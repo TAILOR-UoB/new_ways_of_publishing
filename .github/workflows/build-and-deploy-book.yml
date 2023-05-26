@@ -28,7 +28,9 @@ jobs:
     - name: Create Python kernel
       run: |
         python -m ipykernel install --user --name book-python
+
     - name: Create and install R kernel
+      uses: r-lib/actions/setup-r@v3  
       run: |
         ./install_irkernel.sh
 
