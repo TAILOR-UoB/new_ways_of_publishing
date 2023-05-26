@@ -29,9 +29,6 @@ jobs:
       run: |
         python -m ipykernel install --user --name book-python
 
-    - name: Load R
-      uses: r-lib/actions/setup-r@v3  
-
     - name: Create and install R kernel
       run: |
         ./install_irkernel.sh
