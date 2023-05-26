@@ -9,7 +9,10 @@ chapters:
 - file: citations
 - file: notebooks
 - file: markdown-notebooks
-- file: interactive-code
+- file: interactive-code/index
+  sections:
+  - file: interactive-code/plotly
+  - file: interactive-code/interactive-r
 - file: development
 - file: code-package
 - file: todos

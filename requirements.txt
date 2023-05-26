@@ -6,3 +6,4 @@ ipykernel
 pandas
 sphinxcontrib-mermaid
 docutils==0.17.1
+plotly

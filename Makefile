@@ -3,6 +3,9 @@ install:
 	pip install -r requirements.txt
 	pip install -e lib/book-python/
 
+install_r:
+	./install_irkernel.r
+
 build:
 	jupyter-book build booksource
 

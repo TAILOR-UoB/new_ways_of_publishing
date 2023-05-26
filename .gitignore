@@ -7,3 +7,7 @@
 # Temporal python setup files
 dspython.egg-info/
 __pycache__/
+
+# R
+.RData
+.Rhistory

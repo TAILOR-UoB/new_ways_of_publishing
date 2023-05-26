@@ -25,9 +25,12 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: Create kernel
+    - name: Create Python kernel
       run: |
         python -m ipykernel install --user --name book-python
+    - name: Create and install R kernel
+      run: |
+        ./install_irkernel.r
 
     # Build the book
     - name: Build the book
