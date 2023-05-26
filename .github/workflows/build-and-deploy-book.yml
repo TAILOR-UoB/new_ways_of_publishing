@@ -23,20 +23,31 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-      run: |
-        make install
+      run: make install
+
+    - name: Create Python kernel
+      run: python -m ipykernel install --user --name book-python
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: r-lib/actions/setup-r@v2
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+      cache-version: 2
+      extra-packages: |
+        any::ggplot2
+        any::IRKernel
+
+    - name: Load IRKernel
+      run: Rscript -e "IRkernel::installspec()"
+
     - name: Create Python kernel
       run: |
         python -m ipykernel install --user --name book-python
 
-    - name: Create and install R kernel
-      run: |
-        ./install_irkernel.sh
-
     # Build the book
     - name: Build the book
-      run: |
-        jupyter-book build booksource
+      run: jupyter-book build booksource
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
