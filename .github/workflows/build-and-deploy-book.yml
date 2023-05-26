@@ -30,7 +30,7 @@ jobs:
         python -m ipykernel install --user --name book-python
     - name: Create and install R kernel
       run: |
-        ./install_irkernel.r
+        ./install_irkernel.sh
 
     # Build the book
     - name: Build the book

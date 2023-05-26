@@ -11,3 +11,4 @@ __pycache__/
 # R
 .RData
 .Rhistory
+R_libs
