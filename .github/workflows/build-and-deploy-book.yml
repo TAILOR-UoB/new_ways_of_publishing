@@ -13,9 +13,16 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: [3.8]
+        python-version: [3.9]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - uses: r-lib/actions/setup-r@v2
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+      cache-version: 2
+      extra-packages: |
+        any::ggplot2
+        any::IRKernel
 
     # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
@@ -27,16 +34,6 @@ jobs:
 
     - name: Create Python kernel
       run: python -m ipykernel install --user --name book-python
-
-    steps:
-    - uses: actions/checkout@v3
-    - uses: r-lib/actions/setup-r@v2
-    - uses: r-lib/actions/setup-r-dependencies@v2
-      with:
-      cache-version: 2
-      extra-packages: |
-        any::ggplot2
-        any::IRKernel
 
     - name: Load IRKernel
       run: Rscript -e "IRkernel::installspec()"
