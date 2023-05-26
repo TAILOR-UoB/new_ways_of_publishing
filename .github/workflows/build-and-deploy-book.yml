@@ -27,7 +27,7 @@ jobs:
         make install
     - name: Create kernel
       run: |
-        python -m ipykernel install --user --name data-science
+        python -m ipykernel install --user --name book-python
 
     # Build the book
     - name: Build the book

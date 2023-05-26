@@ -1,7 +1,7 @@
 install:
 	pip install --upgrade pip
 	pip install -r requirements.txt
-	pip install -e lib/data-science-python/
+	pip install -e lib/book-python/
 
 build:
 	jupyter-book build booksource
