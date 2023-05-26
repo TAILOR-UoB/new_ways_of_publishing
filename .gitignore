@@ -1,0 +1,9 @@
+/venv/
+/booksource/_build/
+# Vim temporal files
+*.swp
+# Temporal Jupyter Notebook files
+.ipynb_checkpoints/
+# Temporal python setup files
+dspython.egg-info/
+__pycache__/

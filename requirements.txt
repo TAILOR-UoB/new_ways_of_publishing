@@ -1,0 +1,8 @@
+jupyter-book
+matplotlib
+numpy
+ghp-import
+ipykernel
+pandas
+sphinxcontrib-mermaid
+docutils==0.17.1
