@@ -53,6 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -61,8 +62,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'code-package';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -164,7 +163,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="citations.html">Markdown citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Jupyter Notebook Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">MyST Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive-code.html">Interactive code cells</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="interactive-code/index.html">Interactive code cells</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/plotly.html">Interactive plots with Plotly</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development environment</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Complex code package</a></li>
 
@@ -545,77 +547,73 @@ The original code can be found in the Matplotlib documentation
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_60fb5_row0_col0 {
-  background-color: #63c3bf;
+#T_27554_row0_col0 {
+  background-color: #152772;
+  color: #f1f1f1;
+}
+#T_27554_row0_col1 {
+  background-color: #2094c0;
+  color: #f1f1f1;
+}
+#T_27554_row1_col0 {
+  background-color: #90d4b9;
   color: #000000;
 }
-#T_60fb5_row0_col1, #T_60fb5_row3_col0 {
+#T_27554_row1_col1, #T_27554_row2_col0, #T_27554_row3_col1 {
   background-color: #ffffd9;
   color: #000000;
 }
-#T_60fb5_row1_col0 {
-  background-color: #253595;
+#T_27554_row2_col1 {
+  background-color: #2da2c2;
   color: #f1f1f1;
 }
-#T_60fb5_row1_col1 {
-  background-color: #b9e4b5;
-  color: #000000;
-}
-#T_60fb5_row2_col0 {
-  background-color: #a0dab8;
-  color: #000000;
-}
-#T_60fb5_row2_col1 {
-  background-color: #eef8b3;
-  color: #000000;
-}
-#T_60fb5_row3_col1 {
-  background-color: #22328f;
+#T_27554_row3_col0 {
+  background-color: #0f2367;
   color: #f1f1f1;
 }
-#T_60fb5_row4_col0 {
-  background-color: #2168ad;
-  color: #f1f1f1;
+#T_27554_row4_col0 {
+  background-color: #f8fcc9;
+  color: #000000;
 }
-#T_60fb5_row4_col1 {
-  background-color: #2a9ec1;
+#T_27554_row4_col1 {
+  background-color: #253896;
   color: #f1f1f1;
 }
 </style>
-<table id="T_60fb5">
+<table id="T_27554">
   <caption>Weather Conditions</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_60fb5_level0_col0" class="col_heading level0 col0" >Tokyo</th>
-      <th id="T_60fb5_level0_col1" class="col_heading level0 col1" >Beijing</th>
+      <th id="T_27554_level0_col0" class="col_heading level0 col0" >Tokyo</th>
+      <th id="T_27554_level0_col1" class="col_heading level0 col1" >Beijing</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_60fb5_level0_row0" class="row_heading level0 row0" >Monday</th>
-      <td id="T_60fb5_row0_col0" class="data row0 col0" >Rain</td>
-      <td id="T_60fb5_row0_col1" class="data row0 col1" >Dry</td>
+      <th id="T_27554_level0_row0" class="row_heading level0 row0" >Monday</th>
+      <td id="T_27554_row0_col0" class="data row0 col0" >Heavy Rain</td>
+      <td id="T_27554_row0_col1" class="data row0 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_60fb5_level0_row1" class="row_heading level0 row1" >Tuesday</th>
-      <td id="T_60fb5_row1_col0" class="data row1 col0" >Heavy Rain</td>
-      <td id="T_60fb5_row1_col1" class="data row1 col1" >Rain</td>
+      <th id="T_27554_level0_row1" class="row_heading level0 row1" >Tuesday</th>
+      <td id="T_27554_row1_col0" class="data row1 col0" >Rain</td>
+      <td id="T_27554_row1_col1" class="data row1 col1" >Dry</td>
     </tr>
     <tr>
-      <th id="T_60fb5_level0_row2" class="row_heading level0 row2" >Wednesday</th>
-      <td id="T_60fb5_row2_col0" class="data row2 col0" >Rain</td>
-      <td id="T_60fb5_row2_col1" class="data row2 col1" >Dry</td>
+      <th id="T_27554_level0_row2" class="row_heading level0 row2" >Wednesday</th>
+      <td id="T_27554_row2_col0" class="data row2 col0" >Dry</td>
+      <td id="T_27554_row2_col1" class="data row2 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_60fb5_level0_row3" class="row_heading level0 row3" >Thursday</th>
-      <td id="T_60fb5_row3_col0" class="data row3 col0" >Dry</td>
-      <td id="T_60fb5_row3_col1" class="data row3 col1" >Heavy Rain</td>
+      <th id="T_27554_level0_row3" class="row_heading level0 row3" >Thursday</th>
+      <td id="T_27554_row3_col0" class="data row3 col0" >Heavy Rain</td>
+      <td id="T_27554_row3_col1" class="data row3 col1" >Dry</td>
     </tr>
     <tr>
-      <th id="T_60fb5_level0_row4" class="row_heading level0 row4" >Friday</th>
-      <td id="T_60fb5_row4_col0" class="data row4 col0" >Heavy Rain</td>
-      <td id="T_60fb5_row4_col1" class="data row4 col1" >Heavy Rain</td>
+      <th id="T_27554_level0_row4" class="row_heading level0 row4" >Friday</th>
+      <td id="T_27554_row4_col0" class="data row4 col0" >Dry</td>
+      <td id="T_27554_row4_col1" class="data row4 col1" >Heavy Rain</td>
     </tr>
   </tbody>
 </table>
