@@ -12,7 +12,6 @@ chapters:
 - file: interactive-code/index
   sections:
   - file: interactive-code/plotly
-  - file: interactive-code/interactive-r
 - file: development
 - file: code-package
 - file: todos

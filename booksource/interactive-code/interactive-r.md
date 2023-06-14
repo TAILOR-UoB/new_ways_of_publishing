@@ -14,6 +14,7 @@ kernelspec:
 
 # Examples with R
 
+Section under development.
 
 It is possible to run `R` code by installing a kernel with `CRAN`
 
