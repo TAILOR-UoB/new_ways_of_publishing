@@ -10,6 +10,7 @@
   documentation](https://jupyterbook.org/en/stable/advanced/pdf.html#book-style-pdf)
 - [x] MPN: Fix problem with bibliography generating multiple columns for the
   full page (see [](sec:citations)). Fixed, see notes.
+- [ ] MPN: Fix issue installing the interactive R kernel in a GitHub action
 
 # Notes
 
