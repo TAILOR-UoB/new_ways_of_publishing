@@ -15,8 +15,3 @@ The `{bibliography}` directive must be used for all the `{cite}` roles to
 render properly.
 For example, if the references for your book are stored in `references.bib`,
 then the bibliography is inserted with:
-
-## References
-
-```{bibliography}
-```

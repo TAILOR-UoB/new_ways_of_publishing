@@ -4,6 +4,7 @@
 format: jb-book
 root: index
 chapters:
+- file: introduction
 - file: howto
 - file: markdown
 - file: citations
@@ -12,6 +13,8 @@ chapters:
 - file: interactive-code/index
   sections:
   - file: interactive-code/plotly
+  - file: interactive-code/ipywidgets
 - file: development
 - file: code-package
 - file: todos
+- file: references
