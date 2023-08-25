@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howto.html">How to contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Markdown citations</a></li>
@@ -165,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">MyST Markdown Files</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="interactive-code/index.html">Interactive code cells</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="interactive-code/plotly.html">Interactive plots with Plotly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/ipywidgets.html">Interactive plots with Plotly</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development environment</a></li>
@@ -174,6 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="todos.html">TODOs</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
     </div>
@@ -385,7 +388,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -405,22 +407,12 @@ issue of the bibliography dividing the page into multiple columns.</p>
 <h2>Citations<a class="headerlink" href="#citations" title="Permalink to this heading">#</a></h2>
 <p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
 the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`ruby`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="David Flanagan and Yukihiro Matsumoto. The Ruby Programming Language. O'Reilly Media, 2008.">FM08</a>]</span>.</p>
+this: <span id="id1">[<a class="reference internal" href="references.html#id2" title="David Flanagan and Yukihiro Matsumoto. The Ruby Programming Language. O'Reilly Media, 2008.">FM08</a>]</span>.</p>
 <p>Moreover, you can insert a bibliography into your page with this syntax:
 The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
 render properly.
 For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
 then the bibliography is inserted with:</p>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id2">
-<dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">FM08</a></span></dt>
-<dd><p>David Flanagan and Yukihiro Matsumoto. <em>The Ruby Programming Language</em>. O'Reilly Media, 2008.</p>
-</dd>
-</dl>
-</div>
 </section>
 </section>
 
@@ -492,7 +484,6 @@ then the bibliography is inserted with:</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 
