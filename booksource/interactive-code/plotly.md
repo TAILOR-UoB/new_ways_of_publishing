@@ -12,14 +12,3 @@ kernelspec:
   name: python3
 ---
 
-# Interactive plots with Plotly
-
-```{code-cell} ipython3
-import plotly.io as pio
-import plotly.express as px
-import plotly.offline as py
-
-df = px.data.iris()
-fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
-fig
-```

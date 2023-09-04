@@ -5,16 +5,20 @@ format: jb-book
 root: index
 chapters:
 - file: introduction
+- file: collaboration-tools
 - file: howto
+- file: use-case
 - file: markdown
 - file: citations
 - file: notebooks
 - file: markdown-notebooks
 - file: interactive-code/index
   sections:
-  - file: interactive-code/plotly
-  - file: interactive-code/ipywidgets
+  - file: interactive-code/thebe
+  - file: interactive-code/pyodide
+  - file: interactive-code/shinylive
 - file: development
 - file: code-package
 - file: todos
 - file: references
+- file: glossary
