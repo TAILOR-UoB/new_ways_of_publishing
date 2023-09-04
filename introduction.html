@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How to contribute" href="howto.html" />
+    <link rel="next" title="Collaboration tools" href="collaboration-tools.html" />
     <link rel="prev" title="New Ways of Publishing: A Roadmap to Authoring Online Training Material" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -159,14 +159,17 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collaboration-tools.html">Collaboration tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howto.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use-case.html">Use case scenarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="citations.html">Markdown citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Jupyter Notebook Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">MyST Markdown Files</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="interactive-code/index.html">Interactive code cells</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="interactive-code/plotly.html">Interactive plots with Plotly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive-code/ipywidgets.html">Interactive plots with Plotly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/thebe.html">Thebe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/pyodide.html">Shiny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development environment</a></li>
@@ -177,6 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="todos.html">TODOs</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
     </div>
@@ -402,66 +406,6 @@ LaTeX files or PDFs.</p></li>
 <li><p>There is an increasing interest on appendices to incorporate other type of
 content, or links to software or datasets to provide transparency and
 reproducibility of results.</p></li>
-<li><p>Available tools in the last decade are Jupyter Notebook</p>
-<ul>
-<li><p><a class="reference external" href="https://noteable.io/">Noteable</a>: cloud-based real-time collaboration tool
-for data science, machine learning and others. Focused on Python, R and
-SQL. Free for individual users.</p></li>
-<li><p><a class="reference external" href="https://colab.research.google.com/">Google Colab</a>: Cloud-based Jupyter
-Notebook environment hosted by Google. Free for low-intensive programs.</p></li>
-<li><p><a class="reference external" href="https://www.kaggle.com/notebooks">Kaggle Notebooks</a>: Cloud-based Jupyter
-Notebook environment hosted by Kaggle. Focused on Python for Data Science,
-and Machine Learning. It offers a free solution to participate into Kaggle
-competitions.</p></li>
-<li><p><a class="reference external" href="https://notebooks.azure.com/">Microsoft Azure Notebooks</a>: Cloud-baed
-platform hosted in Azure (requires an Azure user account). It is focused on
-Data Science and Machine learning with CPUs and GPUs available. It
-supports the programming languages Python, R, F# and Julia, among others.</p></li>
-<li><p><a class="reference external" href="https://cocalc.com/">CoCalc</a>: Cloud-based platform with similar
-functionalities than Jupyter Notebooks. It supports the programming
-languages Python, R and Julia.</p></li>
-<li><p><a class="reference external" href="https://datalore.jetbrains.com/">JetBrains Datalore</a>: Cloud-based platform
-similar to Jupyter Notebook. It supports the programming languages Python,
-R and SQL. It integrates with the JetBrains ecosystem tools such as the
-IDEs PyCharm and IntelliJ.</p></li>
-<li><p><a class="reference external" href="https://deepnote.com/">Deepnote</a>: Cloud-based platform similar to Jupyter
-Notebook with real-time editing. Supports multiple programming languages
-and integrates well with TensorFlow and PyTorch.</p></li>
-<li><p><a class="reference external" href="https://hex.tech/">Hex</a>: Cloud-based platform similar to Jupyter Notebook.</p></li>
-<li><p><a class="reference external" href="https://nextjournal.com/">Nextjournal</a>: Cloud-based platform similar to
-Juputer Notebooks with additional capabilities. Supports the programming
-languages Python, R and Julia.</p></li>
-<li><p><a class="reference external" href="https://gradient.paperspace.com/">Paperspace Gradient</a>: …</p></li>
-<li><p><a class="reference external" href="https://zeppelin.apache.org/">Apache Zeppelin</a>: … Built-in code editor.</p></li>
-<li><p><a class="reference external" href="https://count.co/">Count.co</a>: …</p></li>
-</ul>
-</li>
-<li><p>Available tools similar to Jupyter book:</p>
-<ul>
-<li><p><a class="reference external" href="https://quarto.org">Quarto</a>:</p></li>
-<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a>:</p></li>
-<li><p><a class="reference external" href="https://plutojl.org/">Pluto.jl</a>:</p></li>
-<li><p><a class="reference external" href="https://rmarkdown.rstudio.com/">Rmarkdown</a>:</p></li>
-</ul>
-</li>
-<li><p>Data interactivity</p>
-<ul>
-<li><p><a class="reference external" href="https://jupyter.org/widgets">Jupyter Widgets</a>:</p></li>
-<li><p><a class="reference external" href="http://www.htmlwidgets.org/">htmlwidgets for R</a>:</p></li>
-<li><p><a class="reference external" href="https://observablehq.com/&#64;observablehq/observable-javascript">Observable JS</a>: Tool to
-run Javascript code dynamically that supports D3, Lodash and Apache Arrow.</p></li>
-<li><p><a class="reference external" href="https://shiny.posit.co/">Shiny</a>: Run Python or R code in the browser.
-Check the <a class="reference external" href="https://shiny.posit.co/py/docs/overview.html">Python example documentation</a>.
-<a class="reference external" href="https://pyodide.org/en/stable/">Pyodide</a> is a port of Python and other packages compiled to
-<a class="reference external" href="https://webassembly.org/">WebAssembly</a>. Some examples of supported
-packages are  regex, pyyaml, lxml and scientific Python packages including
-numpy, pandas, scipy, matplotlib, and scikit-learn.
-WebAssembly is a binary format for compiled programs.</p></li>
-</ul>
-</li>
-<li><p>Examples: Simply Logical: Intelligent Reasoning by Example (Fully Interactive
-Online Edition) <span id="id1">[<a class="reference internal" href="references.html#id4" title="Peter Flach and Kacper Sokol. Simply Logical – Intelligent Reasoning by Example (Fully Interactive Online Edition). 2022. URL: https://book.simply-logical.space/, doi:10.5281/zenodo.1156977.">FS22</a>]</span> of the Simply Logical textbook
-<span id="id2">[<a class="reference internal" href="references.html#id3" title="Peter Flach. Simply Logical: Intelligent Reasoning by Example. John Wiley, 1994. URL: https://www.cs.bris.ac.uk/~flach/SimplyLogical.html.">Fla94</a>]</span>.</p></li>
 </ul>
 </section>
 
@@ -506,11 +450,11 @@ Online Edition) <span id="id1">[<a class="reference internal" href="references.h
       </div>
     </a>
     <a class="right-next"
-       href="howto.html"
+       href="collaboration-tools.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How to contribute</p>
+        <p class="prev-next-title">Collaboration tools</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
