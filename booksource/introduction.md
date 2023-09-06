@@ -14,44 +14,29 @@ and other physical documents. Woodblock printing was used in China before
 220 A.D. while Movble-type printing in China about 1040. In Europe the printing
 press was invented around 1450 and rotary printing press in 1843.
 
-Printing capacity impressions per hour: in 1600, 200
-
-| year | 1600 | 1800 | 1812 | 1813 | 1814 | 1818 |
-|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| Impressions per hour | 200 | 480 | 800 | 1,100 | 2,000 | 2,400 |
-
-(Source
-https://en.wikipedia.org/wiki/Printing#:~:text=The%20earliest%20known%20form%20of,paper%20until%20the%20seventh%20century.)
-
-**(Some of those interesting facts can be removed or reduced)**
-
-
-Teaching material progression:
-
-- Word to word (spoken, human interaction)
-- Hands on (spoken, physical, interactive)
-- The press (China 1040, Europe 1450s)
-- Books (read, non-interactive)
-- Projectors (1870s)
-- Lectures with word to word + books (spoken, read, human interaction)
-- Lectures with word to word + hands on (spoken, read, physical, interactive)
-- Filmstrip projector (1925)
-- Lectures by School teachers and military offices with projectors
-- The analog video (1950s)
-- Video recordings (visual, non-interactive)
-- The digital video (1970s)
-- Dynamic slides (visual, non-interactive)
-- Lectures with slides (spoken, read, visual, human interaction)
-- The Internet (1960s)
-- Gamification (visual, computer interaction)
-
 ## What is the gap that this document wants to fill
 
-
+There is no standard method to create teaching material, which makes it
+difficult to create long-term tools around them.
+This may be beneficial from an exploratory perspective as new teaching methods
+have emerged by adapting new tools to the teaching environment.
+However, some times the teaching material is kept technologically outdated
+because of the lack of time of exploring new avenues and ignoring the available
+tools to facilitate the transformation.
+This guide provides a helping hand to understand all the tools that are
+available, and properly plan the time necessary to modernize old teaching
+material.
 
 ## What are the questions answered and the aim of this document
 
+The document can be used to search available technologies and tools with
+multiple examples.
+It also provides some of the most common successful use cases to adapt
+previous material into a more modern form.
+
 ## Indication of method and approach followed
+
+
 
 ## Key message
 
