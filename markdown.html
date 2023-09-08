@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Markdown Files &#8212; New ways of Publishing</title>
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -49,13 +50,17 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -304,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/markdown.md" target="_blank"
+      <li><a href="_sources/" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -398,10 +403,19 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams">Diagrams</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mindmaps">Mindmaps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams">Diagrams</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-flowchart">Mermaid flowchart</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-mindmaps">Mermaid Mindmaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tikz">Tikz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graphviz">Graphviz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uml">UML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavedrom">Wavedrom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockdiag">Blockdiag</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-references">Cross-references</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-tabs">Inline-tabs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
 </ul>
             </nav>
@@ -446,6 +460,12 @@ that is being called.</p>
 </section>
 <section id="diagrams">
 <h2>Diagrams<a class="headerlink" href="#diagrams" title="Permalink to this heading">#</a></h2>
+<section id="mermaid-flowchart">
+<h3>Mermaid flowchart<a class="headerlink" href="#mermaid-flowchart" title="Permalink to this heading">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>At this moment, Mermaid is not working in this Jupyter Book.</p>
+</div>
 <p>We have installed an extension to draw diagrams from text using <code class="docutils literal notranslate"><span class="pre">Mermaid</span></code>. The
 following is an example of the code necessary to generate the diagram below.</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{mermaid}
@@ -467,13 +487,45 @@ flowchart TD
   B --&gt; E[(database node E)]
   B --&gt; F((circle F))
   C --&gt; F
-        </div><p>You can find the basic syntax for flowcharts at
+        </div><div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</pre></div>
+</div>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice-&gt;John: Hello John, how are you?
+</pre></div>
+</div>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice-&gt;John: Hello John, how are you?
+	loop Healthcheck
+			John-&gt;John: Fight against hypochondria
+	end
+	Note right of John: Rational thoughts &lt;br/&gt;prevail...
+	John--&gt;Alice: Great!
+	John-&gt;Bob: How about you?
+	Bob--&gt;John: Jolly good!
+</pre></div>
+</div>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+A[Client] --&gt;|tcp_123| B(Load Balancer)
+B --&gt;|tcp_456| C[Server1] 
+B --&gt;|tcp_456| D[Server2]
+</pre></div>
+</div>
+<p>You can find the basic syntax for flowcharts at
 <a class="reference external" href="https://mermaid.js.org/syntax/flowchart.html">mermaid</a>.</p>
 <p>It is possible to add other diagram plugin extensions. See other options in
 <a class="reference external" href="https://opencomputinglab.github.io/SubjectMatterNotebooks/diagram/sphinx-diagrammers.html">sphinx-diagrammers</a>.</p>
 </section>
-<section id="mindmaps">
-<h2>Mindmaps<a class="headerlink" href="#mindmaps" title="Permalink to this heading">#</a></h2>
+<section id="mermaid-mindmaps">
+<h3>Mermaid Mindmaps<a class="headerlink" href="#mermaid-mindmaps" title="Permalink to this heading">#</a></h3>
 <p>With <a class="reference external" href="https://mermaid.js.org/intro/">Mermaid</a> it is possible to generate other
 types of diagrams, the following is an example for a
 <a class="reference external" href="https://mermaid.js.org/syntax/mindmap.html">mindmap</a>.</p>
@@ -496,6 +548,111 @@ types of diagrams, the following is an example for a
       Personal Computers
       Distributed Computing
         </div></section>
+<section id="tikz">
+<h3>Tikz<a class="headerlink" href="#tikz" title="Permalink to this heading">#</a></h3>
+<aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">\draw[thick,rounded corners=8pt]
+   (0,0)--(0,2)--(1,3.25)--(2,2)--(2,0)--(0,2)--(2,2)--(0,0)--(2,0);</span>)</p>
+<p>!xelatex command cannot be run</p>
+</aside>
+</div><aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">\node[blue,draw] (a) {A};
+\node[draw,dotted,right of=a] {B} edge[&lt;-] (a);</span>)</p>
+<p>!xelatex command cannot be run</p>
+</aside>
+</div><aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">mindmap, grow cyclic, every node/.style=concept, concept color=orange!40
+
+\node{ShareLaTeX Tutorial Videos}
+ child { node {Beginners Series}
+ child { node {First Document}}
+ child { node {Sections and Paragraphs}}
+ child { node {Mathematics}}
+ child { node {Images}}
+ child { node {bibliography}}
+ child { node {Tables and Matrices}}
+ child { node {Longer Documents}}
+}
+child { node {Thesis Series}
+ child { node {Basic Structure}}
+ child { node {Page Layout}}
+ child { node {Figures, Subfigures and Tables}}
+ child { node {Biblatex}}
+ child { node {Title Page}}
+}
+child { node {Beamer Series}
+ child { node {Getting Started}}
+ child { node {Text, Pictures and Tables}}
+ child { node {Blocks, Code and Hyperlinks}}
+ child { node {Overlay Specifications}}
+ child { node {Themes and Handouts}}
+}
+child { node {TikZ Series}
+ child { node {Basic Drawing}}
+ child { node {Geogebra}}
+ child { node {Flow Charts}}
+ child { node {Circuit Diagrams}}
+ child { node {Mind Maps}}
+};</span>)</p>
+<p>!xelatex command cannot be run</p>
+</aside>
+</div></section>
+<section id="graphviz">
+<h3>Graphviz<a class="headerlink" href="#graphviz" title="Permalink to this heading">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>At this moment, Graphviz is not working in this Jupyter Book.</p>
+</div>
+<div class="highlight-graphviz notranslate"><div class="highlight"><pre><span></span><span class="k">graph</span><span class="w"> </span><span class="nt">G</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">layout</span><span class="p">=</span><span class="s">neato</span>
+<span class="w">  </span><span class="nt">run</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">intr</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">intr</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">runbl</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">runbl</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">run</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">run</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">kernel</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">kernel</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">zombie</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">kernel</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">sleep</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">kernel</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">runmem</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">sleep</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">swap</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">swap</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">runswap</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">runswap</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">new</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">runswap</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">runmem</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">new</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">runmem</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">sleep</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="nt">runmem</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="uml">
+<h3>UML<a class="headerlink" href="#uml" title="Permalink to this heading">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>At this moment, UML is not working in this Jupyter Book.</p>
+</div>
+<div class="highlight-uml notranslate"><div class="highlight"><pre><span></span>Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+
+Alice -&gt; Bob: Another authentication Request
+Alice &lt;-- Bob: Another authentication Response
+</pre></div>
+</div>
+</section>
+<section id="wavedrom">
+<h3>Wavedrom<a class="headerlink" href="#wavedrom" title="Permalink to this heading">#</a></h3>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{ signal : [
+  { name: "clk",  wave: "p......" },
+  { name: "bus",  wave: "x.34.5x",   data: "head body tail" },
+  { name: "wire", wave: "0.1..0." },
+]}
+</script>
+</div>
+</section>
+<section id="blockdiag">
+<h3>Blockdiag<a class="headerlink" href="#blockdiag" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
 <section id="cross-references">
 <h2>Cross-references<a class="headerlink" href="#cross-references" title="Permalink to this heading">#</a></h2>
 <p><a class="reference internal" href="#figure-example-1"><span class="std std-ref">Caption of the example figure ex1</span></a></p>
@@ -505,7 +662,7 @@ types of diagrams, the following is an example for a
 </figcaption>
 </figure>
 <p><a class="reference internal" href="#table-example-1"><span class="std std-ref">Caption of the table ex1</span></a></p>
-<table class="colwidths-auto table" id="table-example-1">
+<table class="table" id="table-example-1">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Caption of the table ex1</span><a class="headerlink" href="#table-example-1" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>header 1</p></th>
@@ -540,6 +697,42 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
 </section>
+<section id="inline-tabs">
+<h2>Inline-tabs<a class="headerlink" href="#inline-tabs" title="Permalink to this heading">#</a></h2>
+<p>First two tabs showing off defining a function.</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--2">C++</label><div class="tab-content docutils">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Second two tabs showing off printing.</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--2">C++</label><div class="tab-content docutils">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="learn-more">
 <h2>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this heading">#</a></h2>
 <p>This is just a simple starter to get you started.
@@ -566,6 +759,12 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
     }
     </script>
     <script>kernelName = 'python3'</script>
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
 
                 </article>
               
@@ -616,10 +815,19 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams">Diagrams</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mindmaps">Mindmaps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams">Diagrams</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-flowchart">Mermaid flowchart</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-mindmaps">Mermaid Mindmaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tikz">Tikz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graphviz">Graphviz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uml">UML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavedrom">Wavedrom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockdiag">Blockdiag</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-references">Cross-references</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-tabs">Inline-tabs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
 </ul>
   </nav></div>

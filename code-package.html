@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Complex code package &#8212; New ways of Publishing</title>
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -49,13 +50,17 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -349,24 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/code-package.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="_sources/code-package.md" target="_blank"
+      <li><a href="_sources/" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -555,73 +543,73 @@ The original code can be found in the Matplotlib documentation
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_1b674_row0_col0 {
-  background-color: #cbebb4;
+#T_befd6_row0_col0 {
+  background-color: #abdeb7;
   color: #000000;
 }
-#T_1b674_row0_col1 {
-  background-color: #225ca7;
+#T_befd6_row0_col1 {
+  background-color: #63c3bf;
+  color: #000000;
+}
+#T_befd6_row1_col0, #T_befd6_row2_col1 {
+  background-color: #13266f;
   color: #f1f1f1;
 }
-#T_1b674_row1_col0 {
-  background-color: #1d8dbe;
+#T_befd6_row1_col1 {
+  background-color: #67c4be;
+  color: #000000;
+}
+#T_befd6_row2_col0 {
+  background-color: #225aa6;
   color: #f1f1f1;
 }
-#T_1b674_row1_col1, #T_1b674_row4_col1 {
-  background-color: #d6efb3;
+#T_befd6_row3_col0 {
+  background-color: #2a9ec1;
+  color: #f1f1f1;
+}
+#T_befd6_row3_col1 {
+  background-color: #55bec1;
   color: #000000;
 }
-#T_1b674_row2_col0 {
-  background-color: #ceecb3;
-  color: #000000;
-}
-#T_1b674_row2_col1, #T_1b674_row4_col0 {
+#T_befd6_row4_col0, #T_befd6_row4_col1 {
   background-color: #ffffd9;
   color: #000000;
 }
-#T_1b674_row3_col0 {
-  background-color: #1d8ebf;
-  color: #f1f1f1;
-}
-#T_1b674_row3_col1 {
-  background-color: #1c2d81;
-  color: #f1f1f1;
-}
 </style>
-<table id="T_1b674">
+<table id="T_befd6">
   <caption>Weather Conditions</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_1b674_level0_col0" class="col_heading level0 col0" >Tokyo</th>
-      <th id="T_1b674_level0_col1" class="col_heading level0 col1" >Beijing</th>
+      <th id="T_befd6_level0_col0" class="col_heading level0 col0" >Tokyo</th>
+      <th id="T_befd6_level0_col1" class="col_heading level0 col1" >Beijing</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_1b674_level0_row0" class="row_heading level0 row0" >Monday</th>
-      <td id="T_1b674_row0_col0" class="data row0 col0" >Rain</td>
-      <td id="T_1b674_row0_col1" class="data row0 col1" >Heavy Rain</td>
+      <th id="T_befd6_level0_row0" class="row_heading level0 row0" >Monday</th>
+      <td id="T_befd6_row0_col0" class="data row0 col0" >Rain</td>
+      <td id="T_befd6_row0_col1" class="data row0 col1" >Rain</td>
     </tr>
     <tr>
-      <th id="T_1b674_level0_row1" class="row_heading level0 row1" >Tuesday</th>
-      <td id="T_1b674_row1_col0" class="data row1 col0" >Heavy Rain</td>
-      <td id="T_1b674_row1_col1" class="data row1 col1" >Rain</td>
+      <th id="T_befd6_level0_row1" class="row_heading level0 row1" >Tuesday</th>
+      <td id="T_befd6_row1_col0" class="data row1 col0" >Heavy Rain</td>
+      <td id="T_befd6_row1_col1" class="data row1 col1" >Rain</td>
     </tr>
     <tr>
-      <th id="T_1b674_level0_row2" class="row_heading level0 row2" >Wednesday</th>
-      <td id="T_1b674_row2_col0" class="data row2 col0" >Rain</td>
-      <td id="T_1b674_row2_col1" class="data row2 col1" >Dry</td>
+      <th id="T_befd6_level0_row2" class="row_heading level0 row2" >Wednesday</th>
+      <td id="T_befd6_row2_col0" class="data row2 col0" >Heavy Rain</td>
+      <td id="T_befd6_row2_col1" class="data row2 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_1b674_level0_row3" class="row_heading level0 row3" >Thursday</th>
-      <td id="T_1b674_row3_col0" class="data row3 col0" >Heavy Rain</td>
-      <td id="T_1b674_row3_col1" class="data row3 col1" >Heavy Rain</td>
+      <th id="T_befd6_level0_row3" class="row_heading level0 row3" >Thursday</th>
+      <td id="T_befd6_row3_col0" class="data row3 col0" >Heavy Rain</td>
+      <td id="T_befd6_row3_col1" class="data row3 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_1b674_level0_row4" class="row_heading level0 row4" >Friday</th>
-      <td id="T_1b674_row4_col0" class="data row4 col0" >Dry</td>
-      <td id="T_1b674_row4_col1" class="data row4 col1" >Rain</td>
+      <th id="T_befd6_level0_row4" class="row_heading level0 row4" >Friday</th>
+      <td id="T_befd6_row4_col0" class="data row4 col0" >Dry</td>
+      <td id="T_befd6_row4_col1" class="data row4 col1" >Dry</td>
     </tr>
   </tbody>
 </table>
@@ -648,6 +636,12 @@ The original code can be found in the Matplotlib documentation
     }
     </script>
     <script>kernelName = 'python3'</script>
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
 
                 </article>
               
