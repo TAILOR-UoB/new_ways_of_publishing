@@ -69,8 +69,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'markdown';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -429,7 +427,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<span id="sec-markdown"></span><h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this heading">#</a></h1>
+<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this heading">#</a></h1>
 <p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
 in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
 called <strong>MyST Markdown</strong>.
@@ -479,28 +477,34 @@ flowchart TD
 ```
 </pre></div>
 </div>
-<div class="mermaid">
-            flowchart TD
-  A[square node A] --&gt; B(round edges node B)
-  A --&gt; C([stadium node C])
-  B --&gt; D[[subroutine node D]]
-  B --&gt; E[(database node E)]
-  B --&gt; F((circle F))
-  C --&gt; F
-        </div><div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR;
-    A--&gt;B;
-    A--&gt;C;
-    B--&gt;D;
-    C--&gt;D;
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>I have removed the directive {mermaid} in the following examples to avoid
+warnings</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flowchart</span> <span class="n">TD</span>
+  <span class="n">A</span><span class="p">[</span><span class="n">square</span> <span class="n">node</span> <span class="n">A</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">B</span><span class="p">(</span><span class="nb">round</span> <span class="n">edges</span> <span class="n">node</span> <span class="n">B</span><span class="p">)</span>
+  <span class="n">A</span> <span class="o">--&gt;</span> <span class="n">C</span><span class="p">([</span><span class="n">stadium</span> <span class="n">node</span> <span class="n">C</span><span class="p">])</span>
+  <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">D</span><span class="p">[[</span><span class="n">subroutine</span> <span class="n">node</span> <span class="n">D</span><span class="p">]]</span>
+  <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">E</span><span class="p">[(</span><span class="n">database</span> <span class="n">node</span> <span class="n">E</span><span class="p">)]</span>
+  <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">F</span><span class="p">((</span><span class="n">circle</span> <span class="n">F</span><span class="p">))</span>
+  <span class="n">C</span> <span class="o">--&gt;</span> <span class="n">F</span>
 </pre></div>
 </div>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span> <span class="n">LR</span><span class="p">;</span>
+    <span class="n">A</span><span class="o">--&gt;</span><span class="n">B</span><span class="p">;</span>
+    <span class="n">A</span><span class="o">--&gt;</span><span class="n">C</span><span class="p">;</span>
+    <span class="n">B</span><span class="o">--&gt;</span><span class="n">D</span><span class="p">;</span>
+    <span class="n">C</span><span class="o">--&gt;</span><span class="n">D</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
 	participant Alice
 	participant Bob
 	Alice-&gt;John: Hello John, how are you?
 </pre></div>
 </div>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
 	participant Alice
 	participant Bob
 	Alice-&gt;John: Hello John, how are you?
@@ -513,10 +517,10 @@ flowchart TD
 	Bob--&gt;John: Jolly good!
 </pre></div>
 </div>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
-A[Client] --&gt;|tcp_123| B(Load Balancer)
-B --&gt;|tcp_456| C[Server1] 
-B --&gt;|tcp_456| D[Server2]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span> <span class="n">TD</span>
+<span class="n">A</span><span class="p">[</span><span class="n">Client</span><span class="p">]</span> <span class="o">--&gt;|</span><span class="n">tcp_123</span><span class="o">|</span> <span class="n">B</span><span class="p">(</span><span class="n">Load</span> <span class="n">Balancer</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">--&gt;|</span><span class="n">tcp_456</span><span class="o">|</span> <span class="n">C</span><span class="p">[</span><span class="n">Server1</span><span class="p">]</span> 
+<span class="n">B</span> <span class="o">--&gt;|</span><span class="n">tcp_456</span><span class="o">|</span> <span class="n">D</span><span class="p">[</span><span class="n">Server2</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>You can find the basic syntax for flowcharts at
@@ -529,25 +533,27 @@ B --&gt;|tcp_456| D[Server2]
 <p>With <a class="reference external" href="https://mermaid.js.org/intro/">Mermaid</a> it is possible to generate other
 types of diagrams, the following is an example for a
 <a class="reference external" href="https://mermaid.js.org/syntax/mindmap.html">mindmap</a>.</p>
-<div class="mermaid">
-            mindmap
-  root((Data Science))
-    Statistics
-      Surveys
-      Experiments
-    Scientific Computing
-    Scientific Methods
-      Hypothesis Testing
-      Evaluation
-    Processes
-      Parallel Programming
-      Crawlers
-    Algorithms
-    Systems
-      High Performance Computing
-      Personal Computers
-      Distributed Computing
-        </div></section>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">mindmap</span>
+  <span class="n">root</span><span class="p">((</span><span class="n">Data</span> <span class="n">Science</span><span class="p">))</span>
+    <span class="n">Statistics</span>
+      <span class="n">Surveys</span>
+      <span class="n">Experiments</span>
+    <span class="n">Scientific</span> <span class="n">Computing</span>
+    <span class="n">Scientific</span> <span class="n">Methods</span>
+      <span class="n">Hypothesis</span> <span class="n">Testing</span>
+      <span class="n">Evaluation</span>
+    <span class="n">Processes</span>
+      <span class="n">Parallel</span> <span class="n">Programming</span>
+      <span class="n">Crawlers</span>
+    <span class="n">Algorithms</span>
+    <span class="n">Systems</span>
+      <span class="n">High</span> <span class="n">Performance</span> <span class="n">Computing</span>
+      <span class="n">Personal</span> <span class="n">Computers</span>
+      <span class="n">Distributed</span> <span class="n">Computing</span>
+</pre></div>
+</div>
+</section>
 <section id="tikz">
 <h3>Tikz<a class="headerlink" href="#tikz" title="Permalink to this heading">#</a></h3>
 <aside class="system-message">
@@ -626,13 +632,14 @@ child { node {TikZ Series}
 <h3>UML<a class="headerlink" href="#uml" title="Permalink to this heading">#</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>At this moment, UML is not working in this Jupyter Book.</p>
+<p>At this moment, UML is not working in this Jupyter Book. I removed the
+directive {uml} to avoid compilation Warnings.</p>
 </div>
-<div class="highlight-uml notranslate"><div class="highlight"><pre><span></span>Alice -&gt; Bob: Authentication Request
-Bob --&gt; Alice: Authentication Response
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Alice</span> <span class="o">-&gt;</span> <span class="n">Bob</span><span class="p">:</span> <span class="n">Authentication</span> <span class="n">Request</span>
+<span class="n">Bob</span> <span class="o">--&gt;</span> <span class="n">Alice</span><span class="p">:</span> <span class="n">Authentication</span> <span class="n">Response</span>
 
-Alice -&gt; Bob: Another authentication Request
-Alice &lt;-- Bob: Another authentication Response
+<span class="n">Alice</span> <span class="o">-&gt;</span> <span class="n">Bob</span><span class="p">:</span> <span class="n">Another</span> <span class="n">authentication</span> <span class="n">Request</span>
+<span class="n">Alice</span> <span class="o">&lt;--</span> <span class="n">Bob</span><span class="p">:</span> <span class="n">Another</span> <span class="n">authentication</span> <span class="n">Response</span>
 </pre></div>
 </div>
 </section>
