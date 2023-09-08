@@ -12,3 +12,5 @@ sphinxcontrib-mermaid
 sphinxcontrib-plantuml
 sphinxcontrib-tikz
 sphinxcontrib-wavedrom
+sphinxcontrib-blockdiag
+
