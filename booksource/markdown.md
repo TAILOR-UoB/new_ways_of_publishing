@@ -36,6 +36,13 @@ Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
 
 ## Diagrams
 
+
+### Mermaid flowchart
+
+```{warning}
+At this moment, Mermaid is not working in this Jupyter Book.
+```
+
 We have installed an extension to draw diagrams from text using `Mermaid`. The
 following is an example of the code necessary to generate the diagram below.
 
@@ -51,6 +58,7 @@ flowchart TD
 ```
 ````
 
+
 ```{mermaid}
 flowchart TD
   A[square node A] --> B(round edges node B)
@@ -61,19 +69,57 @@ flowchart TD
   C --> F
 ```
 
+```mermaid
+graph LR;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```mermaid
+sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice->John: Hello John, how are you?
+```
+
+```mermaid
+sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice->John: Hello John, how are you?
+	loop Healthcheck
+			John->John: Fight against hypochondria
+	end
+	Note right of John: Rational thoughts <br/>prevail...
+	John-->Alice: Great!
+	John->Bob: How about you?
+	Bob-->John: Jolly good!
+```
+
+```mermaid
+graph TD
+A[Client] -->|tcp_123| B(Load Balancer)
+B -->|tcp_456| C[Server1] 
+B -->|tcp_456| D[Server2]
+```
+
+
 You can find the basic syntax for flowcharts at
 [mermaid](https://mermaid.js.org/syntax/flowchart.html).
 
 It is possible to add other diagram plugin extensions. See other options in
 [sphinx-diagrammers](https://opencomputinglab.github.io/SubjectMatterNotebooks/diagram/sphinx-diagrammers.html).
 
-## Mindmaps
+### Mermaid Mindmaps
 
 With [Mermaid](https://mermaid.js.org/intro/) it is possible to generate other
 types of diagrams, the following is an example for a
 [mindmap](https://mermaid.js.org/syntax/mindmap.html).
 
 ```{mermaid}
+
 mindmap
   root((Data Science))
     Statistics
@@ -91,6 +137,110 @@ mindmap
       High Performance Computing
       Personal Computers
       Distributed Computing
+```
+
+### Tikz
+
+```{tikz}
+\draw[thick,rounded corners=8pt]
+   (0,0)--(0,2)--(1,3.25)--(2,2)--(2,0)--(0,2)--(2,2)--(0,0)--(2,0);
+```
+
+```{tikz}
+\node[blue,draw] (a) {A};
+\node[draw,dotted,right of=a] {B} edge[<-] (a);
+```
+
+
+```{tikz} 
+mindmap, grow cyclic, every node/.style=concept, concept color=orange!40
+
+\node{ShareLaTeX Tutorial Videos}
+ child { node {Beginners Series}
+ child { node {First Document}}
+ child { node {Sections and Paragraphs}}
+ child { node {Mathematics}}
+ child { node {Images}}
+ child { node {bibliography}}
+ child { node {Tables and Matrices}}
+ child { node {Longer Documents}}
+}
+child { node {Thesis Series}
+ child { node {Basic Structure}}
+ child { node {Page Layout}}
+ child { node {Figures, Subfigures and Tables}}
+ child { node {Biblatex}}
+ child { node {Title Page}}
+}
+child { node {Beamer Series}
+ child { node {Getting Started}}
+ child { node {Text, Pictures and Tables}}
+ child { node {Blocks, Code and Hyperlinks}}
+ child { node {Overlay Specifications}}
+ child { node {Themes and Handouts}}
+}
+child { node {TikZ Series}
+ child { node {Basic Drawing}}
+ child { node {Geogebra}}
+ child { node {Flow Charts}}
+ child { node {Circuit Diagrams}}
+ child { node {Mind Maps}}
+};
+```
+
+### Graphviz
+
+```{warning}
+At this moment, Graphviz is not working in this Jupyter Book.
+```
+
+```graphviz
+graph G {
+  layout=neato
+  run -- intr;
+  intr -- runbl;
+  runbl -- run;
+  run -- kernel;
+  kernel -- zombie;
+  kernel -- sleep;
+  kernel -- runmem;
+  sleep -- swap;
+  swap -- runswap;
+  runswap -- new;
+  runswap -- runmem;
+  new -- runmem;
+  sleep -- runmem;
+}
+```
+
+### UML
+
+```{warning}
+At this moment, UML is not working in this Jupyter Book.
+```
+
+```uml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+```
+
+### Wavedrom
+
+```{wavedrom}
+{ signal : [
+  { name: "clk",  wave: "p......" },
+  { name: "bus",  wave: "x.34.5x",   data: "head body tail" },
+  { name: "wire", wave: "0.1..0." },
+]}
+```
+
+### Blockdiag
+
+```{blockdiag}
+A -> B;
 ```
 
 ## Cross-references
@@ -142,6 +292,41 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
 
+## Inline-tabs
+
+First two tabs showing off defining a function.
+
+````{tab} Python
+```python
+def main():
+    return
+```
+````
+````{tab} C++
+```c++
+int main(const int argc, const char **argv) {
+  return 0;
+}
+```
+````
+
+Second two tabs showing off printing.
+
+````{tab} Python
+```python
+print("Hello World!")
+```
+````
+
+````{tab} C++
+```c++
+#include <iostream>
+
+int main() {
+  std::cout << "Hello World!" << std::endl;
+}
+```
+````
 
 ## Learn more
 

@@ -42,6 +42,16 @@ capability of dealing with possible edition conflicts.
 Tool or platform that allows the creation of online content that can be
 displayed in a web browser (see [quarto](https://quarto.org/) description).
 
+**Directives**
+
+Special functions that are defined in a publishing system to render a piece of
+text in a special manner. Some examples of directives already available in
+Jupyter{book} is the _{note}_ that renders a text as an information box.
+
+```{note}
+This is an example of the directive note
+```
+
 **Authoring application**
 
 **Editing environment** 

@@ -16,3 +16,6 @@ cleanbuild: clean build
 
 buildbook:
 	jupyter-book build booksource/ --builder pdfhtml
+
+serve:
+	python -m http.server 9000 -d booksource/_build/html/

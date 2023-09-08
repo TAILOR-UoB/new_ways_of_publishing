@@ -37,6 +37,35 @@
 
 ## Use case examples
 
+### LaTeX files and want a website
+
+#### Short description
+
+I have all the LaTeX files of a publication, thesis or book and want to
+generate a static website.
+
+#### Current artefacts
+
+- LaTeX files
+- Figures
+- Tables
+- bib files
+
+#### Desired outcome
+
+- Static website
+
+#### Possible solutions
+
+Pandoc can convert each individual tex file into markdown
+
+
+```
+pandoc -s input_file.tex -o output_file.md
+```
+
+## Use case examples
+
 ### Power point slides to cross-platform
 
 #### Short description

@@ -4,7 +4,11 @@ numpy
 ghp-import
 ipykernel
 pandas
-sphinxcontrib-mermaid
-docutils==0.17.1
+docutils
 plotly
 ipywidgets
+sphinx_inline_tabs
+sphinxcontrib-mermaid
+sphinxcontrib-plantuml
+sphinxcontrib-tikz
+sphinxcontrib-wavedrom
