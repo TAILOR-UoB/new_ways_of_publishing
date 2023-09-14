@@ -172,12 +172,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../citations.html">Markdown citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">MyST Markdown Files</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Interactive code cells</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="thebe.html">Thebe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pyodide.html">Shiny</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Interactive code cells</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Development environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code-package.html">Complex code package</a></li>
 
@@ -374,7 +370,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -390,6 +388,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Interactive code cells</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#todo">TODO</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -401,6 +409,52 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="interactive-code-cells">
 <h1>Interactive code cells<a class="headerlink" href="#interactive-code-cells" title="Permalink to this heading">#</a></h1>
+<p>Some teaching material may benefit from providing access to interactive code
+that can be a demonstration on how something is calculated or computed.
+In some occasions, having access to the computer code that has generated certain
+figures can be very useful for the learning process.
+We can list different ways in which providing the code can be useful for
+different scenarios:</p>
+<ul class="simple">
+<li><p>Provide static code and the figure generated to understand or replicate by
+the user.</p></li>
+<li><p>Provide a cell of code and the generated figure that can be modified by the
+user to better understand how the changes in the code affect the outcome.</p></li>
+<li><p>Provide a widgets and buttons to interact with a figure and better understand
+how certain parameters affect the output. In this case the objective is not
+to learn how it was programmed, but to understand better a concept.</p></li>
+</ul>
+<p>We also need to differentiate how the code can be run and modified in the
+browser:</p>
+<ul class="simple">
+<li><p>The code is static and is shown just as an example.</p></li>
+<li><p>The code can be modified and run again provided that a server (another
+dedicated machine) is available to run the code.</p></li>
+<li><p>The code can be modified and run again in the client’s web browser.</p></li>
+</ul>
+<p>The previous methods of delivery have their own benefits and drawbacks.</p>
+<p><strong>Explain the drawbacks and bennefits here</strong></p>
+<ul class="simple">
+<li><p>Static: Pros: Can be easily printed in a pdf or other output artefacts. Cons:
+It does not provide interaction, which may be crucial to better understand
+some concepts.</p></li>
+<li><p>Dynamic in a server: Pros: It can be easily printed in a pdf or other output
+artefacts and the user can modify the code to better understand some
+concepts. Cons: It requires a dedicated server that somebody needs to keep up
+to date, or free of charge but may not be reliable.</p></li>
+<li><p>Dynamic in the client: Pros: A static version of the code can be printed as
+an ouptut artifact. The code can be modified and run without the need of a
+dedicated server. Cons: The webpage may need to download additional binary
+code that needs to be run in the client’s browser. The current options to
+generate figures require some obfuscated code.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="todo">
+<h1>TODO<a class="headerlink" href="#todo" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Think about examples out of the fields of computer science, mathematics or
+physics</p></li>
+</ul>
 <p>With the help of <a class="reference external" href="https://thebe.readthedocs.io/en/stable/">Thebe</a> it is
 possible to add interactive code inline. By default, this Jupyter Book has been
 configured to run Thebe with MyBinder whenever a section specifies in the Yaml
@@ -473,6 +527,22 @@ header the following tags.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Interactive code cells</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#todo">TODO</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
