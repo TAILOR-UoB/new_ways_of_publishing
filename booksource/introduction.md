@@ -5,7 +5,8 @@
 ## Brief introduction of the topic
 
 New ways of publishing provides a guide on how to elaborate teaching and
-learning material in the 21st century.
+learning material in the 21st century that can be delivered in various formats
+like static documents, dynamic presentations, videos or online material.
 
 ## Why is the topic important
 
@@ -29,14 +30,22 @@ material.
 
 ## What are the questions answered and the aim of this document
 
-The document can be used to search available technologies and tools with
-multiple examples.
-It also provides some of the most common successful use cases to adapt
+The document can be used to search available technologies and tools to publish
+your material in different forms.
+It also provides guides and examples on how to use those technologies.
+Finally, it contains some of the most common successful use cases to adapt
 previous material into a more modern form.
 
 ## Indication of method and approach followed
 
-
+The number of tools available for online authoring is growing very fast.
+This means that specific tools may be outdated in a matter of months.
+Because of that, we tried to list all the available publishing tools that have
+been well established for a minimum of time (**time to be determined**).
+Furthermore, the examples are provided in the form of external links to guides
+an tutorials in the majority of the cases.
+While in some of the most well established methods we may include guides,
+examples and use cases in this same website.
 
 ## Key message
 
