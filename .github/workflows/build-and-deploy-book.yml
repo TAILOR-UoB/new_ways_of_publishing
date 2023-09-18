@@ -17,6 +17,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    # Install LaTeX dependencies
+    - name: Install LaTeX dependencies
+      run: sudo apt-get install texlive-xetex
+
     # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
