@@ -1,13 +1,14 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: index
+defaults:
+  titlesonly: True
+  maxdepth: 2
 chapters:
 - file: introduction
 - file: teaching
 - file: collaboration-tools
-- file: howto
 - file: use-case
 - file: markdown
 - file: citations
