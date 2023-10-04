@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -181,8 +181,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="citations.html">Markdown citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Jupyter Notebook Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">MyST Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive-code/index.html">Interactive code cells</a></li>
-
+<li class="toctree-l1 has-children"><a class="reference internal" href="interactive-code/index.html">Interactive code cells</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/thebe.html">Thebe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/pyodide.html">Shiny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-code/shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development environment</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Complex code package</a></li>
 
@@ -548,73 +552,73 @@ The original code can be found in the Matplotlib documentation
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_7379c_row0_col0 {
-  background-color: #f3fabf;
-  color: #000000;
-}
-#T_7379c_row0_col1, #T_7379c_row1_col0, #T_7379c_row4_col1 {
+#T_2a603_row0_col0, #T_2a603_row0_col1, #T_2a603_row3_col0 {
   background-color: #ffffd9;
   color: #000000;
 }
-#T_7379c_row1_col1 {
-  background-color: #48b9c3;
-  color: #f1f1f1;
-}
-#T_7379c_row2_col0 {
-  background-color: #2356a4;
-  color: #f1f1f1;
-}
-#T_7379c_row2_col1 {
-  background-color: #d6efb3;
+#T_2a603_row1_col0 {
+  background-color: #6bc6be;
   color: #000000;
 }
-#T_7379c_row3_col0 {
-  background-color: #1f7ab5;
+#T_2a603_row1_col1 {
+  background-color: #40b5c4;
   color: #f1f1f1;
 }
-#T_7379c_row3_col1 {
-  background-color: #24409a;
+#T_2a603_row2_col0 {
+  background-color: #7cccbb;
+  color: #000000;
+}
+#T_2a603_row2_col1 {
+  background-color: #d5efb3;
+  color: #000000;
+}
+#T_2a603_row3_col1 {
+  background-color: #2075b3;
   color: #f1f1f1;
 }
-#T_7379c_row4_col0 {
-  background-color: #b7e3b6;
+#T_2a603_row4_col0 {
+  background-color: #59bfc0;
+  color: #000000;
+}
+#T_2a603_row4_col1 {
+  background-color: #d9f0b3;
   color: #000000;
 }
 </style>
-<table id="T_7379c">
+<table id="T_2a603">
   <caption>Weather Conditions</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_7379c_level0_col0" class="col_heading level0 col0" >Tokyo</th>
-      <th id="T_7379c_level0_col1" class="col_heading level0 col1" >Beijing</th>
+      <th id="T_2a603_level0_col0" class="col_heading level0 col0" >Tokyo</th>
+      <th id="T_2a603_level0_col1" class="col_heading level0 col1" >Beijing</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_7379c_level0_row0" class="row_heading level0 row0" >Monday</th>
-      <td id="T_7379c_row0_col0" class="data row0 col0" >Dry</td>
-      <td id="T_7379c_row0_col1" class="data row0 col1" >Dry</td>
+      <th id="T_2a603_level0_row0" class="row_heading level0 row0" >Monday</th>
+      <td id="T_2a603_row0_col0" class="data row0 col0" >Dry</td>
+      <td id="T_2a603_row0_col1" class="data row0 col1" >Dry</td>
     </tr>
     <tr>
-      <th id="T_7379c_level0_row1" class="row_heading level0 row1" >Tuesday</th>
-      <td id="T_7379c_row1_col0" class="data row1 col0" >Dry</td>
-      <td id="T_7379c_row1_col1" class="data row1 col1" >Heavy Rain</td>
+      <th id="T_2a603_level0_row1" class="row_heading level0 row1" >Tuesday</th>
+      <td id="T_2a603_row1_col0" class="data row1 col0" >Rain</td>
+      <td id="T_2a603_row1_col1" class="data row1 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_7379c_level0_row2" class="row_heading level0 row2" >Wednesday</th>
-      <td id="T_7379c_row2_col0" class="data row2 col0" >Heavy Rain</td>
-      <td id="T_7379c_row2_col1" class="data row2 col1" >Rain</td>
+      <th id="T_2a603_level0_row2" class="row_heading level0 row2" >Wednesday</th>
+      <td id="T_2a603_row2_col0" class="data row2 col0" >Rain</td>
+      <td id="T_2a603_row2_col1" class="data row2 col1" >Rain</td>
     </tr>
     <tr>
-      <th id="T_7379c_level0_row3" class="row_heading level0 row3" >Thursday</th>
-      <td id="T_7379c_row3_col0" class="data row3 col0" >Heavy Rain</td>
-      <td id="T_7379c_row3_col1" class="data row3 col1" >Heavy Rain</td>
+      <th id="T_2a603_level0_row3" class="row_heading level0 row3" >Thursday</th>
+      <td id="T_2a603_row3_col0" class="data row3 col0" >Dry</td>
+      <td id="T_2a603_row3_col1" class="data row3 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_7379c_level0_row4" class="row_heading level0 row4" >Friday</th>
-      <td id="T_7379c_row4_col0" class="data row4 col0" >Rain</td>
-      <td id="T_7379c_row4_col1" class="data row4 col1" >Dry</td>
+      <th id="T_2a603_level0_row4" class="row_heading level0 row4" >Friday</th>
+      <td id="T_2a603_row4_col0" class="data row4 col0" >Heavy Rain</td>
+      <td id="T_2a603_row4_col1" class="data row4 col1" >Rain</td>
     </tr>
   </tbody>
 </table>
@@ -743,8 +747,8 @@ By Miquel Perello Nieto
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
