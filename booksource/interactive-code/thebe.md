@@ -36,6 +36,29 @@ And by adding before the first title of the document the following code
 
 You can see the markdown source code of this page as an example.
 
+In order to start the live code with `Thebe` it is necessary to click on the
+upper right side menu the `spaceship` and the `Live code` button in the
+dropdown.
+
+![launch live code](./images/thebe_live_code.png)
+
+Then the code will be launched in your configured server (in this case
+MyBinder) and a new loading text will be shown at the top of the current page
+with several steps, building the code
+
+![thebe building](./images/thebe_building.png)
+
+then publishing
+
+![thebe publish](./images/thebe_publishing.png)
+
+and finally launching it
+
+![thebe launch](./images/thebe_launching.png)
+
+Depending on the configured server this process may take more or less time to
+complete.
+
 Then, any python code that is written in a `code-cell` with `ipython3` will
 have the option to be run (and modified) in real time by the reader.
 
