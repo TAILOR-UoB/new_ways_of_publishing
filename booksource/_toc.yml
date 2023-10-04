@@ -2,9 +2,6 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
 root: index
-defaults:
-  titlesonly: True
-  maxdepth: 2
 chapters:
 - file: introduction
 - file: teaching
@@ -22,5 +19,6 @@ chapters:
 - file: development
 - file: code-package
 - file: todos
+  #- file: wahcc.md
 - file: references
 - file: glossary

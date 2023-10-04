@@ -1,10 +1,11 @@
 # A brief history of teaching methodologies
 
 
-We are still using ancient techniques for printing teaching material in books
-and other physical documents. Woodblock printing was used in China before
-220 A.D. while Movble-type printing in China about 1040. In Europe the printing
-press was invented around 1450 and rotary printing press in 1843.
+Most teachers and academics are still using ancient techniques for printing
+teaching material in books and other physical documents. Woodblock printing was
+used in China before 220 A.D. while Movble-type printing in China about 1040.
+In Europe the printing press was invented around 1450 and rotary printing press
+in 1843.
 
 Printing capacity impressions per hour: in 1600, 200
 

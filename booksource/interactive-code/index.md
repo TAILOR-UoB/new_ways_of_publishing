@@ -51,7 +51,11 @@ The previous methods of delivery have their own benefits and drawbacks.
   generate figures require some obfuscated code.
 
 
-# TODO
+List of todos
+
+```
+Adding a section # TODO breaks all the subsections in this Chapter
+```
 
 - Think about examples out of the fields of computer science, mathematics or
   physics

@@ -64,6 +64,13 @@ Pandoc can convert each individual tex file into markdown
 pandoc -s input_file.tex -o output_file.md
 ```
 
+#### Problems
+
+- Some LaTeX commands may not be rendered
+- Tables may not be automatically rendered
+- importat command ignores the text during the conversion
+- The LaTeX directive \`\' breaks blocks
+
 ## Use case examples
 
 ### Power point slides to cross-platform
