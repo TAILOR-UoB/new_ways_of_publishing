@@ -57,7 +57,10 @@ and finally launching it
 ![thebe launch](./images/thebe_launching.png)
 
 Depending on the configured server this process may take more or less time to
-complete.
+complete, and could even fail to launch with the following message
+
+![thebe failed](./images/thebe_failed.png)
+
 
 Then, any python code that is written in a `code-cell` with `ipython3` will
 have the option to be run (and modified) in real time by the reader.

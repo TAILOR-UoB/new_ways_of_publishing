@@ -63,3 +63,14 @@ WebAssembly is a binary format for compiled programs.
 - Simply Logical: Intelligent Reasoning by Example (Fully Interactive
   Online Edition) {cite}`flach2022simply` of the Simply Logical textbook
   {cite}`flach1994simply`.
+
+
+## More
+
+Check the following resources for additional tools and examples that can be
+added into this document
+
+-Streamlit vs. Dash vs. Shiny vs. Voila vs. Flask vs. Jupyter
+Comparing data dashboarding tools and frameworks [^1]
+
+[^1]: https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila

@@ -31,7 +31,9 @@ Here is a note
 
 It will be rendered in a special box when you build your book.
 
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
+Here is an inline directive to refer to a document in this section
+`` {doc}`citations` `` wich renders as {doc}`citations`. We can also use `../`
+to navigate to parent sections like `` {doc}`../interactive-server/index` ``.
 
 ## Diagrams
 
@@ -45,7 +47,6 @@ At this moment, Mermaid is not working in this Jupyter Book.
 We have installed an extension to draw diagrams from text using `Mermaid`. The
 following is an example of the code necessary to generate the diagram below.
 
-````md
 ```{mermaid}
 flowchart TD
   A[square node A] --> B(round edges node B)
@@ -55,7 +56,6 @@ flowchart TD
   B --> F((circle F))
   C --> F
 ```
-````
 
 ```{warning}
   I have removed the directive {mermaid} in the following examples to avoid
@@ -223,13 +223,15 @@ At this moment, UML is not working in this Jupyter Book. I removed the
 directive {uml} to avoid compilation Warnings.
 ```
 
-```
+````
+```{uml}
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: Another authentication Response
 ```
+````
 
 ### Wavedrom
 

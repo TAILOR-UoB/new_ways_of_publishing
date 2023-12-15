@@ -1,8 +1,7 @@
 jupyter-book==0.15.1
 matplotlib==3.7.2
 numpy==1.25.2
-ghp-import==2.1.0
-ipykernel==6.25.2
+ghp-import==2.1.0 ipykernel==6.25.2
 pandas==2.1.0
 docutils==0.18.1
 plotly==5.16.1

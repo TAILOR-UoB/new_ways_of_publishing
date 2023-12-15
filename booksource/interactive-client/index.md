@@ -8,7 +8,7 @@ jupytext:
     jupytext_version: 1.10.3
 ---
 
-# Interactive code cells
+# Interactivity within the client
 
 Some teaching material may benefit from providing access to interactive code
 that can be a demonstration on how something is calculated or computed.

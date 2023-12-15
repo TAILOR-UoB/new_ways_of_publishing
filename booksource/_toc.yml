@@ -3,21 +3,30 @@
 format: jb-book
 root: index
 chapters:
-- file: introduction
-- file: teaching
-- file: collaboration-tools
-- file: use-case
-- file: markdown
-- file: citations
-- file: notebooks
-- file: markdown-notebooks
-- file: interactive-code/index
+- file: introduction/index
   sections:
-  - file: interactive-code/thebe
-  - file: interactive-code/pyodide
-  - file: interactive-code/shinylive
-- file: development
-- file: code-package
+  - file: introduction/teaching
+  - file: introduction/type-of-content
+  - file: introduction/collaboration-tools
+  - file: introduction/development
+- file: static-sites/index
+  sections:
+  - file: static-sites/markdown
+  - file: static-sites/citations
+- file: interactive-server/index
+  sections:
+  - file: interactive-server/notebooks
+  - file: interactive-server/markdown-notebooks
+  - file: interactive-server/code-package
+  - file: interactive-server/thebe
+- file: interactive-client/index
+  sections:
+  - file: interactive-client/pyodide
+  - file: interactive-client/interactive-r
+  - file: interactive-client/plotly
+  - file: interactive-client/ipywidgets
+  - file: interactive-client/shinylive
+- file: use-case
 - file: todos
   #- file: wahcc.md
 - file: references
