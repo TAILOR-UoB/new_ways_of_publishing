@@ -30,7 +30,7 @@ jobs:
       with:
         packages: |
           any::ggplot2 
-          any::irkernel
+          any::IRkernel
     - name: Print Rscript version
       run: Rscript -e 'print(version)'
 
