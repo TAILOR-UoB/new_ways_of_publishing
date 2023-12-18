@@ -29,6 +29,7 @@ jobs:
       - uses: r-lib/actions/setup-renv@v2
         with:
           profile: '"shiny"'
+      - run: Rscript -e 'print(version)'
 
     # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
