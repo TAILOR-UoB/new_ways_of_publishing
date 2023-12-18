@@ -21,6 +21,17 @@ jobs:
     - name: Install LaTeX dependencies
       run: sudo apt-get install texlive-xetex poppler-utils pnmtopng
 
+    # Install and Setup R
+    - name: Install and Setup R
+      steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '3.6.3' # The R version to download (if necessary) and use. 
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::rcmdcheck
+
     # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
