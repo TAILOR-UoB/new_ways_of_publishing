@@ -34,7 +34,7 @@ jobs:
     - name: Print Rscript version
       run: Rscript -e 'print(version)'
     - name: Install IRkernel with deault name ir
-      run: Rscript -e 'IRkernel::installspec()'
+      run: R -e 'IRkernel::installspec()'
 
     # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
