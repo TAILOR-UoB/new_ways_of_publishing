@@ -12,6 +12,7 @@ chapters:
 - file: static-sites/index
   sections:
   - file: static-sites/markdown
+  - file: static-sites/recordings
   - file: static-sites/citations
 - file: interactive-server/index
   sections:
