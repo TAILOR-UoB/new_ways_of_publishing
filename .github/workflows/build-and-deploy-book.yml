@@ -33,8 +33,6 @@ jobs:
           any::IRkernel
     - name: Print Rscript version
       run: Rscript -e 'print(version)'
-    - name: Install IRkernel with deault name ir
-      run: Rscript -e 'IRkernel::installspec()'
 
     # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
@@ -47,9 +45,9 @@ jobs:
     - name: Create Python kernel
       run: python -m ipykernel install --user --name book-python
 
-    - name: Create Python kernel
-      run: |
-        python -m ipykernel install --user --name book-python
+    # Install the R kernel in Jupyter
+    - name: Install IRkernel with deault name ir
+      run: R -e 'IRkernel::installspec()'
 
     # Build the book
     - name: Build the book
