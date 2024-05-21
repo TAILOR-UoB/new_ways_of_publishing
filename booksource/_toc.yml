@@ -5,9 +5,12 @@ root: index
 chapters:
 - file: introduction/index
   sections:
+  - file: introduction/rethinking-papers
   - file: introduction/teaching
   - file: introduction/type-of-content
   - file: introduction/collaboration-tools
+  - file: introduction/open-research
+  - file: introduction/licenses
   - file: introduction/development
 - file: static-sites/index
   sections:

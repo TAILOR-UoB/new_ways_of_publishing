@@ -58,6 +58,18 @@ numpy, pandas, scipy, matplotlib, and scikit-learn.
 WebAssembly is a binary format for compiled programs.
 - [Shinylive: Shiny + WebAssembly](https://shiny.posit.co/py/docs/shinylive.html):
 
+
+## Online communication
+
+- Microsoft Teams
+- Zoom
+- [Kumospace](https://www.kumospace.com/) offers virtual locations to interact
+  with other users online.
+
+## Text editors
+
+- [HackMD](https://hackmd.io/)
+
 ## Examples
 
 - Simply Logical: Intelligent Reasoning by Example (Fully Interactive
@@ -72,5 +84,36 @@ added into this document
 
 -Streamlit vs. Dash vs. Shiny vs. Voila vs. Flask vs. Jupyter
 Comparing data dashboarding tools and frameworks [^1]
+- Check [Researchers14](https://www.researchers14.ac.uk/) a group of
+  Universities representing 65% of research communities in the UK that shares
+  good practices in research development.
 
 [^1]: https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila
+
+
+- Project management tools for planning, assigning and tracking tasks like
+  Trello, Airtable, GitHub project, Todoist.
+- Publishing systems
+- Computing platforms
+- Web-based conference management softtware systems Microsoft Conference
+  Management Toolkit, EasyChair, OpenReview
+- Sharing documents Microsoft SharePoint and One Drive, Google drive, Dropbox,
+  Slack
+- Concurrent text editors Overleaf, Google docs, Microsoft Sharepoint
+- Version control GitHub, GitLab, BitBucket
+- Real time communication some with videocall Slack, Microsoft Teams
+- Video edition
+- Public databases: huggingface, OpenML, UCI Machine Learning Repository,
+  Hugging Face a platform for collaboration among machine learning
+  practitioners by sharing datasets, models and applications.
+- Search engines for scientific publications: Google Scholar, PubMed, PubPeer,
+  Semantic Scholar, DBLP, Elsevier Scopus, Microsoft Academic
+- Text search engines: Google, Bing, Yahoo!, Yandex, DuckDuckGo, Baidu 
+- Interactive and graphical search engines: Litmaps, scite, 
+- Notes taking: Obsidian, HackMD, CodiMD (host your own version of HackMD),
+  GitBook, Notion, Evernote, Todoist, 
+  - Notion: No offline support, very flexible, but not the best for each of its
+    functionalities.
+  - Obsidian: Offline but paid online sync, the canvas functionality allows you
+    to organise ideas between them in a virtual plane that resembles a physical
+    surface.
