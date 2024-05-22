@@ -1,5 +1,8 @@
 # Recommended licenses for Research
 
+Check the Open Source Initiative (OSI) which has a list of OSI Approved Licenses
+https://opensource.org/licenses
+
 ## Creative Commons
 
 Source of the following content https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons#:~:text=The%20Creative%20Commons%20set%20of,open%20access%20papers%20and%20books.
