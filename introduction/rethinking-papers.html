@@ -1,0 +1,892 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Rethinking papers &#8212; New ways of Publishing</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/rethinking-papers';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A brief history of teaching methodologies" href="teaching.html" />
+    <link rel="prev" title="Introduction" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="New ways of Publishing - Home"/>
+    <script>document.write(`<img src="../_static/logo.svg" class="logo__image only-dark" alt="New ways of Publishing - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    New Ways of Publishing: A Roadmap to Authoring Online Training Material
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Introduction</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Rethinking papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching.html">A brief history of teaching methodologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type-of-content.html">Type of content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaboration-tools.html">Collaboration tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-research.html">Open Research</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html">Recommended licenses for Research</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development.html">Development environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../static-sites/index.html">Static sites</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../static-sites/markdown.html">Markdown Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../static-sites/recordings.html">Video recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../static-sites/citations.html">Markdown citations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-server/index.html">Interactivity with a server</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/notebooks.html">Jupyter Notebook Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/markdown-notebooks.html">MyST Markdown Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/code-package.html">Complex code package</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/thebe.html">Thebe</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-client/index.html">Interactivity within the client</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-client/pyodide.html">Shiny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-client/interactive-r.html">Examples with R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-client/plotly.html">Plotly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-client/ipywidgets.html">IPyWidgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-client/shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../use-case.html">Use case scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todos.html">TODOs</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/introduction/rethinking-papers.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Fintroduction/rethinking-papers.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Rethinking papers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-defense-of-the-paper-by-owen-lockwood">In Defense of the Paper by Owen Lockwood</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curating-publications-as-artefacts-exploring-machine-learning-research-in-an-interactive-virtual-museum">Curating Publications as Artefacts — Exploring Machine Learning Research in an Interactive Virtual Museum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distill">Distill</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-research-communication-via-illustrated-and-interactive-web-articles">Machine learning research communication via illustrated and interactive web articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ila-compilable-markdown-for-linear-algebra">I❤LA – Compilable Markdown for Linear Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-only-write-thrice-creating-documents-computational-notebooks-and-presentations-from-a-single-source">You Only Write Thrice – Creating Documents, Computational Notebooks and Presentations From a Single Source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhibit-converting-my-phd-thesis-to-html">Exhibit – Converting my PhD thesis to HTML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrammatic-summaries-for-neural-architectures">Diagrammatic summaries for neural architectures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modulom-disseminating-deep-learning-research-with-modular-output-mathematics">ModulOM – Disseminating Deep Learning Research with Modular Output Mathematics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spices-survey-papers-as-interactive-cheatsheet-embeddings">SPICES – Survey papers as interactive cheatsheet embeddings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-augmenting-the-references-section-with-a-citation-network-visualization">On augmenting the references section with a citation network visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fairness-and-friends">Fairness and Friends</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-dissemination-via-comic-strip-a-case-study-with-sacrebleu">Scientific dissemination via comic strip – A case study with SacreBLEU</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convolution-can-incur-foveation-effects">Convolution Can Incur Foveation Effects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-blogging-with-automunge">Open-source blogging with Automunge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mimosa-manifesto">The Mimosa Manifesto</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#octopus">Octopus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-snapshot-of-the-academic-research-culture-in-2023-and-how-it-might-be-improved">A snapshot of the academic research culture in 2023 and how it might be improved</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-media-for-understanding-ml-methods-a-case-study-on-graph-neural-networks">Interactive Media for Understanding ML Methods – A Case-Study on Graph Neural Networks</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="rethinking-papers">
+<h1>Rethinking papers<a class="headerlink" href="#rethinking-papers" title="Permalink to this heading">#</a></h1>
+<p>Notes from ICLR 2021 Workshop Rethinking ML Papers</p>
+<p><a class="reference external" href="https://rethinkingmlpapers.github.io/papers/">https://rethinkingmlpapers.github.io/papers/</a></p>
+<section id="in-defense-of-the-paper-by-owen-lockwood">
+<h2>In Defense of the Paper by Owen Lockwood<a class="headerlink" href="#in-defense-of-the-paper-by-owen-lockwood" title="Permalink to this heading">#</a></h2>
+<p><span id="id1">[<a class="reference internal" href="../references.html#id10">Loc21</a>]</span></p>
+<ul class="simple">
+<li><p>Explosion of papers in Machine Learning since 2012 (possibly due to
+Artificial Neural Networks).</p></li>
+<li><p>Publication process has been broken and requires a new reconceptualization</p></li>
+<li><p>Common problems</p>
+<ol class="arabic simple">
+<li><p>Publish or perish (Mental health impact <span id="id2">[<a class="reference internal" href="../references.html#id6" title="Lindsay Bira, Teresa Evans, and Nathan Vanderford. Mental health in academia: An invisible crisis. Physiology News, pages 32–35, July 2019. URL: https://www.physoc.org/magazine-articles/mental-health-in-academia-an-invisible-crisis/ (visited on 2024-05-17), doi:10.36866/pn.115.32.">BEV19</a>]</span>, research quality
+<span id="id3">[<a class="reference internal" href="../references.html#id5" title="Decca Aitkenhead. Peter Higgs: I wouldn't be productive enough for today's academic system. The Guardian, December 2013. URL: https://www.theguardian.com/science/2013/dec/06/peter-higgs-boson-academic-system (visited on 2024-05-17).">Ait13</a>]</span>).</p></li>
+<li><p>Explainability (missattribution <span id="id4">[<a class="reference internal" href="../references.html#id7" title="Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup, and David Meger. Deep Reinforcement Learning That Matters. Proceedings of the AAAI Conference on Artificial Intelligence, April 2018. Number: 1. URL: https://ojs.aaai.org/index.php/AAAI/article/view/11694 (visited on 2024-05-17), doi:10.1609/aaai.v32i1.11694.">HIB+18</a>]</span>, HARking
+(Hypothesizing after the resulst are known) or poor
+methodological practices <span id="id5">[<a class="reference internal" href="../references.html#id8" title="Norbert L. Kerr. HARKing: Hypothesizing After the Results are Known. Personality and Social Psychology Review, 2(3):196–217, August 1998. Publisher: SAGE Publications Inc. URL: https://doi.org/10.1207/s15327957pspr0203_4 (visited on 2024-05-17), doi:10.1207/s15327957pspr0203_4.">Ker98</a>]</span>, <span id="id6">[<a class="reference internal" href="../references.html#id9" title="Oguzhan Gencoglu, Mark van Gils, Esin Guldogan, Chamin Morikawa, Mehmet Süzen, Mathias Gruber, Jussi Leinonen, and Heikki Huttunen. HARK Side of Deep Learning – From Grad Student Descent to Automated Machine Learning. April 2019. arXiv:1904.07633 [cs]. URL: http://arxiv.org/abs/1904.07633 (visited on 2024-05-17), doi:10.48550/arXiv.1904.07633.">GvGG+19</a>]</span>.</p></li>
+<li><p>Interpretability (errors, obfuscated, lack of review incentives)</p></li>
+</ol>
+</li>
+<li><p>Accessibility vs inclusivity</p></li>
+<li><p>Hybrid conferences</p></li>
+<li><p>Democratize compute resources</p></li>
+<li><p>Break non-specialised conferences into specialised ones</p></li>
+<li><p>Hypothesis lock box (in other fields)</p></li>
+<li><p>pre-registration</p></li>
+<li><p>Improve reviewing system (e.g. paying, rating, eliminate double blind)</p></li>
+</ul>
+<p>References</p>
+<ul class="simple">
+<li><p>Previous work Sculley et al. 2018, review with case studies o problems and
+solutions</p></li>
+<li><p>Lipton &amp; Steinhardt 2018 overview of existing problems but not much about
+solutions</p></li>
+</ul>
+</section>
+<section id="curating-publications-as-artefacts-exploring-machine-learning-research-in-an-interactive-virtual-museum">
+<h2>Curating Publications as Artefacts — Exploring Machine Learning Research in an Interactive Virtual Museum<a class="headerlink" href="#curating-publications-as-artefacts-exploring-machine-learning-research-in-an-interactive-virtual-museum" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Check publication cycle by <span id="id7">[<a class="reference internal" href="../references.html#id18" title="Bo‐Christer Björk. A lifecycle model of the scientific communication process. Learned Publishing, 18(3):165–176, July 2005. URL: https://onlinelibrary.wiley.com/doi/10.1087/0953151054636129 (visited on 2024-05-20), doi:10.1087/0953151054636129.">Bjo05</a>]</span></p>
+<ul>
+<li><p>Browsing existing scientific knowledge</p></li>
+<li><p>Performing research</p></li>
+<li><p>Convert into publication format</p></li>
+<li><p>Communicating and disseminating the research</p></li>
+<li><p>Adding new scientific knowledge</p></li>
+<li><p>Repeat</p></li>
+</ul>
+</li>
+<li><p>Check <span id="id8">[<a class="reference internal" href="../references.html#id19" title="Bo-Christer Björk. A Study of Innovative Features in Scholarly Open Access Journals. Journal of Medical Internet Research, 13(4):e115, December 2011. URL: http://www.jmir.org/2011/4/e115/ (visited on 2024-05-20), doi:10.2196/jmir.1802.">Bjo11</a>]</span> for innovative publication formats including
+web and hyperlinks.</p></li>
+<li><p>Check the initiative of the Visualization for AI Explainability workshops,
+next one 7th workshop at IEEE VIS in St. Pete Beach, Florida. Which requires
+blogposts as a submission method.</p></li>
+</ul>
+</section>
+<section id="distill">
+<h2>Distill<a class="headerlink" href="#distill" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>It was a scientific journal that operated between 2016 and 2021.</p></li>
+<li><p>The editorial team announced an indefinite hiatus because of frictions
+between being a journal but encouraging authors self-publishing habits.</p></li>
+<li><p>Distill can still be used as a template <a class="reference external" href="https://github.com/distillpub/template">distillpub/template</a></p></li>
+<li><p>Distill is based on HTML, CSS and JavaScript and requires loading the distill
+JavaScript library in the header.</p></li>
+</ul>
+</section>
+<section id="machine-learning-research-communication-via-illustrated-and-interactive-web-articles">
+<h2>Machine learning research communication via illustrated and interactive web articles<a class="headerlink" href="#machine-learning-research-communication-via-illustrated-and-interactive-web-articles" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="ila-compilable-markdown-for-linear-algebra">
+<h2>I❤LA – Compilable Markdown for Linear Algebra<a class="headerlink" href="#ila-compilable-markdown-for-linear-algebra" title="Permalink to this heading">#</a></h2>
+<p>Markdown text that can be converted into MathJax, Python, C++, LaTeX and
+MATLAB.</p>
+</section>
+<section id="you-only-write-thrice-creating-documents-computational-notebooks-and-presentations-from-a-single-source">
+<h2>You Only Write Thrice – Creating Documents, Computational Notebooks and Presentations From a Single Source<a class="headerlink" href="#you-only-write-thrice-creating-documents-computational-notebooks-and-presentations-from-a-single-source" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="exhibit-converting-my-phd-thesis-to-html">
+<h2>Exhibit – Converting my PhD thesis to HTML<a class="headerlink" href="#exhibit-converting-my-phd-thesis-to-html" title="Permalink to this heading">#</a></h2>
+<p>Some of the main drawbacks of pdf publications</p>
+<ul class="simple">
+<li><p>Designed for printing</p></li>
+<li><p>Difficult to browse in some devices</p></li>
+<li><p>Huge document with multiple pages, difficult to move between sections</p></li>
+</ul>
+<p>Bennefits of HTML</p>
+<ul class="simple">
+<li><p>Can be browsed in multiple devices</p></li>
+<li><p>Sections divided into smaller pages that are easy to navigate</p></li>
+</ul>
+<p>How can LaTeX be converted into html?</p>
+<ul class="simple">
+<li><p>TeX4ht very hard (30 to 40 hours)</p></li>
+<li><p>Need more automatic tools</p></li>
+</ul>
+</section>
+<section id="diagrammatic-summaries-for-neural-architectures">
+<h2>Diagrammatic summaries for neural architectures<a class="headerlink" href="#diagrammatic-summaries-for-neural-architectures" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="modulom-disseminating-deep-learning-research-with-modular-output-mathematics">
+<h2>ModulOM – Disseminating Deep Learning Research with Modular Output Mathematics<a class="headerlink" href="#modulom-disseminating-deep-learning-research-with-modular-output-mathematics" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="spices-survey-papers-as-interactive-cheatsheet-embeddings">
+<h2>SPICES – Survey papers as interactive cheatsheet embeddings<a class="headerlink" href="#spices-survey-papers-as-interactive-cheatsheet-embeddings" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Invitation notes to researchers from different fields</p></li>
+<li><p>Collection of important problems to be solved</p></li>
+<li><p>Source material for faster, better, and up-to-date teaching</p></li>
+<li><p>Agenda for research directions</p></li>
+<li><p>Concise list of citations</p></li>
+</ul>
+<p>Good survey</p>
+<ul class="simple">
+<li><p>Balance between own and community’s contributions</p></li>
+<li><p>Non-biased narrative</p></li>
+</ul>
+<p>Interesting work to look at</p>
+<ul class="simple">
+<li><p>Proceedings as 2D doc2vec embeddings</p></li>
+<li><p>Check awesome github repositories</p></li>
+<li><p>Cheatsheets</p></li>
+</ul>
+<p>Important aspects of surveys</p>
+<ul class="simple">
+<li><p>Most of the contributions are in the form of a graph G(V,E)</p></li>
+<li><p>WISE rule of reading papers</p>
+<ul>
+<li><p>Why does this paper exist?</p></li>
+<li><p>Iconoclasm: Resist attribution of importance of the paper based on authors</p></li>
+<li><p>Situanality / semantic neighborhood: Find context of the paper</p></li>
+<li><p>Experimental revalidation: check experiments and results</p></li>
+</ul>
+</li>
+</ul>
+<p>SPICES method to write a good survey paper</p>
+<ul class="simple">
+<li></li>
+</ul>
+</section>
+<section id="on-augmenting-the-references-section-with-a-citation-network-visualization">
+<h2>On augmenting the references section with a citation network visualization<a class="headerlink" href="#on-augmenting-the-references-section-with-a-citation-network-visualization" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="fairness-and-friends">
+<h2>Fairness and Friends<a class="headerlink" href="#fairness-and-friends" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="scientific-dissemination-via-comic-strip-a-case-study-with-sacrebleu">
+<h2>Scientific dissemination via comic strip – A case study with SacreBLEU<a class="headerlink" href="#scientific-dissemination-via-comic-strip-a-case-study-with-sacrebleu" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="convolution-can-incur-foveation-effects">
+<h2>Convolution Can Incur Foveation Effects<a class="headerlink" href="#convolution-can-incur-foveation-effects" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="open-source-blogging-with-automunge">
+<h2>Open-source blogging with Automunge<a class="headerlink" href="#open-source-blogging-with-automunge" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="the-mimosa-manifesto">
+<h2>The Mimosa Manifesto<a class="headerlink" href="#the-mimosa-manifesto" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Platform to make questions, hypothesis and answers</p></li>
+<li><p>People can contribute with their results</p></li>
+<li><p>People can answer the question which adds to the count, and can provide
+evidences that are incorporated into the explanation.</p></li>
+</ul>
+<p>Similar platforms</p>
+<ul class="simple">
+<li><p>Hypergraph: peer to peer platform to share results to own network and export
+paper</p></li>
+<li><p>Octopus: Online publishing platform for scholarly research. Funded by UKRI.</p></li>
+<li><p>Mimosa:</p></li>
+</ul>
+<section id="octopus">
+<h3>Octopus<a class="headerlink" href="#octopus" title="Permalink to this heading">#</a></h3>
+<p>Octopus is managed by Jisc and Octopus Publishing CIC.
+<a class="reference external" href="https://www.jisc.ac.uk/">Jisc</a> is a not-for-profit company focused ontertiary
+education, research and innovation based in Bristol, London, Manchester, Oxford
+and other UK locations. The research published in
+Octopus is open access licensed and the platform is published under the open
+source license GPLv3. All Octopus publications have a CC-BY 4.0 license.</p>
+<ul class="simple">
+<li><p>Designed to publish all the research work from theory, data to analysis.</p></li>
+<li><p>Requires the following information:</p>
+<ul>
+<li><p>Title</p></li>
+<li><p>Text and references</p></li>
+<li><p>List of co-authors and emails</p></li>
+<li><p>Funders and acknowledgements</p></li>
+<li><p>Conflicts of interest</p></li>
+<li><p>Institutional affiliations</p></li>
+<li><p>Related topics and/or publications already in Octopus</p></li>
+</ul>
+</li>
+</ul>
+<p>The publication types that are currently supported are</p>
+<ul class="simple">
+<li><p><strong>Research problem</strong>: Propose a problem or question and what it is currently
+known about it.</p></li>
+<li><p><strong>Rationale/Hypothesis</strong>: A potential solution to a problem that needs to be
+validated.</p></li>
+<li><p><strong>Method</strong>: A description of a process that can be used to test a hypothesis.
+It can benefit from the definition of a protocol in
+<span class="xref myst">protocols.io</span>.</p></li>
+<li><p><strong>Results</strong>: Raw data or summarised results collected following a previous
+method. The analysis of results needs to be reported in a separate
+publication type. The data can not be hosted in Octopus and needs to be
+linked in a specialist repository.</p></li>
+<li><p><strong>Analysis</strong>: Manipulations and interpretations of results (e.g. statistical
+analysis).</p></li>
+<li><p><strong>Interpretation</strong>: Conclusions that can be drawn from an analysis.</p></li>
+<li><p><strong>Real World Application</strong>: How findings have been applied in a real world
+solution (e.g. case studies).</p></li>
+<li><p><strong>Peer Review</strong>: Careful constructive critique to a previously published
+work potentially requiring relevant references. Authors of the original work
+can reversion based on the peer review including accreditation.</p></li>
+</ul>
+</section>
+</section>
+<section id="a-snapshot-of-the-academic-research-culture-in-2023-and-how-it-might-be-improved">
+<h2>A snapshot of the academic research culture in 2023 and how it might be improved<a class="headerlink" href="#a-snapshot-of-the-academic-research-culture-in-2023-and-how-it-might-be-improved" title="Permalink to this heading">#</a></h2>
+<p><span id="id9">[<a class="reference internal" href="../references.html#id22" title="Pen-Yuan Hsing, Mariia Tukanova, Alex Freeman, Marcus Munafo, and Jackie Thompson. A snapshot of the academic research culture in 2023 and how it might be improved. Technical Report, Octopus, October 2023. URL: https://zenodo.org/records/8165704 (visited on 2024-05-21), doi:10.5281/zenodo.8165704.">HTF+23</a>]</span></p>
+<ul class="simple">
+<li><p>A work with Octopus and how it can fix some of the current issues with
+academic research.</p></li>
+<li><p>Division of research process into 8 steps that can be published independently
+and referenced (interconnected).</p></li>
+<li><p>Principle of open research as defined by the Open Knowledge Foundation:
+``Knowledge is open if anyone [has the freedoms] to access, use, modify, and
+share it – subject, at most, to measures that preserve provenance and
+openness.’’</p></li>
+<li><p>Other consideration Findable, Accessible, Interoperable, and Reusable (FAIR)
+principles for data. <span id="id10">[<a class="reference internal" href="../references.html#id23" title="Mark D. Wilkinson, Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, Jan Willem Boiten, Luiz Bonino da Silva Santos, Philip E. Bourne, Jildau Bouwman, Anthony J. Brookes, Tim Clark, Mercè Crosas, Ingrid Dillo, Olivier Dumon, Scott Edmunds, Chris T. Evelo, Richard Finkers, Alejandra Gonzalez-Beltran, Alasdair J.G. Gray, Paul Groth, Carole Goble, Jeffrey S. Grethe, Jaap Heringa, Peter A.C. t Hoen, Rob Hooft, Tobias Kuhn, Ruben Kok, Joost Kok, Scott J. Lusher, Maryann E. Martone, Albert Mons, Abel L. Packer, Bengt Persson, Philippe Rocca-Serra, Marco Roos, Rene van Schaik, Susanna Assunta Sansone, Erik Schultes, Thierry Sengstag, Ted Slater, George Strawn, Morris A. Swertz, Mark Thompson, Johan Van Der Lei, Erik Van Mulligen, Jan Velterop, Andra Waagmeester, Peter Wittenburg, Katherine Wolstencroft, Jun Zhao, and Barend Mons. The fair guiding principles for scientific data management and stewardship. Scientific Data 2016 3:1, 3:1-9, 3 2016. URL: https://www.nature.com/articles/sdata201618, doi:10.1038/sdata.2016.18.">WDA+16</a>]</span></p></li>
+<li><p>The peer-review process encourages not sharing ongoing research until it has
+been curated, submitted and successfully accepted for publication. This may
+lead to hidding information, or data manipulation to achieve results that are
+accepted by a high impact publisher.</p></li>
+<li><p>Most prominent barriers for not sharing research reported during interviews
+and survey:</p>
+<ul>
+<li><p>Lack of time which is redirected to publishing on high impact journals,
+networking, and other activities that directly benefit their careers.</p></li>
+<li><p>Fear of scooping in a highly competitive research culture. The credit is
+commonly obtained from the final publication, and the process to reach is
+not valued (e.g. proposing an hypothesis), while institutions value high
+and dramatic stories which are not possible in the earlier stages of
+a research process.</p></li>
+<li><p>There is an inequitable access to the resources that is being led by rich
+countries. Other researchers with no funding are excluded from the
+discussions on how the research should be led.</p></li>
+</ul>
+</li>
+<li><p>Preasure that lead to questionable research practices (QRPs)</p>
+<ul>
+<li><p>Focus on the quantity of published papers rather than quality.</p></li>
+<li><p>Presure to obtain novel and positive results (hidding unsuccessful
+research).</p></li>
+</ul>
+</li>
+<li><p>Factors that lead to certain topics and types of research being favoured</p>
+<ul>
+<li><p>No clear factors were found, but the relation to the QRPs mentioned above
+show that positive results and easy to publish articles are favoured.</p></li>
+</ul>
+</li>
+<li><p>More openly collaborative ways of thinking and working</p>
+<ul>
+<li><p>Focus on the process and not on the output.</p></li>
+<li><p>Value negative or null results.</p></li>
+<li><p>Recognise different forms of contributions.</p></li>
+<li><p>Recognise other type of work done by the authors like teaching,
+administration, fundraising, mentoring…</p></li>
+<li><p>Assessment should be scrutinised and assessed.</p></li>
+<li><p>Necessity of feedback during the full process, as at the moment the
+feedback is obtained in the last stages of publication. On the other hand,
+early feedback could be useful but it is perceived as a potential risk for
+retribution.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="interactive-media-for-understanding-ml-methods-a-case-study-on-graph-neural-networks">
+<h2>Interactive Media for Understanding ML Methods – A Case-Study on Graph Neural Networks<a class="headerlink" href="#interactive-media-for-understanding-ml-methods-a-case-study-on-graph-neural-networks" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "TAILOR-UoB/new_ways_of_publishing",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="teaching.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">A brief history of teaching methodologies</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-defense-of-the-paper-by-owen-lockwood">In Defense of the Paper by Owen Lockwood</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curating-publications-as-artefacts-exploring-machine-learning-research-in-an-interactive-virtual-museum">Curating Publications as Artefacts — Exploring Machine Learning Research in an Interactive Virtual Museum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distill">Distill</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-research-communication-via-illustrated-and-interactive-web-articles">Machine learning research communication via illustrated and interactive web articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ila-compilable-markdown-for-linear-algebra">I❤LA – Compilable Markdown for Linear Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-only-write-thrice-creating-documents-computational-notebooks-and-presentations-from-a-single-source">You Only Write Thrice – Creating Documents, Computational Notebooks and Presentations From a Single Source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhibit-converting-my-phd-thesis-to-html">Exhibit – Converting my PhD thesis to HTML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrammatic-summaries-for-neural-architectures">Diagrammatic summaries for neural architectures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modulom-disseminating-deep-learning-research-with-modular-output-mathematics">ModulOM – Disseminating Deep Learning Research with Modular Output Mathematics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spices-survey-papers-as-interactive-cheatsheet-embeddings">SPICES – Survey papers as interactive cheatsheet embeddings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-augmenting-the-references-section-with-a-citation-network-visualization">On augmenting the references section with a citation network visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fairness-and-friends">Fairness and Friends</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-dissemination-via-comic-strip-a-case-study-with-sacrebleu">Scientific dissemination via comic strip – A case study with SacreBLEU</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convolution-can-incur-foveation-effects">Convolution Can Incur Foveation Effects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-blogging-with-automunge">Open-source blogging with Automunge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mimosa-manifesto">The Mimosa Manifesto</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#octopus">Octopus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-snapshot-of-the-academic-research-culture-in-2023-and-how-it-might-be-improved">A snapshot of the academic research culture in 2023 and how it might be improved</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-media-for-understanding-ml-methods-a-case-study-on-graph-neural-networks">Interactive Media for Understanding ML Methods – A Case-Study on Graph Neural Networks</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Miquel Perello Nieto
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
