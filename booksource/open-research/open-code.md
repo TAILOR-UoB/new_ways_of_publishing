@@ -1,4 +1,4 @@
-# Recommended licenses for Research
+# Open Code
 
 Check the Open Source Initiative (OSI) which has a list of OSI Approved Licenses
 https://opensource.org/licenses

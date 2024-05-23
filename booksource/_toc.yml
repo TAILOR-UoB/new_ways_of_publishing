@@ -9,9 +9,13 @@ chapters:
   - file: introduction/teaching
   - file: introduction/type-of-content
   - file: introduction/collaboration-tools
-  - file: introduction/open-research
-  - file: introduction/licenses
   - file: introduction/development
+- file: open-research/index
+  sections:
+  - file: open-research/open-access
+  - file: open-research/fair-data
+  - file: open-research/open-code
+  - file: open-research/research-profile
 - file: static-sites/index
   sections:
   - file: static-sites/markdown

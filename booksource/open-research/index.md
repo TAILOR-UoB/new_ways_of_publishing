@@ -29,20 +29,9 @@ Usually covers
 - How will the data be stored and for how long it will be maintained.
 - What data will **not** be shared, or any period of exclusive use.
 
-### Open Access
-
-Open Access is a broad international movement that specifies a set of principle
-to make research free of access and online. 
-
-```{figure} images/open-access-logo-png-transparent.png
-:name: figure-open-access
-
-Open Access logo
-```
-
-
-
 ## Additional sources
+
+Additional sources of information can be found in the following links:
 
 - [Open Research at Bristol
   (UOB)](https://openresearchbristol.blogs.bristol.ac.uk/)

@@ -91,12 +91,8 @@ tables, figures, mathematical typesetting and bibliography management.
 Full publication process from the generation of the input artefacts to the end
 result of a publication output.
 
-**Term X**
 
-Description of the term X
-
-
-Other available glossaries of related terms.
+## Other available glossaries of related terms.
 
 - [Jupyter{book}](https://jupyterbook.org/en/stable/reference/glossary.html)
 
