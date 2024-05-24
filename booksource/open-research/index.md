@@ -1,6 +1,8 @@
 # Open Research
 
-Open Research is 
+Open Research is a set of principles to promote sharing research outcomes in a
+way that makes research reproducible and more transparent. There are at least
+four aspects that need to be considered:
 
 - Open Access of publications (Green, Gold, Hybrid, Diamond)
 - FAIR Data (Findable Accessible Interoperable Reusable)
@@ -29,7 +31,7 @@ Usually covers
 - How will the data be stored and for how long it will be maintained.
 - What data will **not** be shared, or any period of exclusive use.
 
-## Additional sources
+## Additional information
 
 Additional sources of information can be found in the following links:
 
