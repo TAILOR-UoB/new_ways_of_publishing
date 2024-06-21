@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Interactivity with a server &#8212; New ways of Publishing</title>
+    <title>Appendix: Development environment &#8212; New ways of Publishing</title>
   
   
   
@@ -68,11 +68,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'interactive-server/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/development';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Jupyter Notebook Files" href="notebooks.html" />
-    <link rel="prev" title="Markdown citations" href="../static-sites/citations.html" />
+    <link rel="prev" title="Glossary" href="../glossary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -202,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../static-sites/citations.html">Markdown citations</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Interactivity with a server</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks.html">Jupyter Notebook Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markdown-notebooks.html">MyST Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code-package.html">Complex code package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-server/index.html">Interactivity with a server</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/notebooks.html">Jupyter Notebook Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/markdown-notebooks.html">MyST Markdown Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/code-package.html">Complex code package</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="thebe.html">Thebe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/thebe.html">Thebe</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-client/index.html">Interactivity within the client</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -226,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/development.html">Appendix: Development environment</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Appendix: Development environment</a></li>
 </ul>
 
     </div>
@@ -298,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/interactive-server/index.md" target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/appendix/development.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -315,7 +314,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Finteractive-server/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Fappendix/development.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -427,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Interactivity with a server</h1>
+    <h1>Appendix: Development environment</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -441,9 +440,36 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="interactivity-with-a-server">
-<h1>Interactivity with a server<a class="headerlink" href="#interactivity-with-a-server" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="appendix-development-environment">
+<h1>Appendix: Development environment<a class="headerlink" href="#appendix-development-environment" title="Permalink to this heading">#</a></h1>
+<p>In order to build this website you will need to create a virtual environment
+with <code class="docutils literal notranslate"><span class="pre">Python3.9</span></code> with the dependencies indicated in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>
+file. You can do that by running the following code in a shell.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3.9<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>/venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>Once the virtual environment has been generated and loaded (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/venv/bin/activate</span></code>), the book can be built with the shell command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>build
+</pre></div>
+</div>
+<p>The previous build will compile only the source files that have changed. Some
+of the table of contents on other pages may still be out of date. To fully
+build the book from anew run the shell command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>cleanbuild
+</pre></div>
+</div>
+<p>In case of wanting to run Jupyter Notebooks, you will need to create a kernel
+of the current virtual environment and load it from the Notebook.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipykernel
+python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="w"> </span>data-science
+</pre></div>
+</div>
+<p>Then, you can open the notebooks with the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
 </div>
 </section>
 
@@ -460,7 +486,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./interactive-server"
+            path: "./appendix"
         },
         predefinedOutput: true
     }
@@ -484,22 +510,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../static-sites/citations.html"
+       href="../glossary.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Markdown citations</p>
+        <p class="prev-next-title">Glossary</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="notebooks.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Jupyter Notebook Files</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

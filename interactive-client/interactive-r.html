@@ -74,7 +74,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Plotly" href="plotly.html" />
-    <link rel="prev" title="Shiny" href="pyodide.html" />
+    <link rel="prev" title="Interactivity within the client" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,19 +181,21 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/rethinking-papers.html">Rethinking papers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/teaching.html">A brief history of teaching methodologies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/type-of-content.html">Type of content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/collaboration-tools.html">Collaboration tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/development.html">Development environment</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../open-research/index.html">Open Research</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/open-access.html">Open Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/fair-data.html">FAIR data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/open-code.html">Open Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/open-data.html">Open Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/research-profile.html">Research Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/rethinking-courses.html">Rethinking courses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open-courses/index.html">Open Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-access.html">Open Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-code.html">Open Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/fair-data.html">FAIR data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-profile.html">Open Profile</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../publishing-tools/index.html">Publishing tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/publishing-systems.html">Publishing systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/collaboration-tools.html">Collaboration tools</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../static-sites/index.html">Static sites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -213,18 +215,20 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Interactivity within the client</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pyodide.html">Shiny</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Examples with R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plotly.html">Plotly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ipywidgets.html">IPyWidgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../use-case.html">Use case scenarios</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todos.html">TODOs</a></li>
-
+<li class="toctree-l1 has-children"><a class="reference internal" href="../use-cases/index.html">Use case scenarios</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../use-cases/moocs.html">MOOC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use-cases/open-course.html">Open course</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/development.html">Appendix: Development environment</a></li>
 </ul>
 
     </div>
@@ -496,6 +500,10 @@ document.write(`
 <span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">()</span>
 </pre></div>
 </div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  # Install IRkernel with default name ir
+  - run: Rscript -e &#39;IRkernel::installspec()&#39;
+</pre></div>
+</div>
 <p>The last command installs the kernel for Jupyter with the default name <code class="docutils literal notranslate"><span class="pre">ir</span></code>.</p>
 <p>Then, in order to run code in a markdown file it is necessary to indicate the
 kernel in the <code class="docutils literal notranslate"><span class="pre">yaml</span></code> configuration as follows:</p>
@@ -598,12 +606,12 @@ kernel in the <code class="docutils literal notranslate"><span class="pre">yaml<
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="pyodide.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Shiny</p>
+        <p class="prev-next-title">Interactivity within the client</p>
       </div>
     </a>
     <a class="right-next"

@@ -179,19 +179,21 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/rethinking-papers.html">Rethinking papers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/teaching.html">A brief history of teaching methodologies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/type-of-content.html">Type of content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/collaboration-tools.html">Collaboration tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/development.html">Development environment</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../open-research/index.html">Open Research</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/open-access.html">Open Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/fair-data.html">FAIR data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/open-code.html">Open Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/open-data.html">Open Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-research/research-profile.html">Research Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/rethinking-courses.html">Rethinking courses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open-courses/index.html">Open Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-access.html">Open Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-code.html">Open Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/fair-data.html">FAIR data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-profile.html">Open Profile</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../publishing-tools/index.html">Publishing tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/publishing-systems.html">Publishing systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/collaboration-tools.html">Collaboration tools</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../static-sites/index.html">Static sites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -211,18 +213,20 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-client/index.html">Interactivity within the client</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-client/pyodide.html">Shiny</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive-client/interactive-r.html">Examples with R</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive-client/plotly.html">Plotly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive-client/ipywidgets.html">IPyWidgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive-client/shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../use-case.html">Use case scenarios</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todos.html">TODOs</a></li>
-
+<li class="toctree-l1 has-children"><a class="reference internal" href="../use-cases/index.html">Use case scenarios</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../use-cases/moocs.html">MOOC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use-cases/open-course.html">Open course</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/development.html">Appendix: Development environment</a></li>
 </ul>
 
     </div>
@@ -581,81 +585,77 @@ The original code can be found in the Matplotlib documentation
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_1b9a3_row0_col0 {
-  background-color: #24409a;
-  color: #f1f1f1;
-}
-#T_1b9a3_row0_col1 {
-  background-color: #1e83ba;
-  color: #f1f1f1;
-}
-#T_1b9a3_row1_col0 {
-  background-color: #1f78b4;
-  color: #f1f1f1;
-}
-#T_1b9a3_row1_col1 {
-  background-color: #ecf7b1;
+#T_81822_row0_col0, #T_81822_row4_col0 {
+  background-color: #ffffd9;
   color: #000000;
 }
-#T_1b9a3_row2_col0 {
-  background-color: #1b2c80;
+#T_81822_row0_col1 {
+  background-color: #e6f5b2;
+  color: #000000;
+}
+#T_81822_row1_col0 {
+  background-color: #1a2b7e;
   color: #f1f1f1;
 }
-#T_1b9a3_row2_col1 {
-  background-color: #23499e;
+#T_81822_row1_col1 {
+  background-color: #2260a9;
   color: #f1f1f1;
 }
-#T_1b9a3_row3_col0 {
-  background-color: #253997;
+#T_81822_row2_col0 {
+  background-color: #39adc3;
   color: #f1f1f1;
 }
-#T_1b9a3_row3_col1 {
-  background-color: #40b5c4;
+#T_81822_row2_col1 {
+  background-color: #3eb3c4;
   color: #f1f1f1;
 }
-#T_1b9a3_row4_col0 {
-  background-color: #2168ad;
+#T_81822_row3_col0 {
+  background-color: #1d8dbe;
   color: #f1f1f1;
 }
-#T_1b9a3_row4_col1 {
-  background-color: #091e5a;
+#T_81822_row3_col1 {
+  background-color: #243f99;
   color: #f1f1f1;
+}
+#T_81822_row4_col1 {
+  background-color: #9cd8b8;
+  color: #000000;
 }
 </style>
-<table id="T_1b9a3">
+<table id="T_81822">
   <caption>Weather Conditions</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_1b9a3_level0_col0" class="col_heading level0 col0" >Tokyo</th>
-      <th id="T_1b9a3_level0_col1" class="col_heading level0 col1" >Beijing</th>
+      <th id="T_81822_level0_col0" class="col_heading level0 col0" >Tokyo</th>
+      <th id="T_81822_level0_col1" class="col_heading level0 col1" >Beijing</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_1b9a3_level0_row0" class="row_heading level0 row0" >Monday</th>
-      <td id="T_1b9a3_row0_col0" class="data row0 col0" >Heavy Rain</td>
-      <td id="T_1b9a3_row0_col1" class="data row0 col1" >Heavy Rain</td>
+      <th id="T_81822_level0_row0" class="row_heading level0 row0" >Monday</th>
+      <td id="T_81822_row0_col0" class="data row0 col0" >Dry</td>
+      <td id="T_81822_row0_col1" class="data row0 col1" >Dry</td>
     </tr>
     <tr>
-      <th id="T_1b9a3_level0_row1" class="row_heading level0 row1" >Tuesday</th>
-      <td id="T_1b9a3_row1_col0" class="data row1 col0" >Heavy Rain</td>
-      <td id="T_1b9a3_row1_col1" class="data row1 col1" >Dry</td>
+      <th id="T_81822_level0_row1" class="row_heading level0 row1" >Tuesday</th>
+      <td id="T_81822_row1_col0" class="data row1 col0" >Heavy Rain</td>
+      <td id="T_81822_row1_col1" class="data row1 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_1b9a3_level0_row2" class="row_heading level0 row2" >Wednesday</th>
-      <td id="T_1b9a3_row2_col0" class="data row2 col0" >Heavy Rain</td>
-      <td id="T_1b9a3_row2_col1" class="data row2 col1" >Heavy Rain</td>
+      <th id="T_81822_level0_row2" class="row_heading level0 row2" >Wednesday</th>
+      <td id="T_81822_row2_col0" class="data row2 col0" >Heavy Rain</td>
+      <td id="T_81822_row2_col1" class="data row2 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_1b9a3_level0_row3" class="row_heading level0 row3" >Thursday</th>
-      <td id="T_1b9a3_row3_col0" class="data row3 col0" >Heavy Rain</td>
-      <td id="T_1b9a3_row3_col1" class="data row3 col1" >Heavy Rain</td>
+      <th id="T_81822_level0_row3" class="row_heading level0 row3" >Thursday</th>
+      <td id="T_81822_row3_col0" class="data row3 col0" >Heavy Rain</td>
+      <td id="T_81822_row3_col1" class="data row3 col1" >Heavy Rain</td>
     </tr>
     <tr>
-      <th id="T_1b9a3_level0_row4" class="row_heading level0 row4" >Friday</th>
-      <td id="T_1b9a3_row4_col0" class="data row4 col0" >Heavy Rain</td>
-      <td id="T_1b9a3_row4_col1" class="data row4 col1" >Heavy Rain</td>
+      <th id="T_81822_level0_row4" class="row_heading level0 row4" >Friday</th>
+      <td id="T_81822_row4_col0" class="data row4 col0" >Dry</td>
+      <td id="T_81822_row4_col1" class="data row4 col1" >Rain</td>
     </tr>
   </tbody>
 </table>
