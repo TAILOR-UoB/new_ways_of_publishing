@@ -1,4 +1,4 @@
-# Rethinking papers
+# Rethinking courses
 
 Notes from ICLR 2021 Workshop Rethinking ML Papers
 
@@ -59,8 +59,6 @@ References
 - Distill is based on HTML, CSS and JavaScript and requires loading the distill
   JavaScript library in the header. 
 
-## Machine learning research communication via illustrated and interactive web articles
-
 ## I❤LA -- Compilable Markdown for Linear Algebra
 
 Markdown text that can be converted into MathJax, Python, C++, LaTeX and
@@ -85,13 +83,6 @@ How can LaTeX be converted into html?
 
 - TeX4ht very hard (30 to 40 hours)
 - Need more automatic tools
-
-
-
-
-## Diagrammatic summaries for neural architectures
-
-## ModulOM -- Disseminating Deep Learning Research with Modular Output Mathematics
 
 ## SPICES -- Survey papers as interactive cheatsheet embeddings
 
@@ -123,21 +114,7 @@ Important aspects of surveys
 
 SPICES method to write a good survey paper
 
--
-
-
-## On augmenting the references section with a citation network visualization
-
-## Fairness and Friends
-
-## Scientific dissemination via comic strip -- A case study with SacreBLEU
-
-## Convolution Can Incur Foveation Effects
-
-## Open-source blogging with Automunge
-
 ## The Mimosa Manifesto
-
 
 - Platform to make questions, hypothesis and answers
 - People can contribute with their results
@@ -242,8 +219,3 @@ The publication types that are currently supported are
     feedback is obtained in the last stages of publication. On the other hand,
     early feedback could be useful but it is perceived as a potential risk for
     retribution.
-
-
-## Interactive Media for Understanding ML Methods -- A Case-Study on Graph Neural Networks
-
-

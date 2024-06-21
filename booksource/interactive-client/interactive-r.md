@@ -22,6 +22,8 @@ It is possible to run `R` code by installing a kernel with `CRAN`
 install.packages('IRkernel')
 IRkernel::installspec()
 ```
+      # Install IRkernel with default name ir
+      - run: Rscript -e 'IRkernel::installspec()'
 
 The last command installs the kernel for Jupyter with the default name `ir`.
 

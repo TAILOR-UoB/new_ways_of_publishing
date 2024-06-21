@@ -35,14 +35,6 @@ languages Python, R and Julia.
 - [Apache Zeppelin](https://zeppelin.apache.org/): ... Built-in code editor.
 - [Count.co](https://count.co/): ...
 
-## Publishing systems
-
-- [Quarto](https://quarto.org): 
-- [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/):
-- [Pluto.jl](https://plutojl.org/):
-- [Rmarkdown](https://rmarkdown.rstudio.com/):
-
-
 ## Data interactivity
 
 - [Jupyter Widgets](https://jupyter.org/widgets): 

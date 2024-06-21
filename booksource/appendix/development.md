@@ -1,8 +1,8 @@
-# Development environment
+# Appendix: Development environment
 
-In order to build the book you will need to create a virtual environment with
-`Python3.9` with the dependencies indicated in the `requirements.txt` file. You
-can do that by running the following code in a shell.
+In order to build this website you will need to create a virtual environment
+with `Python3.9` with the dependencies indicated in the `requirements.txt`
+file. You can do that by running the following code in a shell.
 
 ```bash
 python3.9 -m venv venv

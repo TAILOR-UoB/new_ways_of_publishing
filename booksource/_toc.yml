@@ -5,18 +5,19 @@ root: index
 chapters:
 - file: introduction/index
   sections:
-  - file: introduction/rethinking-papers
   - file: introduction/teaching
   - file: introduction/type-of-content
-  - file: introduction/collaboration-tools
-  - file: introduction/development
-- file: open-research/index
+- file: introduction/rethinking-courses
+- file: open-courses/index
   sections:
-  - file: open-research/open-access
-  - file: open-research/fair-data
-  - file: open-research/open-code
-  - file: open-research/open-data
-  - file: open-research/research-profile
+  - file: open-courses/open-access
+  - file: open-courses/open-code
+  - file: open-courses/fair-data
+  - file: open-courses/open-profile
+- file: publishing-tools/index
+  sections:
+  - file: publishing-tools/publishing-systems
+  - file: publishing-tools/collaboration-tools
 - file: static-sites/index
   sections:
   - file: static-sites/markdown
@@ -30,13 +31,14 @@ chapters:
   - file: interactive-server/thebe
 - file: interactive-client/index
   sections:
-  - file: interactive-client/pyodide
   - file: interactive-client/interactive-r
   - file: interactive-client/plotly
   - file: interactive-client/ipywidgets
   - file: interactive-client/shinylive
-- file: use-case
-- file: todos
-  #- file: wahcc.md
+- file: use-cases/index
+  sections:
+  - file: use-cases/moocs
+  - file: use-cases/open-course
 - file: references
 - file: glossary
+- file: appendix/development

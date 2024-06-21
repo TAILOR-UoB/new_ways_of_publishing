@@ -13,3 +13,5 @@ sphinxcontrib-plantuml==0.26
 sphinxcontrib-tikz==0.4.16
 sphinxcontrib-wavedrom==3.0.4
 sphinxcontrib-blockdiag==3.0.0
+statsmodels
+ipyleaflet
