@@ -70,3 +70,11 @@ Same as a bullet list
 - MOOCs (Massive Open Online Course)s
 - Home study from MOOCs + Q&A sessions
 
+
+## MOOCs
+
+In the inflated expectation stage of Garner's hype cycle in 2012 with 100,000
+students {cite}`haber2014moocs`
+
+Commonly low completing rates (15%), lack of personalisation, less academic and
+more industrialised as a product. Sometimes courses are free.

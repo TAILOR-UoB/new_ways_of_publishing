@@ -86,12 +86,6 @@ The BSD license includes several versions
   display the following acknowledgement: This product includes software
   developed by the \<copyright holder\>.
 
-## Data
-
-- **ODC-BY (Open Data Commons Attribution License)**: allows to copy,
-  distribute and use a database, produce new works, and to modify, transform
-  and build upon it. The license requires accreditation of the original work.
-
 ## Flowchart
 
 It may be a good idea to make a flowchart that leads to the appropriate

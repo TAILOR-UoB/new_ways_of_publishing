@@ -15,6 +15,7 @@ chapters:
   - file: open-research/open-access
   - file: open-research/fair-data
   - file: open-research/open-code
+  - file: open-research/open-data
   - file: open-research/research-profile
 - file: static-sites/index
   sections:

@@ -117,3 +117,5 @@ Comparing data dashboarding tools and frameworks [^1]
   - Obsidian: Offline but paid online sync, the canvas functionality allows you
     to organise ideas between them in a virtual plane that resembles a physical
     surface.
+  - Pandoc to convert between different file formats (e.g. Word Document to
+    Markdown). This is one of the integral parts of Quarto publishing system.
