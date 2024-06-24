@@ -2,6 +2,11 @@
 
 Available tools in the last decade
 
+- [Posit Workbench](https://posit.co/products/enterprise/workbench/)(formerly
+  RStudio):
+  Integrated management of data science for teams, allowing multiple
+  collaborators editing the same source code for Quarto applications among
+  others. 
 - [Starboard](https://starboard.gg/): Notebooks that run in the client web
 browser.
 - [Noteable](https://noteable.io/): cloud-based real-time collaboration tool

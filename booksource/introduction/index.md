@@ -1,21 +1,61 @@
 # Introduction
 
-**Header titles to be removed**
+The landscape of tools for authoring training material is vast, and creating or
+modernising outdated material may be daunting with all the available options.
+This website provides simple guidelines for publishing modern online training
+materials with state-of-the-art tools. We focus on publishing workflows that
+use standard authoring artefacts that can generate multiple publishing outputs.
 
-## Brief introduction of the topic
+The wide spread of the World Wide Web has allowed the modernisation of teaching
+material that is cross-platform and dynamic. Clear examples of modern teaching
+material online include video recordings (e.g. Khan Academy), videos and
+questionaries (e.g. Massive Open Online Courses), personal blogs with dynamic
+illustrations, and sets of animated presentations. However, most of the
+teaching material still focuses on printable formats with the addition of
+hyperlinks.
+
+The lack of standard methods for publishing reduces the adoption of one
+authoring file format and diminishes the efforts to improve individual
+publishing workflows. Furthermore, the time spent getting familiar with one
+technology may not be useful in the future with the rapidly changing publishing
+environment. Additionally, multiple publishing outputs require different input
+formats which forces the duplication of efforts to produce very similar
+material (e.g. printed pdf, website, blog post, slides, posters). We suggest
+the use of a limited number of input formats that have been supported by most
+common publishing systems.
+
+This website provides an introduction to modern authoring tools and publishing
+systems. We explore the most extended authoring and publishing platforms, and
+online collaboration tools to facilitate the creation of shared online
+material.  We pay special attention to the possible standardisation of a
+workflow to minimise the effort of authoring artefacts while maximizing the
+publishing of various output modalities. Two such publishing systems are
+Jupyter Book and Quarto for which multiple examples are provided.
+
+We also provide some use-case examples of a full workflow to generate online
+training material (including this same website). All the material is kept in a
+version control environment (GitHub) to maximise transparency and
+reproducibility while allowing the automatic generation of the output artefacts
+with GitHub Actions. The input artefact is constructed in such a way that
+multiple types of output formats can be generated automatically from them (e.g.
+formats like an HTML website, Reveal.js slides, pdf, and e-book).
+
+## Previous notes:
+
+### Brief introduction of the topic
 
 New ways of publishing provides a guide on how to elaborate teaching and
 learning material in the 21st century that can be delivered in various formats
 like static documents, dynamic presentations, videos or online material.
 
-## Why is the topic important
+### Why is the topic important
 
 We are still using ancient techniques for printing teaching material in books
 and other physical documents. Woodblock printing was used in China before
 220 A.D. while Movble-type printing in China about 1040. In Europe the printing
 press was invented around 1450 and rotary printing press in 1843.
 
-## What is the gap that this document wants to fill
+### What is the gap that this document wants to fill
 
 There is no standard method to create teaching material, which makes it
 difficult to create long-term tools around them.
@@ -28,7 +68,7 @@ This guide provides a helping hand to understand all the tools that are
 available, and properly plan the time necessary to modernize old teaching
 material.
 
-## What are the questions answered and the aim of this document
+### What are the questions answered and the aim of this document
 
 The document can be used to search available technologies and tools to publish
 your material in different forms.
@@ -36,7 +76,7 @@ It also provides guides and examples on how to use those technologies.
 Finally, it contains some of the most common successful use cases to adapt
 previous material into a more modern form.
 
-## Indication of method and approach followed
+### Indication of method and approach followed
 
 The number of tools available for online authoring is growing very fast.
 This means that specific tools may be outdated in a matter of months.
@@ -47,11 +87,11 @@ an tutorials in the majority of the cases.
 While in some of the most well established methods we may include guides,
 examples and use cases in this same website.
 
-## Key message
+### Key message
 
-## Summary of findings
+### Summary of findings
 
-## Explanation of the contribution of the findings and key message
+### Explanation of the contribution of the findings and key message
 
 Points to mention:
 
@@ -66,5 +106,3 @@ Points to mention:
 - There is an increasing interest on appendices to incorporate other type of
   content, or links to software or datasets to provide transparency and
   reproducibility of results.
-
-

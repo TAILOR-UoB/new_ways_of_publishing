@@ -6,7 +6,7 @@ https://rethinkingmlpapers.github.io/papers/
 
 ## In Defense of the Paper by Owen Lockwood
 
-{cite}`lockwood_defense_2021`
+{cite}`lockwood2021in`
 
 - Explosion of papers in Machine Learning since 2012 (possibly due to
   Artificial Neural Networks).
