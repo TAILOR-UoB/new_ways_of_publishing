@@ -4,7 +4,9 @@ The landscape of tools for authoring training material is vast, and creating or
 modernising outdated material may be daunting with all the available options.
 This website provides simple guidelines for publishing modern online training
 materials with state-of-the-art tools. We focus on publishing workflows that
-use standard authoring artefacts that can generate multiple publishing outputs.
+use standard authoring artefacts (such as plain text, tables and figures) that
+can generate multiple publishing outputs (like slides, websites, pdfs, or
+documents).
 
 The wide spread of the World Wide Web has allowed the modernisation of teaching
 material that is cross-platform and dynamic. Clear examples of modern teaching
@@ -14,18 +16,18 @@ illustrations, and sets of animated presentations. However, most of the
 teaching material still focuses on printable formats with the addition of
 hyperlinks.
 
-The lack of standard methods for publishing reduces the adoption of one
-authoring file format and diminishes the efforts to improve individual
-publishing workflows. Furthermore, the time spent getting familiar with one
-technology may not be useful in the future with the rapidly changing publishing
-environment. Additionally, multiple publishing outputs require different input
-formats which forces the duplication of efforts to produce very similar
-material (e.g. printed pdf, website, blog post, slides, posters). We suggest
-the use of a limited number of input formats that have been supported by most
-common publishing systems.
+The lack of standards for publishing reduces the adoption of one authoring file
+format and spreads the efforts to improve individual publishing workflows.
+Furthermore, the time spent getting familiar with one technology may not be
+useful in the future with the rapidly changing publishing environment.
+Additionally, multiple publishing outputs require different input formats which
+forces the duplication of efforts to produce very similar material (e.g.
+printed pdf, website, blog post, slides, posters). We suggest the use of a
+limited number of input formats that have been supported by most common
+publishing systems.
 
 This website provides an introduction to modern authoring tools and publishing
-systems. We explore the most extended authoring and publishing platforms, and
+systems. We explore the most adopted authoring and publishing platforms, and
 online collaboration tools to facilitate the creation of shared online
 material.  We pay special attention to the possible standardisation of a
 workflow to minimise the effort of authoring artefacts while maximizing the
@@ -39,6 +41,8 @@ reproducibility while allowing the automatic generation of the output artefacts
 with GitHub Actions. The input artefact is constructed in such a way that
 multiple types of output formats can be generated automatically from them (e.g.
 formats like an HTML website, Reveal.js slides, pdf, and e-book).
+
+
 
 ## Previous notes:
 

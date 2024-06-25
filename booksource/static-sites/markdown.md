@@ -62,7 +62,7 @@ flowchart TD
   warnings
 ```
 
-```
+```{mermaid}
 flowchart TD
   A[square node A] --> B(round edges node B)
   A --> C([stadium node C])
@@ -72,7 +72,7 @@ flowchart TD
   C --> F
 ```
 
-```
+```{mermaid}
 graph LR;
     A-->B;
     A-->C;
@@ -80,14 +80,14 @@ graph LR;
     C-->D;
 ```
 
-```
+```{mermaid}
 sequenceDiagram
 	participant Alice
 	participant Bob
 	Alice->John: Hello John, how are you?
 ```
 
-```
+```{mermaid}
 sequenceDiagram
 	participant Alice
 	participant Bob
@@ -101,7 +101,7 @@ sequenceDiagram
 	Bob-->John: Jolly good!
 ```
 
-```
+```{mermaid}
 graph TD
 A[Client] -->|tcp_123| B(Load Balancer)
 B -->|tcp_456| C[Server1] 
@@ -121,8 +121,7 @@ With [Mermaid](https://mermaid.js.org/intro/) it is possible to generate other
 types of diagrams, the following is an example for a
 [mindmap](https://mermaid.js.org/syntax/mindmap.html).
 
-```
-
+```{mermaid}
 mindmap
   root((Data Science))
     Statistics
@@ -197,7 +196,7 @@ child { node {TikZ Series}
 At this moment, Graphviz is not working in this Jupyter Book.
 ```
 
-```graphviz
+```{graphviz}
 graph G {
   layout=neato
   run -- intr;
@@ -223,7 +222,6 @@ At this moment, UML is not working in this Jupyter Book. I removed the
 directive {uml} to avoid compilation Warnings.
 ```
 
-````
 ```{uml}
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
@@ -231,7 +229,6 @@ Bob --> Alice: Authentication Response
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: Another authentication Response
 ```
-````
 
 ### Wavedrom
 
@@ -333,6 +330,14 @@ int main() {
 }
 ```
 ````
+
+## reStructuredText
+
+```{eval-rst}
+.. note::
+
+  A note written in reStructuredText.
+```
 
 ## Learn more
 

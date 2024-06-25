@@ -49,19 +49,6 @@ launch_buttons:
 only_build_toc_files: true
 
 # Additional extensions for Sphinx
-#sphinx:
-#    config:
-#        html_js_files:
-#        - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
-#        - https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js
-#	extra_extensions:
-#        - sphinxcontrib.mermaid # Draw diagrams with Mermaid
-#		- sphinxcontrib.wavedrom
-#		- sphinxcontrib.plantuml
-#		- sphinxcontrib.tikz
-#		- sphinxcontrib.blockdiag
-#        - sphinx_inline_tabs    # How to interpret {tab}
-
 sphinx:
   config:
     suppress_warnings: ["mystnb.unknown_mime_type"]
@@ -69,10 +56,12 @@ sphinx:
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js
-  mermaid_version: 10.4.0
+      #  mermaid_version: 10.4.0
   extra_extensions:
-    - sphinxcontrib.mermaid
+    - sphinxcontrib.mermaid # Draw diagrams with Mermaid
     - sphinxcontrib.tikz
     - sphinx_inline_tabs    # How to interpret {tab}
     - sphinxcontrib.blockdiag
     - sphinxcontrib.wavedrom
+    - sphinxcontrib.plantuml
+    - sphinxcontrib.blockdiag
