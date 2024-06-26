@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=a8e58a58"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -65,7 +65,7 @@
     <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'publishing-tools/publishing-systems';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
+    <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Collaboration tools" href="collaboration-tools.html" />
@@ -147,6 +147,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../index.html">
   
@@ -168,7 +170,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -205,6 +207,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../static-sites/index.html">Static sites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../static-sites/restructuredtext.html">reStructuredText</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../static-sites/markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../static-sites/recordings.html">Video recordings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../static-sites/citations.html">Markdown citations</a></li>
@@ -408,10 +411,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -419,12 +422,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -440,6 +445,24 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-single-out">Single-In-Single-Out</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-multiple-out">Single-In-Multiple-Out</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-markdown">R markdown</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bookdown">Bookdown</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d2l-book">D2L book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx">Sphinx</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-in-multiple-out">Multiple-In-Multiple-Out</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -452,34 +475,168 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="publishing-systems">
 <h1>Publishing systems<a class="headerlink" href="#publishing-systems" title="Link to this heading">#</a></h1>
 <p>Publishing systems are tools or platforms that allow the generation of
-publishing outputs from a specific set of input artefacts. Common input
-artefacts are plain text, markdown, LaTeX, tables, figures, references among
-others, while the common outpus are html websites, slides, posters, printable
-documents and others.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://quarto.org">Quarto</a>:</p>
-<ul>
-<li><p>Quarto supports dynamic content with Python, R, Julia and Observable</p></li>
-<li><p>programming languages.</p></li>
-<li><p>Quarto uses pandoc to convert the input artefacts to its output.</p></li>
-<li><p>Quarto supports plain text markdown, Jupyter notebooks and an augmented</p></li>
-<li><p>markdown,</p></li>
-<li><p>Integration with Posit Connect (former RMarkdown), Atlassian Confluence, Visual
-Studio,</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a>:</p></li>
-<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter{book}</a></p>
-<ul>
-<li><p>MyST Markdown, Jupyter notebooks, reStructuredText</p></li>
-<li><p>Provides its own</p></li>
-<li><p>Live environments with Binder, Thebe</p></li>
-<li><p>Output website and pdf</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://plutojl.org/">Pluto.jl</a>:</p></li>
-<li><p><a class="reference external" href="https://rmarkdown.rstudio.com/">Rmarkdown</a>:</p></li>
-</ul>
+publishing outputs (e.g. html, slides, posters, and pdfs) from a set of input
+artefacts (e.g. plain text, markdown, LaTeX, tables, figures). In this Section
+we divide the systems into three paradigms <em>Single-In-Single-Out (SISO)</em>,
+<em>Single-In-Multi-Out (SIMO)</em> and <em>Multiple-In-Multiple-Out (MIMO)</em>. In this
+roadmap we only focus on the second type, as it is covers the most adopted and
+flexible systems for authoring training material.</p>
+<section id="single-in-single-out">
+<h2>Single-In-Single-Out<a class="headerlink" href="#single-in-single-out" title="Link to this heading">#</a></h2>
+<p>Publishing systems have usually specialised in generating only one type of
+output provided one or more types of input files. This is one of the most
+common approaches when producing an article. The text, figures, tables and
+other artefacts are assembled with some authoring tool and compiled with a
+specialised publishing system to produce a printable pdf. Once it has been
+accepted a presentation may require parts of the original artefacts and a
+different publishing system. It is then common to have a duplicate of the same
+content with mild modifications in a separate environment. The same process is
+often repeated if a poster, computational notebooks, or a website need to be
+created. We refer to this paradigm of publishing system as Single-In-Single-Out
+as each system works independently, while the authors need to keep up to date
+copies of similar content in each of them.</p>
+<div class="mermaid">
+            %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
+
+flowchart LR
+  
+    dummy1[ ]:::empty -.-&gt; I1
+    dummy1 -.-&gt; I2
+    dummy1 -.-&gt; I3
+    dummy1 -.-&gt; I4
+    I1(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O1[&quot;Published \n Paper \n (PDF)&quot;]
+    I2(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O2[&quot;Presentation \n Slides \n (PPTX/PDF)&quot;]
+    I3(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
+    I4(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
+    style O1 fill:#fca
+    style O2 fill:#ffb
+    style O3 fill:#f99
+    style O4 fill:#bfb
+    classDef empty width:0px,height:0px,fill:#000;
+        </div><p>Common examples of this type of paradigm is the authoring and publishing
+workflows followed by creating documents with Microsoft Word<a class="footnote-reference brackets" href="#word" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, Libre
+Office Writer<a class="footnote-reference brackets" href="#writer" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, LaTeX<a class="footnote-reference brackets" href="#latex" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>; sets of slides with Microsoft
+PowerPoint<a class="footnote-reference brackets" href="#powpoint" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>, LibreOffice Impress<a class="footnote-reference brackets" href="#impress" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>, LaTeX Beamer<a class="footnote-reference brackets" href="#beamer" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>,
+Reveal.js<a class="footnote-reference brackets" href="#reveal" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>, or Google Slides; posters with Microsoft Publisher, Google
+Slides, LaTeX, etc.</p>
+</section>
+<section id="single-in-multiple-out">
+<h2>Single-In-Multiple-Out<a class="headerlink" href="#single-in-multiple-out" title="Link to this heading">#</a></h2>
+<p>More modern publishing systems allow the generation of multiple types of
+publication formats from a joint set of input artefacts. We refer to this
+paradigm as Single-In-Multiple-Out (SIMO). This paradigm offers multiple
+benefits, among them: (1) keep all the artefacts in a unique
+location facilitates finding the required documents, (2) keeping a unique
+source of history changes and versions which is useful for auditing and
+transparency, (3) not duplicating artefacts that are not changed between
+different publishing systems.</p>
+<div class="mermaid">
+            %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
+
+flowchart LR
+    I1(&quot;Text + Figures + \n Code + ...&quot;):::input --- dummy2( ):::empty
+    dummy2 --&gt; O1[&quot;Published \n Paper \n (PDF)&quot;]
+    dummy2 --&gt; O2[&quot;Presentation \n Slides \n (PPTX/PDF)&quot;]
+    dummy2 --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
+    dummy2 --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
+    style O1 fill:#fca
+    style O2 fill:#ffb
+    style O3 fill:#f99
+    style O4 fill:#bfb
+    classDef empty width:0px,height:0px,fill:#000;
+        </div><p>Nowadays, this type of publishing systems are getting more common being able to
+produce multiple types of outputs from the same sources. In this roadmap we
+focus on the state-of-the-art publishing systems that fall into this category.
+The same roadmap is an example of one of such systems (Jupyter Book), while the
+rest of the document and use cases also include Quarto. The following
+subsections describe what are the main characteristics of the most adopted
+ones.</p>
+<section id="jupyter-book">
+<h3>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Link to this heading">#</a></h3>
+<p>Jupyter Book<a class="footnote-reference brackets" href="#jbook" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> is one of the main projects of the Executable Books
+Project<a class="footnote-reference brackets" href="#ebookp" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>, together with the other project MyST Markdown<a class="footnote-reference brackets" href="#myst" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>. The
+Executable Books Project is an international collaboration to build open source
+tools for publishing computational documents based on the Jupyter
+ecosystem[^jupyter]. Jupyter Book can read markdown, MyST Markdown, Jupyter
+notebooks and
+<a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a><a class="footnote-reference brackets" href="#rst" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>. It is based
+on the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx documentation engine</a>
+being able to produce html websites, pdf, and computational narratives. It
+supports multiple programming languages in the Jupyter notebooks provided that
+a Jupyter kernel exist (e.g. Python, Julia, Rubi, Haskell, and many other
+languages<a class="footnote-reference brackets" href="#kernels" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>).
+Websites that include computational narratives can also bennefit from live
+environments thanks to the integration of Binder, Thebe and Google
+Colab<a class="footnote-reference brackets" href="#colab" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>. It supports lots of narrative content like highlighted notes,
+code cells, quotations, epigraphs, glossaries, index of terms, footnotes,
+references, grids, cards, dropdown menus, tab content, maths, equations,
+proofs, theorems, algorithms, and more. The Jupyter Book system has been used
+in multiple ocasions to publish online material, an extensive gallery can be
+found at <a class="reference external" href="https://executablebooks.org/en/latest/gallery/">https://executablebooks.org/en/latest/gallery/</a>. This website has been
+created with Jupyter Book and serves as an example of some of its
+functionalities.</p>
+</section>
+<section id="quarto">
+<h3>Quarto<a class="headerlink" href="#quarto" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://quarto.org">Quarto</a> is another open-source publishing system with the
+objective of facilitating the collaboration to create scientific content.
+Quarto is sponsored by Posit<a class="footnote-reference brackets" href="#posit" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a>, and follows the development of the R Markdown
+publishing system extending the focus from the programming language R to
+Python, R, Julia and Observable. It supports Jupyter notebooks, markdown and
+their own extension Quarto markdown. The conversion to different output formats
+is done with pandoc<a class="footnote-reference brackets" href="#pandoc" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a>, which is able to produce presentations (Reveal.js),
+dashboards, websites, blogs, books, PDFs, Microsoft Word, ePub and more. Quarto
+is integrated into multiple authoring environments like Microsoft Visual
+Studio, Jupyter Lab, Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>, and Atlassian Confluence<a class="footnote-reference brackets" href="#confluence" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a>
+among others.</p>
+</section>
+<section id="r-markdown">
+<h3>R markdown<a class="headerlink" href="#r-markdown" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://rmarkdown.rstudio.com/">R markdown</a> is a flavoured markdown type with
+special focus on the R programming language and a publishing system. The
+publishing system uses R markdown files (with extension <code class="docutils literal notranslate"><span class="pre">.rmd</span></code>) or standard
+markdown and can produce various output formats including HTML, PDFs, Microsoft
+Word documents, Beamer presentations, HTML5 slides, scientific articles and
+books (with the the help of the bookdown R package<a class="footnote-reference brackets" href="#id29" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a>). It also support
+other programming languages including Python, SQL and others with a language
+engine<a class="footnote-reference brackets" href="#engines" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a>. R markdown is also integrated in Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="bookdown">
+<h3>Bookdown<a class="headerlink" href="#bookdown" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://bookdown.org/">Bookdown</a> is an open-source R package that facilitates
+the creation of books from R Markdown documents. It is an extension for R
+Markdown to work with long documents. The rest of the functionalities are
+shared with R Markdown. A list of books written with Bookdown can be found at
+<a class="reference external" href="https://bookdown.org/home/archive/">https://bookdown.org/home/archive/</a>.</p>
+</section>
+<section id="d2l-book">
+<h3>D2L book<a class="headerlink" href="#d2l-book" title="Link to this heading">#</a></h3>
+<p>D2L book is a Python package and a toolkit to build online and printed books.
+The package was mainly developed for the publication of the book <a class="reference external" href="https://d2l.ai/">Dive into
+Deep Learning</a><span id="id21">[<a class="reference internal" href="../references.html#id25" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. Cambridge University Press, 2023. https://D2L.ai.">ZLLS23</a>]</span>, which had multiple
+collaborators mostly from Amazon. It is mainly focused for content that
+includes computational narratives in Python. The input files are mainly MyST
+markdown and Jupyter Notebooks. The publishing part is made with pandoc and
+Sphinx allowing the creation of websites and pdf documents.</p>
+</section>
+<section id="sphinx">
+<h3>Sphinx<a class="headerlink" href="#sphinx" title="Link to this heading">#</a></h3>
+<p>Sphinx<a class="footnote-reference brackets" href="#id30" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a> is an open-source documentation engine that is based on
+Docutils<a class="footnote-reference brackets" href="#docutils" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>21<span class="fn-bracket">]</span></a>; extending it to multi-page documentation. Docutils is an
+open-source text processing system that uses the plain text easy-to-read
+reStructuredText to create documentation in multiple formats, such as HTML,
+LaTeX, Linux man pages<a class="footnote-reference brackets" href="#man" id="id24" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a>, OpenDocument<a class="footnote-reference brackets" href="#odf" id="id25" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a>, or XML<a class="footnote-reference brackets" href="#xml" id="id26" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a>. Sphinx supports
+reStructuredText and MyST markdown as input files and can generate multiple
+output formats including HTML, LaTeX, PDF, ePub, and Texinfo<a class="footnote-reference brackets" href="#texinfo" id="id27" role="doc-noteref"><span class="fn-bracket">[</span>25<span class="fn-bracket">]</span></a> (the
+official documentation format of the GNU project<a class="footnote-reference brackets" href="#gnu" id="id28" role="doc-noteref"><span class="fn-bracket">[</span>26<span class="fn-bracket">]</span></a>).</p>
+</section>
+</section>
+<section id="multiple-in-multiple-out">
+<h2>Multiple-In-Multiple-Out<a class="headerlink" href="#multiple-in-multiple-out" title="Link to this heading">#</a></h2>
+<p>Another paradigm that has not been explored in this roadmap is the
+Multiple-In-Multiple-Out (MIMO) that considers the storage of different
+artefacts in different platforms and allows the composition of the necessary
+artefacts to publish different output types.</p>
 <div class="mermaid">
             %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
 
@@ -499,8 +656,117 @@ flowchart LR
     style O2 fill:#ffb
     style O3 fill:#f99
     style O4 fill:#bfb
-    classDef empty width:0px,height:0px;
-        </div></section>
+    classDef empty width:0px,height:0px,fill:#000;
+        </div><hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="word" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.microsoft.com/en-gb/microsoft-365/word">https://www.microsoft.com/en-gb/microsoft-365/word</a></p>
+</aside>
+<aside class="footnote brackets" id="writer" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.libreoffice.org/discover/writer/">https://www.libreoffice.org/discover/writer/</a></p>
+</aside>
+<aside class="footnote brackets" id="latex" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.latex-project.org/">https://www.latex-project.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="powpoint" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.microsoft.com/en-gb/microsoft-365/powerpoint">https://www.microsoft.com/en-gb/microsoft-365/powerpoint</a></p>
+</aside>
+<aside class="footnote brackets" id="impress" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.libreoffice.org/discover/impress/">https://www.libreoffice.org/discover/impress/</a></p>
+</aside>
+<aside class="footnote brackets" id="beamer" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://ctan.org/pkg/beamer">https://ctan.org/pkg/beamer</a></p>
+</aside>
+<aside class="footnote brackets" id="reveal" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://revealjs.com/">https://revealjs.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="jbook" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">https://jupyterbook.org/en/stable/intro.html</a></p>
+</aside>
+<aside class="footnote brackets" id="ebookp" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://executablebooks.org/en/latest/">https://executablebooks.org/en/latest/</a></p>
+</aside>
+<aside class="footnote brackets" id="myst" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://executablebooks.org/en/latest/tools/#tools-myst">https://executablebooks.org/en/latest/tools/#tools-myst</a></p>
+</aside>
+<aside class="footnote brackets" id="rst" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">https://docutils.sourceforge.io/rst.html</a></p>
+</aside>
+<aside class="footnote brackets" id="kernels" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">12</a><span class="fn-bracket">]</span></span>
+<p><a class="github reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">jupyter/jupyter</a></p>
+</aside>
+<aside class="footnote brackets" id="colab" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">13</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="posit" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">14</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://posit.co">https://posit.co</a></p>
+</aside>
+<aside class="footnote brackets" id="pandoc" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">15</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://pandoc.org/">https://pandoc.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="rstudio" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id16">1</a>,<a role="doc-backlink" href="#id20">2</a>)</span>
+<p><a class="reference external" href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a></p>
+</aside>
+<aside class="footnote brackets" id="confluence" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">17</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.atlassian.com/software/confluence">https://www.atlassian.com/software/confluence</a></p>
+</aside>
+<aside class="footnote brackets" id="id29" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">18</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://bookdown.org/">https://bookdown.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="engines" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">19</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://bookdown.org/yihui/rmarkdown/language-engines.html">https://bookdown.org/yihui/rmarkdown/language-engines.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id30" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id22">20</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
+</aside>
+<aside class="footnote brackets" id="docutils" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">21</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docutils.sourceforge.io/">https://docutils.sourceforge.io/</a></p>
+</aside>
+<aside class="footnote brackets" id="man" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id24">22</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://linux.die.net/man/">https://linux.die.net/man/</a></p>
+</aside>
+<aside class="footnote brackets" id="odf" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id25">23</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/OpenDocument">https://en.wikipedia.org/wiki/OpenDocument</a></p>
+</aside>
+<aside class="footnote brackets" id="xml" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id26">24</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/XML">https://en.wikipedia.org/wiki/XML</a></p>
+</aside>
+<aside class="footnote brackets" id="texinfo" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id27">25</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.gnu.org/software/texinfo/">https://www.gnu.org/software/texinfo/</a></p>
+</aside>
+<aside class="footnote brackets" id="gnu" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id28">26</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.gnu.org/">https://www.gnu.org/</a></p>
+</aside>
+</aside>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -563,6 +829,31 @@ flowchart LR
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-single-out">Single-In-Single-Out</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-multiple-out">Single-In-Multiple-Out</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-markdown">R markdown</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bookdown">Bookdown</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d2l-book">D2L book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx">Sphinx</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-in-multiple-out">Multiple-In-Multiple-Out</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -582,7 +873,7 @@ By Miquel Perello Nieto
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
@@ -606,8 +897,8 @@ By Miquel Perello Nieto
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
