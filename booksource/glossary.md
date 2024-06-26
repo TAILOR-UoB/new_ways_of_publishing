@@ -9,7 +9,7 @@ Host
 
 Client
   The final user's device that is requesting the website. This is most commonly a
-web browser in a computer or phone.
+  web browser in a computer or phone.
 
 Server
   Machine or service that is used as a hosting, or as a computer node that
