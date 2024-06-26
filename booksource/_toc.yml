@@ -20,6 +20,7 @@ chapters:
   - file: publishing-tools/collaboration-tools
 - file: static-sites/index
   sections:
+  - file: static-sites/restructuredtext
   - file: static-sites/markdown
   - file: static-sites/recordings
   - file: static-sites/citations

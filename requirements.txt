@@ -16,3 +16,6 @@ sphinxcontrib-blockdiag
 statsmodels
 ipyleaflet
 jupyterlab
+#sphinx-hoverxref
+#sphinx-tippy
+pyppeteer

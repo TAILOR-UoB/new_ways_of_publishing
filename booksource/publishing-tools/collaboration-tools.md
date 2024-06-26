@@ -116,3 +116,8 @@ Comparing data dashboarding tools and frameworks [^1]
     surface.
   - Pandoc to convert between different file formats (e.g. Word Document to
     Markdown). This is one of the integral parts of Quarto publishing system.
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/):
+- [Pluto.jl](https://plutojl.org/):
+  - For programming language Julia
+  - Creates notebooks that can be exported to html or pdf
+  - 

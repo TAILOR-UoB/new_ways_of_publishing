@@ -2,19 +2,20 @@
 
 Glossary of common terms used in the new ways of publishing.
 
-**Host**
+```{glossary}
 
-Machine or service that is hosting the website/book.
+Host
+  Machine or service that is hosting the website/book.
 
-**Client**
-
-The final user's device that is requesting the website. This is most commonly a
+Client
+  The final user's device that is requesting the website. This is most commonly a
 web browser in a computer or phone.
 
-**Server**
+Server
+  Machine or service that is used as a hosting, or as a computer node that
+  returns requested computations.
+```
 
-Machine or service that is used as a hosting, or as a computer node that
-returns requested computations.
 
 **Run in the browser**
 

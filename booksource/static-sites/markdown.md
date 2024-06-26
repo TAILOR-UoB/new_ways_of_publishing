@@ -44,8 +44,12 @@ to navigate to parent sections like `` {doc}`../interactive-server/index` ``.
 At this moment, Mermaid is not working in this Jupyter Book.
 ```
 
+
 We have installed an extension to draw diagrams from text using `Mermaid`. The
 following is an example of the code necessary to generate the diagram below.
+
+The Mermaid Live Editor is a great tool to create mermaid diagrams online that
+are rendered in real time for easy implementation https://mermaid.live/edit
 
 ```{mermaid}
 flowchart TD
@@ -274,6 +278,9 @@ This is a reference to Equation {eq}`equation-example-1`
 E = mc^2
 ```
 
+A reference to the Section [Citations](./citations.md) can also include a
+preview of its content.
+
 ## Videos
 
 We can insert videos in the middle of a markdown file by using `html` and and
@@ -337,6 +344,7 @@ int main() {
 .. note::
 
   A note written in reStructuredText.
+
 ```
 
 ## Learn more

@@ -1,3 +1,12 @@
+---
+title: Markdown citations
+date: 2024-06-26
+authors:
+  - name: Miquel Perello Nieto
+    affiliations:
+      - University of Bristol
+description: Information on how to make citations of published references.
+---
 (sec:citations)=
 # Markdown citations
 
