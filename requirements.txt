@@ -19,3 +19,4 @@ jupyterlab
 #sphinx-hoverxref
 #sphinx-tippy
 pyppeteer
+pycalib
