@@ -69,7 +69,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Collaboration tools" href="collaboration-tools.html" />
-    <link rel="prev" title="Publishing tools" href="index.html" />
+    <link rel="prev" title="Authoring file formats" href="authoring-formats.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -201,7 +201,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../open-courses/open-profile.html">Open Profile</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Publishing tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Publishing workflow</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="authoring-tools.html">Authoring tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authoring-formats.html">Authoring file formats</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Publishing systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaboration-tools.html">Collaboration tools</a></li>
 </ul>
@@ -500,19 +502,24 @@ copies of similar content in each of them.</p>
 
 flowchart LR
   
-    dummy1[ ]:::empty -.-&gt; I1
-    dummy1 -.-&gt; I2
-    dummy1 -.-&gt; I3
-    dummy1 -.-&gt; I4
-    I1(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O1[&quot;Published \n Paper \n (PDF)&quot;]
-    I2(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O2[&quot;Presentation \n Slides \n (PPTX/PDF)&quot;]
-    I3(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
-    I4(&quot;Text + Figures + \n Code + ...&quot;):::input --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
+    S1(&quot;External sources\nVarious modifications&quot;):::empty -.-&gt; I1
+    S1 -.-&gt; I2
+    S1 -.-&gt; I3
+    S1 -.-&gt; I4
+    I1(&quot;Text + Figures + \n Code + ... v.1&quot;):::input --&gt; P1{{&quot;Publishing system 1&quot;}}
+    I2(&quot;Text + Figures + \n Code + ... v.2&quot;):::input --&gt; P2{{&quot;Publishing system 2&quot;}}
+    I3(&quot;Text + Figures + \n Code + ... v.3&quot;):::input --&gt; P3{{&quot;Publishing system 3&quot;}}
+    I4(&quot;Text + Figures + \n Code + ... v.4&quot;):::input --&gt; P4{{&quot;Publishing system 4&quot;}}
+    P1 --&gt; O1[&quot;Published \n Paper \n (PDF)&quot;]
+    P2 --&gt; O2[&quot;Presentation \n Slides \n (PPTX/PDF)&quot;]
+    P3 --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
+    P4 --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
     style O1 fill:#fca
-    style O2 fill:#ffb
+    style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
-    classDef empty width:0px,height:0px,fill:#000;
+    classDef input fill:#ffa;
+    classDef empty fill:#aaa,stroke:#333,stroke-dasharray: 5 5;
         </div><p>Common examples of this type of paradigm is the authoring and publishing
 workflows followed by creating documents with Microsoft Word<a class="footnote-reference brackets" href="#word" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, Libre
 Office Writer<a class="footnote-reference brackets" href="#writer" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, LaTeX<a class="footnote-reference brackets" href="#latex" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>; sets of slides with Microsoft
@@ -534,16 +541,16 @@ different publishing systems.</p>
             %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
 
 flowchart LR
-    I1(&quot;Text + Figures + \n Code + ...&quot;):::input --- dummy2( ):::empty
+    I1(&quot;Text + Figures + \n Code + ...&quot;):::input --- dummy2{{&quot;Publishing system&quot;}}
     dummy2 --&gt; O1[&quot;Published \n Paper \n (PDF)&quot;]
     dummy2 --&gt; O2[&quot;Presentation \n Slides \n (PPTX/PDF)&quot;]
     dummy2 --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
     dummy2 --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
+    classDef input fill:#ffa;
     style O1 fill:#fca
-    style O2 fill:#ffb
+    style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
-    classDef empty width:0px,height:0px,fill:#000;
         </div><p>Nowadays, this type of publishing systems are getting more common being able to
 produce multiple types of outputs from the same sources. In this roadmap we
 focus on the state-of-the-art publishing systems that fall into this category.
@@ -653,9 +660,10 @@ flowchart LR
     dummy2 --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
     dummy2 --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
     style O1 fill:#fca
-    style O2 fill:#ffb
+    style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
+    classDef input fill:#ffa;
     classDef empty width:0px,height:0px,fill:#000;
         </div><hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
@@ -805,12 +813,12 @@ flowchart LR
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="authoring-formats.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Publishing tools</p>
+        <p class="prev-next-title">Authoring file formats</p>
       </div>
     </a>
     <a class="right-next"

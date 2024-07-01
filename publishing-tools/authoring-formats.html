@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MyST Markdown Files &#8212; New ways of Publishing</title>
+    <title>Authoring file formats &#8212; New ways of Publishing</title>
   
   
   
@@ -61,13 +61,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'interactive-server/markdown-notebooks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'publishing-tools/authoring-formats';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Complex code package" href="code-package.html" />
-    <link rel="prev" title="Jupyter Notebook Files" href="notebooks.html" />
+    <link rel="next" title="Publishing systems" href="publishing-systems.html" />
+    <link rel="prev" title="Authoring tools" href="authoring-tools.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,11 +199,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../open-courses/open-profile.html">Open Profile</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../publishing-tools/index.html">Publishing workflow</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/authoring-tools.html">Authoring tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/authoring-formats.html">Authoring file formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/publishing-systems.html">Publishing systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-tools/collaboration-tools.html">Collaboration tools</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Publishing workflow</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="authoring-tools.html">Authoring tools</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Authoring file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing-systems.html">Publishing systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaboration-tools.html">Collaboration tools</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../static-sites/index.html">Static sites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -213,14 +213,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../static-sites/citations.html">Markdown citations</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Interactivity with a server</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="notebooks.html">Jupyter Notebook Files</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">MyST Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code-package.html">Complex code package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-server/index.html">Interactivity with a server</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/notebooks.html">Jupyter Notebook Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/markdown-notebooks.html">MyST Markdown Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/code-package.html">Complex code package</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="thebe.html">Thebe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive-server/thebe.html">Thebe</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-client/index.html">Interactivity within the client</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -284,55 +284,6 @@
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/TAILOR-UoB/new_ways_of_publishing/main?urlpath=lab/tree/booksource/interactive-server/markdown-notebooks.md" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -358,7 +309,7 @@
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/interactive-server/markdown-notebooks.md" target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/publishing-tools/authoring-formats.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,7 +326,7 @@
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Finteractive-server/markdown-notebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Fpublishing-tools/authoring-formats.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -476,9 +427,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -489,21 +438,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>MyST Markdown Files</h1>
+    <h1>Authoring file formats</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -513,51 +452,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="myst-markdown-files">
-<h1>MyST Markdown Files<a class="headerlink" href="#myst-markdown-files" title="Link to this heading">#</a></h1>
-<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.</p>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Link to this heading">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
-</div>
-</section>
-<section id="create-a-notebook-with-myst-markdown">
-<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Link to this heading">#</a></h2>
-<p>MyST Markdown notebooks are defined by two things:</p>
-<ol class="arabic simple">
-<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-See the YAML at the top of this page for example.</p></li>
-<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
-</ol>
-<p>That’s all that is needed to get started!</p>
-</section>
-<section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Link to this heading">#</a></h2>
-<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
-</pre></div>
-</div>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="authoring-file-formats">
+<h1>Authoring file formats<a class="headerlink" href="#authoring-file-formats" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>LaTeX markup (1984) created by Leslie Lamport while working at Standford
+Research Institute.</p></li>
+<li><p>setext (1992) or Structure Enhanced Text developed by Ian Feldman</p></li>
+<li><p>Textile (2002)</p></li>
+<li><p>reStructuredText (2002)</p></li>
+<li><p>Markdown (2004) a markup language to create formatted text using plain text that is
+both human and machine readable.</p></li>
+<li><p>R Markdown</p></li>
+<li><p>Quarto Markdown</p></li>
+<li><p>MyST Markdown is a community-driven</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -573,7 +481,7 @@ See the YAML at the top of this page for example.</p></li>
         },
         kernelOptions: {
             name: "python3",
-            path: "./interactive-server"
+            path: "./publishing-tools"
         },
         predefinedOutput: true
     }
@@ -597,20 +505,20 @@ See the YAML at the top of this page for example.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="notebooks.html"
+       href="authoring-tools.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Jupyter Notebook Files</p>
+        <p class="prev-next-title">Authoring tools</p>
       </div>
     </a>
     <a class="right-next"
-       href="code-package.html"
+       href="publishing-systems.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Complex code package</p>
+        <p class="prev-next-title">Publishing systems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -620,23 +528,6 @@ See the YAML at the top of this page for example.</p></li>
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
