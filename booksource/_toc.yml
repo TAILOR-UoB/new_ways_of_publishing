@@ -16,6 +16,8 @@ chapters:
   - file: open-courses/open-profile
 - file: publishing-tools/index
   sections:
+  - file: publishing-tools/authoring-tools
+  - file: publishing-tools/authoring-formats
   - file: publishing-tools/publishing-systems
   - file: publishing-tools/collaboration-tools
 - file: static-sites/index

@@ -40,32 +40,12 @@ languages Python, R and Julia.
 - [Apache Zeppelin](https://zeppelin.apache.org/): ... Built-in code editor.
 - [Count.co](https://count.co/): ...
 
-## Data interactivity
-
-- [Jupyter Widgets](https://jupyter.org/widgets): 
-- [htmlwidgets for R](http://www.htmlwidgets.org/):
-- [Observable JS](https://observablehq.com/@observablehq/observable-javascript): Tool to
-run Javascript code dynamically that supports D3, Lodash and Apache Arrow.
-- [Shiny](https://shiny.posit.co/): Run Python or R code in the browser.
-Check the [Python example documentation](https://shiny.posit.co/py/docs/overview.html).
-[Pyodide](https://pyodide.org/en/stable/) is a port of Python and other packages compiled to
-[WebAssembly](https://webassembly.org/). Some examples of supported
-packages are  regex, pyyaml, lxml and scientific Python packages including
-numpy, pandas, scipy, matplotlib, and scikit-learn.
-WebAssembly is a binary format for compiled programs.
-- [Shinylive: Shiny + WebAssembly](https://shiny.posit.co/py/docs/shinylive.html):
-
-
 ## Online communication
 
 - Microsoft Teams
 - Zoom
 - [Kumospace](https://www.kumospace.com/) offers virtual locations to interact
   with other users online.
-
-## Text editors
-
-- [HackMD](https://hackmd.io/)
 
 ## Examples
 
@@ -90,8 +70,6 @@ Comparing data dashboarding tools and frameworks [^1]
 
 - Project management tools for planning, assigning and tracking tasks like
   Trello, Airtable, GitHub project, Todoist.
-- Publishing systems
-- Computing platforms
 - Web-based conference management softtware systems Microsoft Conference
   Management Toolkit, EasyChair, OpenReview
 - Sharing documents Microsoft SharePoint and One Drive, Google drive, Dropbox,
@@ -116,7 +94,6 @@ Comparing data dashboarding tools and frameworks [^1]
     surface.
   - Pandoc to convert between different file formats (e.g. Word Document to
     Markdown). This is one of the integral parts of Quarto publishing system.
-- [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/):
 - [Pluto.jl](https://plutojl.org/):
   - For programming language Julia
   - Creates notebooks that can be exported to html or pdf

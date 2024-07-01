@@ -28,19 +28,24 @@ copies of similar content in each of them.
 
 flowchart LR
   
-    dummy1[ ]:::empty -.-> I1
-    dummy1 -.-> I2
-    dummy1 -.-> I3
-    dummy1 -.-> I4
-    I1("Text + Figures + \n Code + ..."):::input --> O1["Published \n Paper \n (PDF)"]
-    I2("Text + Figures + \n Code + ..."):::input --> O2["Presentation \n Slides \n (PPTX/PDF)"]
-    I3("Text + Figures + \n Code + ..."):::input --> O3["Poster \n (PPTX/PDF)"]
-    I4("Text + Figures + \n Code + ..."):::input --> O4["Computational \n Notebook \n (Colab)"]
+    S1("External sources\nVarious modifications"):::empty -.-> I1
+    S1 -.-> I2
+    S1 -.-> I3
+    S1 -.-> I4
+    I1("Text + Figures + \n Code + ... v.1"):::input --> P1{{"Publishing system 1"}}
+    I2("Text + Figures + \n Code + ... v.2"):::input --> P2{{"Publishing system 2"}}
+    I3("Text + Figures + \n Code + ... v.3"):::input --> P3{{"Publishing system 3"}}
+    I4("Text + Figures + \n Code + ... v.4"):::input --> P4{{"Publishing system 4"}}
+    P1 --> O1["Published \n Paper \n (PDF)"]
+    P2 --> O2["Presentation \n Slides \n (PPTX/PDF)"]
+    P3 --> O3["Poster \n (PPTX/PDF)"]
+    P4 --> O4["Computational \n Notebook \n (Colab)"]
     style O1 fill:#fca
-    style O2 fill:#ffb
+    style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
-    classDef empty width:0px,height:0px,fill:#000;
+    classDef input fill:#ffa;
+    classDef empty fill:#aaa,stroke:#333,stroke-dasharray: 5 5;
 ```
 
 Common examples of this type of paradigm is the authoring and publishing
@@ -74,16 +79,16 @@ different publishing systems.
 %%{ init : { "flowchart" : { "curve" : "stepBefore" }}}%%
 
 flowchart LR
-    I1("Text + Figures + \n Code + ..."):::input --- dummy2( ):::empty
+    I1("Text + Figures + \n Code + ..."):::input --- dummy2{{"Publishing system"}}
     dummy2 --> O1["Published \n Paper \n (PDF)"]
     dummy2 --> O2["Presentation \n Slides \n (PPTX/PDF)"]
     dummy2 --> O3["Poster \n (PPTX/PDF)"]
     dummy2 --> O4["Computational \n Notebook \n (Colab)"]
+    classDef input fill:#ffa;
     style O1 fill:#fca
-    style O2 fill:#ffb
+    style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
-    classDef empty width:0px,height:0px,fill:#000;
 ```
 
 Nowadays, this type of publishing systems are getting more common being able to
@@ -276,8 +281,9 @@ flowchart LR
     dummy2 --> O3["Poster \n (PPTX/PDF)"]
     dummy2 --> O4["Computational \n Notebook \n (Colab)"]
     style O1 fill:#fca
-    style O2 fill:#ffb
+    style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
+    classDef input fill:#ffa;
     classDef empty width:0px,height:0px,fill:#000;
 ```
