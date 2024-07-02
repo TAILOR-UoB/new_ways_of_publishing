@@ -1,10 +1,12 @@
 # Authoring tools
 
-Authoring tools are tools that help the creation of authoring artefacts which
-will be compiled by a publishing systems to generate outputs. For example, a
+`Authoring tools` are tools that help the creation of authoring artefacts which
+will be compiled by a `publishing systems` to generate outputs. For example, a
 text editor to create `LaTeX` is an authoring tool, while `pdflatex`,
 `XeLaTeX`, `LuaTeX` are publishing systems that compile all the input artefacts
 to pdf.
+
+## Text editors
 
 - Overleaf self-defined as a collaborative authoring tool, defined by
   University of Manchester as a writing and publishing tool.
@@ -21,7 +23,7 @@ Visual Studio Live Share
 Overleaf
 Google Docs
 
-## Data interactivity
+## Interactive code
 
 - [Jupyter Widgets](https://jupyter.org/widgets): 
 - [htmlwidgets for R](http://www.htmlwidgets.org/):
@@ -35,5 +37,3 @@ packages are  regex, pyyaml, lxml and scientific Python packages including
 numpy, pandas, scipy, matplotlib, and scikit-learn.
 WebAssembly is a binary format for compiled programs.
 - [Shinylive: Shiny + WebAssembly](https://shiny.posit.co/py/docs/shinylive.html):
-
-

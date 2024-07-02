@@ -14,12 +14,12 @@ chapters:
   - file: open-courses/open-code
   - file: open-courses/fair-data
   - file: open-courses/open-profile
-- file: publishing-tools/index
+- file: publishing-workflow/index
   sections:
-  - file: publishing-tools/authoring-tools
-  - file: publishing-tools/authoring-formats
-  - file: publishing-tools/publishing-systems
-  - file: publishing-tools/collaboration-tools
+  - file: publishing-workflow/authoring-tools
+  - file: publishing-workflow/authoring-formats
+  - file: publishing-workflow/publishing-systems
+  - file: publishing-workflow/collaboration-tools
 - file: static-sites/index
   sections:
   - file: static-sites/restructuredtext
@@ -40,7 +40,8 @@ chapters:
   - file: interactive-client/shinylive
 - file: use-cases/index
   sections:
-  - file: use-cases/moocs
+  - file: use-cases/qmd
+  - file: use-cases/tex-to-qmd
   - file: use-cases/open-course
 - file: references
 - file: glossary
