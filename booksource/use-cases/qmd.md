@@ -331,4 +331,24 @@ OBS Studio configured to record the set of slides and video capture with a
 plugin that automatically removes the background.
 ```
 
+In order to install the background removal plugin in Ubuntu 20.04 it is
+necessary to install OBS and the plugin from `flatpak` with the following
+commands:
+
+```shell
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.obsproject.Studio
+flatpak install flathub com.obsproject.Studio.Plugin.BackgroundRemoval
+```
+
+The following video is an example of the results obtained using the `Revealjs`
+slides generated with `Quarto` and the video recorded with `OBS` and the
+automatic removal of the background.
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/IymQ6f87CtA?si=PRqwMxL9aqjZ-W9M"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 [^recordings]: https://www.youtube.com/watch?v=IymQ6f87CtA&list=PLgdhPOmeUNm0tiFGUQtAG1yWx8bz914SI

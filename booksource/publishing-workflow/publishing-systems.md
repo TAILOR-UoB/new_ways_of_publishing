@@ -115,13 +115,13 @@ a Jupyter kernel exist (e.g. Python, Julia, Rubi, Haskell, and many other
 languages[^kernels]).
 Websites that include computational narratives can also bennefit from live
 environments thanks to the integration of Binder, Thebe and Google
-Colab[^colab]. It supports lots of narrative content like highlighted notes,
-code cells, quotations, epigraphs, glossaries, index of terms, footnotes,
-references, grids, cards, dropdown menus, tab content, maths, equations,
-proofs, theorems, algorithms, and more. The Jupyter Book system has been used
-in multiple ocasions to publish online material, an extensive gallery can be
-found at https://executablebooks.org/en/latest/gallery/. This website has been
-created with Jupyter Book and serves as an example of some of its
+Colab[^colab]. It supports multiple types of narrative content like highlighted
+notes, code cells, quotations, epigraphs, glossaries, index of terms,
+footnotes, references, grids, cards, dropdown menus, tab content, maths,
+equations, proofs, theorems, algorithms, and more. The Jupyter Book system has
+been used in multiple ocasions to publish online material, an extensive gallery
+can be found at https://executablebooks.org/en/latest/gallery/. This website
+has been created with Jupyter Book and serves as an example of some of its
 functionalities.
 
 [^jbook]: https://jupyterbook.org/en/stable/intro.html

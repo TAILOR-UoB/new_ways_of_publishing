@@ -1,3 +1,4 @@
+(sec:intro)=
 # Introduction
 
 The landscape of tools for authoring training material is vast, and creating or
@@ -43,6 +44,7 @@ multiple types of output formats can be generated automatically from them (e.g.
 formats like an HTML website, Reveal.js slides, pdf, and e-book).
 
 
+<!--
 
 ## Previous notes:
 
@@ -110,3 +112,5 @@ Points to mention:
 - There is an increasing interest on appendices to incorporate other type of
   content, or links to software or datasets to provide transparency and
   reproducibility of results.
+
+-->

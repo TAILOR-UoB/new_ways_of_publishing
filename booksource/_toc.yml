@@ -5,9 +5,9 @@ root: index
 chapters:
 - file: introduction/index
   sections:
-  - file: introduction/teaching
+  #  - file: introduction/teaching
+  - file: introduction/rethinking-courses
   - file: introduction/type-of-content
-- file: introduction/rethinking-courses
 - file: open-courses/index
   sections:
   - file: open-courses/open-access
@@ -19,30 +19,17 @@ chapters:
   - file: publishing-workflow/authoring-tools
   - file: publishing-workflow/authoring-formats
   - file: publishing-workflow/publishing-systems
-  - file: publishing-workflow/collaboration-tools
-- file: static-sites/index
+- file: content-examples/index
   sections:
-  - file: static-sites/restructuredtext
-  - file: static-sites/markdown
-  - file: static-sites/recordings
-  - file: static-sites/citations
-- file: interactive-server/index
-  sections:
-  - file: interactive-server/notebooks
-  - file: interactive-server/markdown-notebooks
-  - file: interactive-server/code-package
-  - file: interactive-server/thebe
-- file: interactive-client/index
-  sections:
-  - file: interactive-client/interactive-r
-  - file: interactive-client/plotly
-  - file: interactive-client/ipywidgets
-  - file: interactive-client/shinylive
+  - file: content-examples/markdown
+  - file: content-examples/markdown-code
+  - file: content-examples/notebooks
+  - file: content-examples/thebe
+  - file: content-examples/shinylive
 - file: use-cases/index
   sections:
   - file: use-cases/qmd
   - file: use-cases/tex-to-qmd
-  - file: use-cases/open-course
 - file: references
 - file: glossary
 - file: appendix/development
