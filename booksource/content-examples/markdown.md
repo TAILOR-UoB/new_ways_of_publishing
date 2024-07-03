@@ -41,47 +41,84 @@ computational results between the text. This format has been widely adopted by
 multiple authoring and publishing systems like `Quarto`, `Jupyter Lab`, `Google
 Colab`.
 
-## Sample Roles and Directives
+## Roles and Directives
 
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
+MyST Markdown provides roles and directives in order to extend the basic
+functionalities of Markdown. By defining a set of terms and how to interpret
+the code on it via extensions, which may be already integrated in Jupyter Book.
 
-## Directives
+Roles are used in-line and have the form `` {rol-name}`role content` `` for
+example the role `` {math}`E=mc^2` `` is rendered as {math}`E=mc^2`.
 
-Here is a "note" directive:
+Similarly, directives are multi-line versions of the form
 
+````
+```{directive-name} arguments
+:key1: val1
+:key2: val2
+
+Content of 
+the directive
+```
+````
+
+Examples of directives can be found in {ref}`sec:notes`.
+
+(sec:notes)=
+## Notes
+
+Notes are a type of directive supported by Jupyter Book. They allow you to
+create information boxes with a colored title, and main content.
+
+````
 ```{note}
 Here is a note
 ```
+````
 
-It will be rendered in a special box when you build your book.
+```{note}
 
-%Here is an inline directive to refer to a document in this section
-%`` {doc}`citations` `` wich renders as {doc}`citations`. We can also use `../`
-%to navigate to parent sections like `` {doc}`../interactive-server/index` ``.
+Here is a note
+```
 
-### Mermaid
+Other types of notes can be created with the directives `attention`, `caution`,
+`danger`, `error`, `important`, `warning`, `tip`, `seealso`, and more that can
+be found at https://mystmd.org/guide/directives. The following are three
+examples.
+
+```{tip}
+
+Tip note
+```
+
+```{attention}
+
+Attention note
+```
+
+```{error}
+
+Error note
+```
 
 ## Diagrams
 
+With additional directives it is possible to create diagrams from plain text.
+There are multiple sphinx plugins that can be installed in `Jupyter Book` and
+some that are already integrated in `Quarto`.
+In this section we show some examples.
+The [Mermaid](https://mermaid.js.org/) diagramming and charting tool allows the
+creation of a multitude of diagrams including [flowcharts](sec:mer:fc),
+[sequences](sec:mer:sd), [mindmaps](sec:mer:mm) and more. There is an online
+live editor that allows the exploration of various examples, modification and
+creation of new diagrams in the following link https://mermaid.live/edit.
+[WaveDrom](https://wavedrom.com/) is another rendering engine to draw [timing
+diagrams](sec:wd).
+
+(sec:mer:fc)=
 ### Mermaid flowchart
 
-```{warning}
-At this moment, Mermaid is not working in this Jupyter Book.
-```
-
-
-We have installed an extension to draw diagrams from text using `Mermaid`. The
-following is an example of the code necessary to generate the diagram below.
-
-The Mermaid Live Editor is a great tool to create mermaid diagrams online that
-are rendered in real time for easy implementation https://mermaid.live/edit
-
-```{mermaid}
+```{mermaid} 
 flowchart TD
   A[square node A] --> B(round edges node B)
   A --> C([stadium node C])
@@ -91,31 +128,8 @@ flowchart TD
   C --> F
 ```
 
-
-```{mermaid}
-flowchart TD
-  A[square node A] --> B(round edges node B)
-  A --> C([stadium node C])
-  B --> D[[subroutine node D]]
-  B --> E[(database node E)]
-  B --> F((circle F))
-  C --> F
-```
-
-```{mermaid}
-graph LR;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-```{mermaid}
-sequenceDiagram
-	participant Alice
-	participant Bob
-	Alice->John: Hello John, how are you?
-```
+(sec:mer:sd)=
+### Mermaid sequence diagram
 
 ```{mermaid}
 sequenceDiagram
@@ -131,25 +145,8 @@ sequenceDiagram
 	Bob-->John: Jolly good!
 ```
 
-```{mermaid}
-graph TD
-A[Client] -->|tcp_123| B(Load Balancer)
-B -->|tcp_456| C[Server1] 
-B -->|tcp_456| D[Server2]
-```
-
-
-You can find the basic syntax for flowcharts at
-[mermaid](https://mermaid.js.org/syntax/flowchart.html).
-
-It is possible to add other diagram plugin extensions. See other options in
-[sphinx-diagrammers](https://opencomputinglab.github.io/SubjectMatterNotebooks/diagram/sphinx-diagrammers.html).
-
-### Mermaid Mindmaps
-
-With [Mermaid](https://mermaid.js.org/intro/) it is possible to generate other
-types of diagrams, the following is an example for a
-[mindmap](https://mermaid.js.org/syntax/mindmap.html).
+(sec:mer:mm)=
+### Mermaid mindmap
 
 ```{mermaid}
 mindmap
@@ -171,8 +168,10 @@ mindmap
       Distributed Computing
 ```
 
+(sec:wd)=
+### WaveDrom timming diagrams
 
-### Wavedrom
+[WaveDrom](https://wavedrom.com/) can draw timming diagrams.
 
 ```{wavedrom}
 { signal : [
@@ -180,12 +179,6 @@ mindmap
   { name: "bus",  wave: "x.34.5x",   data: "head body tail" },
   { name: "wire", wave: "0.1..0." },
 ]}
-```
-
-### Blockdiag
-
-```{blockdiag}
-A -> B;
 ```
 
 ## Cross-references
@@ -212,8 +205,8 @@ Caption of the example figure ex1
 
 is possible to reference the image with the role `{numref}`Figure %s <figure-example-1>``
 which will show a reference like {numref}`Figure %s <figure-example-1>`. The
-same can be done for tables like {numref}`table-example-1`, and equations like
-Equation {eq}`equation-example-1`.
+same can be done for tables like {numref}`table-example-1`, equations like
+Equation {eq}`equation-example-1` and Sections {ref}`Introduction <sec:intro>`.
 
 ```{table} Caption of the table ex1
 :name: table-example-1
@@ -228,11 +221,6 @@ Equation {eq}`equation-example-1`.
 
 E = mc^2
 ```
-
-Refenrences to other Sections can also include a preview of thier content like
-Section {hoverxref}`Introduction <sec:intro>`.
-
-{hoverxref}`Reference with preview <sec:basic>`.
 
 `Quarto` has its own way to make cross references which can be consulted in
 their documentation ([Quarto cross

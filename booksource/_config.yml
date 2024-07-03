@@ -53,8 +53,8 @@ sphinx:
   config:
     suppress_warnings: ["mystnb.unknown_mime_type"]
     html_copy_source: false
-    hoverxref_roles:
-      - term
+    #hoverxref_roles:
+    #  - term
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
@@ -62,10 +62,9 @@ sphinx:
   extra_extensions:
     - sphinx_inline_tabs    # How to interpret {tab}
     - sphinxcontrib.mermaid # Draw diagrams with Mermaid
-    - sphinxcontrib.tikz
     - sphinxcontrib.blockdiag
     - sphinxcontrib.wavedrom
-    - sphinxcontrib.plantuml
-    - sphinxcontrib.blockdiag
-    - hoverxref.extension
+      #- hoverxref.extension
       #- sphinx_tippy
+      #- sphinxcontrib.tikz
+      #- sphinxcontrib.plantuml
