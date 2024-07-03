@@ -189,11 +189,10 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/teaching.html">A brief history of teaching methodologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/rethinking-courses.html">Rethinking courses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/type-of-content.html">Type of content</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/rethinking-courses.html">Rethinking courses</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../open-courses/index.html">Open Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../open-courses/open-access.html">Open Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-courses/open-code.html">Open Code</a></li>
@@ -205,37 +204,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/authoring-tools.html">Authoring tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/authoring-formats.html">Authoring file formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/publishing-systems.html">Publishing systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/collaboration-tools.html">Collaboration tools</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../static-sites/index.html">Static sites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/restructuredtext.html">reStructuredText</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/markdown.html">Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/recordings.html">Video recordings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/citations.html">Markdown citations</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-server/index.html">Interactivity with a server</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/notebooks.html">Jupyter Notebook Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/markdown-notebooks.html">MyST Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/code-package.html">Complex code package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content-examples/index.html">Content Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content-examples/markdown.html">Basic content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content-examples/markdown-code.html">Running code</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/thebe.html">Thebe</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-client/index.html">Interactivity within the client</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-client/interactive-r.html">Examples with R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-client/plotly.html">Plotly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-client/ipywidgets.html">IPyWidgets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-client/shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../content-examples/notebooks.html">Jupyter Notebook Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content-examples/thebe.html">Thebe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content-examples/shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Use case scenarios</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Quarto course example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tex-to-qmd.html">From LaTeX Beamer to Quarto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="open-course.html">Open course</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
@@ -821,6 +807,22 @@ content.</p>
 plugin that automatically removes the background.</span><a class="headerlink" href="#figure-obs" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>In order to install the background removal plugin in Ubuntu 20.04 it is
+necessary to install OBS and the plugin from <code class="docutils literal notranslate"><span class="pre">flatpak</span></code> with the following
+commands:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://flathub.org/repo/flathub.flatpakrepo
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>com.obsproject.Studio
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>com.obsproject.Studio.Plugin.BackgroundRemoval
+</pre></div>
+</div>
+<p>The following video is an example of the results obtained using the <code class="docutils literal notranslate"><span class="pre">Revealjs</span></code>
+slides generated with <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> and the video recorded with <code class="docutils literal notranslate"><span class="pre">OBS</span></code> and the
+automatic removal of the background.</p>
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/IymQ6f87CtA?si=PRqwMxL9aqjZ-W9M"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="html" role="doc-footnote">

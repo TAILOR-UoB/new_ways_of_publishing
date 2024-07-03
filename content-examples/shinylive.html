@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Examples with R &#8212; New ways of Publishing</title>
+    <title>Shinylive: Shiny + WebAssembly &#8212; New ways of Publishing</title>
   
   
   
@@ -61,15 +61,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'interactive-client/interactive-r';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content-examples/shinylive';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Plotly" href="plotly.html" />
-    <link rel="prev" title="Interactivity within the client" href="index.html" />
+    <link rel="next" title="Use case scenarios" href="../use-cases/index.html" />
+    <link rel="prev" title="Thebe" href="thebe.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,11 +187,10 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/teaching.html">A brief history of teaching methodologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/rethinking-courses.html">Rethinking courses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/type-of-content.html">Type of content</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/rethinking-courses.html">Rethinking courses</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../open-courses/index.html">Open Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../open-courses/open-access.html">Open Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-courses/open-code.html">Open Code</a></li>
@@ -205,37 +202,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/authoring-tools.html">Authoring tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/authoring-formats.html">Authoring file formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/publishing-systems.html">Publishing systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/collaboration-tools.html">Collaboration tools</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../static-sites/index.html">Static sites</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/restructuredtext.html">reStructuredText</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/markdown.html">Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/recordings.html">Video recordings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../static-sites/citations.html">Markdown citations</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive-server/index.html">Interactivity with a server</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/notebooks.html">Jupyter Notebook Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/markdown-notebooks.html">MyST Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/code-package.html">Complex code package</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Content Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="markdown.html">Basic content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markdown-code.html">Running code</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../interactive-server/thebe.html">Thebe</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Interactivity within the client</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Examples with R</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plotly.html">Plotly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipywidgets.html">IPyWidgets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shinylive.html">Shinylive: Shiny + WebAssembly</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="notebooks.html">Jupyter Notebook Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thebe.html">Thebe</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Shinylive: Shiny + WebAssembly</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../use-cases/index.html">Use case scenarios</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../use-cases/qmd.html">Quarto course example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../use-cases/tex-to-qmd.html">From LaTeX Beamer to Quarto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../use-cases/open-course.html">Open course</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
@@ -287,55 +271,6 @@
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/TAILOR-UoB/new_ways_of_publishing/main?urlpath=lab/tree/booksource/interactive-client/interactive-r.md" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -361,7 +296,7 @@
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/interactive-client/interactive-r.md" target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/content-examples/shinylive.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -378,7 +313,7 @@
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Finteractive-client/interactive-r.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Fcontent-examples/shinylive.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -490,7 +425,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Examples with R</h1>
+    <h1>Shinylive: Shiny + WebAssembly</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -504,81 +439,46 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="examples-with-r">
-<h1>Examples with R<a class="headerlink" href="#examples-with-r" title="Link to this heading">#</a></h1>
-<p>Section under development.</p>
-<p>It is possible to run <code class="docutils literal notranslate"><span class="pre">R</span></code> code by installing a kernel with <code class="docutils literal notranslate"><span class="pre">CRAN</span></code></p>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;IRkernel&#39;</span><span class="p">)</span>
-<span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">()</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="shinylive-shiny-webassembly">
+<h1>Shinylive: Shiny + WebAssembly<a class="headerlink" href="#shinylive-shiny-webassembly" title="Link to this heading">#</a></h1>
+<p>WebAssembly is a binary format for compiled programs that can run in the web
+browser at near-native speeds. Pyodide is a port of Python and various packages
+compiled in WebAssembly.</p>
+<p>Shiny provides an interface with an editor, output console and a user interface
+to run R or Python code.</p>
+<iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMVAJwEtyAKAcgAk4AbT4gAgHditTgBMAhCwCUAHQhgAvgF0gA"
+data-external="1" width="100%" height="400px">
+</iframe>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iframe</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMAMwCdiYACAZwAsBLCbJjmVYnTJMAgujxMArhwA6EOWlQB9aUwC8UjligBzOEpoAbaQBMAFNIxsATGZlgAEhwlQIJpmTauA1iyY1BDzpsLh0mAGVObgBCewBKOLkFdHVRdDNFFWcmADlSOESIMABfAF0gA&quot;</span>
+<span class="n">data</span><span class="o">-</span><span class="n">external</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;400px&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  # Install IRkernel with default name ir
-  - run: Rscript -e &#39;IRkernel::installspec()&#39;
+<iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMAMwCdiYACAZwAsBLCbJjmVYnTJMAgujxMArhwA6EOWlQB9aUwC8UjligBzOEpoAbaQBMAFNIxsATGZlgAEhwlQIJpmTauA1iyY1BDzpsLh0mAGVObgBCewBKOLkFdHVRdDNFFWcmADlSOESIMABfAF0gA"
+data-external="1" width="100%" height="400px">
+</iframe>
+<p>All the code for the previous example is encoded in the URL as a GET method. It
+is possible to modify the code in the editor, and generate the new URL by
+clicking the Share button on the top right corner. This provides a link to the
+editor (including editor, console and user interface (ui)) or only the
+application (ui).</p>
+<p>The code can be a Github Gist code by providing the gist id. For example, the
+following GitHub Gist <a class="reference external" href="https://gist.github.com/wch/e62218aa28bf26e785fc6cb99efe8efe">https://gist.github.com/wch/e62218aa28bf26e785fc6cb99efe8efe</a>
+with id=e62218aa28bf26e785fc6cb99efe8efe can be deployed with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iframe</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://shinylive.io/py/editor/#gist=e62218aa28bf26e785fc6cb99efe8efe&quot;</span>
+<span class="n">data</span><span class="o">-</span><span class="n">external</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;400px&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>The last command installs the kernel for Jupyter with the default name <code class="docutils literal notranslate"><span class="pre">ir</span></code>.</p>
-<p>Then, in order to run code in a markdown file it is necessary to indicate the
-kernel in the <code class="docutils literal notranslate"><span class="pre">yaml</span></code> configuration as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kernelspec</span><span class="p">:</span>
-  <span class="n">display_name</span><span class="p">:</span> <span class="n">iR</span>
-  <span class="n">language</span><span class="p">:</span> <span class="n">R</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">ir</span>
-</pre></div>
-</div>
-<p>Once the kernel is loaded, we can write <code class="docutils literal notranslate"><span class="pre">R</span></code> code in any cell as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{code-cell} R
-&quot;Hello world!&quot;
-```
-</pre></div>
-</div>
-<p>which will generate the following cell and output</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;Hello world!&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">'Hello world!'</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">3</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">12</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">var1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">5</span>
-<span class="n">var2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span>
-<span class="n">var3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">-3</span>
-
-<span class="nf">print</span><span class="p">(</span><span class="n">var1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">var2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">var3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 12
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
-<span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
-
-<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/4167504260b02ccfac0358e807d0f2bbb7e94cfd3a3c890a67749b16411597b2.png"><img alt="../_images/4167504260b02ccfac0358e807d0f2bbb7e94cfd3a3c890a67749b16411597b2.png" src="../_images/4167504260b02ccfac0358e807d0f2bbb7e94cfd3a3c890a67749b16411597b2.png" style="width: 420px; height: 420px;" /></a>
-</div>
-</div>
+<iframe src="https://shinylive.io/py/editor/#gist=e62218aa28bf26e785fc6cb99efe8efe"
+data-external="1" width="100%" height="400px">
+</iframe>
+<iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMASxlWICcyACGKM1AG2LK5oBGWbN14soAZxbcyAHQh0GzFhACu9bOKkRU8gGaNiMFhIAWNCJsVNWAQXR4WjSgBM4jR6prz5aVAH0vFgBeFi8sKABzOH89Li8XAAp5FlSwmgwLVFUyfwl+N0ZkyFl8FlKAOXUBdxZiPRYBCwlSxwAGRwBGNo6WACY2gEo8FLTw4hzs3NEyYpnS4flBnwh5NwaJdwA3d0SsnMcJzgOTOAkJGlJBxFHUgAEjqduWO+cIQqweWaguMmDS2wscwSMjESKMWALZ7raRfRLXZ5pFSYCHvIwYTZwJKdACcADYABxtImdZYQJFIgAeIRY3TaLAA1LSAKwsABUyIwqJc6O5EESABYAMwAdjJiLSehokUcUGpoRkGNUAhmEnhEtScowwNmlMc+zIGH5wxYbggFzI2GCABVGKo4GSKWlnGRVIxyVLIitfOgafZUIk-IEaI5Nowdh5TXABKpIja7Q75GAAL4AXSAA" data-external="1"
+width="925px" height="400px">
+</iframe>
+<iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMASxlWICcyACGKM1AG2LK5oBGWbN14soAZxbcyAHQgAzRsRgsJACxoRsLOg2YsAgujwtGlACZxGpgK4158tKgD69lgF4W9rFADmcC4KXPYWABTyLFHeNBjEtpwJLqJkEWApsmAAlHjyWY4QVgpq1gBu1mFaqAmm8YlkphJwEhI0pFmIkdEAAnXVchDRLN3mhdZYPKlQXGQemYYs-BBw0pOZ+YPRRau8YR1dQ1HmZLaMgzITu8AADKYAjKYATKYAbAC6pjemACxPpgDsHxYAHJiABaYEbJzoTxGdBhZxuGiNMrWLJgAC+byAA" data-external="1"
+width="925px" height="400px">
+</iframe>
 </section>
 
     <script type="text/x-thebe-config">
@@ -590,16 +490,16 @@ kernel in the <code class="docutils literal notranslate"><span class="pre">yaml<
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "r"
+            mode: "python"
         },
         kernelOptions: {
-            name: "ir",
-            path: "./interactive-client"
+            name: "python3",
+            path: "./content-examples"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'ir'</script>
+    <script>kernelName = 'python3'</script>
     <script type="text/javascript">
         function init() {
             WaveDrom.ProcessAll();
@@ -618,20 +518,20 @@ kernel in the <code class="docutils literal notranslate"><span class="pre">yaml<
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="thebe.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Interactivity within the client</p>
+        <p class="prev-next-title">Thebe</p>
       </div>
     </a>
     <a class="right-next"
-       href="plotly.html"
+       href="../use-cases/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Plotly</p>
+        <p class="prev-next-title">Use case scenarios</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
