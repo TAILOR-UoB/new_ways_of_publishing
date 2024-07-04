@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(sec:use:lat)=
 # From LaTeX Beamer to Quarto
 
 In this use-case scenario we created a `Quarto` website with multiple output

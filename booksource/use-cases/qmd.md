@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(sec:use:qua)=
 # Quarto course example
 
 In this use-case scenario we created a website for an online course with

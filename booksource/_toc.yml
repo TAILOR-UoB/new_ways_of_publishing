@@ -23,8 +23,6 @@ chapters:
   sections:
   - file: content-examples/markdown
   - file: content-examples/markdown-code
-  - file: content-examples/notebooks
-  - file: content-examples/thebe
   - file: content-examples/shinylive
 - file: use-cases/index
   sections:

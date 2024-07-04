@@ -1,3 +1,4 @@
+(sec:use)=
 # Use case scenarios
 
 ## Terminology

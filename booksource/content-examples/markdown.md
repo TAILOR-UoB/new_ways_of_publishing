@@ -1,6 +1,6 @@
 ---
 title: Markdown
-date: 2024-06-26
+date: 2024-07-04
 authors:
   - name: Miquel Perello Nieto
     affiliations:
@@ -41,6 +41,7 @@ computational results between the text. This format has been widely adopted by
 multiple authoring and publishing systems like `Quarto`, `Jupyter Lab`, `Google
 Colab`.
 
+(sec:ro:di)=
 ## Roles and Directives
 
 MyST Markdown provides roles and directives in order to extend the basic
