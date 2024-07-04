@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Shinylive: Shiny + WebAssembly &#8212; New ways of Publishing</title>
+    <title>Running code in the web browser &#8212; New ways of Publishing</title>
   
   
   
@@ -67,7 +67,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Use case scenarios" href="../use-cases/index.html" />
-    <link rel="prev" title="Thebe" href="thebe.html" />
+    <link rel="prev" title="Computational narratives" href="markdown-code.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -206,15 +206,8 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Content Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="markdown.html">Basic content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markdown-code.html">Running code</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="notebooks.html">Jupyter Notebook Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="thebe.html">Thebe</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Shinylive: Shiny + WebAssembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markdown-code.html">Computational narratives</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Running code in the web browser</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../use-cases/index.html">Use case scenarios</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -414,7 +407,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -425,11 +420,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Shinylive: Shiny + WebAssembly</h1>
+    <h1>Running code in the web browser</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shinylive-shiny-webassembly">Shinylive: Shiny + WebAssembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shinylive-in-jupyter-book">Shinylive in Jupyter Book</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shinylive-in-quarto">Shinylive in Quarto</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -439,21 +446,47 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="shinylive-shiny-webassembly">
-<h1>Shinylive: Shiny + WebAssembly<a class="headerlink" href="#shinylive-shiny-webassembly" title="Link to this heading">#</a></h1>
-<p>WebAssembly is a binary format for compiled programs that can run in the web
-browser at near-native speeds. Pyodide is a port of Python and various packages
-compiled in WebAssembly.</p>
-<p>Shiny provides an interface with an editor, output console and a user interface
-to run R or Python code.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="running-code-in-the-web-browser">
+<h1>Running code in the web browser<a class="headerlink" href="#running-code-in-the-web-browser" title="Link to this heading">#</a></h1>
+<p>Programming examples shown in the previous sections are executed during the
+compilation of the publication and their result is embedded into the resulting
+publication file. We have also seen that with “Thebe” it is possible to have
+live code that can be modified and re-run to generate different results.
+However, it requires a third party server (e.g. Google Colab, MyBinder,
+SageMaker Studio Lab, or others). On the other hand, there are some methods to
+run code in the same web browser without the need of an external computation
+resource. In this Section we demonstrate how this can be achieved with
+Shinylive.</p>
+<section id="shinylive-shiny-webassembly">
+<h2>Shinylive: Shiny + WebAssembly<a class="headerlink" href="#shinylive-shiny-webassembly" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://shiny.posit.co/py/docs/shinylive.html">Shinylive</a> is a technology that
+unifies <a class="reference external" href="https://shiny.posit.co/">Shiny</a> and <a class="reference external" href="https://webassembly.org/">WebAssembly</a>.
+WebAssebmly is a binary format for compiled programs that can run in the web
+browser at near-native speeds. <a class="reference external" href="https://pyodide.org/en/stable/">Pyodide</a> is a
+port of Python and various packages compiled in WebAssembly.</p>
+<p>It is possible to edit Shiny applications in the online editor
+<a class="reference external" href="https://shinylive.io/py/editor/">https://shinylive.io/py/editor/</a>. Once the application has been finished it is
+possible to copy a link to the end result. By default, Shiny provides an
+interface with a code editor on the top left, an output console at the bottom
+left and a user interface on the right to output the application result. The
+following example uses the output console and not the user interface.</p>
 <iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMVAJwEtyAKAcgAk4AbT4gAgHditTgBMAhCwCUAHQhgAvgF0gA"
 data-external="1" width="100%" height="400px">
 </iframe>
+<p>It is possible to modify the code and obtain the result on the output console.
+For example, you may want to try and change <code class="docutils literal notranslate"><span class="pre">print('Hello</span> <span class="pre">world!')</span></code> by
+<code class="docutils literal notranslate"><span class="pre">print(2+2)</span></code> and click <code class="docutils literal notranslate"><span class="pre">Re-run</span> <span class="pre">app</span></code> (or press <code class="docutils literal notranslate"><span class="pre">(Ctrl)-Shift-Enter</span></code>).</p>
+<section id="shinylive-in-jupyter-book">
+<span id="sec-shi-jup"></span><h3>Shinylive in Jupyter Book<a class="headerlink" href="#shinylive-in-jupyter-book" title="Link to this heading">#</a></h3>
+<p>Jupyter Books (like this roadmap) need to edit the application in the online
+editor and embed the final application using the resulting url and an
+<code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code>. For example the following iframe</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iframe</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMAMwCdiYACAZwAsBLCbJjmVYnTJMAgujxMArhwA6EOWlQB9aUwC8UjligBzOEpoAbaQBMAFNIxsATGZlgAEhwlQIJpmTauA1iyY1BDzpsLh0mAGVObgBCewBKOLkFdHVRdDNFFWcmADlSOESIMABfAF0gA&quot;</span>
 <span class="n">data</span><span class="o">-</span><span class="n">external</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;400px&quot;</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
 </pre></div>
 </div>
+<p>which is rendered as follows</p>
 <iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMAMwCdiYACAZwAsBLCbJjmVYnTJMAgujxMArhwA6EOWlQB9aUwC8UjligBzOEpoAbaQBMAFNIxsATGZlgAEhwlQIJpmTauA1iyY1BDzpsLh0mAGVObgBCewBKOLkFdHVRdDNFFWcmADlSOESIMABfAF0gA"
 data-external="1" width="100%" height="400px">
 </iframe>
@@ -462,23 +495,58 @@ is possible to modify the code in the editor, and generate the new URL by
 clicking the Share button on the top right corner. This provides a link to the
 editor (including editor, console and user interface (ui)) or only the
 application (ui).</p>
-<p>The code can be a Github Gist code by providing the gist id. For example, the
-following GitHub Gist <a class="reference external" href="https://gist.github.com/wch/e62218aa28bf26e785fc6cb99efe8efe">https://gist.github.com/wch/e62218aa28bf26e785fc6cb99efe8efe</a>
-with id=e62218aa28bf26e785fc6cb99efe8efe can be deployed with</p>
+<p>Furthermore, the original source code could be store in a Github Gist and
+provide the gist id in the url. For example, the following GitHub Gist
+<a class="reference external" href="https://gist.github.com/wch/e62218aa28bf26e785fc6cb99efe8efe">https://gist.github.com/wch/e62218aa28bf26e785fc6cb99efe8efe</a> with
+<code class="docutils literal notranslate"><span class="pre">id=e62218aa28bf26e785fc6cb99efe8efe</span></code> can be deployed with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iframe</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://shinylive.io/py/editor/#gist=e62218aa28bf26e785fc6cb99efe8efe&quot;</span>
 <span class="n">data</span><span class="o">-</span><span class="n">external</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;400px&quot;</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
 </pre></div>
 </div>
+<p>which results in the following application</p>
 <iframe src="https://shinylive.io/py/editor/#gist=e62218aa28bf26e785fc6cb99efe8efe"
 data-external="1" width="100%" height="400px">
 </iframe>
+<p>There are multiple prebuild common Python packages like Matplotlib, Numpy,
+Seaborn, Scipy, and scikit-learn (See list of packages for Pyodide 0.25.1 at
+<a class="reference external" href="https://shiny.posit.co/py/docs/shinylive.html#installed-packages">https://shiny.posit.co/py/docs/shinylive.html#installed-packages</a>). This makes
+it flexible to create plots with interactive parts like the following histogram
+of random points.</p>
 <iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMASxlWICcyACGKM1AG2LK5oBGWbN14soAZxbcyAHQh0GzFhACu9bOKkRU8gGaNiMFhIAWNCJsVNWAQXR4WjSgBM4jR6prz5aVAH0vFgBeFi8sKABzOH89Li8XAAp5FlSwmgwLVFUyfwl+N0ZkyFl8FlKAOXUBdxZiPRYBCwlSxwAGRwBGNo6WACY2gEo8FLTw4hzs3NEyYpnS4flBnwh5NwaJdwA3d0SsnMcJzgOTOAkJGlJBxFHUgAEjqduWO+cIQqweWaguMmDS2wscwSMjESKMWALZ7raRfRLXZ5pFSYCHvIwYTZwJKdACcADYABxtImdZYQJFIgAeIRY3TaLAA1LSAKwsABUyIwqJc6O5EESABYAMwAdjJiLSehokUcUGpoRkGNUAhmEnhEtScowwNmlMc+zIGH5wxYbggFzI2GCABVGKo4GSKWlnGRVIxyVLIitfOgafZUIk-IEaI5Nowdh5TXABKpIja7Q75GAAL4AXSAA" data-external="1"
 width="925px" height="400px">
 </iframe>
+<p>Or a simple line plot which can be easily modified.</p>
 <iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMASxlWICcyACGKM1AG2LK5oBGWbN14soAZxbcyAHQgAzRsRgsJACxoRsLOg2YsAgujwtGlACZxGpgK4158tKgD69lgF4W9rFADmcC4KXPYWABTyLFHeNBjEtpwJLqJkEWApsmAAlHjyWY4QVgpq1gBu1mFaqAmm8YlkphJwEhI0pFmIkdEAAnXVchDRLN3mhdZYPKlQXGQemYYs-BBw0pOZ+YPRRau8YR1dQ1HmZLaMgzITu8AADKYAjKYATKYAbAC6pjemACxPpgDsHxYAHJiABaYEbJzoTxGdBhZxuGiNMrWLJgAC+byAA" data-external="1"
 width="925px" height="400px">
 </iframe>
+</section>
+</section>
+<section id="shinylive-in-quarto">
+<h2>Shinylive in Quarto<a class="headerlink" href="#shinylive-in-quarto" title="Link to this heading">#</a></h2>
+<p>Shiny and Quarto are both developed by Posit (formearly RStudio). Quarto
+integrates very well with Shinylive being able to embed any Shinylive
+application in a Markdown file by writing the source code directly in a
+directive of the type <code class="docutils literal notranslate"><span class="pre">{shinylive-python}</span></code>. There are some options that can be
+adjusted in the header, and the code goes directly below. The following example
+in Quarto would render as the first example of the previous subsection
+<a class="reference internal" href="#sec-shi-jup"><span class="std std-ref">Shinylive in Jupyter Book</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{shinylive-python}
+#| standalone: true
+#| components: [editor, viewer]
+#| viewerHeight: 480
+
+from shiny import App, ui
+
+app_ui = ui.page_fluid(ui.h2(&quot;Hi, and thanks for trying Shiny!&quot;))
+
+app = App(app_ui, None)
+```
+</pre></div>
+</div>
+<p>More complex examples are shown in use case scenarios <a class="reference internal" href="../use-cases/qmd.html#sec-use-qua"><span class="std std-ref">Quarto course example</span></a> and
+<a class="reference internal" href="../use-cases/tex-to-qmd.html#sec-use-lat"><span class="std std-ref">From LaTeX Beamer to Quarto</span></a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -518,12 +586,12 @@ width="925px" height="400px">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="thebe.html"
+       href="markdown-code.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Thebe</p>
+        <p class="prev-next-title">Computational narratives</p>
       </div>
     </a>
     <a class="right-next"
@@ -541,6 +609,25 @@ width="925px" height="400px">
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shinylive-shiny-webassembly">Shinylive: Shiny + WebAssembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shinylive-in-jupyter-book">Shinylive in Jupyter Book</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shinylive-in-quarto">Shinylive in Quarto</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
