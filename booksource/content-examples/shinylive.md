@@ -92,7 +92,7 @@ Or a simple line plot which can be easily modified.
 width="925px" height="400px">
 </iframe>
 
-## Shinylive in Quarto
+### Shinylive in Quarto
 
 Shiny and Quarto are both developed by Posit (formearly RStudio). Quarto
 integrates very well with Shinylive being able to embed any Shinylive
