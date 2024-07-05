@@ -409,7 +409,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -425,6 +427,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-content">Basic content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-with-a-third-party">Interactive with a third party</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-client">Interactive within the client</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -437,7 +449,66 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="content-examples">
 <h1>Content Examples<a class="headerlink" href="#content-examples" title="Link to this heading">#</a></h1>
 <p>In this Section we provide multiple examples of the type of content that can be
-generated with publishing systems like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>.</p>
+generated with publishing systems like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>. We divided
+the different content into three types. The basic content is the most common
+textual narratives that include figures, tables, and other static elements. We
+also include videos in that section as videos are a common resource in
+internet.</p>
+<section id="basic-content">
+<h2>Basic content<a class="headerlink" href="#basic-content" title="Link to this heading">#</a></h2>
+<p>To generate basic content with a publication system and accessing the
+resulting content online usually follows the steps shown in the diagram below.
+<strong>(1)</strong> The publication system compiles all the source documents and creates a
+static publication website, <strong>(2)</strong> the static website is sent to an online
+hosting service which is properly organised, <strong>(3)</strong> a user requests access to
+the website to the host server from a computer or other device, <strong>(4)</strong> the
+hosting service serves the required documents to the client.</p>
+<figure class="align-default" id="fig-cli-sta">
+<img alt="../_images/static.svg" src="../_images/static.svg" /><figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
+as static content (the content could be printed).</span><a class="headerlink" href="#fig-cli-sta" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Most of this type of content is described in section <a class="reference internal" href="markdown.html#sec-basic"><span class="std std-ref">Basic content</span></a> and part of
+the section <a class="reference internal" href="markdown-code.html#sec-com-nar"><span class="std std-ref">Computational narratives</span></a>.</p>
+</section>
+<section id="interactive-with-a-third-party">
+<h2>Interactive with a third party<a class="headerlink" href="#interactive-with-a-third-party" title="Link to this heading">#</a></h2>
+<p>Online content in STEM fields commonly involve programming, sometimes being an
+important part of the training material. Platforms like Jupyter notebooks allow
+the creation of computational narratives that can be interactive, and can be
+modified and re-run changing the visualisation outcomes. This type of content
+requires a different architecture in which a computational node is involved to
+create an execution environment that can run and serve any changes in the
+source code. The first five steps mentioned above are the same, but additional
+steps are necessary. <strong>(6)</strong> The client has the option of interacting with
+certain parts of the website (e.g. changing the source code of some
+computational narrative cells), <strong>(7)</strong> a new session is started in a third
+party computational node that instantiates all the necessary dependencies to
+execute the changes and re-running the necessary parts, <strong>(8)</strong> the third party
+server serves all the changes to the client.</p>
+<figure class="align-default" id="fig-ser-int">
+<img alt="../_images/interactive_server.svg" src="../_images/interactive_server.svg" /><figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
+as static content but the content can be modified and rerun but requires a
+session with a (third party) server.</span><a class="headerlink" href="#fig-ser-int" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This may require the payment of a third party service that includes execution
+of code. There are some free services like <code class="docutils literal notranslate"><span class="pre">MyBinder</span></code> or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Colab</span></code> that
+offer a free tier. The end of section <a class="reference internal" href="markdown-code.html#sec-com-nar"><span class="std std-ref">Computational narratives</span></a> provides some guidelines
+on how to generate this type of content.</p>
+</section>
+<section id="interactive-within-the-client">
+<h2>Interactive within the client<a class="headerlink" href="#interactive-within-the-client" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="fig-cli-int">
+<img alt="../_images/interactive_client.svg" src="../_images/interactive_client.svg" /><figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
+as static content but the content can be modified and re-run within the client
+web browser (no further communication is necessary with external servers).</span><a class="headerlink" href="#fig-cli-int" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -502,6 +573,23 @@ generated with publishing systems like <code class="docutils literal notranslate
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-content">Basic content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-with-a-third-party">Interactive with a third party</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-client">Interactive within the client</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
