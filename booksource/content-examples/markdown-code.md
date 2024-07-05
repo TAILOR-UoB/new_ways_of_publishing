@@ -251,7 +251,7 @@ print(f"The current BPython version is {bpython.__version__}")
 Another example with a complex 3D surface visualisation from the Matplotlib
 documentation was already shown in the Section [](sec:com:nar:plo).
 
-(sec:live)=
+(sec:mar:liv)=
 ## Live code
 
 With the help of [Thebe](https://thebe.readthedocs.io/en/stable/) it is

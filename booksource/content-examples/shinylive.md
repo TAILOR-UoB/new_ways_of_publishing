@@ -1,3 +1,4 @@
+(sec:con:run)=
 # Running code in the web browser
 
 Programming examples shown in the previous sections are executed during the
@@ -83,13 +84,13 @@ it flexible to create plots with interactive parts like the following histogram
 of random points.
 
 <iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMASxlWICcyACGKM1AG2LK5oBGWbN14soAZxbcyAHQh0GzFhACu9bOKkRU8gGaNiMFhIAWNCJsVNWAQXR4WjSgBM4jR6prz5aVAH0vFgBeFi8sKABzOH89Li8XAAp5FlSwmgwLVFUyfwl+N0ZkyFl8FlKAOXUBdxZiPRYBCwlSxwAGRwBGNo6WACY2gEo8FLTw4hzs3NEyYpnS4flBnwh5NwaJdwA3d0SsnMcJzgOTOAkJGlJBxFHUgAEjqduWO+cIQqweWaguMmDS2wscwSMjESKMWALZ7raRfRLXZ5pFSYCHvIwYTZwJKdACcADYABxtImdZYQJFIgAeIRY3TaLAA1LSAKwsABUyIwqJc6O5EESABYAMwAdjJiLSehokUcUGpoRkGNUAhmEnhEtScowwNmlMc+zIGH5wxYbggFzI2GCABVGKo4GSKWlnGRVIxyVLIitfOgafZUIk-IEaI5Nowdh5TXABKpIja7Q75GAAL4AXSAA" data-external="1"
-width="925px" height="400px">
+width="100%" height="400px">
 </iframe>
 
 Or a simple line plot which can be easily modified.
 
 <iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMASxlWICcyACGKM1AG2LK5oBGWbN14soAZxbcyAHQgAzRsRgsJACxoRsLOg2YsAgujwtGlACZxGpgK4158tKgD69lgF4W9rFADmcC4KXPYWABTyLFHeNBjEtpwJLqJkEWApsmAAlHjyWY4QVgpq1gBu1mFaqAmm8YlkphJwEhI0pFmIkdEAAnXVchDRLN3mhdZYPKlQXGQemYYs-BBw0pOZ+YPRRau8YR1dQ1HmZLaMgzITu8AADKYAjKYATKYAbAC6pjemACxPpgDsHxYAHJiABaYEbJzoTxGdBhZxuGiNMrWLJgAC+byAA" data-external="1"
-width="925px" height="400px">
+width="100%" height="400px">
 </iframe>
 
 ### Shinylive in Quarto
