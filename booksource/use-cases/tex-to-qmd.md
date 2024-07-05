@@ -13,23 +13,22 @@ kernelspec:
 ---
 
 (sec:use:lat)=
-# From LaTeX Beamer to Quarto
+# From $\LaTeX$ Beamer to Quarto
 
-In this use-case scenario we created a `Quarto` website with multiple output
-formats.
+The use case [](sec:use:qua) shows how to start a `Quarto` course with multiple
+outputs from zero. In this use case we start from an already existing set of
+slides made with $\LaTeX$ package [beamer](https://ctan.org/pkg/beamer?lang=en).
+The original set of slides can be found at [](./data/cla-cal-slides.pdf), and
+the course generated in this use case is available at
+https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html.
 
-```{note}
-TODO
-```
+This use case explains the process followed to generate the `Quarto` course
+material paying special attention on the largest difficulties found during the
+process. In order to replicate the steps involved you can {download}`download
+the presentation source files in this link <./data/cla-cal-slides.zip>`. 
 
-The following website was created with `Quarto` as an example of the
-functionalities https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html
-
-You can {download}`Download the set of slides <./data/cla-cal-slides.pdf>`
-expected after running the previous commands.
-
-The source code for the slides can be The original set of slides can be build from the 
-{download}`Download the LaTeX files <./data/cla-cal-slides.zip>`
+To generate the slides first unzip the downloaded file and run pdflatex and
+biber as follows
 
 ```shell
 unzip -X cla_cal_slides.zip
@@ -38,18 +37,24 @@ biber main
 pdflatex main.tex
 ```
 
+The rest of the use case uses the content of the zip file to extend the `Quarto`
+project started in the use case [](sec:use:qua).
 
-## Pandoc: from latex to md
+## Pandoc: from latex to markdown
 
-Pandoc is a tool to convert text documents into a multitude of other formats.
-The command to convert a `LaTeX` file to `markdown` is the following.
+Depending on the size of the $\LaTeX$ project it may be possible to manually
+copy the main content and edit it in such a form that is markdown compliant.
+This may be a good solution as at the end there is no perfect automation to
+convert latex to markdown. However, there are a few alternatives that will do
+part of the job automatically. For example, `pandoc` is a tool to convert text
+documents into a multitude of other formats.  The command to convert a $\LaTeX$
+file to `markdown` is the following.
 
 ```shell
 pandoc main.tex -s -o main.md
 ```
-
 However, this will result in a markdown with only the titles of the sections
-and empty content. This is because the LaTeX source code of this example
+and empty content. This is because the $\LaTeX$ source code of this example
 contains several definitions and new commands that can not be converted by
 `pandoc` without manual modifications.
 
@@ -119,7 +124,7 @@ alt: Text messages depicing errors of LaTeX definitions
 Errors from undefined terms that were not correctly converted by pandoc.
 ```
 
-Another problem is that the original `LaTeX` file did not indicate the
+Another problem is that the original $\LaTeX$ file did not indicate the
 extension of some figures that were originally PDFs. With the absence of the
 file extension `Quarto` assumes that the figures are `png` files which is not
 correct. An option would be to manually modify all the figures in the Quarto
@@ -174,7 +179,26 @@ be loaded. It is also convenient to change the rest of the extensions
 `.pdf` to `.png` now that we have the bitmap version of all figures. And
 manually change the markdown of a couple of figures
 
-## Figure size issues
+## Figure sizes and positions
+
+Figures in the original set of slides were positioned and adjusted to fit the
+spacing provided by $\LaTeX$ beamer. The change of spacing in the `Quarto`
+output makes it difficult to fit the figures in an appealing manner. For that
+reason, we had to manually adjust the automated generated markdown code. The
+original $\LaTeX$ code 
+
+```latex
+\includegraphics[height=0.7\textheight]{figures/ROCCH.pdf}\hfill
+\includegraphics[height=0.7\textheight]{figures/ROCcal2.pdf}\\
+Source: \textcite{flach2016roc}
+```
+
+which considered the height of the slides to position them correctly as follows
+
+![](images/latex-two-columns.jpg)
+
+The code was automatically converted to markdown keeping the original height
+proportions
 
 ```markdown
 ![image](figures/ROCCH.pdf){height="0.7\textheight"}
@@ -182,7 +206,10 @@ manually change the markdown of a couple of figures
 Source: @flach2016roc
 ```
 
-for the following code that resizes the images to better fit the website
+However, the spacing in the `Quarto` webpage didn't had the same vertical
+dimensions, which made the figures extend to a large portion of the webpage. We
+manually changed the code by partitioning the body space into columns as
+follows
 
 ```markdown
 :::: {.columns .v-center-container}
@@ -202,6 +229,11 @@ Source: @flach2016roc
 :::
 ::::
 ```
+
+which resulted in the following output
+
+![](images/two_columns.jpg)
+
 
 ## Comments and line breaks
 
@@ -229,7 +261,7 @@ P(Y=i \: | \: \hat{p}_i(\mathbf{x})=c)=c\qquad\text{where }\ i=\argmax_j \hat{p}
 ## Generating figures from source code
 
 The original slides required the figures to be generated in advance and
-imported from `LaTeX`. However, given that we had the `Python` code to generate
+imported from $\LaTeX$. However, given that we had the `Python` code to generate
 the figures it is better to embed the code, which can be modified in the
 `markdown` file if we want to change the example. For example, the following
 markdown code loaded a figure
@@ -264,10 +296,15 @@ fig = plot_reliability_diagram(labels, np.vstack([1 - scores, scores]).T,
 
 ## Authors in the header
 
-```markdown
----
+Authoring is in the heart of the `Quarto` publication system. `Quarto` allows
+to include metadata about the authors in the YAML header section of each
+markdown file, which is rendered at the top of each page indicating clearly the
+list of authors. This makes it very easy to collaborate in one `Quarto`
+publication where multiple authors worked in different sections, and clearly
+indicate their contributions. The following metadata
+
+```yaml
 title: Classifier Calibration
-subtitle: <a href="slides-cla-cal.html" target="_blank"><img src="https://img.shields.io/badge/slides-revealjs-yellow"></a>
 author: 
   - name: Peter Flach
     orcid: 0000-0001-6857-5810
@@ -289,32 +326,23 @@ author:
         postal-code: BS8 1QU
     attributes:
         equal-contributor: False
-format:
-  html:
-    css: wahcc_style.css
-  revealjs:
-    logo: "../images/logos/tailor_and_uob.svg"
-    output-file: slides-cla-cal.html
-    slide-number: true
-    width: 100%
-    height: 100%
-    incremental: true
-    smaller: false
-    auto-stretch: false
-    chalkboard: true
-bibliography: references.bib
----
+
+# Other configuration ommited
+# ...
 ```
+
+results in a list of authors with their affiliations, links to their e-mail
+addresses and ORCID profiles.
+
+![](images/authors.jpg)
 
 ## Generating Reveal.js slides
 
-Quarto allows the generation of other types of outupts from the same `markdown`
-file. By adding the following configuration to the header, Quarto will generate
-slides and provide a link on the right navigation bar.
+`Quarto` allows the generation of multiple type of outupt formats from the same
+`markdown` file. By adding the following configuration to the header, `Quarto`
+will generate slides and provide a link on the right navigation bar.
 
-```markdown
-...
-
+```yaml
 format:
   html:
     css: wahcc_style.css
@@ -329,9 +357,9 @@ format:
     auto-stretch: false
     chalkboard: true
 bibliography: references.bib
----
 ```
 
+![](images/formats.jpg)
 
 ```{figure} images/clacal_revealjs.jpg
 ---
@@ -376,11 +404,12 @@ Is only one of the following answers correct?
 
 The Universitat Politècnica de València counts with a physical infrastructure
 to record teaching sessions with a speaker in front of a green screen and
-accompanying slides shown in the background. Some of the functionalities are
-provided are the automatic detection of slide changes that presents the
-different slides in the video timeline for easy navigation, and the automatic
-generation of captions in various languages. For this use-case Peter recorded
-various short videos one for each subsection of the presentation. 
+accompanying slides that are placed in the background after recording. Some of
+the functionalities provided are the automatic detection of slide changes
+that presents the different slides in the video timeline for easy navigation,
+and the automatic generation of captions in various languages. For this
+use case Peter recorded various short videos one for each subsection of the
+presentation. 
 
 Videos can be embedded into websites with the `<iframe>` tag, which allows to
 embed one web page into another. The following `html` code is an example.
@@ -450,19 +479,19 @@ Revealjs slides look good. Among the those changes are:
 
 - Remove empty lines between each element of a list
 - Manually added `highlights` with \`text to highlight\`
-- Fix multiple issues with `LaTeX` and added definitions and packages in the
+- Fix multiple issues with $\LaTeX$ and added definitions and packages in the
   header
 - Adjusted the size of tables, figures and code to better fit the webpage and
   the slides
 
-## MyST client: to html
+## MyST client: $\LaTeX$ to html
 
-The MyST client Python package can convert slides made with LaTeX Beamer to
-MyST Markdown and html. A guide on how to make this conversion can be found at
-https://mystmd.org/guide/writing-in-latex. Thi section also provides a quick
-summary of the guide that results in a good html version. However, at the
-moment I have not been able to retrieve the intermediate MyST markdown files
-which would be really useful to improve the method explained above with pandoc.
+The MyST client Python package can convert slides made with $\LaTeX$ Beamer to
+html. However, we didn't find a method to obtain the intermediate MyST markdown
+files that are automatically generated, which may have done the process
+described above with pandoc much easier. A guide on how to make this conversion
+can be found at https://mystmd.org/guide/writing-in-latex. Thi section also
+provides a quick summary of the guide that results in a good html version. 
 
 This method requires the installation of the MyST client[^mystcl], which also
 requires an updated version of node. The installation of the required version
@@ -494,7 +523,7 @@ npm -v
 # 10.2.4
 ```
 
-One consideration from this example is that the LaTeX environment `refsection`
+One consideration from this example is that the $\LaTeX$ environment `refsection`
 is not currently supported, and all the environments need to be removed. This
 can be done by removing the beginning and end of each environment.
 
@@ -504,6 +533,11 @@ can be done by removing the beginning and end of each environment.
 \end{refsection}
 ```
 
+The resulting website is in general very well formatted with some minor
+problems. The following is a capture of the resulting front page with a
+navigation bar on the left for the different documents and on the right side
+for the sections of the current document.
+
 ```{figure} images/myst_1.jpg
 ---
 width: 100 %
@@ -511,8 +545,12 @@ align: center
 alt: Website with left and right navigation bars and central content
 ---
 
-Automatic conversion of LaTeX beamer file into a website with MyST client.
+Automatic conversion of $\LaTeX$ beamer file into a website with MyST client.
 ```
+
+The previous figure shows one of the issues with the lists, which in this
+particular case were not converted to markdown correctly. However, tables,
+images and equations were correctly rendered in most cases.
 
 ```{figure} images/myst_2.jpg
 ---
@@ -521,8 +559,8 @@ align: center
 alt: Website with left and right navigation bars and central content
 ---
 
-Simple LaTeX table converted with MyST client to markdown. The defined colors
-in LaTeX is not rendered correctly.
+Simple $\LaTeX$ table converted with MyST client to markdown. The defined colors
+in $\LaTeX$ is not rendered correctly.
 ```
 
 ```{figure} images/myst_3.jpg
@@ -544,14 +582,4 @@ alt: Website with left and right navigation bars and central content
 ---
 
 Most of the equations are correctly displayed, even with colors.
-```
-
-```{figure} images/myst_6.jpg
----
-width: 80 %
-align: center
-alt: Website with left and right navigation bars and central content
----
-
-Errors rendering some mathematical commands.
 ```
