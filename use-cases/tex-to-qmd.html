@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>From LaTeX Beamer to Quarto &#8212; New ways of Publishing</title>
+    <title>From \(\LaTeX\) Beamer to Quarto &#8212; New ways of Publishing</title>
   
   
   
@@ -61,6 +61,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'use-cases/tex-to-qmd';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
@@ -212,7 +214,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Use case scenarios</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qmd.html">Quarto course example</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">From LaTeX Beamer to Quarto</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">From <span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer to Quarto</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
@@ -469,7 +471,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>From LaTeX Beamer to Quarto</h1>
+    <h1>From \LaTeX Beamer to Quarto</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -479,8 +481,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandoc-from-latex-to-md">Pandoc: from latex to md</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-size-issues">Figure size issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandoc-from-latex-to-markdown">Pandoc: from latex to markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-sizes-and-positions">Figure sizes and positions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-and-line-breaks">Comments and line breaks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-figures-from-source-code">Generating figures from source code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors-in-the-header">Authors in the header</a></li>
@@ -490,7 +492,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-into-slides-and-sections">Breaking into slides and sections</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-content">Conditional content</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-changes">Other changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-client-to-html">MyST client: to html</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-client-latex-to-html">MyST client: <span class="math notranslate nohighlight">\(\LaTeX\)</span> to html</a></li>
 </ul>
             </nav>
         </div>
@@ -503,34 +505,40 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="from-latex-beamer-to-quarto">
-<span id="sec-use-lat"></span><h1>From LaTeX Beamer to Quarto<a class="headerlink" href="#from-latex-beamer-to-quarto" title="Link to this heading">#</a></h1>
-<p>In this use-case scenario we created a <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> website with multiple output
-formats.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>TODO</p>
-</div>
-<p>The following website was created with <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> as an example of the
-functionalities <a class="reference external" href="https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html">https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html</a></p>
-<p>You can <a class="reference download internal" download="" href="../_downloads/def3d1563eca36133f081eebd75f6b7d/cla-cal-slides.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">slides</span></code></a>
-expected after running the previous commands.</p>
-<p>The source code for the slides can be The original set of slides can be build from the
-<a class="reference download internal" download="" href="../_downloads/607ee4c14e80879975f26e734f105c67/cla-cal-slides.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">LaTeX</span> <span class="pre">files</span></code></a></p>
+<span id="sec-use-lat"></span><h1>From <span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer to Quarto<a class="headerlink" href="#from-latex-beamer-to-quarto" title="Link to this heading">#</a></h1>
+<p>The use case <a class="reference internal" href="qmd.html#sec-use-qua"><span class="std std-ref">Quarto course example</span></a> shows how to start a <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> course with multiple
+outputs from zero. In this use case we start from an already existing set of
+slides made with <span class="math notranslate nohighlight">\(\LaTeX\)</span> package <a class="reference external" href="https://ctan.org/pkg/beamer?lang=en">beamer</a>.
+The original set of slides can be found at <a class="reference download internal" download="" href="../_downloads/def3d1563eca36133f081eebd75f6b7d/cla-cal-slides.pdf"><code class="xref download myst docutils literal notranslate"><span class="pre">./data/cla-cal-slides.pdf</span></code></a>, and
+the course generated in this use case is available at
+<a class="reference external" href="https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html">https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html</a>.</p>
+<p>This use case explains the process followed to generate the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> course
+material paying special attention on the largest difficulties found during the
+process. In order to replicate the steps involved you can <a class="reference download internal" download="" href="../_downloads/607ee4c14e80879975f26e734f105c67/cla-cal-slides.zip"><code class="xref download docutils literal notranslate"><span class="pre">download</span> <span class="pre">the</span> <span class="pre">presentation</span> <span class="pre">source</span> <span class="pre">files</span> <span class="pre">in</span> <span class="pre">this</span> <span class="pre">link</span></code></a>.</p>
+<p>To generate the slides first unzip the downloaded file and run pdflatex and
+biber as follows</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>-X<span class="w"> </span>cla_cal_slides.zip
 pdflatex<span class="w"> </span>main.tex
 biber<span class="w"> </span>main
 pdflatex<span class="w"> </span>main.tex
 </pre></div>
 </div>
-<section id="pandoc-from-latex-to-md">
-<h2>Pandoc: from latex to md<a class="headerlink" href="#pandoc-from-latex-to-md" title="Link to this heading">#</a></h2>
-<p>Pandoc is a tool to convert text documents into a multitude of other formats.
-The command to convert a <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> file to <code class="docutils literal notranslate"><span class="pre">markdown</span></code> is the following.</p>
+<p>The rest of the use case uses the content of the zip file to extend the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>
+project started in the use case <a class="reference internal" href="qmd.html#sec-use-qua"><span class="std std-ref">Quarto course example</span></a>.</p>
+<section id="pandoc-from-latex-to-markdown">
+<h2>Pandoc: from latex to markdown<a class="headerlink" href="#pandoc-from-latex-to-markdown" title="Link to this heading">#</a></h2>
+<p>Depending on the size of the <span class="math notranslate nohighlight">\(\LaTeX\)</span> project it may be possible to manually
+copy the main content and edit it in such a form that is markdown compliant.
+This may be a good solution as at the end there is no perfect automation to
+convert latex to markdown. However, there are a few alternatives that will do
+part of the job automatically. For example, <code class="docutils literal notranslate"><span class="pre">pandoc</span></code> is a tool to convert text
+documents into a multitude of other formats.  The command to convert a <span class="math notranslate nohighlight">\(\LaTeX\)</span>
+file to <code class="docutils literal notranslate"><span class="pre">markdown</span></code> is the following.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pandoc<span class="w"> </span>main.tex<span class="w"> </span>-s<span class="w"> </span>-o<span class="w"> </span>main.md
 </pre></div>
 </div>
 <p>However, this will result in a markdown with only the titles of the sections
-and empty content. This is because the LaTeX source code of this example
+and empty content. This is because the <span class="math notranslate nohighlight">\(\LaTeX\)</span> source code of this example
 contains several definitions and new commands that can not be converted by
 <code class="docutils literal notranslate"><span class="pre">pandoc</span></code> without manual modifications.</p>
 <p>The first thing that needed to be changed was to define the command
@@ -578,7 +586,7 @@ folder, bibliography file and some of the other documents.</p>
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Errors from undefined terms that were not correctly converted by pandoc.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Another problem is that the original <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> file did not indicate the
+<p>Another problem is that the original <span class="math notranslate nohighlight">\(\LaTeX\)</span> file did not indicate the
 extension of some figures that were originally PDFs. With the absence of the
 file extension <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> assumes that the figures are <code class="docutils literal notranslate"><span class="pre">png</span></code> files which is not
 correct. An option would be to manually modify all the figures in the Quarto
@@ -626,14 +634,31 @@ be loaded. It is also convenient to change the rest of the extensions
 <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> to <code class="docutils literal notranslate"><span class="pre">.png</span></code> now that we have the bitmap version of all figures. And
 manually change the markdown of a couple of figures</p>
 </section>
-<section id="figure-size-issues">
-<h2>Figure size issues<a class="headerlink" href="#figure-size-issues" title="Link to this heading">#</a></h2>
+<section id="figure-sizes-and-positions">
+<h2>Figure sizes and positions<a class="headerlink" href="#figure-sizes-and-positions" title="Link to this heading">#</a></h2>
+<p>Figures in the original set of slides were positioned and adjusted to fit the
+spacing provided by <span class="math notranslate nohighlight">\(\LaTeX\)</span> beamer. The change of spacing in the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>
+output makes it difficult to fit the figures in an appealing manner. For that
+reason, we had to manually adjust the automated generated markdown code. The
+original <span class="math notranslate nohighlight">\(\LaTeX\)</span> code</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\includegraphics</span><span class="na">[height=0.7\textheight]</span><span class="nb">{</span>figures/ROCCH.pdf<span class="nb">}</span><span class="k">\hfill</span>
+<span class="k">\includegraphics</span><span class="na">[height=0.7\textheight]</span><span class="nb">{</span>figures/ROCcal2.pdf<span class="nb">}</span><span class="k">\\</span>
+Source: <span class="k">\textcite</span><span class="nb">{</span>flach2016roc<span class="nb">}</span>
+</pre></div>
+</div>
+<p>which considered the height of the slides to position them correctly as follows</p>
+<p><img alt="" src="../_images/latex-two-columns.jpg" /></p>
+<p>The code was automatically converted to markdown keeping the original height
+proportions</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>![<span class="nt">image</span>](<span class="na">figures/ROCCH.pdf</span>){height=&quot;0.7\textheight&quot;}
 ![<span class="nt">image</span>](<span class="na">figures/ROCcal2.pdf</span>){height=&quot;0.7\textheight&quot;}\
 Source: <span class="ni">@flach2016roc</span>
 </pre></div>
 </div>
-<p>for the following code that resizes the images to better fit the website</p>
+<p>However, the spacing in the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> webpage didn’t had the same vertical
+dimensions, which made the figures extend to a large portion of the webpage. We
+manually changed the code by partitioning the body space into columns as
+follows</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>:::: {.columns .v-center-container}
 
 ::: {.column width=&quot;40%&quot;}
@@ -652,6 +677,8 @@ Source: <span class="ni">@flach2016roc</span>
 ::::
 </pre></div>
 </div>
+<p>which resulted in the following output</p>
+<p><img alt="" src="../_images/two_columns.jpg" /></p>
 </section>
 <section id="comments-and-line-breaks">
 <h2>Comments and line breaks<a class="headerlink" href="#comments-and-line-breaks" title="Link to this heading">#</a></h2>
@@ -677,7 +704,7 @@ P(Y=i \: | \: \hat{p}_i(\mathbf{x})=c)=c\qquad\text{where }\ i=\argmax_j \hat{p}
 <section id="generating-figures-from-source-code">
 <h2>Generating figures from source code<a class="headerlink" href="#generating-figures-from-source-code" title="Link to this heading">#</a></h2>
 <p>The original slides required the figures to be generated in advance and
-imported from <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code>. However, given that we had the <code class="docutils literal notranslate"><span class="pre">Python</span></code> code to generate
+imported from <span class="math notranslate nohighlight">\(\LaTeX\)</span>. However, given that we had the <code class="docutils literal notranslate"><span class="pre">Python</span></code> code to generate
 the figures it is better to embed the code, which can be modified in the
 <code class="docutils literal notranslate"><span class="pre">markdown</span></code> file if we want to change the example. For example, the following
 markdown code loaded a figure</p>
@@ -716,72 +743,65 @@ roadmap.</p>
 </section>
 <section id="authors-in-the-header">
 <h2>Authors in the header<a class="headerlink" href="#authors-in-the-header" title="Link to this heading">#</a></h2>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>---
-title: Classifier Calibration
-subtitle: &lt;a href=&quot;slides-cla-cal.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/slides-revealjs-yellow&quot;&gt;&lt;/a&gt;
-author: 
-<span class="w">  </span><span class="k">-</span><span class="w"> </span>name: Peter Flach
-    orcid: 0000-0001-6857-5810
-    email: peter.flach@bristol.ac.uk
-    affiliations:
-<span class="w">      </span><span class="k">-</span><span class="w"> </span>name: University of Bristol
-        city: Bristol
-        country: United Kingdom
-        postal-code: BS8 1QU
-<span class="w">  </span><span class="k">-</span><span class="w"> </span>name:
-      given: Miquel
-      family: Perello Nieto
-    orcid: 0000-0001-8925-424X
-    email: miquel.perellonieto@bristol.ac.uk
-    affiliations:
-<span class="w">      </span><span class="k">-</span><span class="w"> </span>name: University of Bristol
-        city: Bristol
-        country: United Kingdom
-        postal-code: BS8 1QU
-    attributes:
-        equal-contributor: False
-format:
-  html:
-    css: wahcc_style.css
-  revealjs:
-    logo: &quot;../images/logos/tailor_and_uob.svg&quot;
-    output-file: slides-cla-cal.html
-    slide-number: true
-    width: 100%
-    height: 100%
-    incremental: true
-    smaller: false
-    auto-stretch: false
-    chalkboard: true
-<span class="gu">bibliography: references.bib</span>
-<span class="gu">---</span>
+<p>Authoring is in the heart of the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> publication system. <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> allows
+to include metadata about the authors in the YAML header section of each
+markdown file, which is rendered at the top of each page indicating clearly the
+list of authors. This makes it very easy to collaborate in one <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>
+publication where multiple authors worked in different sections, and clearly
+indicate their contributions. The following metadata</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Classifier Calibration</span>
+<span class="nt">author</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Peter Flach</span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0000-0001-6857-5810</span>
+<span class="w">    </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peter.flach@bristol.ac.uk</span>
+<span class="w">    </span><span class="nt">affiliations</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">University of Bristol</span>
+<span class="w">        </span><span class="nt">city</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bristol</span>
+<span class="w">        </span><span class="nt">country</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">United Kingdom</span>
+<span class="w">        </span><span class="nt">postal-code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BS8 1QU</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">given</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Miquel</span>
+<span class="w">      </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Perello Nieto</span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0000-0001-8925-424X</span>
+<span class="w">    </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">miquel.perellonieto@bristol.ac.uk</span>
+<span class="w">    </span><span class="nt">affiliations</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">University of Bristol</span>
+<span class="w">        </span><span class="nt">city</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bristol</span>
+<span class="w">        </span><span class="nt">country</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">United Kingdom</span>
+<span class="w">        </span><span class="nt">postal-code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BS8 1QU</span>
+<span class="w">    </span><span class="nt">attributes</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">equal-contributor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
+
+<span class="c1"># Other configuration ommited</span>
+<span class="c1"># ...</span>
 </pre></div>
 </div>
+<p>results in a list of authors with their affiliations, links to their e-mail
+addresses and ORCID profiles.</p>
+<p><img alt="" src="../_images/authors.jpg" /></p>
 </section>
 <section id="generating-reveal-js-slides">
 <h2>Generating Reveal.js slides<a class="headerlink" href="#generating-reveal-js-slides" title="Link to this heading">#</a></h2>
-<p>Quarto allows the generation of other types of outupts from the same <code class="docutils literal notranslate"><span class="pre">markdown</span></code>
-file. By adding the following configuration to the header, Quarto will generate
-slides and provide a link on the right navigation bar.</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>...
-
-format:
-  html:
-    css: wahcc_style.css
-  revealjs:
-    logo: &quot;../images/logos/tailor_and_uob.svg&quot;
-    output-file: slides-cla-cal.html
-    slide-number: true
-    width: 100%
-    height: 100%
-    incremental: true
-    smaller: false
-    auto-stretch: false
-    chalkboard: true
-<span class="gu">bibliography: references.bib</span>
-<span class="gu">---</span>
+<p><code class="docutils literal notranslate"><span class="pre">Quarto</span></code> allows the generation of multiple type of outupt formats from the same
+<code class="docutils literal notranslate"><span class="pre">markdown</span></code> file. By adding the following configuration to the header, <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>
+will generate slides and provide a link on the right navigation bar.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">html</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">css</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wahcc_style.css</span>
+<span class="w">  </span><span class="nt">revealjs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;../images/logos/tailor_and_uob.svg&quot;</span>
+<span class="w">    </span><span class="nt">output-file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slides-cla-cal.html</span>
+<span class="w">    </span><span class="nt">slide-number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100%</span>
+<span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100%</span>
+<span class="w">    </span><span class="nt">incremental</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">smaller</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">auto-stretch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">chalkboard</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">bibliography</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references.bib</span>
 </pre></div>
 </div>
+<p><img alt="" src="../_images/formats.jpg" /></p>
 <figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../_images/clacal_revealjs.jpg"><img alt="Thumbnails of multiple reveal.js slides" src="../_images/clacal_revealjs.jpg" style="width: 100%;" /></a>
 <figcaption>
@@ -819,11 +839,12 @@ hidden text that can be inspected when clicking.</p>
 <h2>Video recordings<a class="headerlink" href="#video-recordings" title="Link to this heading">#</a></h2>
 <p>The Universitat Politècnica de València counts with a physical infrastructure
 to record teaching sessions with a speaker in front of a green screen and
-accompanying slides shown in the background. Some of the functionalities are
-provided are the automatic detection of slide changes that presents the
-different slides in the video timeline for easy navigation, and the automatic
-generation of captions in various languages. For this use-case Peter recorded
-various short videos one for each subsection of the presentation.</p>
+accompanying slides that are placed in the background after recording. Some of
+the functionalities provided are the automatic detection of slide changes
+that presents the different slides in the video timeline for easy navigation,
+and the automatic generation of captions in various languages. For this
+use case Peter recorded various short videos one for each subsection of the
+presentation.</p>
 <p>Videos can be embedded into websites with the <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code> tag, which allows to
 embed one web page into another. The following <code class="docutils literal notranslate"><span class="pre">html</span></code> code is an example.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">allowfullscreen</span>
@@ -885,20 +906,20 @@ Revealjs slides look good. Among the those changes are:</p>
 <ul class="simple">
 <li><p>Remove empty lines between each element of a list</p></li>
 <li><p>Manually added <code class="docutils literal notranslate"><span class="pre">highlights</span></code> with `text to highlight`</p></li>
-<li><p>Fix multiple issues with <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> and added definitions and packages in the
+<li><p>Fix multiple issues with <span class="math notranslate nohighlight">\(\LaTeX\)</span> and added definitions and packages in the
 header</p></li>
 <li><p>Adjusted the size of tables, figures and code to better fit the webpage and
 the slides</p></li>
 </ul>
 </section>
-<section id="myst-client-to-html">
-<h2>MyST client: to html<a class="headerlink" href="#myst-client-to-html" title="Link to this heading">#</a></h2>
-<p>The MyST client Python package can convert slides made with LaTeX Beamer to
-MyST Markdown and html. A guide on how to make this conversion can be found at
-<a class="reference external" href="https://mystmd.org/guide/writing-in-latex">https://mystmd.org/guide/writing-in-latex</a>. Thi section also provides a quick
-summary of the guide that results in a good html version. However, at the
-moment I have not been able to retrieve the intermediate MyST markdown files
-which would be really useful to improve the method explained above with pandoc.</p>
+<section id="myst-client-latex-to-html">
+<h2>MyST client: <span class="math notranslate nohighlight">\(\LaTeX\)</span> to html<a class="headerlink" href="#myst-client-latex-to-html" title="Link to this heading">#</a></h2>
+<p>The MyST client Python package can convert slides made with <span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer to
+html. However, we didn’t find a method to obtain the intermediate MyST markdown
+files that are automatically generated, which may have done the process
+described above with pandoc much easier. A guide on how to make this conversion
+can be found at <a class="reference external" href="https://mystmd.org/guide/writing-in-latex">https://mystmd.org/guide/writing-in-latex</a>. Thi section also
+provides a quick summary of the guide that results in a good html version.</p>
 <p>This method requires the installation of the MyST client<a class="footnote-reference brackets" href="#mystcl" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, which also
 requires an updated version of node. The installation of the required version
 of node can be done by creating a virtual environment for the specific version.</p>
@@ -920,7 +941,7 @@ npm<span class="w"> </span>-v
 <span class="c1"># 10.2.4</span>
 </pre></div>
 </div>
-<p>One consideration from this example is that the LaTeX environment <code class="docutils literal notranslate"><span class="pre">refsection</span></code>
+<p>One consideration from this example is that the <span class="math notranslate nohighlight">\(\LaTeX\)</span> environment <code class="docutils literal notranslate"><span class="pre">refsection</span></code>
 is not currently supported, and all the environments need to be removed. This
 can be done by removing the beginning and end of each environment.</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>refsection<span class="nb">}</span>
@@ -928,17 +949,24 @@ can be done by removing the beginning and end of each environment.</p>
 <span class="k">\end</span><span class="nb">{</span>refsection<span class="nb">}</span>
 </pre></div>
 </div>
+<p>The resulting website is in general very well formatted with some minor
+problems. The following is a capture of the resulting front page with a
+navigation bar on the left for the different documents and on the right side
+for the sections of the current document.</p>
 <figure class="align-center" id="id7">
 <a class="reference internal image-reference" href="../_images/myst_1.jpg"><img alt="Website with left and right navigation bars and central content" src="../_images/myst_1.jpg" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Automatic conversion of LaTeX beamer file into a website with MyST client.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Automatic conversion of <span class="math notranslate nohighlight">\(\LaTeX\)</span> beamer file into a website with MyST client.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>The previous figure shows one of the issues with the lists, which in this
+particular case were not converted to markdown correctly. However, tables,
+images and equations were correctly rendered in most cases.</p>
 <figure class="align-center" id="id8">
 <a class="reference internal image-reference" href="../_images/myst_2.jpg"><img alt="Website with left and right navigation bars and central content" src="../_images/myst_2.jpg" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Simple LaTeX table converted with MyST client to markdown. The defined colors
-in LaTeX is not rendered correctly.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Simple <span class="math notranslate nohighlight">\(\LaTeX\)</span> table converted with MyST client to markdown. The defined colors
+in <span class="math notranslate nohighlight">\(\LaTeX\)</span> is not rendered correctly.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id9">
@@ -952,12 +980,6 @@ right location.</span><a class="headerlink" href="#id9" title="Link to this imag
 <a class="reference internal image-reference" href="../_images/myst_5.jpg"><img alt="Website with left and right navigation bars and central content" src="../_images/myst_5.jpg" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 15 </span><span class="caption-text">Most of the equations are correctly displayed, even with colors.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id11">
-<a class="reference internal image-reference" href="../_images/myst_6.jpg"><img alt="Website with left and right navigation bars and central content" src="../_images/myst_6.jpg" style="width: 80%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Errors rendering some mathematical commands.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="footnotes docutils" />
@@ -1041,8 +1063,8 @@ right location.</span><a class="headerlink" href="#id9" title="Link to this imag
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandoc-from-latex-to-md">Pandoc: from latex to md</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-size-issues">Figure size issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandoc-from-latex-to-markdown">Pandoc: from latex to markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-sizes-and-positions">Figure sizes and positions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-and-line-breaks">Comments and line breaks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-figures-from-source-code">Generating figures from source code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors-in-the-header">Authors in the header</a></li>
@@ -1052,7 +1074,7 @@ right location.</span><a class="headerlink" href="#id9" title="Link to this imag
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-into-slides-and-sections">Breaking into slides and sections</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-content">Conditional content</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-changes">Other changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-client-to-html">MyST client: to html</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-client-latex-to-html">MyST client: <span class="math notranslate nohighlight">\(\LaTeX\)</span> to html</a></li>
 </ul>
   </nav></div>
 
