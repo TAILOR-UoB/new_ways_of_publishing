@@ -434,7 +434,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-content">Basic content</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-with-a-third-party">Interactive with a third party</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-client">Interactive within the client</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-web-browser">Interactive within the web browser</a></li>
 </ul>
             </nav>
         </div>
@@ -447,7 +447,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="content-examples">
-<h1>Content Examples<a class="headerlink" href="#content-examples" title="Link to this heading">#</a></h1>
+<span id="sec-con"></span><h1>Content Examples<a class="headerlink" href="#content-examples" title="Link to this heading">#</a></h1>
 <p>In this Section we provide multiple examples of the type of content that can be
 generated with publishing systems like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>. We divided
 the different content into three types. The basic content is the most common
@@ -455,7 +455,7 @@ textual narratives that include figures, tables, and other static elements. We
 also include videos in that section as videos are a common resource in
 internet.</p>
 <section id="basic-content">
-<h2>Basic content<a class="headerlink" href="#basic-content" title="Link to this heading">#</a></h2>
+<span id="sec-con-bas"></span><h2>Basic content<a class="headerlink" href="#basic-content" title="Link to this heading">#</a></h2>
 <p>To generate basic content with a publication system and accessing the
 resulting content online usually follows the steps shown in the diagram below.
 <strong>(1)</strong> The publication system compiles all the source documents and creates a
@@ -464,7 +464,8 @@ hosting service which is properly organised, <strong>(3)</strong> a user request
 the website to the host server from a computer or other device, <strong>(4)</strong> the
 hosting service serves the required documents to the client.</p>
 <figure class="align-default" id="fig-cli-sta">
-<img alt="../_images/static.svg" src="../_images/static.svg" /><figcaption>
+<a class="reference internal image-reference" href="../_images/static.svg"><img alt="../_images/static.svg" src="../_images/static.svg" width="550px" /></a>
+<figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
 as static content (the content could be printed).</span><a class="headerlink" href="#fig-cli-sta" title="Link to this image">#</a></p>
 </figcaption>
@@ -473,7 +474,7 @@ as static content (the content could be printed).</span><a class="headerlink" hr
 the section <a class="reference internal" href="markdown-code.html#sec-com-nar"><span class="std std-ref">Computational narratives</span></a>.</p>
 </section>
 <section id="interactive-with-a-third-party">
-<h2>Interactive with a third party<a class="headerlink" href="#interactive-with-a-third-party" title="Link to this heading">#</a></h2>
+<span id="sec-con-ser"></span><h2>Interactive with a third party<a class="headerlink" href="#interactive-with-a-third-party" title="Link to this heading">#</a></h2>
 <p>Online content in STEM fields commonly involve programming, sometimes being an
 important part of the training material. Platforms like Jupyter notebooks allow
 the creation of computational narratives that can be interactive, and can be
@@ -488,26 +489,42 @@ party computational node that instantiates all the necessary dependencies to
 execute the changes and re-running the necessary parts, <strong>(8)</strong> the third party
 server serves all the changes to the client.</p>
 <figure class="align-default" id="fig-ser-int">
-<img alt="../_images/interactive_server.svg" src="../_images/interactive_server.svg" /><figcaption>
+<a class="reference internal image-reference" href="../_images/interactive_server.svg"><img alt="../_images/interactive_server.svg" src="../_images/interactive_server.svg" width="500px" /></a>
+<figcaption>
 <p><span class="caption-number">Fig. 6 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
 as static content but the content can be modified and rerun but requires a
 session with a (third party) server.</span><a class="headerlink" href="#fig-ser-int" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This may require the payment of a third party service that includes execution
-of code. There are some free services like <code class="docutils literal notranslate"><span class="pre">MyBinder</span></code> or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Colab</span></code> that
-offer a free tier. The end of section <a class="reference internal" href="markdown-code.html#sec-com-nar"><span class="std std-ref">Computational narratives</span></a> provides some guidelines
-on how to generate this type of content.</p>
+of code. The process commonly requires starting a computational instance which
+is often slow and may end up in connection issues. There are services like
+<code class="docutils literal notranslate"><span class="pre">MyBinder</span></code> or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Colab</span></code> that offer a free tier. The full section
+<a class="reference internal" href="markdown-code.html#sec-com-nar"><span class="std std-ref">Computational narratives</span></a> can be run in third party servers which also includes
+guidelines on how to generate this type of content in subsection
+<a class="reference internal" href="markdown-code.html#sec-mar-liv"><span class="std std-ref">Live code</span></a>.</p>
 </section>
-<section id="interactive-within-the-client">
-<h2>Interactive within the client<a class="headerlink" href="#interactive-within-the-client" title="Link to this heading">#</a></h2>
+<section id="interactive-within-the-web-browser">
+<span id="sec-con-cli"></span><h2>Interactive within the web browser<a class="headerlink" href="#interactive-within-the-web-browser" title="Link to this heading">#</a></h2>
+<p>There are some ways to create interactive content within the web browser based
+on static content. The benefit of this type of content is that it can be hosted
+by multiple hosting services that offer free static hosting, not requiring
+computational nodes on the server side. Content of this type uses the
+computational resources of the client web browser in order to modify its
+content. The series of steps are the same as the basic content <a class="reference internal" href="#sec-con-bas"><span class="std std-ref">Basic content</span></a>
+but any subsequent interactions are done in the client’s computer.</p>
 <figure class="align-default" id="fig-cli-int">
-<img alt="../_images/interactive_client.svg" src="../_images/interactive_client.svg" /><figcaption>
+<a class="reference internal image-reference" href="../_images/interactive_client.svg"><img alt="../_images/interactive_client.svg" src="../_images/interactive_client.svg" width="350px" /></a>
+<figcaption>
 <p><span class="caption-number">Fig. 7 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
 as static content but the content can be modified and re-run within the client
 web browser (no further communication is necessary with external servers).</span><a class="headerlink" href="#fig-cli-int" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>One of the drawbacks of this method is that it may require longer loading times
+as additional files need to be downloaded even if no interaction is intended.
+The section <a class="reference internal" href="shinylive.html#sec-con-run"><span class="std std-ref">Running code in the web browser</span></a> provides a guideline with examples of this type of
+content.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -585,7 +602,7 @@ web browser (no further communication is necessary with external servers).</span
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-content">Basic content</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-with-a-third-party">Interactive with a third party</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-client">Interactive within the client</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-web-browser">Interactive within the web browser</a></li>
 </ul>
   </nav></div>
 
