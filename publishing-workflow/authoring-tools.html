@@ -61,12 +61,14 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'publishing-workflow/authoring-tools';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Authoring file formats" href="authoring-formats.html" />
+    <link rel="next" title="Publishing systems" href="publishing-systems.html" />
     <link rel="prev" title="Publishing workflow" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,20 +189,11 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/rethinking-courses.html">Rethinking courses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/type-of-content.html">Type of content</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../open-courses/index.html">Open Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-access.html">Open Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-code.html">Open Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-courses/fair-data.html">FAIR data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-courses/open-profile.html">Open Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/open-courses.html">Open Courses</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Publishing workflow</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Authoring tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authoring-formats.html">Authoring file formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="publishing-systems.html">Publishing systems</a></li>
 </ul>
 </details></li>
@@ -431,12 +424,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-editors">Text editors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-collaboration">Real time collaboration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-code">Interactive code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaboration-tools">Collaboration tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online-communication">Online communication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 </ul>
             </nav>
         </div>
@@ -450,164 +439,79 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="authoring-tools">
 <h1>Authoring tools<a class="headerlink" href="#authoring-tools" title="Link to this heading">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">Authoring</span> <span class="pre">tools</span></code> are tools that help the creation of authoring artefacts which
-will be compiled by a <code class="docutils literal notranslate"><span class="pre">publishing</span> <span class="pre">systems</span></code> to generate outputs. For example, a
-text editor to create <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> is an authoring tool, while <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>,
-<code class="docutils literal notranslate"><span class="pre">XeLaTeX</span></code>, <code class="docutils literal notranslate"><span class="pre">LuaTeX</span></code> are publishing systems that compile all the input artefacts
-to pdf.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Authoring</span> <span class="pre">tools</span></code> are tools that help the creation of authoring input artefacts
+which will be compiled by a <code class="docutils literal notranslate"><span class="pre">publishing</span> <span class="pre">system</span></code> to generate publishable
+outputs. For example, a text editor to create <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> is an authoring tool,
+while <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>, <code class="docutils literal notranslate"><span class="pre">XeLaTeX</span></code>, <code class="docutils literal notranslate"><span class="pre">LuaTeX</span></code> are publishing systems that compile all
+the input artefacts to pdf. In this roadmap we focus on authoring tools that
+can be used for the purpose of multioutput publishing systems. We provide some
+guidelines on the type of files that need to be considered during the authoring
+process, which tools can directly help on the generation of those artefacts. We
+consider the collaboration of teams in the authoring process as a desirable
+feature.</p>
 <section id="text-editors">
 <h2>Text editors<a class="headerlink" href="#text-editors" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Overleaf self-defined as a collaborative authoring tool, defined by
-University of Manchester as a writing and publishing tool.</p></li>
-<li><p><a class="reference external" href="https://hackmd.io/">HackMD</a></p></li>
-<li><p>Microsoft Visual Studio</p></li>
-<li><p>RStudio</p></li>
-<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a>:</p></li>
-<li><p>Typst provides an writing environment for markdown style files that are
-rendered in the web browser. It allows collaboration and real-time multi-user
-edition.</p></li>
-</ul>
+<p>Text editors are one of the most important tools for authoring material
+publishable material. Some editors provide an interface to write rich text
+documents like Microsoft Word, Libre office, or Google Docs. However, those
+files are difficult to convert automatically to other formats as they do not
+separate the source text from the presentation layer. Some of their benefits
+is that multiple people can edit concurrently these types of files as the
+syntax is usually hidden to the user, making difficult the generation of
+compilation or format errors.</p>
+<p>Other editors consider a separation between the source code and the publishable
+output. <a class="reference external" href="https://www.overleaf.com/">Overleaf</a> is an online collaborative
+authoring tool that allows the edition of <span class="math notranslate nohighlight">\(\LaTeX\)</span> files, managing the errors
+and generating PDF files with a <span class="math notranslate nohighlight">\(\LaTeX\)</span> compiler. However the free tier has
+some collaboration limitations. <a class="reference external" href="https://hackmd.io/">HackMD</a>,
+<a class="reference external" href="https://www.notion.so/">Notion</a> and <a class="reference external" href="https://typst.app/">Typst</a> are other
+online collaborative text edition tools that can be used for authoring
+publishable material and work with markdown files. Although, these tools may
+have differences in the markdown syntax which makes difficult the reuse of the
+generated on different platforms.</p>
 </section>
-<section id="real-time-collaboration">
-<h2>Real time collaboration<a class="headerlink" href="#real-time-collaboration" title="Link to this heading">#</a></h2>
-<p>Visual Studio Live Share
-Overleaf
-Google Docs</p>
+<section id="computational-narrative-editors">
+<h2>Computational narrative editors<a class="headerlink" href="#computational-narrative-editors" title="Link to this heading">#</a></h2>
+<p>Jupyter Notebooks are documents that offer computational narratives by
+interlacing formated markdown text and code cells that are executed, providing
+the output as additional content. The idea has been adopted by other platforms
+that have created similar notebook environments. Most of these platforms can
+convert the resulting computational narratives into various formats like html,
+pdf, or text documents. Jupyter Notebook and
+<a class="reference external" href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a> offer the official
+environment for the original Jupyter Notebooks. All of the following projects
+offer cloud-based platforms to edit Jupyter notebooks or similar. <a class="reference external" href="https://colab.research.google.com/">Google
+Colab</a> is hosted by
+Google and free for low-intensive programs, <a class="reference external" href="https://www.kaggle.com/notebooks">Kaggle
+Notebooks</a> is
+hosted by Kaggle which focuses on Python for Data Science, and Machine
+Learning, offering a free solution to participate into Kaggle competitions.
+<a class="reference external" href="https://notebooks.azure.com/">Microsoft Azure Notebooks</a> is hosted in Azure
+and focused on Data Science and Machine Learning with
+CPUs and GPUs available. It supports various programming languages Python, R,
+F# and Julia, among others. Other platforms that are similar to support
+functionalities similar to Jupyter Notebook are <a class="reference external" href="https://cocalc.com/">CoCalc</a>,
+<a class="reference external" href="https://datalore.jetbrains.com/">JetBrains Datalore</a>,
+<a class="reference external" href="https://deepnote.com/">Deepnote</a>, <a class="reference external" href="https://hex.tech/">Hex</a>,
+<a class="reference external" href="https://plutojl.org/">Pluto.jl</a>, <a class="reference external" href="https://nextjournal.com/">Nextjournal</a>, and
+<a class="reference external" href="https://starboard.gg/">Starboard</a>.  In particular JetBrains Datalore
+integrates with the JetBrains ecosystem tools such as the IDEs
+<a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and
+<a class="reference external" href="https://www.jetbrains.com/idea/">IntelliJ</a>.</p>
 </section>
-<section id="interactive-code">
-<h2>Interactive code<a class="headerlink" href="#interactive-code" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://jupyter.org/widgets">Jupyter Widgets</a>:</p></li>
-<li><p><a class="reference external" href="http://www.htmlwidgets.org/">htmlwidgets for R</a>:</p></li>
-<li><p><a class="reference external" href="https://observablehq.com/&#64;observablehq/observable-javascript">Observable JS</a>: Tool to
-run Javascript code dynamically that supports D3, Lodash and Apache Arrow.</p></li>
-<li><p><a class="reference external" href="https://shiny.posit.co/">Shiny</a>: Run Python or R code in the browser.
-Check the <a class="reference external" href="https://shiny.posit.co/py/docs/overview.html">Python example documentation</a>.
-<a class="reference external" href="https://pyodide.org/en/stable/">Pyodide</a> is a port of Python and other packages compiled to
-<a class="reference external" href="https://webassembly.org/">WebAssembly</a>. Some examples of supported
-packages are  regex, pyyaml, lxml and scientific Python packages including
-numpy, pandas, scipy, matplotlib, and scikit-learn.
-WebAssembly is a binary format for compiled programs.</p></li>
-<li><p><a class="reference external" href="https://shiny.posit.co/py/docs/shinylive.html">Shinylive: Shiny + WebAssembly</a>:</p></li>
-</ul>
-</section>
-<section id="collaboration-tools">
-<h2>Collaboration tools<a class="headerlink" href="#collaboration-tools" title="Link to this heading">#</a></h2>
-<p>Available tools in the last decade</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://posit.co/products/enterprise/workbench/">Posit Workbench</a>(formerly
-RStudio):
-Integrated management of data science for teams, allowing multiple
-collaborators editing the same source code for Quarto applications among
-others.</p></li>
-<li><p><a class="reference external" href="https://starboard.gg/">Starboard</a>: Notebooks that run in the client web
-browser.</p></li>
-<li><p><a class="reference external" href="https://noteable.io/">Noteable</a>: cloud-based real-time collaboration tool
-for data science, machine learning and others. Focused on Python, R and
-SQL. Free for individual users.</p></li>
-<li><p><a class="reference external" href="https://colab.research.google.com/">Google Colab</a>: Cloud-based Jupyter
-Notebook environment hosted by Google. Free for low-intensive programs.</p></li>
-<li><p><a class="reference external" href="https://www.kaggle.com/notebooks">Kaggle Notebooks</a>: Cloud-based Jupyter
-Notebook environment hosted by Kaggle. Focused on Python for Data Science,
-and Machine Learning. It offers a free solution to participate into Kaggle
-competitions.</p></li>
-<li><p><a class="reference external" href="https://notebooks.azure.com/">Microsoft Azure Notebooks</a>: Cloud-baed
-platform hosted in Azure (requires an Azure user account). It is focused on
-Data Science and Machine learning with CPUs and GPUs available. It
-supports the programming languages Python, R, F# and Julia, among others.</p></li>
-<li><p><a class="reference external" href="https://cocalc.com/">CoCalc</a>: Cloud-based platform with similar
-functionalities than Jupyter Notebooks. It supports the programming
-languages Python, R and Julia.</p></li>
-<li><p><a class="reference external" href="https://datalore.jetbrains.com/">JetBrains Datalore</a>: Cloud-based platform
-similar to Jupyter Notebook. It supports the programming languages Python,
-R and SQL. It integrates with the JetBrains ecosystem tools such as the
-IDEs PyCharm and IntelliJ.</p></li>
-<li><p><a class="reference external" href="https://deepnote.com/">Deepnote</a>: Cloud-based platform similar to Jupyter
-Notebook with real-time editing. Supports multiple programming languages
-and integrates well with TensorFlow and PyTorch.</p></li>
-<li><p><a class="reference external" href="https://hex.tech/">Hex</a>: Cloud-based platform similar to Jupyter Notebook.</p></li>
-<li><p><a class="reference external" href="https://nextjournal.com/">Nextjournal</a>: Cloud-based platform similar to
-Juputer Notebooks with additional capabilities. Supports the programming
-languages Python, R and Julia.</p></li>
-<li><p><a class="reference external" href="https://gradient.paperspace.com/">Paperspace Gradient</a>: …</p></li>
-<li><p><a class="reference external" href="https://zeppelin.apache.org/">Apache Zeppelin</a>: … Built-in code editor.</p></li>
-<li><p><a class="reference external" href="https://count.co/">Count.co</a>: …</p></li>
-</ul>
-</section>
-<section id="online-communication">
-<h2>Online communication<a class="headerlink" href="#online-communication" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Microsoft Teams</p></li>
-<li><p>Zoom</p></li>
-<li><p><a class="reference external" href="https://www.kumospace.com/">Kumospace</a> offers virtual locations to interact
-with other users online.</p></li>
-</ul>
-</section>
-<section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Simply Logical: Intelligent Reasoning by Example (Fully Interactive
-Online Edition) <span id="id1">[<a class="reference internal" href="../references.html#id4" title="Peter Flach and Kacper Sokol. Simply Logical – Intelligent Reasoning by Example (Fully Interactive Online Edition). 2022. URL: https://book.simply-logical.space/, doi:10.5281/zenodo.1156977.">FS22</a>]</span> of the Simply Logical textbook
-<span id="id2">[<a class="reference internal" href="../references.html#id3" title="Peter Flach. Simply Logical: Intelligent Reasoning by Example. John Wiley, 1994. URL: https://www.cs.bris.ac.uk/~flach/SimplyLogical.html.">Fla94</a>]</span>.</p></li>
-</ul>
-</section>
-<section id="more">
-<h2>More<a class="headerlink" href="#more" title="Link to this heading">#</a></h2>
-<p>Check the following resources for additional tools and examples that can be
-added into this document</p>
-<p>-Streamlit vs. Dash vs. Shiny vs. Voila vs. Flask vs. Jupyter
-Comparing data dashboarding tools and frameworks <a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<ul class="simple">
-<li><p>Check <a class="reference external" href="https://www.researchers14.ac.uk/">Researchers14</a> a group of
-Universities representing 65% of research communities in the UK that shares
-good practices in research development.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Project management tools for planning, assigning and tracking tasks like
-Trello, Airtable, GitHub project, Todoist.</p></li>
-<li><p>Web-based conference management softtware systems Microsoft Conference
-Management Toolkit, EasyChair, OpenReview</p></li>
-<li><p>Sharing documents Microsoft SharePoint and One Drive, Google drive, Dropbox,
-Slack</p></li>
-<li><p>Concurrent text editors Overleaf, Google docs, Microsoft Sharepoint</p></li>
-<li><p>Version control GitHub, GitLab, BitBucket</p></li>
-<li><p>Real time communication some with videocall Slack, Microsoft Teams</p></li>
-<li><p>Video edition</p></li>
-<li><p>Public databases: huggingface, OpenML, UCI Machine Learning Repository,
-Hugging Face a platform for collaboration among machine learning
-practitioners by sharing datasets, models and applications.</p></li>
-<li><p>Search engines for scientific publications: Google Scholar, PubMed, PubPeer,
-Semantic Scholar, DBLP, Elsevier Scopus, Microsoft Academic</p></li>
-<li><p>Text search engines: Google, Bing, Yahoo!, Yandex, DuckDuckGo, Baidu</p></li>
-<li><p>Interactive and graphical search engines: Litmaps, scite,</p></li>
-<li><p>Notes taking: Obsidian, HackMD, CodiMD (host your own version of HackMD),
-GitBook, Notion, Evernote, Todoist,</p>
-<ul>
-<li><p>Notion: No offline support, very flexible, but not the best for each of its
-functionalities.</p></li>
-<li><p>Obsidian: Offline but paid online sync, the canvas functionality allows you
-to organise ideas between them in a virtual plane that resembles a physical
-surface.</p></li>
-<li><p>Pandoc to convert between different file formats (e.g. Word Document to
-Markdown). This is one of the integral parts of Quarto publishing system.</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://plutojl.org/">Pluto.jl</a>:</p>
-<ul>
-<li><p>For programming language Julia</p></li>
-<li><p>Creates notebooks that can be exported to html or pdf</p></li>
-<li></li>
-</ul>
-</li>
-</ul>
-<hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id4" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila">https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila</a></p>
-</aside>
-</aside>
+<section id="integrated-development-environments">
+<h2>Integrated Development Environments<a class="headerlink" href="#integrated-development-environments" title="Link to this heading">#</a></h2>
+<p>The separation of the source code and the publishable outputs is something that
+all the Integrated Development Environments (IDE) excel. These are tools for
+writing computer programs that commonly require a compilation phase which is
+usually integrated in the same tool. The idea of authoring tools that can
+create generic input artefacts that are later combined by a publishing system
+is very similar to the common process followed by IDEs. This made the adoption
+of IDEs as authoring tools. Microsoft Visual Studio, <a class="reference external" href="https://posit.co/products/enterprise/workbench/">Posit
+Workbench</a>(formerly
+<a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a>)
+have tools to work with the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> environment. Both of them provide options
+for multiple collaborators editing content at the same time.</p>
 </section>
 </section>
 
@@ -657,11 +561,11 @@ Markdown). This is one of the integral parts of Quarto publishing system.</p></l
       </div>
     </a>
     <a class="right-next"
-       href="authoring-formats.html"
+       href="publishing-systems.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Authoring file formats</p>
+        <p class="prev-next-title">Publishing systems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -682,12 +586,8 @@ Markdown). This is one of the integral parts of Quarto publishing system.</p></l
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-editors">Text editors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-collaboration">Real time collaboration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-code">Interactive code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaboration-tools">Collaboration tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online-communication">Online communication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 </ul>
   </nav></div>
 
