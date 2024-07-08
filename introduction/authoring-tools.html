@@ -70,7 +70,7 @@
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Open Courses" href="open-courses.html" />
+    <link rel="next" title="Formatting tools" href="formatting-tools.html" />
     <link rel="prev" title="Publishing workflow" href="publishing-workflow.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -193,6 +193,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="publishing-workflow.html">Publishing workflow</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Authoring tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatting-tools.html">Formatting tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authoring-and-formatting-tools.html">Authoring + formatting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-courses.html">Open Courses</a></li>
 </ul>
 </details></li>
@@ -423,10 +425,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markup-language-editors">Markup language editors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 </ul>
             </nav>
         </div>
@@ -450,28 +450,6 @@ guidelines on the type of files that need to be considered during the authoring
 process, which tools can directly help on the generation of those artefacts. We
 consider the collaboration of teams in the authoring process as a desirable
 feature.</p>
-<section id="wysiwyg-what-you-see-is-what-you-get">
-<h2>WYSIWYG (What You See Is What You Get)<a class="headerlink" href="#wysiwyg-what-you-see-is-what-you-get" title="Link to this heading">#</a></h2>
-<p>Text editors are one of the most important tools for authoring material
-publishable material. Some editors provide an interface to write rich text
-documents like Microsoft Word, Libre office, or Google Docs. However, those
-files are difficult to convert automatically to other formats as they do not
-separate the source text from the presentation layer. Some of their benefits
-is that multiple people can edit concurrently these types of files as the
-syntax is usually hidden to the user, making difficult the generation of
-compilation or format errors.</p>
-<div class="mermaid">
-            flowchart LR
-  
-    E1(&quot;External sources&quot;):::external --&gt; A1
-    subgraph &quot;Libre Office, Google Docs, Microsoft Word, ...&quot; 
-      direction LR
-      A1{{&quot;Authoring and Formatting tool&quot;}} --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
-    end
-    classDef external fill:#eee;
-    classDef input fill:#ffa;
-    classDef output fill:#faa;
-        </div></section>
 <section id="markup-language-editors">
 <h2>Markup language editors<a class="headerlink" href="#markup-language-editors" title="Link to this heading">#</a></h2>
 <p>Other editors consider a separation between the source code and the publishable
@@ -487,26 +465,13 @@ generated on different platforms.</p>
 <div class="mermaid">
             flowchart LR
   
-    E1(&quot;External sources&quot;):::external --&gt; A1
+    E1(&quot;External resources&quot;):::external -.-&gt; A1
     subgraph &quot;Vim, NeoVim, Notepad&quot; 
       direction LR
       A1{{&quot;Authoring tool&quot;}} --&gt; I1(&quot;Text + Code +\nTables + ...&quot;):::input
     end
     I1 --&gt; P1{{&quot;Formatting tool&quot;}}
     P1 --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
-    classDef external fill:#eee;
-    classDef input fill:#ffa;
-    classDef output fill:#faa;
-        </div><div class="mermaid">
-            flowchart LR
-  
-    E1(&quot;External sources&quot;):::external --&gt; A1
-    A1{{&quot;Authoring tool&quot;}} --&gt; I1(&quot;Text + Figures +\nCode + Tables + ...&quot;):::input
-    subgraph &quot;Quarto, pdflatex, xelatex, pandoc, ...&quot; 
-      direction LR
-      I1 --&gt; P1{{&quot;Formatting tool&quot;}}
-      P1 --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
-    end
     classDef external fill:#eee;
     classDef input fill:#ffa;
     classDef output fill:#faa;
@@ -540,33 +505,6 @@ integrates with the JetBrains ecosystem tools such as the IDEs
 <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and
 <a class="reference external" href="https://www.jetbrains.com/idea/">IntelliJ</a>.</p>
 </section>
-<section id="integrated-development-environments">
-<h2>Integrated Development Environments<a class="headerlink" href="#integrated-development-environments" title="Link to this heading">#</a></h2>
-<p>The separation of the source code and the publishable outputs is something that
-all the Integrated Development Environments (IDE) excel. These are tools for
-writing computer programs that commonly require a compilation phase which is
-usually integrated in the same tool. The idea of authoring tools that can
-create generic input artefacts that are later combined by a formatting tool
-is very similar to the common process followed by IDEs. This has facilitate the
-adoption of IDEs as authoring tools. Microsoft Visual Studio, <a class="reference external" href="https://posit.co/products/enterprise/workbench/">Posit
-Workbench</a>(formerly
-<a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a>) have tools to work with
-the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> environment. Both of them provide options for multiple
-collaborators editing content at the same time.</p>
-<div class="mermaid">
-            flowchart LR
-  
-    E1(&quot;External sources&quot;):::external --&gt; A1
-    subgraph &quot;Posit (or MS VS) + Quarto, HackMD, Notion, ...&quot; 
-      direction LR
-      A1{{&quot;Authoring tool&quot;}} --&gt; I1(&quot;Text + Figures +\nCode + Tables + ...&quot;):::input
-      I1 --&gt; P1{{&quot;Formatting tool&quot;}}
-      P1 --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
-    end
-    classDef external fill:#eee;
-    classDef input fill:#ffa;
-    classDef output fill:#faa;
-        </div></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -615,11 +553,11 @@ collaborators editing content at the same time.</p>
       </div>
     </a>
     <a class="right-next"
-       href="open-courses.html"
+       href="formatting-tools.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Open Courses</p>
+        <p class="prev-next-title">Formatting tools</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -639,10 +577,8 @@ collaborators editing content at the same time.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markup-language-editors">Markup language editors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 </ul>
   </nav></div>
 
