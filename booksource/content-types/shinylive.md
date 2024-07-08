@@ -95,7 +95,7 @@ width="100%" height="400px">
 
 ### Shinylive in Quarto
 
-Shiny and Quarto are both developed by Posit (formearly RStudio). Quarto
+Shiny and Quarto are both developed by Posit (formerly RStudio). Quarto
 integrates very well with Shinylive being able to embed any Shinylive
 application in a Markdown file by writing the source code directly in a
 directive of the type `{shinylive-python}`. There are some options that can be

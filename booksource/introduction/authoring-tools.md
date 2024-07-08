@@ -1,10 +1,10 @@
 # Authoring tools
 
 `Authoring tools` are tools that help the creation of authoring input artefacts
-which will be compiled by a `publishing system` to generate publishable
-outputs. For example, a text editor to create `LaTeX` is an authoring tool,
-while `pdflatex`, `XeLaTeX`, `LuaTeX` are publishing systems that compile all
-the input artefacts to pdf. In this roadmap we focus on authoring tools that
+which will be compiled by a `formatting tool` to generate publishable
+outputs. For example, a markup language editor to create $\LaTeX$ is an authoring tool,
+while `pdflatex`, `XeLaTeX`, or `LuaTeX` are publishing systems that compile
+input artefacts to pdf. In this roadmap we focus on authoring tools that
 can be used for the purpose of multioutput publishing systems. We provide some
 guidelines on the type of files that need to be considered during the authoring
 process, which tools can directly help on the generation of those artefacts. We
@@ -36,6 +36,19 @@ is that multiple people can edit concurrently these types of files as the
 syntax is usually hidden to the user, making difficult the generation of
 compilation or format errors.
 
+```{mermaid}
+flowchart LR
+  
+    E1("External sources"):::external --> A1
+    subgraph "Libre Office, Google Docs, Microsoft Word, ..." 
+      direction LR
+      A1{{"Authoring and Formatting tool"}} --> O1["Formatted\nOutput"]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+```
+
 ## Markup language editors
 
 Other editors consider a separation between the source code and the publishable
@@ -48,6 +61,36 @@ online collaborative text edition tools that can be used for authoring
 publishable material and work with markdown files. Although, these tools may
 have differences in the markdown syntax which makes difficult the reuse of the
 generated on different platforms.
+
+```{mermaid}
+flowchart LR
+  
+    E1("External sources"):::external --> A1
+    subgraph "Vim, NeoVim, Notepad" 
+      direction LR
+      A1{{"Authoring tool"}} --> I1("Text + Code +\nTables + ..."):::input
+    end
+    I1 --> P1{{"Formatting tool"}}
+    P1 --> O1["Formatted\nOutput"]:::output
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+```
+
+```{mermaid}
+flowchart LR
+  
+    E1("External sources"):::external --> A1
+    A1{{"Authoring tool"}} --> I1("Text + Figures +\nCode + Tables + ..."):::input
+    subgraph "Quarto, pdflatex, xelatex, pandoc, ..." 
+      direction LR
+      I1 --> P1{{"Formatting tool"}}
+      P1 --> O1["Formatted\nOutput"]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+```
 
 ## Computational narrative editors
 
@@ -84,13 +127,29 @@ The separation of the source code and the publishable outputs is something that
 all the Integrated Development Environments (IDE) excel. These are tools for
 writing computer programs that commonly require a compilation phase which is
 usually integrated in the same tool. The idea of authoring tools that can
-create generic input artefacts that are later combined by a publishing system
-is very similar to the common process followed by IDEs. This made the adoption
-of IDEs as authoring tools. Microsoft Visual Studio, [Posit
+create generic input artefacts that are later combined by a formatting tool
+is very similar to the common process followed by IDEs. This has facilitate the
+adoption of IDEs as authoring tools. Microsoft Visual Studio, [Posit
 Workbench](https://posit.co/products/enterprise/workbench/)(formerly
-[RStudio](https://posit.co/download/rstudio-desktop/))
-have tools to work with the `Quarto` environment. Both of them provide options
-for multiple collaborators editing content at the same time.
+[RStudio](https://posit.co/download/rstudio-desktop/)) have tools to work with
+the `Quarto` environment. Both of them provide options for multiple
+collaborators editing content at the same time.
+
+```{mermaid}
+flowchart LR
+  
+    E1("External sources"):::external --> A1
+    subgraph "Posit (or MS VS) + Quarto, HackMD, Notion, ..." 
+      direction LR
+      A1{{"Authoring tool"}} --> I1("Text + Figures +\nCode + Tables + ..."):::input
+      I1 --> P1{{"Formatting tool"}}
+      P1 --> O1["Formatted\nOutput"]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+```
+
 
 %## Real time collaboration
 %

@@ -6,10 +6,10 @@ principles to promote sharing research outcomes in a way that makes research
 reproducible and more transparent. There are at least four aspects that are
 considered:
 
-- **Open Access** of publications (Green, Gold, Hybrid, Diamond)
-- **FAIR Data** (Findable Accessible Interoperable Reusable)
 - **Open Code** (Open source licenses)
+- **FAIR Data** (Findable Accessible Interoperable Reusable)
 - **Research Profile** (e.g. ORCID)
+- **Open Access** of publications (Green, Gold, Hybrid, Diamond)
 
 New ways of publishing potentially needs to consider all of the aforementioned
 points as the objective is to publish teaching material online with maximum
@@ -19,53 +19,93 @@ authors of the course may also benefit from an open research profile which
 would give credibility to their content, transparency and increase the
 visibility to other work created by the same authors.
 
-## Open Access
+## Open Code
 
-Open Access is a broad international movement that specifies a set of
-principles to make research free of access and online, defined as "digital,
-online, free of charge, and free of most copyright and licensing
-restrictions.". One of the main objectives is to publish research work under
-the CC-BY license. If the material for a course is later reused to publish a
-book or some other type of publication it may be necessary to know what are the
-possible licensing restrictions.
+As indicated for the datasets, publishing the code of the teaching material
+online does not entitle the way in which the course material can be used. When
+the course is created it is automatically protected by copyright. The course
+source code material without a license can not be used. It is important then to
+understand what are the licenses available and to add them to the course
+material properly. The information provided in this roadmap is a personal
+overview and should not be taken as legal advise, additional information can be
+found at https://opensource.guide/legal/. Furthermore, an interactive guide on
+how to choose a license is available at https://choosealicense.com/.
 
-```{figure} images/open-access-logo-png-transparent.png
-:name: figure-open-access
-:width: 200px
+One of the most common licenses for open source is `Creative Commons`. It has
+lots of variations depending on the flexibility that you want to provide to the
+users. The Creative Common licenses are short named with acronyms, and
+understanding them makes much easier their interpretation.  
 
-Open Access logo
-```
+- **0 (No rights Reserved, Public Domain)**: There are no restrictions on how
+  the code is used nor shared.
+- **BY (By Attribution)**: Any use of the code needs to attribute the original
+  work and author/s.
+- **SA (Share-Alike)**: Any use of the code even if modified needs to keep the
+  same license as the original work.
+- **ND (No Derivatives)**: The work is shared as a whole and can not be
+  modified.
+- **NC (Non Commercial)**: The work can not be used for commercial uses.
 
-There are multiple types of Open Access models that are used by journals.
-However, the most common ones are gold, green and hybrid OA journals, while
-some journals are hybrid. In all the cases the article is free to read but they
-have the following differences.
+The following are some common Creative Commons licenses:
 
-**Gold OA**: The article is free to read, but the authors need to pay the
-publisher, requiring an external funding. The 'Article Processing Charge' costs
-an average of £2,000 and can reach £10,000.
+- **CC-0**: No Rights Reserved, allows the distribution without accreditation, it
+  is commonly used to share tabular data or other databases from which
+  knowledge could be derived.
+- **CC-BY**: Attribution, allows the use of the work even for commercial
+  purposes but requires the attribution of the original form (e.g. with a
+  citation). It is recommended for the widest dissemination of work.
+- **CC-BY-SA**: Attribution-ShareAlike, allows the use of the work even for commercial
+  purposes but requires the attribution and the same type of license to any
+  derivatives.
+- **CC-BY-ND**: Attribution-NoDerivatives, allows the use of the code as it is
+  even for commercial uses, but does not allow the modification of the code. It
+  also requires the accreditation of the original author.
+- **CC-BY-NC**: Attribution-NonCommercial), allows the use and modification of
+  the code for non-commercial use, subject to accreditation of the author and
+  does not require the same license on its derivatives.
+- **CC-BY-NC-SA**: Attribution-NonComercial-ShareAlike, allows the use and
+  modification of the work for non commercial applications, requires
+  accreditation of the original work and authors and the derived code needs to
+  use the same license as the original.
+- **CC-BY-NC-ND**: Attribution-NonComercial-NoDerivatives, allows the use of
+  the code without modifications for non commercial uses and requires
+  accreditation of the original work and authors.
+- **The Restrictive License Template**: is a license developed by the
+  Australian Government Open Access Licensing framework for material that
+  contains personal or other confidential information. It can include multiple
+  restrictions on its use like time limits, permissions or ethics required, or
+  contractual arrangements). See more at
+  https://library.unimelb.edu.au/Digital-Scholarship/restrictive-licence-template
 
-**Green OA**: The author accepted manuscript can be hosted in some repository
-(e.g. Pure is a repository of scholarly works for the Universtiy of Bristol).
-The publisher retains the final version in their website. The article has a
-CC-BY license and there is no embargo on its use. Additional considerations may
-be required by the authors, for example the inclusion of a statement in the
-publishers submission, like in the case of the University of Bristol
-recomendation:
+Other common licenses for software are
 
-```
-  "For the purpose of open access, the author(s) has applied a Creative Commons
-  Attribution (CC BY) licence to any Author Accepted Manuscript version arising
-  from this submission."
-```
+- **MIT** ([license](https://opensource.org/license/mit)) allows the use of the
+  Software free of charge, with no restrictions but under the condition that
+  there is an accreditation of the original software and authors and that the
+  permission notice is included in all the copies or substantial portions of
+  the Software.
+- **Apache** (Apache License, Version 2.0)
+  ([license](https://www.apache.org/licenses/LICENSE-2.0))
+- **GPL** (General Public License) guarantees the end users the four freedoms
+  to run, study, share and modify the Software.
 
-**Diamond OA**: These are crowd-funded by libraries and scholarly organisations
-that pay for the processing charges. Then in the same manner as the **Green
-OA**, the accepted manuscript can be hosted in a repository, while the final
-copy is available in the publisher's website.
+And the BSD license which includes several versions
 
-%Most of the journals that accept OA can be found in the website
-%https://doaj.org/ .
+- **BSD 0-clause** (aka BSD Zero Clause License) allows the use, copy,
+  modification and/or distribution of the Software for any purposes with or
+  without fees.
+- **BSD 2-clause license** (aka "Simplified BSD License" or "FreeBSD
+  License") same as 0-clause but requires to retain the copyright notice, the
+  list of conditions and a disclaimer in the source code and in the
+  documentation or other materials provided if used in its binary form.
+- **BSD 3-clause** (aka "BSD License 2.0", "Revised BSD License", "New BSD
+  License", or "Modified BSD License") same as 2-clause license but does not
+  allow the endorsement or promotion of products in the name of the original
+  copyright holders and contributors without specific prior written permission.
+- **BSD 4-clause** (aka original "BSD License") same as 3-clause license but
+  all advertising material that mentiones the use of the original sofware must
+  display the following acknowledgement: This product includes software
+  developed by the \<copyright holder\>.
 
 ## FAIR Data
 
@@ -191,94 +231,6 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Open Code
-
-As indicated for the datasets, publishing the code of the teaching material
-online does not entitle the way in which the course material can be used. When
-the course is created it is automatically protected by copyright. The course
-source code material without a license can not be used. It is important then to
-understand what are the licenses available and to add them to the course
-material properly. The information provided in this roadmap is a personal
-overview and should not be taken as legal advise, additional information can be
-found at https://opensource.guide/legal/. Furthermore, an interactive guide on
-how to choose a license is available at https://choosealicense.com/.
-
-One of the most common licenses for open source is `Creative Commons`. It has
-lots of variations depending on the flexibility that you want to provide to the
-users. The Creative Common licenses are short named with acronyms, and
-understanding them makes much easier their interpretation.  
-
-- **0 (No rights Reserved, Public Domain)**: There are no restrictions on how
-  the code is used nor shared.
-- **BY (By Attribution)**: Any use of the code needs to attribute the original
-  work and author/s.
-- **SA (Share-Alike)**: Any use of the code even if modified needs to keep the
-  same license as the original work.
-- **ND (No Derivatives)**: The work is shared as a whole and can not be
-  modified.
-- **NC (Non Commercial)**: The work can not be used for commercial uses.
-
-The following are some common Creative Commons licenses:
-
-- **CC-0**: No Rights Reserved, allows the distribution without accreditation, it
-  is commonly used to share tabular data or other databases from which
-  knowledge could be derived.
-- **CC-BY**: Attribution, allows the use of the work even for commercial
-  purposes but requires the attribution of the original form (e.g. with a
-  citation). It is recommended for the widest dissemination of work.
-- **CC-BY-SA**: Attribution-ShareAlike, allows the use of the work even for commercial
-  purposes but requires the attribution and the same type of license to any
-  derivatives.
-- **CC-BY-ND**: Attribution-NoDerivatives, allows the use of the code as it is
-  even for commercial uses, but does not allow the modification of the code. It
-  also requires the accreditation of the original author.
-- **CC-BY-NC**: Attribution-NonCommercial), allows the use and modification of
-  the code for non-commercial use, subject to accreditation of the author and
-  does not require the same license on its derivatives.
-- **CC-BY-NC-SA**: Attribution-NonComercial-ShareAlike, allows the use and
-  modification of the work for non commercial applications, requires
-  accreditation of the original work and authors and the derived code needs to
-  use the same license as the original.
-- **CC-BY-NC-ND**: Attribution-NonComercial-NoDerivatives, allows the use of
-  the code without modifications for non commercial uses and requires
-  accreditation of the original work and authors.
-- **The Restrictive License Template**: is a license developed by the
-  Australian Government Open Access Licensing framework for material that
-  contains personal or other confidential information. It can include multiple
-  restrictions on its use like time limits, permissions or ethics required, or
-  contractual arrangements). See more at
-  https://library.unimelb.edu.au/Digital-Scholarship/restrictive-licence-template
-
-Other common licenses for software are
-
-- **MIT** ([license](https://opensource.org/license/mit)) allows the use of the
-  Software free of charge, with no restrictions but under the condition that
-  there is an accreditation of the original software and authors and that the
-  permission notice is included in all the copies or substantial portions of
-  the Software.
-- **Apache** (Apache License, Version 2.0)
-  ([license](https://www.apache.org/licenses/LICENSE-2.0))
-- **GPL** (General Public License) guarantees the end users the four freedoms
-  to run, study, share and modify the Software.
-
-And the BSD license which includes several versions
-
-- **BSD 0-clause** (aka BSD Zero Clause License) allows the use, copy,
-  modification and/or distribution of the Software for any purposes with or
-  without fees.
-- **BSD 2-clause license** (aka "Simplified BSD License" or "FreeBSD
-  License") same as 0-clause but requires to retain the copyright notice, the
-  list of conditions and a disclaimer in the source code and in the
-  documentation or other materials provided if used in its binary form.
-- **BSD 3-clause** (aka "BSD License 2.0", "Revised BSD License", "New BSD
-  License", or "Modified BSD License") same as 2-clause license but does not
-  allow the endorsement or promotion of products in the name of the original
-  copyright holders and contributors without specific prior written permission.
-- **BSD 4-clause** (aka original "BSD License") same as 3-clause license but
-  all advertising material that mentiones the use of the original sofware must
-  display the following acknowledgement: This product includes software
-  developed by the \<copyright holder\>.
-
 ## Research Profile
 
 The authoring of any material should clearly and uniquely identify the identity
@@ -297,6 +249,57 @@ system, among others.
 [^ORCID]: https://info.orcid.org/ 
 [^clarivate]: https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/researcher-profiles/
 [^DAI]: https://en.wikipedia.org/wiki/Digital_Author_Identifier
+
+## Open Access
+
+We provide a short introduction to Open Access for completeness of the Open
+Research principles, which is mainly directed for research publications.
+However, we believe this principle may be considered if the teaching material
+is reused for a research publication. Open Access is a broad international
+movement that specifies a set of principles to make research free of access and
+online, defined as "digital, online, free of charge, and free of most copyright
+and licensing restrictions.". One of the main objectives is to publish research
+work under the CC-BY license. If the material for a course is later reused to
+publish a book or some other type of publication it may be necessary to know
+what are the possible licensing restrictions.
+
+```{figure} images/open-access-logo-png-transparent.png
+:name: figure-open-access
+:width: 200px
+
+Open Access logo
+```
+
+There are multiple types of Open Access models that are used by journals.
+However, the most common ones are gold, green and hybrid OA journals, while
+some journals are hybrid. In all the cases the article is free to read but they
+have the following differences.
+
+**Gold OA**: The article is free to read, but the authors need to pay the
+publisher, requiring an external funding. The 'Article Processing Charge' costs
+an average of £2,000 and can reach £10,000.
+
+**Green OA**: The author accepted manuscript can be hosted in some repository
+(e.g. Pure is a repository of scholarly works for the Universtiy of Bristol).
+The publisher retains the final version in their website. The article has a
+CC-BY license and there is no embargo on its use. Additional considerations may
+be required by the authors, for example the inclusion of a statement in the
+publishers submission, like in the case of the University of Bristol
+recomendation:
+
+```
+  "For the purpose of open access, the author(s) has applied a Creative Commons
+  Attribution (CC BY) licence to any Author Accepted Manuscript version arising
+  from this submission."
+```
+
+**Diamond OA**: These are crowd-funded by libraries and scholarly organisations
+that pay for the processing charges. Then in the same manner as the **Green
+OA**, the accepted manuscript can be hosted in a repository, while the final
+copy is available in the publisher's website.
+
+%Most of the journals that accept OA can be found in the website
+%https://doaj.org/ .
 
 
 ## More about Open Research

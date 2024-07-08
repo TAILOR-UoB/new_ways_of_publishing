@@ -278,26 +278,24 @@ In order to start the live code with `Thebe` it is necessary to click on the
 upper right side menu the `spaceship` and the `Live code` button in the
 dropdown.
 
-![launch live code](./images/thebe_live_code.png)
+```{figure} images/thebe_live_code.png
+:name: figure-launch-live-code
+
+Menu to launch Live Code with Thebe
+```
 
 Then the code will be launched in your configured server (in this case
 MyBinder) and a new loading text will be shown at the top of the current page
-with several steps, building the code
+with several steps, building the code, publishing and launching.  Depending on
+the configured server this process may take more or less time to complete, and
+could even fail to launch.
 
-![thebe building](./images/thebe_building.png)
+```{figure} images/thebe_steps.svg
+:name: figure-thebe-steps
+:width: 400px
 
-then publishing
-
-![thebe publish](./images/thebe_publishing.png)
-
-and finally launching it
-
-![thebe launch](./images/thebe_launching.png)
-
-Depending on the configured server this process may take more or less time to
-complete, and could even fail to launch with the following message
-
-![thebe failed](./images/thebe_failed.png)
+Steps that Live Code will show as it prepares the running environment.
+```
 
 
 Then, any python code that is written in a `code-cell` with `ipython3` will

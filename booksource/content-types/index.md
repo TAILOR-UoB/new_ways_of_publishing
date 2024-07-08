@@ -23,7 +23,7 @@ hosting service serves the required documents to the client.
 :name: fig-cli-sta
 :width: 550px
 
-Diagram of files and communication for content that is show in the bew browser
+Diagram of files and communication for content that is show in the web browser
 as static content (the content could be printed).
 ```
 
