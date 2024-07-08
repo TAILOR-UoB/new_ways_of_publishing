@@ -19,11 +19,11 @@ chapters:
   - file: publishing-workflow/authoring-tools
   #- file: publishing-workflow/authoring-formats
   - file: publishing-workflow/publishing-systems
-- file: content-examples/index
+- file: content-types/index
   sections:
-  - file: content-examples/markdown
-  - file: content-examples/markdown-code
-  - file: content-examples/shinylive
+  - file: content-types/markdown
+  - file: content-types/markdown-code
+  - file: content-types/shinylive
 - file: use-cases/index
   sections:
   - file: use-cases/qmd

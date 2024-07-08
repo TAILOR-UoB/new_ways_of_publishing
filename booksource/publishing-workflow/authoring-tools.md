@@ -24,7 +24,8 @@ feature.
 %- Quarto Markdown
 %- MyST Markdown is a community-driven
 
-## Text editors
+
+## WYSIWYG (What You See Is What You Get)
 
 Text editors are one of the most important tools for authoring material
 publishable material. Some editors provide an interface to write rich text
@@ -34,6 +35,8 @@ separate the source text from the presentation layer. Some of their benefits
 is that multiple people can edit concurrently these types of files as the
 syntax is usually hidden to the user, making difficult the generation of
 compilation or format errors.
+
+## Markup language editors
 
 Other editors consider a separation between the source code and the publishable
 output. [Overleaf](https://www.overleaf.com/) is an online collaborative
