@@ -7,7 +7,7 @@ chapters:
   sections:
   #- file: introduction/teaching
   #- file: introduction/rethinking-courses
-  - file: publishing-workflow/publishing-workflow
+  - file: introduction/publishing-workflow
   - file: introduction/authoring-tools
   - file: introduction/open-courses
   #- file: open-courses/index
