@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Content Examples &#8212; New ways of Publishing</title>
+    <title>Authoring tools &#8212; New ways of Publishing</title>
   
   
   
@@ -63,13 +63,15 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content-examples/index';</script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/authoring-tools';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Basic content" href="markdown.html" />
-    <link rel="prev" title="Publishing systems" href="../publishing-workflow/publishing-systems.html" />
+    <link rel="next" title="Open Courses" href="open-courses.html" />
+    <link rel="prev" title="Publishing workflow" href="../publishing-workflow/publishing-workflow.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,19 +190,16 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../introduction/open-courses.html">Open Courses</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/publishing-workflow.html">Publishing workflow</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Authoring tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-courses.html">Open Courses</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../publishing-workflow/index.html">Publishing workflow</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/authoring-tools.html">Authoring tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../publishing-workflow/publishing-systems.html">Publishing systems</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Content Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="markdown.html">Basic content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markdown-code.html">Computational narratives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shinylive.html">Running code in the web browser</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content-types/index.html">Types of content</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content-types/markdown.html">Basic content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content-types/markdown-code.html">Computational narratives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content-types/shinylive.html">Running code in the web browser</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../use-cases/index.html">Use case scenarios</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -208,6 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../use-cases/tex-to-qmd.html">From <span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer to Quarto</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix/development.html">Appendix: Development environment</a></li>
@@ -282,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/content-examples/index.md" target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/edit/main/booksource/introduction/authoring-tools.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,7 @@
       
       
       
-      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Fcontent-examples/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/TAILOR-UoB/new_ways_of_publishing/issues/new?title=Issue%20on%20page%20%2Fintroduction/authoring-tools.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -413,7 +413,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Content Examples</h1>
+    <h1>Authoring tools</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -423,9 +423,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-content">Basic content</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-with-a-third-party">Interactive with a third party</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-web-browser">Interactive within the web browser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markup-language-editors">Markup language editors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 </ul>
             </nav>
         </div>
@@ -437,88 +438,135 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="content-examples">
-<span id="sec-con"></span><h1>Content Examples<a class="headerlink" href="#content-examples" title="Link to this heading">#</a></h1>
-<p>In this Section we provide multiple examples of the type of content that can be
-generated with publishing systems like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>. We divided
-the different content into three types. The basic content is the most common
-textual narratives that include figures, tables, and other static elements. We
-also include videos in that section as videos are a common resource in
-internet.</p>
-<section id="basic-content">
-<span id="sec-con-bas"></span><h2>Basic content<a class="headerlink" href="#basic-content" title="Link to this heading">#</a></h2>
-<p>To generate basic content with a publication system and accessing the
-resulting content online usually follows the steps shown in the diagram below.
-<strong>(1)</strong> The publication system compiles all the source documents and creates a
-static publication website, <strong>(2)</strong> the static website is sent to an online
-hosting service which is properly organised, <strong>(3)</strong> a user requests access to
-the website to the host server from a computer or other device, <strong>(4)</strong> the
-hosting service serves the required documents to the client.</p>
-<figure class="align-default" id="fig-cli-sta">
-<a class="reference internal image-reference" href="../_images/static.svg"><img alt="../_images/static.svg" src="../_images/static.svg" width="550px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
-as static content (the content could be printed).</span><a class="headerlink" href="#fig-cli-sta" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Most of this type of content is described in section <a class="reference internal" href="markdown.html#sec-basic"><span class="std std-ref">Basic content</span></a> and part of
-the section <a class="reference internal" href="markdown-code.html#sec-com-nar"><span class="std std-ref">Computational narratives</span></a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="authoring-tools">
+<h1>Authoring tools<a class="headerlink" href="#authoring-tools" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Authoring</span> <span class="pre">tools</span></code> are tools that help the creation of authoring input artefacts
+which will be compiled by a <code class="docutils literal notranslate"><span class="pre">formatting</span> <span class="pre">tool</span></code> to generate publishable
+outputs. For example, a markup language editor to create <span class="math notranslate nohighlight">\(\LaTeX\)</span> is an authoring tool,
+while <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>, <code class="docutils literal notranslate"><span class="pre">XeLaTeX</span></code>, or <code class="docutils literal notranslate"><span class="pre">LuaTeX</span></code> are publishing systems that compile
+input artefacts to pdf. In this roadmap we focus on authoring tools that
+can be used for the purpose of multioutput publishing systems. We provide some
+guidelines on the type of files that need to be considered during the authoring
+process, which tools can directly help on the generation of those artefacts. We
+consider the collaboration of teams in the authoring process as a desirable
+feature.</p>
+<section id="wysiwyg-what-you-see-is-what-you-get">
+<h2>WYSIWYG (What You See Is What You Get)<a class="headerlink" href="#wysiwyg-what-you-see-is-what-you-get" title="Link to this heading">#</a></h2>
+<p>Text editors are one of the most important tools for authoring material
+publishable material. Some editors provide an interface to write rich text
+documents like Microsoft Word, Libre office, or Google Docs. However, those
+files are difficult to convert automatically to other formats as they do not
+separate the source text from the presentation layer. Some of their benefits
+is that multiple people can edit concurrently these types of files as the
+syntax is usually hidden to the user, making difficult the generation of
+compilation or format errors.</p>
+<div class="mermaid">
+            flowchart LR
+  
+    E1(&quot;External sources&quot;):::external --&gt; A1
+    subgraph &quot;Libre Office, Google Docs, Microsoft Word, ...&quot; 
+      direction LR
+      A1{{&quot;Authoring and Formatting tool&quot;}} --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+        </div></section>
+<section id="markup-language-editors">
+<h2>Markup language editors<a class="headerlink" href="#markup-language-editors" title="Link to this heading">#</a></h2>
+<p>Other editors consider a separation between the source code and the publishable
+output. <a class="reference external" href="https://www.overleaf.com/">Overleaf</a> is an online collaborative
+authoring tool that allows the edition of <span class="math notranslate nohighlight">\(\LaTeX\)</span> files, managing the errors
+and generating PDF files with a <span class="math notranslate nohighlight">\(\LaTeX\)</span> compiler. However the free tier has
+some collaboration limitations. <a class="reference external" href="https://hackmd.io/">HackMD</a>,
+<a class="reference external" href="https://www.notion.so/">Notion</a> and <a class="reference external" href="https://typst.app/">Typst</a> are other
+online collaborative text edition tools that can be used for authoring
+publishable material and work with markdown files. Although, these tools may
+have differences in the markdown syntax which makes difficult the reuse of the
+generated on different platforms.</p>
+<div class="mermaid">
+            flowchart LR
+  
+    E1(&quot;External sources&quot;):::external --&gt; A1
+    subgraph &quot;Vim, NeoVim, Notepad&quot; 
+      direction LR
+      A1{{&quot;Authoring tool&quot;}} --&gt; I1(&quot;Text + Code +\nTables + ...&quot;):::input
+    end
+    I1 --&gt; P1{{&quot;Formatting tool&quot;}}
+    P1 --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+        </div><div class="mermaid">
+            flowchart LR
+  
+    E1(&quot;External sources&quot;):::external --&gt; A1
+    A1{{&quot;Authoring tool&quot;}} --&gt; I1(&quot;Text + Figures +\nCode + Tables + ...&quot;):::input
+    subgraph &quot;Quarto, pdflatex, xelatex, pandoc, ...&quot; 
+      direction LR
+      I1 --&gt; P1{{&quot;Formatting tool&quot;}}
+      P1 --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+        </div></section>
+<section id="computational-narrative-editors">
+<h2>Computational narrative editors<a class="headerlink" href="#computational-narrative-editors" title="Link to this heading">#</a></h2>
+<p>Jupyter Notebooks are documents that offer computational narratives by
+interlacing formated markdown text and code cells that are executed, providing
+the output as additional content. The idea has been adopted by other platforms
+that have created similar notebook environments. Most of these platforms can
+convert the resulting computational narratives into various formats like html,
+pdf, or text documents. Jupyter Notebook and
+<a class="reference external" href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a> offer the official
+environment for the original Jupyter Notebooks. All of the following projects
+offer cloud-based platforms to edit Jupyter notebooks or similar. <a class="reference external" href="https://colab.research.google.com/">Google
+Colab</a> is hosted by
+Google and free for low-intensive programs, <a class="reference external" href="https://www.kaggle.com/notebooks">Kaggle
+Notebooks</a> is
+hosted by Kaggle which focuses on Python for Data Science, and Machine
+Learning, offering a free solution to participate into Kaggle competitions.
+<a class="reference external" href="https://notebooks.azure.com/">Microsoft Azure Notebooks</a> is hosted in Azure
+and focused on Data Science and Machine Learning with
+CPUs and GPUs available. It supports various programming languages Python, R,
+F# and Julia, among others. Other platforms that are similar to support
+functionalities similar to Jupyter Notebook are <a class="reference external" href="https://cocalc.com/">CoCalc</a>,
+<a class="reference external" href="https://datalore.jetbrains.com/">JetBrains Datalore</a>,
+<a class="reference external" href="https://deepnote.com/">Deepnote</a>, <a class="reference external" href="https://hex.tech/">Hex</a>,
+<a class="reference external" href="https://plutojl.org/">Pluto.jl</a>, <a class="reference external" href="https://nextjournal.com/">Nextjournal</a>, and
+<a class="reference external" href="https://starboard.gg/">Starboard</a>.  In particular JetBrains Datalore
+integrates with the JetBrains ecosystem tools such as the IDEs
+<a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and
+<a class="reference external" href="https://www.jetbrains.com/idea/">IntelliJ</a>.</p>
 </section>
-<section id="interactive-with-a-third-party">
-<span id="sec-con-ser"></span><h2>Interactive with a third party<a class="headerlink" href="#interactive-with-a-third-party" title="Link to this heading">#</a></h2>
-<p>Online content in STEM fields commonly involve programming, sometimes being an
-important part of the training material. Platforms like Jupyter notebooks allow
-the creation of computational narratives that can be interactive, and can be
-modified and re-run changing the visualisation outcomes. This type of content
-requires a different architecture in which a computational node is involved to
-create an execution environment that can run and serve any changes in the
-source code. The first five steps mentioned above are the same, but additional
-steps are necessary. <strong>(6)</strong> The client has the option of interacting with
-certain parts of the website (e.g. changing the source code of some
-computational narrative cells), <strong>(7)</strong> a new session is started in a third
-party computational node that instantiates all the necessary dependencies to
-execute the changes and re-running the necessary parts, <strong>(8)</strong> the third party
-server serves all the changes to the client.</p>
-<figure class="align-default" id="fig-ser-int">
-<a class="reference internal image-reference" href="../_images/interactive_server.svg"><img alt="../_images/interactive_server.svg" src="../_images/interactive_server.svg" width="500px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
-as static content but the content can be modified and rerun but requires a
-session with a (third party) server.</span><a class="headerlink" href="#fig-ser-int" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>This may require the payment of a third party service that includes execution
-of code. The process commonly requires starting a computational instance which
-is often slow and may end up in connection issues. There are services like
-<code class="docutils literal notranslate"><span class="pre">MyBinder</span></code> or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Colab</span></code> that offer a free tier. The full section
-<a class="reference internal" href="markdown-code.html#sec-com-nar"><span class="std std-ref">Computational narratives</span></a> can be run in third party servers which also includes
-guidelines on how to generate this type of content in subsection
-<a class="reference internal" href="markdown-code.html#sec-mar-liv"><span class="std std-ref">Live code</span></a>.</p>
-</section>
-<section id="interactive-within-the-web-browser">
-<span id="sec-con-cli"></span><h2>Interactive within the web browser<a class="headerlink" href="#interactive-within-the-web-browser" title="Link to this heading">#</a></h2>
-<p>There are some ways to create interactive content within the web browser based
-on static content. The benefit of this type of content is that it can be hosted
-by multiple hosting services that offer free static hosting, not requiring
-computational nodes on the server side. Content of this type uses the
-computational resources of the client web browser in order to modify its
-content. The series of steps are the same as the basic content <a class="reference internal" href="#sec-con-bas"><span class="std std-ref">Basic content</span></a>
-but any subsequent interactions are done in the client’s computer.</p>
-<figure class="align-default" id="fig-cli-int">
-<a class="reference internal image-reference" href="../_images/interactive_client.svg"><img alt="../_images/interactive_client.svg" src="../_images/interactive_client.svg" width="350px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Diagram of files and communication for content that is show in the bew browser
-as static content but the content can be modified and re-run within the client
-web browser (no further communication is necessary with external servers).</span><a class="headerlink" href="#fig-cli-int" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>One of the drawbacks of this method is that it may require longer loading times
-as additional files need to be downloaded even if no interaction is intended.
-The section <a class="reference internal" href="shinylive.html#sec-con-run"><span class="std std-ref">Running code in the web browser</span></a> provides a guideline with examples of this type of
-content.</p>
-</section>
-<div class="toctree-wrapper compound">
-</div>
+<section id="integrated-development-environments">
+<h2>Integrated Development Environments<a class="headerlink" href="#integrated-development-environments" title="Link to this heading">#</a></h2>
+<p>The separation of the source code and the publishable outputs is something that
+all the Integrated Development Environments (IDE) excel. These are tools for
+writing computer programs that commonly require a compilation phase which is
+usually integrated in the same tool. The idea of authoring tools that can
+create generic input artefacts that are later combined by a formatting tool
+is very similar to the common process followed by IDEs. This has facilitate the
+adoption of IDEs as authoring tools. Microsoft Visual Studio, <a class="reference external" href="https://posit.co/products/enterprise/workbench/">Posit
+Workbench</a>(formerly
+<a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a>) have tools to work with
+the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> environment. Both of them provide options for multiple
+collaborators editing content at the same time.</p>
+<div class="mermaid">
+            flowchart LR
+  
+    E1(&quot;External sources&quot;):::external --&gt; A1
+    subgraph &quot;Posit (or MS VS) + Quarto, HackMD, Notion, ...&quot; 
+      direction LR
+      A1{{&quot;Authoring tool&quot;}} --&gt; I1(&quot;Text + Figures +\nCode + Tables + ...&quot;):::input
+      I1 --&gt; P1{{&quot;Formatting tool&quot;}}
+      P1 --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+        </div></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -534,7 +582,7 @@ content.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./content-examples"
+            path: "./introduction"
         },
         predefinedOutput: true
     }
@@ -558,20 +606,20 @@ content.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../publishing-workflow/publishing-systems.html"
+       href="../publishing-workflow/publishing-workflow.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Publishing systems</p>
+        <p class="prev-next-title">Publishing workflow</p>
       </div>
     </a>
     <a class="right-next"
-       href="markdown.html"
+       href="open-courses.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Basic content</p>
+        <p class="prev-next-title">Open Courses</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -591,9 +639,10 @@ content.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-content">Basic content</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-with-a-third-party">Interactive with a third party</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-within-the-web-browser">Interactive within the web browser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markup-language-editors">Markup language editors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 </ul>
   </nav></div>
 
