@@ -44,6 +44,12 @@ with GitHub Actions. The input artefact is constructed in such a way that
 multiple types of output formats can be generated automatically from them (e.g.
 formats like an HTML website, Reveal.js slides, pdf, and e-book).
 
+The structure of the document is fairly self-explanatory. 
+The {ref}`sec:intro` sets the stage and introduces terminology, with 
+{ref}`sec:formatting-tools` describing the most recent developments. 
+The next section describes use cases with different degrees of interactivity. 
+We then give concrete examples of authoring training material using Quarto, 
+either from scratch or converting content originally authored in $\Latex$ Beamer. 
 
 <!--
 
