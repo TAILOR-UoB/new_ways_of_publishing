@@ -61,6 +61,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/formatting-tools';</script>
@@ -68,8 +70,8 @@
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Authoring + formatting" href="authoring-and-formatting-tools.html" />
-    <link rel="prev" title="Authoring tools" href="authoring-tools.html" />
+    <link rel="next" title="Authoring tools" href="authoring-tools.html" />
+    <link rel="prev" title="Publishing workflows" href="publishing-workflow.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,10 +191,9 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="publishing-workflow.html">Publishing workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authoring-tools.html">Authoring tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing-workflow.html">Publishing workflows</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Formatting tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authoring-and-formatting-tools.html">Authoring + formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authoring-tools.html">Authoring tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-courses.html">Open Courses</a></li>
 </ul>
 </details></li>
@@ -423,12 +424,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandoc">Pandoc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx">Sphinx</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-markdown">R markdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookdown">Bookdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2l-book">D2L book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx">Sphinx</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
 </ul>
             </nav>
         </div>
@@ -442,11 +444,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="formatting-tools">
 <span id="sec-formatting-tools"></span><h1>Formatting tools<a class="headerlink" href="#formatting-tools" title="Link to this heading">#</a></h1>
-<p>These take input artefacts produced by authoring tools and produce publishable formatted output.
-While many of the authoring tools discussed in the previous section are well-known,
-there have been many recent developments in formatting tools that deserve to be better
-known in the academic community as they take opportunities for publishing training material
-to the next level.</p>
+<p><strong>Formatting tools</strong> take input artefacts produced by authoring tools and
+produce publishable formatted output.  While many of the authoring tools
+discussed in the previous section are well-known, there have been many recent
+developments in formatting tools that deserve to be better known in the
+academic community as they take opportunities for publishing training material
+to the next level. In Section <a class="reference internal" href="publishing-workflow.html#sec-pub"><span class="std std-ref">Publishing workflows</span></a> we have described the two type of
+paradigms  <em>Single-In-Single-Out (SISO)</em>, and <em>Single-In-Multi-Out (SIMO)</em>. In
+this section we describe some <em>formatting tools</em> that can be used for the SIMO
+paradigm.</p>
 <div class="mermaid">
             flowchart LR
   
@@ -460,23 +466,47 @@ to the next level.</p>
     classDef external fill:#eee;
     classDef input fill:#ffa;
     classDef output fill:#faa;
-        </div><section id="jupyter-book">
-<h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Link to this heading">#</a></h2>
-<p>Jupyter Book<a class="footnote-reference brackets" href="#jbook" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is one of the main projects of the Executable Books
-Project<a class="footnote-reference brackets" href="#ebookp" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, together with the other project MyST Markdown<a class="footnote-reference brackets" href="#myst" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. The
+        </div><section id="pandoc">
+<span id="sec-pandoc"></span><h2>Pandoc<a class="headerlink" href="#pandoc" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://pandoc.org/">Pandoc</a><a class="footnote-reference brackets" href="#id24" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is a tool to convert files between multiple
+markup formats. Pandoc is used within more generic tools like Quarto,
+D2L book, among others. It is customizable thanks to a Haskell library
+and a template system to feet your needs. It is able to generate
+bibliographies, footnotes, <span class="math notranslate nohighlight">\(\LaTeX\)</span> math, tables, definitions, and most common
+publication assets. Some supported formats are lightweight markup (Markdown,
+reStructuredText, AsciiDoc, Textile, Emacs Org-Mode, …), HTML,
+Ebooks, TeX, word processing (docx, rtf, odt), wiki markup, slide show
+(<span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer, reveal.js, Microsoft PowerPoint, …), and even PDF (via
+pdflatex, lualatex, xelatex, latexmk and others).</p>
+</section>
+<section id="sphinx">
+<h2>Sphinx<a class="headerlink" href="#sphinx" title="Link to this heading">#</a></h2>
+<p>Sphinx<a class="footnote-reference brackets" href="#id25" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> is an open-source documentation engine that is based on
+Docutils<a class="footnote-reference brackets" href="#docutils" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>; extending it to multi-page documentation. Docutils is an
+open-source text processing system that uses the plain text easy-to-read
+reStructuredText to create documentation in multiple formats, such as HTML,
+LaTeX, Linux man pages<a class="footnote-reference brackets" href="#man" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>, OpenDocument<a class="footnote-reference brackets" href="#odf" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>, or XML<a class="footnote-reference brackets" href="#xml" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Sphinx supports
+reStructuredText and MyST markdown as input files and can generate multiple
+output formats including HTML, LaTeX, PDF, ePub, and Texinfo<a class="footnote-reference brackets" href="#texinfo" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> (the
+official documentation format of the GNU project<a class="footnote-reference brackets" href="#gnu" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>).</p>
+</section>
+<section id="jupyter-book">
+<span id="sec-jupbook"></span><h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Link to this heading">#</a></h2>
+<p>Jupyter Book<a class="footnote-reference brackets" href="#jbook" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> is one of the main projects of the Executable Books
+Project<a class="footnote-reference brackets" href="#ebookp" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>, together with the other project MyST Markdown<a class="footnote-reference brackets" href="#myst" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>. The
 Executable Books Project is an international collaboration to build open source
 tools for publishing computational documents based on the Jupyter
-ecosystem<a class="footnote-reference brackets" href="#jupyter" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. Jupyter Book can read markdown, MyST Markdown, Jupyter
+ecosystem<a class="footnote-reference brackets" href="#jupyter" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>. Jupyter Book can read markdown, MyST Markdown, Jupyter
 notebooks and
-<a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a><a class="footnote-reference brackets" href="#rst" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. It is based
+<a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a><a class="footnote-reference brackets" href="#rst" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>. It is based
 on the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx documentation engine</a>
 being able to produce html websites, pdf, and computational narratives. It
 supports multiple programming languages in the Jupyter notebooks provided that
 a Jupyter kernel exist (e.g. Python, Julia, Rubi, Haskell, and many other
-languages<a class="footnote-reference brackets" href="#kernels" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>).
+languages<a class="footnote-reference brackets" href="#kernels" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a>).
 Websites that include computational narratives can also bennefit from live
 environments thanks to the integration of Binder, Thebe and Google
-Colab<a class="footnote-reference brackets" href="#colab" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>. It supports multiple types of narrative content like highlighted
+Colab<a class="footnote-reference brackets" href="#colab" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a>. It supports multiple types of narrative content like highlighted
 notes, code cells, quotations, epigraphs, glossaries, index of terms,
 footnotes, references, grids, cards, dropdown menus, tab content, maths,
 equations, proofs, theorems, algorithms, and more. The Jupyter Book system has
@@ -485,33 +515,19 @@ can be found at <a class="reference external" href="https://executablebooks.org/
 has been created with Jupyter Book and serves as an example of some of its
 functionalities.</p>
 </section>
-<section id="quarto">
-<h2>Quarto<a class="headerlink" href="#quarto" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://quarto.org">Quarto</a> is another open-source publishing system with the
-objective of facilitating the collaboration to create scientific content.
-Quarto is sponsored by Posit<a class="footnote-reference brackets" href="#posit" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>, and follows the development of the R Markdown
-publishing system extending the focus from the programming language R to
-Python, R, Julia and Observable. It supports Jupyter notebooks, markdown and
-their own extension Quarto markdown. The conversion to different output formats
-is done with pandoc<a class="footnote-reference brackets" href="#pandoc" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>, which is able to produce presentations (Reveal.js),
-dashboards, websites, blogs, books, PDFs, Microsoft Word, ePub and more. Quarto
-is integrated into multiple authoring environments like Microsoft Visual
-Studio, Jupyter Lab, Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>, and Atlassian Confluence<a class="footnote-reference brackets" href="#confluence" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>
-among others.</p>
-</section>
 <section id="r-markdown">
-<h2>R markdown<a class="headerlink" href="#r-markdown" title="Link to this heading">#</a></h2>
+<span id="sec-rmd"></span><h2>R markdown<a class="headerlink" href="#r-markdown" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://rmarkdown.rstudio.com/">R markdown</a> is a flavoured markdown type with
 special focus on the R programming language and a publishing system. The
 publishing system uses R markdown files (with extension <code class="docutils literal notranslate"><span class="pre">.rmd</span></code>) or standard
 markdown and can produce various output formats including HTML, PDFs, Microsoft
 Word documents, Beamer presentations, HTML5 slides, scientific articles and
-books (with the the help of the bookdown R package<a class="footnote-reference brackets" href="#id23" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>). It also support
+books (with the the help of the bookdown R package<a class="footnote-reference brackets" href="#id26" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>). It also support
 other programming languages including Python, SQL and others with a language
-engine<a class="footnote-reference brackets" href="#engines" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>. R markdown is also integrated in Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>.</p>
+engine<a class="footnote-reference brackets" href="#engines" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a>. R markdown is also integrated in Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="bookdown">
-<h2>Bookdown<a class="headerlink" href="#bookdown" title="Link to this heading">#</a></h2>
+<span id="sec-bookdown"></span><h2>Bookdown<a class="headerlink" href="#bookdown" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://bookdown.org/">Bookdown</a> is an open-source R package that facilitates
 the creation of books from R Markdown documents. It is an extension for R
 Markdown to work with long documents. The rest of the functionalities are
@@ -519,107 +535,111 @@ shared with R Markdown. A list of books written with Bookdown can be found at
 <a class="reference external" href="https://bookdown.org/home/archive/">https://bookdown.org/home/archive/</a>.</p>
 </section>
 <section id="d2l-book">
-<h2>D2L book<a class="headerlink" href="#d2l-book" title="Link to this heading">#</a></h2>
+<span id="sec-d2lbook"></span><h2>D2L book<a class="headerlink" href="#d2l-book" title="Link to this heading">#</a></h2>
 <p>D2L book is a Python package and a toolkit to build online and printed books.
 The package was mainly developed for the publication of the book <a class="reference external" href="https://d2l.ai/">Dive into
-Deep Learning</a><span id="id15">[<a class="reference internal" href="../references.html#id25" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. Cambridge University Press, 2023. https://D2L.ai.">ZLLS23</a>]</span>, which had multiple
+Deep Learning</a><span id="id19">[<a class="reference internal" href="../references.html#id25" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. Cambridge University Press, 2023. https://D2L.ai.">ZLLS23</a>]</span>, which had multiple
 collaborators mostly from Amazon. It is mainly focused for content that
 includes computational narratives in Python. The input files are mainly MyST
 markdown and Jupyter Notebooks. The publishing part is made with pandoc and
 Sphinx allowing the creation of websites and pdf documents.</p>
 </section>
-<section id="sphinx">
-<h2>Sphinx<a class="headerlink" href="#sphinx" title="Link to this heading">#</a></h2>
-<p>Sphinx<a class="footnote-reference brackets" href="#id24" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a> is an open-source documentation engine that is based on
-Docutils<a class="footnote-reference brackets" href="#docutils" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a>; extending it to multi-page documentation. Docutils is an
-open-source text processing system that uses the plain text easy-to-read
-reStructuredText to create documentation in multiple formats, such as HTML,
-LaTeX, Linux man pages<a class="footnote-reference brackets" href="#man" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>, OpenDocument<a class="footnote-reference brackets" href="#odf" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a>, or XML<a class="footnote-reference brackets" href="#xml" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a>. Sphinx supports
-reStructuredText and MyST markdown as input files and can generate multiple
-output formats including HTML, LaTeX, PDF, ePub, and Texinfo<a class="footnote-reference brackets" href="#texinfo" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a> (the
-official documentation format of the GNU project<a class="footnote-reference brackets" href="#gnu" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a>).</p>
+<section id="quarto">
+<span id="sec-qmd"></span><h2>Quarto<a class="headerlink" href="#quarto" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://quarto.org">Quarto</a> is another open-source publishing system with the
+objective of facilitating the collaboration to create scientific content.
+Quarto is sponsored by Posit<a class="footnote-reference brackets" href="#posit" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a>, and follows the development of the R Markdown
+publishing system extending the focus from the programming language R to
+Python, R, Julia and Observable. It supports Jupyter notebooks, markdown and
+their own extension Quarto markdown. The conversion to different output formats
+is done with pandoc<a class="footnote-reference brackets" href="#id24" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, which is able to produce presentations (Reveal.js),
+dashboards, websites, blogs, books, PDFs, Microsoft Word, ePub and more. Quarto
+is integrated into multiple authoring environments like Microsoft Visual
+Studio, Jupyter Lab, Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a>, and Atlassian Confluence<a class="footnote-reference brackets" href="#confluence" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a>
+among others.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="jbook" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">https://jupyterbook.org/en/stable/intro.html</a></p>
-</aside>
-<aside class="footnote brackets" id="ebookp" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://executablebooks.org/en/latest/">https://executablebooks.org/en/latest/</a></p>
-</aside>
-<aside class="footnote brackets" id="myst" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://executablebooks.org/en/latest/tools/#tools-myst">https://executablebooks.org/en/latest/tools/#tools-myst</a></p>
-</aside>
-<aside class="footnote brackets" id="jupyter" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a></p>
-</aside>
-<aside class="footnote brackets" id="rst" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">https://docutils.sourceforge.io/rst.html</a></p>
-</aside>
-<aside class="footnote brackets" id="kernels" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
-<p><a class="github reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">jupyter/jupyter</a></p>
-</aside>
-<aside class="footnote brackets" id="colab" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
-</aside>
-<aside class="footnote brackets" id="posit" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://posit.co">https://posit.co</a></p>
-</aside>
-<aside class="footnote brackets" id="pandoc" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id24" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id21">2</a>)</span>
 <p><a class="reference external" href="https://pandoc.org/">https://pandoc.org/</a></p>
 </aside>
-<aside class="footnote brackets" id="rstudio" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id10">1</a>,<a role="doc-backlink" href="#id14">2</a>)</span>
-<p><a class="reference external" href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a></p>
-</aside>
-<aside class="footnote brackets" id="confluence" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://www.atlassian.com/software/confluence">https://www.atlassian.com/software/confluence</a></p>
-</aside>
-<aside class="footnote brackets" id="id23" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">12</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://bookdown.org/">https://bookdown.org/</a></p>
-</aside>
-<aside class="footnote brackets" id="engines" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">13</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://bookdown.org/yihui/rmarkdown/language-engines.html">https://bookdown.org/yihui/rmarkdown/language-engines.html</a></p>
-</aside>
-<aside class="footnote brackets" id="id24" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">14</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id25" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
 </aside>
 <aside class="footnote brackets" id="docutils" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">15</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://docutils.sourceforge.io/">https://docutils.sourceforge.io/</a></p>
 </aside>
 <aside class="footnote brackets" id="man" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">16</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://linux.die.net/man/">https://linux.die.net/man/</a></p>
 </aside>
 <aside class="footnote brackets" id="odf" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">17</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/OpenDocument">https://en.wikipedia.org/wiki/OpenDocument</a></p>
 </aside>
 <aside class="footnote brackets" id="xml" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">18</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/XML">https://en.wikipedia.org/wiki/XML</a></p>
 </aside>
 <aside class="footnote brackets" id="texinfo" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">19</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.gnu.org/software/texinfo/">https://www.gnu.org/software/texinfo/</a></p>
 </aside>
 <aside class="footnote brackets" id="gnu" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id22">20</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.gnu.org/">https://www.gnu.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="jbook" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">https://jupyterbook.org/en/stable/intro.html</a></p>
+</aside>
+<aside class="footnote brackets" id="ebookp" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://executablebooks.org/en/latest/">https://executablebooks.org/en/latest/</a></p>
+</aside>
+<aside class="footnote brackets" id="myst" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://executablebooks.org/en/latest/tools/#tools-myst">https://executablebooks.org/en/latest/tools/#tools-myst</a></p>
+</aside>
+<aside class="footnote brackets" id="jupyter" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">12</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="rst" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">13</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">https://docutils.sourceforge.io/rst.html</a></p>
+</aside>
+<aside class="footnote brackets" id="kernels" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">14</a><span class="fn-bracket">]</span></span>
+<p><a class="github reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">jupyter/jupyter</a></p>
+</aside>
+<aside class="footnote brackets" id="colab" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">15</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="id26" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">16</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://bookdown.org/">https://bookdown.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="engines" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">17</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://bookdown.org/yihui/rmarkdown/language-engines.html">https://bookdown.org/yihui/rmarkdown/language-engines.html</a></p>
+</aside>
+<aside class="footnote brackets" id="rstudio" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id18">1</a>,<a role="doc-backlink" href="#id22">2</a>)</span>
+<p><a class="reference external" href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a></p>
+</aside>
+<aside class="footnote brackets" id="posit" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">19</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://posit.co">https://posit.co</a></p>
+</aside>
+<aside class="footnote brackets" id="confluence" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">20</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.atlassian.com/software/confluence">https://www.atlassian.com/software/confluence</a></p>
 </aside>
 </aside>
 </section>
@@ -662,20 +682,20 @@ official documentation format of the GNU project<a class="footnote-reference bra
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="authoring-tools.html"
+       href="publishing-workflow.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Authoring tools</p>
+        <p class="prev-next-title">Publishing workflows</p>
       </div>
     </a>
     <a class="right-next"
-       href="authoring-and-formatting-tools.html"
+       href="authoring-tools.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Authoring + formatting</p>
+        <p class="prev-next-title">Authoring tools</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -695,12 +715,13 @@ official documentation format of the GNU project<a class="footnote-reference bra
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandoc">Pandoc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx">Sphinx</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-markdown">R markdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookdown">Bookdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2l-book">D2L book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx">Sphinx</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
 </ul>
   </nav></div>
 

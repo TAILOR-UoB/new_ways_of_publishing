@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Publishing workflow &#8212; New ways of Publishing</title>
+    <title>Publishing workflows &#8212; New ways of Publishing</title>
   
   
   
@@ -68,7 +68,7 @@
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Authoring tools" href="authoring-tools.html" />
+    <link rel="next" title="Formatting tools" href="formatting-tools.html" />
     <link rel="prev" title="Introduction" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,10 +189,9 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Publishing workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authoring-tools.html">Authoring tools</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Publishing workflows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="formatting-tools.html">Formatting tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authoring-and-formatting-tools.html">Authoring + formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authoring-tools.html">Authoring tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-courses.html">Open Courses</a></li>
 </ul>
 </details></li>
@@ -413,7 +412,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Publishing workflow</h1>
+    <h1>Publishing workflows</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -423,7 +422,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-tools">Formatting tools</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-single-out">Single-In-Single-Out</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-multiple-out">Single-In-Multiple-Out</a></li>
 </ul>
@@ -437,12 +435,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="publishing-workflow">
-<h1>Publishing workflow<a class="headerlink" href="#publishing-workflow" title="Link to this heading">#</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">publishing</span> <span class="pre">workflow</span></code> is the full process in which authors produce results
-and the corresponding input artefacts that will be necessary to make a
-publication, and the <code class="docutils literal notranslate"><span class="pre">publication</span> <span class="pre">system</span></code> that is involved to compile all the
-material into the final publication.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="publishing-workflows">
+<span id="sec-pub"></span><h1>Publishing workflows<a class="headerlink" href="#publishing-workflows" title="Link to this heading">#</a></h1>
+<p>The <strong>publishing workflow</strong> is the process in which external resources are
+collated together with the help of an <strong>authoring tool</strong> and subsequently
+arranged with a <strong>formatting tool</strong> to generate a publishable output that can be
+delivered in various forms. In this <strong>roadmap</strong> we exclude (1) the process of
+generating the external resources and (6) the delivery system.</p>
 <p>In this <code class="docutils literal notranslate"><span class="pre">Roadmap</span></code> we want to emphasize the difference between the <code class="docutils literal notranslate"><span class="pre">authoring</span></code>
 and the <code class="docutils literal notranslate"><span class="pre">formatting</span></code> parts of the full <code class="docutils literal notranslate"><span class="pre">publication</span> <span class="pre">workflow</span></code>. The <code class="docutils literal notranslate"><span class="pre">authoring</span></code> side
 consists in creating a structured composition of input artefacts that are
@@ -461,45 +460,33 @@ PF: I updated the next paragraph.</p>
 <div class="mermaid">
             flowchart LR
   
-    E1(&quot;External resources&quot;):::external -.-&gt; A1
-    A1{{&quot;Authoring tool&quot;}} --&gt; I1(&quot;Text + Figures +\nCode + Tables + ...&quot;):::input
-    I1 --&gt; P1{{&quot;Formatting tool&quot;}}
-    P1 --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
-    O1 -.-&gt; D1{{Delivery system}}:::delivery
+    E1(&quot;(1)\nExternal resources&quot;):::external -.-&gt; A1
+    A1{{&quot;(2)\nAuthoring tool&quot;}} --&gt; I1(&quot;(3)\nText + Figures +\nCode + Tables + ...&quot;):::input
+    I1 --&gt; P1{{&quot;(4)\nFormatting tool&quot;}}
+    P1 --&gt; O1[&quot;(5)\nFormatted\nOutput&quot;]:::output
+    O1 -.-&gt; D1{{&quot;(6)\nDelivery system&quot;}}:::delivery
     classDef external fill:#eee,stroke:#666,stroke-width:2px,stroke-dasharray: 5 5;
     classDef input fill:#ffa;
     classDef output fill:#faa;
     classDef delivery stroke:#666,stroke-width:2px,stroke-dasharray: 5 5;
-        </div><p>The process of creating the input artefacts is often distributed over different apps or environments,
-non-linear and may involve redundancies (e.g., multiple copies of the same image for the paper, slides, etc.).
-Keeping all versions of the artefacts up to date constitutes a challenge, as parts of the artefacts are
-re-used and adapted to be used within their respective authoring contexts.</p>
-<div class="mermaid">
-            flowchart LR
-  
-    I1(&quot;Source code&quot;):::input -.-&gt;|Part of the code| MS
-    I1 &amp; I3{{&quot;Analysis&quot;}} --&gt; M1(&quot;Results&quot;):::input
-    M1 --&gt; I3
-    I3 --&gt; M2(&quot;Figures + Tables + \n ...&quot;):::input
-    I4[&quot;Other sources&quot;]:::external --&gt; M2
-    M1 -.-&gt;|Part of the results| MS(&quot;Figures + Code + \n Tables + ...&quot;):::input
-    M2 -.-&gt;|Subset| MS
-    classDef input fill:#ffa;
-    classDef external fill:#aaa,stroke:#333,stroke-dasharray: 5 5;
-        </div><section id="formatting-tools">
-<h2>Formatting tools<a class="headerlink" href="#formatting-tools" title="Link to this heading">#</a></h2>
-<p>Formatting tools format the input files into publishing outputs outputs (e.g.
-html, slides, posters, and pdfs) from a set of input artefacts (e.g. plain
-text, markdown, LaTeX, tables, figures). In this Section we divide the tools
-into three paradigms <em>Single-In-Single-Out (SISO)</em>, <em>Single-In-Multi-Out
-(SIMO)</em> and <em>Multiple-In-Multiple-Out (MIMO)</em>. In this roadmap we only focus on
-the second type, as it covers the most widely adopted and flexible systems for
-authoring training material.</p>
-</section>
+        </div><p>An example of a publishing workflow is the following. A research group may
+carry out an investigation which ends up with <strong>(1)</strong> data, figures, analyses,
+and results, those resources are put together with an <strong>(2)</strong> authoring tool
+like Overleaf which produces an <strong>(3)</strong> organised hierarchy of files and text
+that includes formatting information, then using a <strong>(4)</strong> formatting tool like
+pdfLaTeX all the artefacts are combined into a <strong>(5)</strong> pdf document that can be
+<strong>(6a)</strong> printed as a stand alone document, or <strong>(6b)</strong> included into the
+proceedings of a conference.</p>
+<p>The creation of research or academic material usually involves the production
+of slides, documents, posters and other output formats from the same material.
+In this roadmap, we are interested in workflows to generate this multitude of
+opututs minimising the <em>authoring</em> effort. Here, we describe two types of
+paradigms to achieve this <em>Single-In-Single-Out (SISO)</em>, and
+<em>Single-In-Multi-Out (SIMO)</em>.</p>
 <section id="single-in-single-out">
 <h2>Single-In-Single-Out<a class="headerlink" href="#single-in-single-out" title="Link to this heading">#</a></h2>
-<p><em>Formatting tools</em> have usually specialised in generating only one type of
-output provided one or more types of input files. This is one of the most
+<p><em>Formatting tools</em> commonly specialise in generating only one type of
+output from one or more input files. This is one of the most
 common approaches when producing an article. The text, figures, tables and
 other artefacts are assembled with some authoring tool and compiled with a
 specialised formatting tool to produce a printable pdf. Once it has been
@@ -534,21 +521,21 @@ flowchart LR
     classDef input fill:#ffa;
     classDef empty fill:#aaa,stroke:#333,stroke-dasharray: 5 5;
         </div><p>Common examples of this type of paradigm are the authoring and publishing
-workflows followed by creating documents with Microsoft Word<a class="footnote-reference brackets" href="#word" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, Libre
+workflows followed by creating text documents with Microsoft Word<a class="footnote-reference brackets" href="#word" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, Libre
 Office Writer<a class="footnote-reference brackets" href="#writer" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, LaTeX<a class="footnote-reference brackets" href="#latex" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>; sets of slides with Microsoft
 PowerPoint<a class="footnote-reference brackets" href="#powpoint" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>, LibreOffice Impress<a class="footnote-reference brackets" href="#impress" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>, LaTeX Beamer<a class="footnote-reference brackets" href="#beamer" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>,
-Reveal.js<a class="footnote-reference brackets" href="#reveal" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>, or Google Slides; posters with Microsoft Publisher, Google
-Slides, LaTeX, etc.</p>
+Reveal.js<a class="footnote-reference brackets" href="#reveal" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>, or Google Slides; or posters with Microsoft Publisher,
+Google Slides, LaTeX, etc.</p>
 </section>
 <section id="single-in-multiple-out">
 <h2>Single-In-Multiple-Out<a class="headerlink" href="#single-in-multiple-out" title="Link to this heading">#</a></h2>
 <p>More recent publishing systems allow the generation of multiple types of
 publication formats from a joint set of input artefacts. We refer to this
-paradigm as Single-In-Multiple-Out (SIMO). This paradigm offers multiple
-benefits, among them: (1) keep all the artefacts in a unique
-location facilitates finding the required documents, (2) keeping a unique
+paradigm as Single-In-Multiple-Out (SIMO). This paradigm offers various
+benefits, among them: <strong>(1)</strong> keep all the artefacts in a unique
+location facilitates finding the required documents, <strong>(2)</strong> keeping a unique
 source of history changes and versions which is useful for auditing and
-transparency, (3) not duplicating artefacts that are not changed between
+transparency, <strong>(3)</strong> not duplicating artefacts that are not changed between
 different publishing systems.</p>
 <div class="mermaid">
             %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
@@ -569,7 +556,8 @@ produce multiple types of outputs from the same sources. In this roadmap we
 focus on the state-of-the-art formatting tools that fall into this category.
 The roadmap document itself is an example of one particular tool (Jupyter Book), while the
 rest of the document and use cases also include examples built with Quarto. A description of these
-and other publishing tools is provided with more detail in the next Section.</p>
+and other publishing tools is provided with more detail in Section
+<a class="reference internal" href="formatting-tools.html#sec-formatting-tools"><span class="std std-ref">Formatting tools</span></a>.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="word" role="doc-footnote">
@@ -650,11 +638,11 @@ and other publishing tools is provided with more detail in the next Section.</p>
       </div>
     </a>
     <a class="right-next"
-       href="authoring-tools.html"
+       href="formatting-tools.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Authoring tools</p>
+        <p class="prev-next-title">Formatting tools</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -674,7 +662,6 @@ and other publishing tools is provided with more detail in the next Section.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-tools">Formatting tools</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-single-out">Single-In-Single-Out</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-in-multiple-out">Single-In-Multiple-Out</a></li>
 </ul>
