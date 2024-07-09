@@ -1,14 +1,15 @@
-(sec:for)=
+(sec:formatting-tools)=
 # Formatting tools
 
-**Formatting tools** are computer programs or platforms that given a set of
-instructions and input artefacts that include metadata are able to combine them
-in a desired output form (e.g. website, pdf, poster, or slides). Some
-_formatting tools_ are specialised in one type of output, while other ones can
-generate multiple forms depending on the provided metadata. In Section
-[](sec:pub) we have described the two type of paradigms  *Single-In-Single-Out
-(SISO)*, and *Single-In-Multi-Out (SIMO)*. In this section we describe some
-_formatting tools_ that can be used for the SIMO paradigm.
+**Formatting tools** take input artefacts produced by authoring tools and
+produce publishable formatted output.  While many of the authoring tools
+discussed in the previous section are well-known, there have been many recent
+developments in formatting tools that deserve to be better known in the
+academic community as they take opportunities for publishing training material
+to the next level. In Section [](sec:pub) we have described the two type of
+paradigms  *Single-In-Single-Out (SISO)*, and *Single-In-Multi-Out (SIMO)*. In
+this section we describe some _formatting tools_ that can be used for the SIMO
+paradigm.
 
 ```{mermaid}
 flowchart LR
@@ -79,7 +80,7 @@ functionalities.
 [^jbook]: https://jupyterbook.org/en/stable/intro.html
 [^ebookp]: https://executablebooks.org/en/latest/
 [^myst]: https://executablebooks.org/en/latest/tools/#tools-myst
-[^juypter]: https://jupyter.org/
+[^jupyter]: https://jupyter.org/
 [^rst]: https://docutils.sourceforge.io/rst.html
 [^kernels]: https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
 [^colab]: https://colab.research.google.com/
