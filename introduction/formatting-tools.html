@@ -441,7 +441,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="formatting-tools">
-<h1>Formatting tools<a class="headerlink" href="#formatting-tools" title="Link to this heading">#</a></h1>
+<span id="sec-formatting-tools"></span><h1>Formatting tools<a class="headerlink" href="#formatting-tools" title="Link to this heading">#</a></h1>
+<p>These take input artefacts produced by authoring tools and produce publishable formatted output.
+While many of the authoring tools discussed in the previous section are well-known,
+there have been many recent developments in formatting tools that deserve to be better
+known in the academic community as they take opportunities for publishing training material
+to the next level.</p>
 <div class="mermaid">
             flowchart LR
   
@@ -461,17 +466,17 @@ document.write(`
 Project<a class="footnote-reference brackets" href="#ebookp" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, together with the other project MyST Markdown<a class="footnote-reference brackets" href="#myst" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. The
 Executable Books Project is an international collaboration to build open source
 tools for publishing computational documents based on the Jupyter
-ecosystem[^jupyter]. Jupyter Book can read markdown, MyST Markdown, Jupyter
+ecosystem<a class="footnote-reference brackets" href="#jupyter" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. Jupyter Book can read markdown, MyST Markdown, Jupyter
 notebooks and
-<a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a><a class="footnote-reference brackets" href="#rst" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. It is based
+<a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a><a class="footnote-reference brackets" href="#rst" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. It is based
 on the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx documentation engine</a>
 being able to produce html websites, pdf, and computational narratives. It
 supports multiple programming languages in the Jupyter notebooks provided that
 a Jupyter kernel exist (e.g. Python, Julia, Rubi, Haskell, and many other
-languages<a class="footnote-reference brackets" href="#kernels" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>).
+languages<a class="footnote-reference brackets" href="#kernels" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>).
 Websites that include computational narratives can also bennefit from live
 environments thanks to the integration of Binder, Thebe and Google
-Colab<a class="footnote-reference brackets" href="#colab" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. It supports multiple types of narrative content like highlighted
+Colab<a class="footnote-reference brackets" href="#colab" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>. It supports multiple types of narrative content like highlighted
 notes, code cells, quotations, epigraphs, glossaries, index of terms,
 footnotes, references, grids, cards, dropdown menus, tab content, maths,
 equations, proofs, theorems, algorithms, and more. The Jupyter Book system has
@@ -484,14 +489,14 @@ functionalities.</p>
 <h2>Quarto<a class="headerlink" href="#quarto" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://quarto.org">Quarto</a> is another open-source publishing system with the
 objective of facilitating the collaboration to create scientific content.
-Quarto is sponsored by Posit<a class="footnote-reference brackets" href="#posit" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>, and follows the development of the R Markdown
+Quarto is sponsored by Posit<a class="footnote-reference brackets" href="#posit" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>, and follows the development of the R Markdown
 publishing system extending the focus from the programming language R to
 Python, R, Julia and Observable. It supports Jupyter notebooks, markdown and
 their own extension Quarto markdown. The conversion to different output formats
-is done with pandoc<a class="footnote-reference brackets" href="#pandoc" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>, which is able to produce presentations (Reveal.js),
+is done with pandoc<a class="footnote-reference brackets" href="#pandoc" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>, which is able to produce presentations (Reveal.js),
 dashboards, websites, blogs, books, PDFs, Microsoft Word, ePub and more. Quarto
 is integrated into multiple authoring environments like Microsoft Visual
-Studio, Jupyter Lab, Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>, and Atlassian Confluence<a class="footnote-reference brackets" href="#confluence" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>
+Studio, Jupyter Lab, Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>, and Atlassian Confluence<a class="footnote-reference brackets" href="#confluence" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>
 among others.</p>
 </section>
 <section id="r-markdown">
@@ -501,9 +506,9 @@ special focus on the R programming language and a publishing system. The
 publishing system uses R markdown files (with extension <code class="docutils literal notranslate"><span class="pre">.rmd</span></code>) or standard
 markdown and can produce various output formats including HTML, PDFs, Microsoft
 Word documents, Beamer presentations, HTML5 slides, scientific articles and
-books (with the the help of the bookdown R package<a class="footnote-reference brackets" href="#id22" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>). It also support
+books (with the the help of the bookdown R package<a class="footnote-reference brackets" href="#id23" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>). It also support
 other programming languages including Python, SQL and others with a language
-engine<a class="footnote-reference brackets" href="#engines" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>. R markdown is also integrated in Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>.</p>
+engine<a class="footnote-reference brackets" href="#engines" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>. R markdown is also integrated in Rstudio<a class="footnote-reference brackets" href="#rstudio" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="bookdown">
 <h2>Bookdown<a class="headerlink" href="#bookdown" title="Link to this heading">#</a></h2>
@@ -517,7 +522,7 @@ shared with R Markdown. A list of books written with Bookdown can be found at
 <h2>D2L book<a class="headerlink" href="#d2l-book" title="Link to this heading">#</a></h2>
 <p>D2L book is a Python package and a toolkit to build online and printed books.
 The package was mainly developed for the publication of the book <a class="reference external" href="https://d2l.ai/">Dive into
-Deep Learning</a><span id="id14">[<a class="reference internal" href="../references.html#id25" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. Cambridge University Press, 2023. https://D2L.ai.">ZLLS23</a>]</span>, which had multiple
+Deep Learning</a><span id="id15">[<a class="reference internal" href="../references.html#id25" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. Cambridge University Press, 2023. https://D2L.ai.">ZLLS23</a>]</span>, which had multiple
 collaborators mostly from Amazon. It is mainly focused for content that
 includes computational narratives in Python. The input files are mainly MyST
 markdown and Jupyter Notebooks. The publishing part is made with pandoc and
@@ -525,14 +530,14 @@ Sphinx allowing the creation of websites and pdf documents.</p>
 </section>
 <section id="sphinx">
 <h2>Sphinx<a class="headerlink" href="#sphinx" title="Link to this heading">#</a></h2>
-<p>Sphinx<a class="footnote-reference brackets" href="#id23" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> is an open-source documentation engine that is based on
-Docutils<a class="footnote-reference brackets" href="#docutils" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a>; extending it to multi-page documentation. Docutils is an
+<p>Sphinx<a class="footnote-reference brackets" href="#id24" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a> is an open-source documentation engine that is based on
+Docutils<a class="footnote-reference brackets" href="#docutils" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a>; extending it to multi-page documentation. Docutils is an
 open-source text processing system that uses the plain text easy-to-read
 reStructuredText to create documentation in multiple formats, such as HTML,
-LaTeX, Linux man pages<a class="footnote-reference brackets" href="#man" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a>, OpenDocument<a class="footnote-reference brackets" href="#odf" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>, or XML<a class="footnote-reference brackets" href="#xml" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a>. Sphinx supports
+LaTeX, Linux man pages<a class="footnote-reference brackets" href="#man" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>, OpenDocument<a class="footnote-reference brackets" href="#odf" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a>, or XML<a class="footnote-reference brackets" href="#xml" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a>. Sphinx supports
 reStructuredText and MyST markdown as input files and can generate multiple
-output formats including HTML, LaTeX, PDF, ePub, and Texinfo<a class="footnote-reference brackets" href="#texinfo" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a> (the
-official documentation format of the GNU project<a class="footnote-reference brackets" href="#gnu" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a>).</p>
+output formats including HTML, LaTeX, PDF, ePub, and Texinfo<a class="footnote-reference brackets" href="#texinfo" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a> (the
+official documentation format of the GNU project<a class="footnote-reference brackets" href="#gnu" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a>).</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="jbook" role="doc-footnote">
@@ -547,69 +552,73 @@ official documentation format of the GNU project<a class="footnote-reference bra
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://executablebooks.org/en/latest/tools/#tools-myst">https://executablebooks.org/en/latest/tools/#tools-myst</a></p>
 </aside>
-<aside class="footnote brackets" id="rst" role="doc-footnote">
+<aside class="footnote brackets" id="jupyter" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="rst" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">https://docutils.sourceforge.io/rst.html</a></p>
 </aside>
 <aside class="footnote brackets" id="kernels" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
 <p><a class="github reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">jupyter/jupyter</a></p>
 </aside>
 <aside class="footnote brackets" id="colab" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
 </aside>
 <aside class="footnote brackets" id="posit" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://posit.co">https://posit.co</a></p>
 </aside>
 <aside class="footnote brackets" id="pandoc" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://pandoc.org/">https://pandoc.org/</a></p>
 </aside>
 <aside class="footnote brackets" id="rstudio" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id9">1</a>,<a role="doc-backlink" href="#id13">2</a>)</span>
+<span class="label"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id10">1</a>,<a role="doc-backlink" href="#id14">2</a>)</span>
 <p><a class="reference external" href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a></p>
 </aside>
 <aside class="footnote brackets" id="confluence" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.atlassian.com/software/confluence">https://www.atlassian.com/software/confluence</a></p>
 </aside>
-<aside class="footnote brackets" id="id22" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id23" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">12</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://bookdown.org/">https://bookdown.org/</a></p>
 </aside>
 <aside class="footnote brackets" id="engines" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">12</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">13</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://bookdown.org/yihui/rmarkdown/language-engines.html">https://bookdown.org/yihui/rmarkdown/language-engines.html</a></p>
 </aside>
-<aside class="footnote brackets" id="id23" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">13</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id24" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">14</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
 </aside>
 <aside class="footnote brackets" id="docutils" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">14</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">15</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://docutils.sourceforge.io/">https://docutils.sourceforge.io/</a></p>
 </aside>
 <aside class="footnote brackets" id="man" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">15</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">16</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://linux.die.net/man/">https://linux.die.net/man/</a></p>
 </aside>
 <aside class="footnote brackets" id="odf" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">16</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">17</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/OpenDocument">https://en.wikipedia.org/wiki/OpenDocument</a></p>
 </aside>
 <aside class="footnote brackets" id="xml" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">17</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">18</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/XML">https://en.wikipedia.org/wiki/XML</a></p>
 </aside>
 <aside class="footnote brackets" id="texinfo" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">18</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">19</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.gnu.org/software/texinfo/">https://www.gnu.org/software/texinfo/</a></p>
 </aside>
 <aside class="footnote brackets" id="gnu" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">19</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id22">20</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.gnu.org/">https://www.gnu.org/</a></p>
 </aside>
 </aside>
