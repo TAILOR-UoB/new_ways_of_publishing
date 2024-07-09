@@ -1,7 +1,8 @@
+(sec:aut)=
 # Authoring tools
 
-`Authoring tools` are tools that help the creation of authoring input artefacts
-which will be compiled by a `formatting tool` to generate publishable
+**Authoring tools** are tools that help the creation of authoring input artefacts
+which will be compiled by a _formatting tool_ to generate publishable
 outputs. For example, a markup language editor to create $\LaTeX$ is an authoring tool,
 while `pdflatex`, `XeLaTeX`, or `LuaTeX` are publishing systems that compile
 input artefacts to pdf. In this roadmap we focus on authoring tools that

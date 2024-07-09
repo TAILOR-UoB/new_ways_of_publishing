@@ -1,7 +1,7 @@
 # Open Courses
 
 The idea of Open Courses is to take some of the principles of Open Research and
-adapt for the creation of online teaching material. Open Research is a set of
+adapt for the creation of online training material. Open Research is a set of
 principles to promote sharing research outcomes in a way that makes research
 reproducible and more transparent. There are at least four aspects that are
 considered:
@@ -12,7 +12,7 @@ considered:
 - **Open Access** of publications (Green, Gold, Hybrid, Diamond)
 
 New ways of publishing potentially needs to consider all of the aforementioned
-points as the objective is to publish teaching material online with maximum
+points as the objective is to publish training material online with maximum
 reach. For transparency and accessibility the source code of the course should
 be open and any data used in the course should adhere to best practices. The
 authors of the course may also benefit from an open research profile which
@@ -21,7 +21,7 @@ visibility to other work created by the same authors.
 
 ## Open Code
 
-As indicated for the datasets, publishing the code of the teaching material
+As indicated for the datasets, publishing the code of the training material
 online does not entitle the way in which the course material can be used. When
 the course is created it is automatically protected by copyright. The course
 source code material without a license can not be used. It is important then to
@@ -113,7 +113,7 @@ The FAIR (Findable Accessible Interoperable Reusable) principles of sharing
 data were defined by a consortium of scientists and organisations, and
 published in the journal Scientific Data {cite}`Wilkinson2016-so`. In STEM
 fields it is very common to share datasets with the students in order to better
-understand the teaching material. It is important to ensure that any data
+understand the training material. It is important to ensure that any data
 shared online in this manner is correctly licensed. The four principles that
 shape the acronym are:
 
@@ -254,7 +254,7 @@ system, among others.
 
 We provide a short introduction to Open Access for completeness of the Open
 Research principles, which is mainly directed for research publications.
-However, we believe this principle may be considered if the teaching material
+However, we believe this principle may be considered if the training material
 is reused for a research publication. Open Access is a broad international
 movement that specifies a set of principles to make research free of access and
 online, defined as "digital, online, free of charge, and free of most copyright

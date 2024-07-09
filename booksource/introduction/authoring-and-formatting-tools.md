@@ -1,4 +1,5 @@
-# Authoring + formatting
+(sec:hyb)=
+# Hybrid tools
 
 ## WYSIWYG (What You See Is What You Get)
 
@@ -42,7 +43,7 @@ collaborators editing content at the same time.
 flowchart LR
   
     E1("External resources"):::external -.-> A1
-    subgraph "Posit (or MS VS) + Quarto, HackMD, Notion, ..." 
+    subgraph "IDE + Quarto, HackMD, Notion, Typst, Overleaf..." 
       direction LR
       A1{{"Authoring tool"}} --> I1("Text + Figures +\nCode + Tables + ..."):::input
       I1 --> P1{{"Formatting tool"}}

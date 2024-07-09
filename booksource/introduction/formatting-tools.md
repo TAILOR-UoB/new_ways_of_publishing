@@ -1,4 +1,13 @@
+(sec:for)=
 # Formatting tools
+
+Formatting tools format the input files into publishable outputs (e.g.
+website, slides, posters, or documents) from a set of input artefacts (e.g. plain
+text, markdown, LaTeX, tables, figures). In this Section we divide the tools
+into three paradigms *Single-In-Single-Out (SISO)*, *Single-In-Multi-Out
+(SIMO)* and *Multiple-In-Multiple-Out (MIMO)*. In this roadmap we only focus on
+the second type, as it is covers the most adopted and flexible systems for
+authoring training material.
 
 ```{mermaid}
 flowchart LR
@@ -15,6 +24,21 @@ flowchart LR
     classDef output fill:#faa;
 ```
 
+(sec:pandoc)=
+## Pandoc
+
+[Pandoc](https://pandoc.org/)[^pandoc] is a tool to convert files between multiple
+markup formats. Pandoc is used within more generic tools like Quarto,
+D2L book, among others. It is customizable thanks to a Haskell library
+and a template system to feet your needs. It is able to generate
+bibliographies, footnotes, $\LaTeX$ math, tables, definitions, and most common
+publication assets. Some supported formats are lightweight markup (Markdown,
+reStructuredText, AsciiDoc, Textile, Emacs Org-Mode, ...), HTML,
+Ebooks, TeX, word processing (docx, rtf, odt), wiki markup, slide show
+($\LaTeX$ Beamer, reveal.js, Microsoft PowerPoint, ...), and even PDF (via
+pdflatex, lualatex, xelatex, latexmk and others).
+
+(sec:jupbook)=
 ### Jupyter Book
 
 Jupyter Book[^jbook] is one of the main projects of the Executable Books
@@ -66,6 +90,7 @@ functionalities.
 %    the `_build` path, `python -m http.server 8000 -d _site/`
 %  - Uses Sphinx under the hood
 
+(sec:qmd)=
 ### Quarto
 
 [Quarto](https://quarto.org) is another open-source publishing system with the
@@ -97,6 +122,7 @@ among others.
 %  - Has a preview mode `quarto preview` which autobuilds and updates when
 %    changes in the source files are detected.
 
+(sec:rmd)=
 ### R markdown
 
 [R markdown](https://rmarkdown.rstudio.com/) is a flavoured markdown type with
@@ -120,6 +146,7 @@ engine[^engines]. R markdown is also integrated in Rstudio[^rstudio].
 [^bookdown]: https://bookdown.org/
 [^engines]: https://bookdown.org/yihui/rmarkdown/language-engines.html
 
+(sec:bookdown)=
 ### Bookdown
 
 [Bookdown](https://bookdown.org/) is an open-source R package that facilitates
@@ -137,6 +164,7 @@ https://bookdown.org/home/archive/.
 %  - Programming languages R, C/C++, Python, Fortran, Julia, Shell scripts and
 %    SQL, among others.
 
+(sec:d2lbook)=
 ### D2L book
 
 D2L book is a Python package and a toolkit to build online and printed books.
@@ -166,6 +194,8 @@ reStructuredText and MyST markdown as input files and can generate multiple
 output formats including HTML, LaTeX, PDF, ePub, and Texinfo[^texinfo] (the
 official documentation format of the GNU project[^gnu]).
 
+
+[^pandoc]: https://pandoc.org/ 
 [^sphinx]: https://www.sphinx-doc.org/en/master/
 [^docutils]: https://docutils.sourceforge.io/
 [^odf]: https://en.wikipedia.org/wiki/OpenDocument
