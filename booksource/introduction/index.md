@@ -1,26 +1,27 @@
 (sec:intro)=
 # Introduction
 
-The landscape of tools for authoring training material is vast, and creating or
-modernising outdated material may be daunting with all the available options.
-This website provides simple guidelines for publishing modern online training
-materials with state-of-the-art tools. We focus on publishing workflows that
+The landscape of tools for authoring and publishing training material is vast, 
+and creating new or upgrading legacy material may appear daunting with all the available options.
+This website surveys the landscape and provides actionable guidelines 
+for publishing modern online training materials with state-of-the-art tools. 
+We focus on publishing workflows that
 use standard authoring artefacts (such as plain text, tables and figures) that
 can generate multiple publishing outputs (like slides, websites, pdfs, or
 documents).
 
-The wide spread of the World Wide Web has allowed the modernisation of teaching
+The proliferation and adoption of the World Wide Web has allowed the modernisation of teaching
 material that is cross-platform and dynamic. Clear examples of modern teaching
-material online include video recordings (e.g. Khan Academy), videos and
-questionaries (e.g. Massive Open Online Courses), personal blogs with dynamic
-illustrations, and sets of animated presentations. However, most of the
-teaching material still focuses on printable formats with the addition of
-hyperlinks.
+material online include video recordings (e.g. Khan Academy), online exams 
+(e.g. Massive Open Online Courses or MOOCs), personal blogs with dynamic
+illustrations, and sets of animated presentations. However, large parts of the 
+currently available teaching material still focus on printable formats, 
+with the possible addition of hyperlinks.
 
-The lack of standards for publishing reduces the adoption of one authoring file
-format and spreads the efforts to improve individual publishing workflows.
+The lack of standards for publishing hinders the adoption of one authoring file
+format and increases the efforts to improve individual publishing workflows.
 Furthermore, the time spent getting familiar with one technology may not be
-useful in the future with the rapidly changing publishing environment.
+productive in future with the rapidly changing publishing environment.
 Additionally, multiple publishing outputs require different input formats which
 forces the duplication of efforts to produce very similar material (e.g.
 printed pdf, website, blog post, slides, posters). We suggest the use of a
@@ -28,8 +29,8 @@ limited number of input formats that have been supported by most common
 publishing systems.
 
 This website provides an introduction to modern authoring tools and publishing
-systems. We explore the most adopted authoring and publishing platforms, and
-online collaboration tools to facilitate the creation of shared online
+systems. We explore the most broadly adopted authoring and publishing platforms, 
+as well as online collaboration tools to facilitate the creation of shared online
 material.  We pay special attention to the possible standardisation of a
 workflow to minimise the effort of authoring artefacts while maximizing the
 publishing of various output modalities. Two such publishing systems are

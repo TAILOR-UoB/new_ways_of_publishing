@@ -6,7 +6,7 @@
 #######################################################################################
 # Book settings
 title                       : New ways of Publishing  # The title of the book. Will be placed in the left navbar.
-author                      : Miquel Perello Nieto and <a href="http://people.cs.bris.ac.uk/~flach/">Peter Flach</a>  # The author of the book
+author                      : <a href="https://perellonieto.com">Miquel Perello Nieto</a> and <a href="http://people.cs.bris.ac.uk/~flach/">Peter Flach</a>  # The author of the book
 copyright                   : "2024"  # Copyright year to be placed in the footer
 logo                        : images/logo.svg  # A path to the book logo
 
