@@ -1,4 +1,5 @@
-# Publishing workflow
+(sec:pub)=
+# Publishing workflows
 
 The **publishing workflow** is the process in which external resources are
 collated together with the help of an **authoring tool** and subsequently
@@ -80,30 +81,45 @@ proceedings of a conference.
 %    classDef external fill:#aaa,stroke:#333,stroke-dasharray: 5 5;
 %```
 
-## Authoring tools
+%## Authoring tools
+%
+%**Authoring tools** are computer programs or platforms that provide a user
+%interface to arange all sorts of input artefacts (e.g. plain text, markup
+%language, tables, figures, code, or equations) in a way that can be formated
+%later. These tools need to integrate metadata about the format in which the
+%different artefacts need to be shown in different output forms. For example,
+%the font of the text and its position, the position of figures, tables and
+%other elements. 
+%
+%```{mermaid}
+%flowchart LR
+%  
+%    E1("External resources"):::external -.-> A1
+%    subgraph "Vim, NeoVim, Notepad" 
+%      direction LR
+%      A1{{"Authoring tool"}} --> I1("Text + Code +\nTables + ..."):::input
+%    end
+%    I1 --> P1{{"Formatting tool"}}
+%    P1 --> O1["Formatted\nOutput"]:::output
+%    classDef external fill:#eee;
+%    classDef input fill:#ffa;
+%    classDef output fill:#faa;
+%```
+%
+%Authoring tools that do not incorporate part of the formatting are rare, as it
+%is common to require at least a previsualisation of the formatted output.
+%Examples of authoring that can be separated from the formatting step are simple
+%text editors like vim, NeoVim, Notepad, and general purpose Integrated
+%Development Environments (IDEs).
 
-**Authoring tools** are computer programs or platforms that provide a user
-interface to arange all sorts of input artefacts (e.g. plain text, markup
-language, tables, figures, code, or equations) in a way that can be formated
-later. These tools need to integrate metadata about the format in which the
-different artefacts need to be shown in different output forms. For example,
-the font of the text and its position, the position of figures, tables and
-other elements. Section [](sec:aut) provides additional information about
-currently available _authoring tools_.
+When producing research or academic material, it is common to end up with
+slides, documents, posters and other output formats from the same material. In
+this roadmap, we are interested in workflows to generate this multitude of
+opututs minimising the _authoring_ effort. Here, we describe two types of
+paradigms to achieve this *Single-In-Single-Out (SISO)*, and
+*Single-In-Multi-Out (SIMO)*. 
 
-## Formatting tools
-
-**Formatting tools** are computer programs or platforms that given specific
-instructions and input artefacts that include metadata are able to combine them
-in a desired output form (e.g. website, pdf, poster, or slides). Some
-_formatting tools_ are specialised in one type of output, while other ones can
-generate multiple forms depending on the provided metadata. We differentiate
-between two types of paradigms *Single-In-Single-Out (SISO)*, and
-*Single-In-Multi-Out (SIMO)*. In this roadmap we focus mostly on the SIMO type,
-as we will see that covers more flexible systems for authoring training
-material.
-
-### Single-In-Single-Out
+## Single-In-Single-Out
 
 _Formatting tools_ commonly specialise in generating only one type of
 output from one or more input files. This is one of the most
@@ -159,7 +175,7 @@ Google Slides, LaTeX, etc.
 [^beamer]: https://ctan.org/pkg/beamer
 [^reveal]: https://revealjs.com/
 
-### Single-In-Multiple-Out
+## Single-In-Multiple-Out
 
 More modern _formatting tools_ allow the generation of multiple types of
 publication formats from a joint set of input artefacts. We refer to this
@@ -193,14 +209,3 @@ The same roadmap is an example of one of such tools (Jupyter Book), while the
 rest of the document and use cases also include Quarto. A description of these
 and other publishing tools is described with more detail in Section [](sec:for).
 
-## Hybrid tools
-
-**Hybrid tools** are a combination of both _authoring_ and _formatting_
-tools. While in some situations it is a good practice to separate the two
-aspects, some computer programs integrate them in one tool that may (or may
-not) provide access to the intermediate artefacts. For example, softwares like
-Microsoft Word are authoring tools that already provide the formated output
-durint the authoring process. Another typical example in academic environments
-is Overleaf that provides an online collaborative authoring platform that
-integrates with _pdfLatex_ in the back end. Section [](sec:hyb) provides
-additional information about those tools.

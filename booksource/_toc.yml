@@ -8,9 +8,9 @@ chapters:
   #- file: introduction/teaching
   #- file: introduction/rethinking-courses
   - file: introduction/publishing-workflow
-  - file: introduction/authoring-tools
   - file: introduction/formatting-tools
-  - file: introduction/authoring-and-formatting-tools
+  - file: introduction/authoring-tools
+    #- file: introduction/authoring-and-formatting-tools
   - file: introduction/open-courses
   #- file: open-courses/index
   #  sections:

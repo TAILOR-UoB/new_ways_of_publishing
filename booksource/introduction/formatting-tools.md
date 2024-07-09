@@ -1,13 +1,14 @@
 (sec:for)=
 # Formatting tools
 
-Formatting tools format the input files into publishable outputs (e.g.
-website, slides, posters, or documents) from a set of input artefacts (e.g. plain
-text, markdown, LaTeX, tables, figures). In this Section we divide the tools
-into three paradigms *Single-In-Single-Out (SISO)*, *Single-In-Multi-Out
-(SIMO)* and *Multiple-In-Multiple-Out (MIMO)*. In this roadmap we only focus on
-the second type, as it is covers the most adopted and flexible systems for
-authoring training material.
+**Formatting tools** are computer programs or platforms that given a set of
+instructions and input artefacts that include metadata are able to combine them
+in a desired output form (e.g. website, pdf, poster, or slides). Some
+_formatting tools_ are specialised in one type of output, while other ones can
+generate multiple forms depending on the provided metadata. In Section
+[](sec:pub) we have described the two type of paradigms  *Single-In-Single-Out
+(SISO)*, and *Single-In-Multi-Out (SIMO)*. In this section we describe some
+_formatting tools_ that can be used for the SIMO paradigm.
 
 ```{mermaid}
 flowchart LR
@@ -38,8 +39,19 @@ Ebooks, TeX, word processing (docx, rtf, odt), wiki markup, slide show
 ($\LaTeX$ Beamer, reveal.js, Microsoft PowerPoint, ...), and even PDF (via
 pdflatex, lualatex, xelatex, latexmk and others).
 
+## Sphinx
+
+Sphinx[^sphinx] is an open-source documentation engine that is based on
+Docutils[^docutils]; extending it to multi-page documentation. Docutils is an
+open-source text processing system that uses the plain text easy-to-read
+reStructuredText to create documentation in multiple formats, such as HTML,
+LaTeX, Linux man pages[^man], OpenDocument[^odf], or XML[^xml]. Sphinx supports
+reStructuredText and MyST markdown as input files and can generate multiple
+output formats including HTML, LaTeX, PDF, ePub, and Texinfo[^texinfo] (the
+official documentation format of the GNU project[^gnu]).
+
 (sec:jupbook)=
-### Jupyter Book
+## Jupyter Book
 
 Jupyter Book[^jbook] is one of the main projects of the Executable Books
 Project[^ebookp], together with the other project MyST Markdown[^myst]. The
@@ -90,8 +102,69 @@ functionalities.
 %    the `_build` path, `python -m http.server 8000 -d _site/`
 %  - Uses Sphinx under the hood
 
+(sec:rmd)=
+## R markdown
+
+[R markdown](https://rmarkdown.rstudio.com/) is a flavoured markdown type with
+special focus on the R programming language and a publishing system. The
+publishing system uses R markdown files (with extension `.rmd`) or standard
+markdown and can produce various output formats including HTML, PDFs, Microsoft
+Word documents, Beamer presentations, HTML5 slides, scientific articles and
+books (with the the help of the bookdown R package[^bookdown]). It also support
+other programming languages including Python, SQL and others with a language
+engine[^engines]. R markdown is also integrated in Rstudio[^rstudio].
+
+%- [Rmarkdown](https://rmarkdown.rstudio.com/):
+%  - Input R markdown files (.rmd)
+%  - Output formats include HTML, PDF, MS Word, Beamer, HTML5 slides, books (see
+%    examples of books build with markdown in
+%    [bookdown](https://bookdown.org/)), scientific articles, websites.
+%	- Supports multiple languages including R, Python and SQL (see
+%    [other language engines]()).
+%  - Posit Connect
+
+[^bookdown]: https://bookdown.org/
+[^engines]: https://bookdown.org/yihui/rmarkdown/language-engines.html
+
+(sec:bookdown)=
+## Bookdown
+
+[Bookdown](https://bookdown.org/) is an open-source R package that facilitates
+the creation of books from R Markdown documents. It is an extension for R
+Markdown to work with long documents. The rest of the functionalities are
+shared with R Markdown. A list of books written with Bookdown can be found at
+https://bookdown.org/home/archive/.
+
+%- [Bookdown](https://bookdown.org/) package
+%  - It is an R package
+%  - It is based on R Markdown
+%  - Input R Markdown
+%  - Output formats pdf, LaTeX, HTML, EPUB, and Word.
+%  - Integartion with RStudio IDE
+%  - Programming languages R, C/C++, Python, Fortran, Julia, Shell scripts and
+%    SQL, among others.
+
+(sec:d2lbook)=
+## D2L book
+
+D2L book is a Python package and a toolkit to build online and printed books.
+The package was mainly developed for the publication of the book [Dive into
+Deep Learning](https://d2l.ai/){cite}`zhang2023dive`, which had multiple
+collaborators mostly from Amazon. It is mainly focused for content that
+includes computational narratives in Python. The input files are mainly MyST
+markdown and Jupyter Notebooks. The publishing part is made with pandoc and
+Sphinx allowing the creation of websites and pdf documents.
+
+%- [Dive into Deep Learning](https://d2l.ai/) an interactive book with multiple
+%authors mainly from Amazon .
+%  - [d2l-book](https://github.com/d2l-ai/d2l-book) is the Python package used
+%    to build and publish the D2L book.
+%  - Programming language Python
+%  - Output website and pdf
+%  - Uses Markdown, Jupyter Notebooks, Sphinx, and pandoc
+
 (sec:qmd)=
-### Quarto
+## Quarto
 
 [Quarto](https://quarto.org) is another open-source publishing system with the
 objective of facilitating the collaboration to create scientific content.
@@ -121,78 +194,6 @@ among others.
 %  - Built with `quarto render`
 %  - Has a preview mode `quarto preview` which autobuilds and updates when
 %    changes in the source files are detected.
-
-(sec:rmd)=
-### R markdown
-
-[R markdown](https://rmarkdown.rstudio.com/) is a flavoured markdown type with
-special focus on the R programming language and a publishing system. The
-publishing system uses R markdown files (with extension `.rmd`) or standard
-markdown and can produce various output formats including HTML, PDFs, Microsoft
-Word documents, Beamer presentations, HTML5 slides, scientific articles and
-books (with the the help of the bookdown R package[^bookdown]). It also support
-other programming languages including Python, SQL and others with a language
-engine[^engines]. R markdown is also integrated in Rstudio[^rstudio].
-
-%- [Rmarkdown](https://rmarkdown.rstudio.com/):
-%  - Input R markdown files (.rmd)
-%  - Output formats include HTML, PDF, MS Word, Beamer, HTML5 slides, books (see
-%    examples of books build with markdown in
-%    [bookdown](https://bookdown.org/)), scientific articles, websites.
-%	- Supports multiple languages including R, Python and SQL (see
-%    [other language engines]()).
-%  - Posit Connect
-
-[^bookdown]: https://bookdown.org/
-[^engines]: https://bookdown.org/yihui/rmarkdown/language-engines.html
-
-(sec:bookdown)=
-### Bookdown
-
-[Bookdown](https://bookdown.org/) is an open-source R package that facilitates
-the creation of books from R Markdown documents. It is an extension for R
-Markdown to work with long documents. The rest of the functionalities are
-shared with R Markdown. A list of books written with Bookdown can be found at
-https://bookdown.org/home/archive/.
-
-%- [Bookdown](https://bookdown.org/) package
-%  - It is an R package
-%  - It is based on R Markdown
-%  - Input R Markdown
-%  - Output formats pdf, LaTeX, HTML, EPUB, and Word.
-%  - Integartion with RStudio IDE
-%  - Programming languages R, C/C++, Python, Fortran, Julia, Shell scripts and
-%    SQL, among others.
-
-(sec:d2lbook)=
-### D2L book
-
-D2L book is a Python package and a toolkit to build online and printed books.
-The package was mainly developed for the publication of the book [Dive into
-Deep Learning](https://d2l.ai/){cite}`zhang2023dive`, which had multiple
-collaborators mostly from Amazon. It is mainly focused for content that
-includes computational narratives in Python. The input files are mainly MyST
-markdown and Jupyter Notebooks. The publishing part is made with pandoc and
-Sphinx allowing the creation of websites and pdf documents.
-
-%- [Dive into Deep Learning](https://d2l.ai/) an interactive book with multiple
-%authors mainly from Amazon .
-%  - [d2l-book](https://github.com/d2l-ai/d2l-book) is the Python package used
-%    to build and publish the D2L book.
-%  - Programming language Python
-%  - Output website and pdf
-%  - Uses Markdown, Jupyter Notebooks, Sphinx, and pandoc
-
-### Sphinx
-
-Sphinx[^sphinx] is an open-source documentation engine that is based on
-Docutils[^docutils]; extending it to multi-page documentation. Docutils is an
-open-source text processing system that uses the plain text easy-to-read
-reStructuredText to create documentation in multiple formats, such as HTML,
-LaTeX, Linux man pages[^man], OpenDocument[^odf], or XML[^xml]. Sphinx supports
-reStructuredText and MyST markdown as input files and can generate multiple
-output formats including HTML, LaTeX, PDF, ePub, and Texinfo[^texinfo] (the
-official documentation format of the GNU project[^gnu]).
 
 
 [^pandoc]: https://pandoc.org/ 
