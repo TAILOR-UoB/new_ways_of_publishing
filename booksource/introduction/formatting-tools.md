@@ -1,4 +1,11 @@
+(sec:formatting-tools)=
 # Formatting tools
+
+These take input artefacts produced by authoring tools and produce publishable formatted output. 
+While many of the authoring tools discussed in the previous section are well-known, 
+there have been many recent developments in formatting tools that deserve to be better 
+known in the academic community as they take opportunities for publishing training material 
+to the next level. 
 
 ```{mermaid}
 flowchart LR
@@ -43,7 +50,7 @@ functionalities.
 [^jbook]: https://jupyterbook.org/en/stable/intro.html
 [^ebookp]: https://executablebooks.org/en/latest/
 [^myst]: https://executablebooks.org/en/latest/tools/#tools-myst
-[^juypter]: https://jupyter.org/
+[^jupyter]: https://jupyter.org/
 [^rst]: https://docutils.sourceforge.io/rst.html
 [^kernels]: https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
 [^colab]: https://colab.research.google.com/
