@@ -5,22 +5,10 @@ root: index
 chapters:
 - file: introduction/index
   sections:
-  #- file: introduction/teaching
-  #- file: introduction/rethinking-courses
   - file: introduction/publishing-workflow
   - file: introduction/formatting-tools
   - file: introduction/authoring-tools
-    #- file: introduction/authoring-and-formatting-tools
   - file: introduction/open-courses
-  #- file: open-courses/index
-  #  sections:
-  #  - file: open-courses/open-access
-  #  - file: open-courses/open-code
-  #  - file: open-courses/fair-data
-  #  - file: open-courses/open-profile
-  #sections:
-  #- file: publishing-workflow/authoring-formats
-  #- file: publishing-workflow/publishing-systems
 - file: content-types/index
   sections:
   - file: content-types/markdown
