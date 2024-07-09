@@ -1,11 +1,11 @@
 # Authoring tools
 
-`Authoring tools` are tools that help the creation of authoring input artefacts
-which will be compiled by a `formatting tool` to generate publishable
+`Authoring tools` facilitate the creation of input artefacts
+which will be compiled and rendered by a `formatting tool` to generate publishable
 outputs. For example, a markup language editor to create $\LaTeX$ is an authoring tool,
 while `pdflatex`, `XeLaTeX`, or `LuaTeX` are publishing systems that compile
 input artefacts to pdf. In this roadmap we focus on authoring tools that
-can be used for the purpose of multioutput publishing systems. We provide some
+can be used for the purpose of multi-output publishing systems. We provide some
 guidelines on the type of files that need to be considered during the authoring
 process, which tools can directly help on the generation of those artefacts. We
 consider the collaboration of teams in the authoring process as a desirable
@@ -27,16 +27,17 @@ feature.
 
 ## Markup language editors
 
-Other editors consider a separation between the source code and the publishable
-output. [Overleaf](https://www.overleaf.com/) is an online collaborative
+These editors separate the source text from the publishable output. 
+Unlike WYSIWYG editors (What You See Is What You Get) they typically have a 
+dual-pane user interface with one pane displaying the editable source and 
+the other pane providing a preview. 
+[Overleaf](https://www.overleaf.com/) is an online collaborative
 authoring tool that allows the edition of $\LaTeX$ files, managing the errors
 and generating PDF files with a $\LaTeX$ compiler. However the free tier has
 some collaboration limitations. [HackMD](https://hackmd.io/),
 [Notion](https://www.notion.so/) and [Typst](https://typst.app/) are other
-online collaborative text edition tools that can be used for authoring
-publishable material and work with markdown files. Although, these tools may
-have differences in the markdown syntax which makes difficult the reuse of the
-generated on different platforms.
+online collaborative text editing tools that can be used for authoring
+publishable material and work with markdown files. 
 
 ```{mermaid}
 flowchart LR
@@ -56,7 +57,7 @@ flowchart LR
 ## Computational narrative editors
 
 Jupyter Notebooks are documents that offer computational narratives by
-interlacing formated markdown text and code cells that are executed, providing
+interlacing formatted markdown text and executable code cells, providing
 the output as additional content. The idea has been adopted by other platforms
 that have created similar notebook environments. Most of these platforms can
 convert the resulting computational narratives into various formats like html,
