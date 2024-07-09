@@ -49,7 +49,7 @@ The {ref}`sec:intro` sets the stage and introduces terminology, with
 {ref}`sec:formatting-tools` describing the most recent developments. 
 The next section describes use cases with different degrees of interactivity. 
 We then give concrete examples of authoring training material using Quarto, 
-either from scratch or converting content originally authored in $\Latex$ Beamer. 
+either from scratch or converting content originally authored in $\LaTeX$ Beamer. 
 
 <!--
 
