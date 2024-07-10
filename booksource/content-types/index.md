@@ -11,12 +11,12 @@ internet.
 (sec:con:bas)=
 ## Basic content
 
-To generate basic content with a publication system and accessing the
-resulting content online usually follows the steps shown in the diagram below.
-**(1)** The publication system compiles all the source documents and creates a
-static publication website, **(2)** the static website is sent to an online
-hosting service which is properly organised, **(3)** a user requests access to
-the website to the host server from a computer or other device, **(4)** the
+To generate basic content with a publication system and accessing the resulting
+content online usually follows the steps shown in the diagram below.  **(1)**
+The publication system compiles all the source documents and creates a static
+publication website, **(2)** the static website is sent to an online hosting
+service which **(3)** is properly organised, **(4)** a user requests access to
+the website to the host server from a computer or other device, **(5)** the
 hosting service serves the required documents to the client.
 
 ```{figure} images/static.svg
