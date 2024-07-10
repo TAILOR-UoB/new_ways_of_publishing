@@ -52,8 +52,8 @@ The creation of research or academic material usually involves the production
 of slides, documents, posters and other output formats from the same material.
 In this roadmap, we are interested in workflows to generate this multitude of
 opututs minimising the _authoring_ effort. Here, we describe two types of
-paradigms to achieve this *Single-In-Single-Out (SISO)*, and
-*Single-In-Multi-Out (SIMO)*. 
+paradigms described in the previous TAILOR deliverable D9.3 {cite}`sokol21` to
+achieve this *Single-In-Single-Out (SISO)*, and *Single-In-Multi-Out (SIMO)*. 
 
 
 %% MPN: I have removed this as it was complicated  and may not be necessary
