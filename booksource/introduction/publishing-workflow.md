@@ -8,7 +8,7 @@ delivered in various forms. In this **roadmap** we exclude (1) the process of
 generating the external resources and (6) the delivery system.
 
 In this `Roadmap` we want to emphasize the difference between the `authoring`
-and the `formatting` parts of the full `publication workflow`. The `authoring` side
+and the `formatting` parts of the full `publishing workflow`. The `authoring` side
 consists in creating a structured composition of input artefacts that are
 necessary to generate the intended publication. The authoring step may also
 be able to generate outputs such as previews, but these are intermediate and 

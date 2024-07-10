@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 (sec:use:lat)=
-# From $\LaTeX$ Beamer to Quarto
+# Convert a $\LaTeX$ Beamer presentation to Quarto
 
 The use case [](sec:use:qua) shows how to start a `Quarto` course with multiple
 outputs from zero. In this use case we start from an already existing set of

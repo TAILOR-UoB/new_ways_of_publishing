@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 (sec:use:qua)=
-# Quarto course example
+# Create a Quarto course from scratch
 
 In this use-case scenario we created a website for an online course with
 `Quarto` starting from zero. The website for the course can be found at

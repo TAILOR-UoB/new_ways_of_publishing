@@ -77,7 +77,7 @@ MyST Markdown
   Extended markdown syntax that supports basic academic publishing features like
   tables, figures, mathematical typesetting and bibliography management.
 
-Publication Workflow
+publishing workflow
   Full publication process from the authoring process (generation of the input
   artefacts) to the end result of a publication output.
 

@@ -1,5 +1,5 @@
 (sec:use)=
-# Use case scenarios
+# How to...
 
 ```{note}
 
