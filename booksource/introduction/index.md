@@ -3,9 +3,9 @@
 
 The landscape of tools for authoring and publishing training material is vast, 
 and creating new or upgrading legacy material may appear daunting with all the available options.
-This website surveys the landscape and provides actionable guidelines 
+This roadmap surveys the landscape and provides actionable guidelines 
 for publishing modern online training materials with state-of-the-art tools. 
-We focus on publishing workflows that
+We focus on {ref}`sec:pub` that
 use standard authoring artefacts (such as plain text, tables and figures) that
 can generate multiple publishing outputs (like slides, websites, pdfs, or
 documents).
@@ -16,7 +16,7 @@ material online include video recordings (e.g. Khan Academy), online exams
 (e.g. Massive Open Online Courses or MOOCs), personal blogs with dynamic
 illustrations, and sets of animated presentations. However, large parts of the 
 currently available teaching material still focus on printable formats, 
-with the possible addition of hyperlinks.
+with the possible addition of hyperlinks for online delivery. 
 
 The lack of standards for publishing hinders the adoption of one authoring file
 format and increases the efforts to improve individual publishing workflows.
@@ -24,16 +24,14 @@ Furthermore, the time spent getting familiar with one technology may not be
 productive in future with the rapidly changing publishing environment.
 Additionally, multiple publishing outputs require different input formats which
 forces the duplication of efforts to produce very similar material (e.g.
-printed pdf, website, blog post, slides, posters). We suggest the use of a
-limited number of input formats that have been supported by most common
-publishing systems.
+printed pdf, website, blog post, slides, posters). 
 
-This website provides an introduction to modern authoring tools and publishing
-systems. We explore the most broadly adopted authoring and publishing platforms, 
+This roadmap provides an introduction to modern {sec}`sec:aut` and {sec}`sec:formatting-tools`. 
+We explore the most broadly adopted authoring and publishing platforms, 
 as well as online collaboration tools to facilitate the creation of shared online
 material.  We pay special attention to the possible standardisation of a
 workflow to minimise the effort of authoring artefacts while maximizing the
-publishing of various output modalities. Two such publishing systems are
+range of output modalities. Two such publishing systems are
 Jupyter Book and Quarto for which multiple examples are provided.
 
 We also provide some use-case examples of a full workflow to generate online
@@ -43,13 +41,6 @@ reproducibility while allowing the automatic generation of the output artefacts
 with GitHub Actions. The input artefact is constructed in such a way that
 multiple types of output formats can be generated automatically from them (e.g.
 formats like an HTML website, Reveal.js slides, pdf, and e-book).
-
-The structure of the document is fairly self-explanatory. 
-The {ref}`sec:intro` sets the stage and introduces terminology, with 
-{ref}`sec:formatting-tools` describing the most recent developments. 
-The next section describes use cases with different degrees of interactivity. 
-We then give concrete examples of authoring training material using Quarto, 
-either from scratch or converting content originally authored in $\LaTeX$ Beamer. 
 
 <!--
 
