@@ -1,16 +1,21 @@
-# Data Science
+# New Ways of Publishing: A Roadmap to Authoring Online Training Material
 
-This cookiecutter creates a simple boilerplate for a Jupyter Book.
+This website provides a set of guidelines to publish online training material
+using state-of-the-art web authoring tools, and also serves as an example itself.
+
+It has been prepared as a deliverable of the 
+[TAILOR Network of Trustworthy AI through Integrating Learning, Optimisation and Reasoning](https://tailor-network.eu) 
+as part of Work Package 9: Network Collaboration. 
 
 ## Usage
 
-### Building the book
+### Building the website
 
-If you'd like to develop and/or build the Data Science book, you should:
+If you'd like to develop and/or build the website, you should:
 
 1. Clone this repository
 2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-3. Run `pip install -e /lib/data-science-python/` (these are some Python tools
+3. Run `pip install -e /lib/book-python/` (these are some Python tools
    for the book)
 4. (Optional) Edit the books source files located in the `booksource/` directory
 5. Run `jupyter-book clean booksource/` to remove any existing builds
@@ -27,7 +32,3 @@ For GitHub and GitLab deployment specifically, the [cookiecutter-jupyter-book](h
 ## Contributors
 
 We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/perellonieto/booksource/graphs/contributors).
-
-## Credits
-
-This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
