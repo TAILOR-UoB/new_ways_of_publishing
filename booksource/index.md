@@ -9,7 +9,7 @@ as part of Work Package 9: Network Collaboration,
 and is made freely available to the academic community. 
 
 :::{admonition} Who should read this
-We prepared this material for an audience with experience in authoring AI-related training material using well-established tools such as $\Latex$, Overleaf, Google Docs etc. You will learn about the latest tools and frameworks such as JupyterBook (not be confused with Jupyter Notebooks) and Quarto. These tools make it easier to deliver content in a variety of ways, and also offer the opportunity to add interactive elements. We give examples of possible workflows to get you started. 
+We prepared this material for an audience with experience in authoring AI-related training material using well-established tools such as $\LaTeX$, Overleaf, Google Docs etc. You will learn about the latest tools and frameworks such as JupyterBook (not be confused with Jupyter Notebooks) and Quarto. These tools make it easier to deliver content in a variety of ways, and also offer the opportunity to add interactive elements. We give examples of possible workflows to get you started. 
 :::
 
 :::{admonition} How to read this
@@ -21,9 +21,9 @@ The {ref}`sec:intro` sets the stage, provides context and introduces terminology
 We then give concrete examples of authoring training material using Quarto in {ref}`sec:use`
 either from scratch or converting content originally authored in $\LaTeX$ Beamer. 
 
-:::
-
-:::{tableofcontents}
+The full table of contents is given in the panel on the left, each element of which is a separate webpage. 
+You can step through these pages in order by following the `Next` link at the bottom of each page. 
+If the page has an internal heading structure this is indicated in a panel on the top-right. 
 :::
 
 :::{note} This is a near-final draft currently under review.  
