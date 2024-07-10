@@ -121,20 +121,13 @@ flowchart LR
 ```
 
 Common examples of this type of paradigm are the authoring and publishing
-workflows followed by creating text documents with Microsoft Word[^word], Libre
-Office Writer[^writer], LaTeX[^latex]; sets of slides with Microsoft
-PowerPoint[^powpoint], LibreOffice Impress[^impress], LaTeX Beamer[^beamer],
-Reveal.js[^reveal], or Google Slides; or posters with Microsoft Publisher,
-Google Slides, LaTeX, etc.
-
-[^word]: https://www.microsoft.com/en-gb/microsoft-365/word
-[^latex]: https://www.latex-project.org/
-[^writer]: https://www.libreoffice.org/discover/writer/
-
-[^powpoint]: https://www.microsoft.com/en-gb/microsoft-365/powerpoint
-[^impress]: https://www.libreoffice.org/discover/impress/
-[^beamer]: https://ctan.org/pkg/beamer
-[^reveal]: https://revealjs.com/
+workflows followed by creating text documents with [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word), [Libre
+Office Writer](https://www.libreoffice.org/discover/writer/), [LaTeX](https://www.latex-project.org/); sets of slides with [Microsoft
+PowerPoint](https://www.microsoft.com/en-gb/microsoft-365/powerpoint), [LibreOffice Impress](https://www.libreoffice.org/discover/impress/), [LaTeX Beamer](https://ctan.org/pkg/beamer),
+[Reveal.js](https://revealjs.com/), or [Google
+Slides](https://workspace.google.com/intl/en_uk/products/slides/); or posters
+with [Microsoft
+Publisher](https://www.microsoft.com/en-gb/microsoft-365/publisher), Google Slides, LaTeX, etc.
 
 ## Single-In-Multiple-Out
 

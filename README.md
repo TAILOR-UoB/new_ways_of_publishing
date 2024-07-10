@@ -1,34 +1,41 @@
 # New Ways of Publishing: A Roadmap to Authoring Online Training Material
 
-This website provides a set of guidelines to publish online training material
-using state-of-the-art web authoring tools, and also serves as an example itself.
-
-It has been prepared as a deliverable of the 
+This is the version controlled source code for the New Ways of Publishing
+website. It has been prepared as a deliverable of the 
 [TAILOR Network of Trustworthy AI through Integrating Learning, Optimisation and Reasoning](https://tailor-network.eu) 
 as part of Work Package 9: Network Collaboration. 
 
-## Usage
+This source code serves as an example on how to use Jupyter Book to create
+online training material.
 
-### Building the website
+# Development
 
-If you'd like to develop and/or build the website, you should:
+Instructions on how to develop this work can be found in the appendix of the
+website [Development environment](https://tailor-uob.github.io/new_ways_of_publishing/appendix/development.html).
 
-1. Clone this repository
-2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-3. Run `pip install -e /lib/book-python/` (these are some Python tools
-   for the book)
-4. (Optional) Edit the books source files located in the `booksource/` directory
-5. Run `jupyter-book clean booksource/` to remove any existing builds
-6. Run `jupyter-book build booksource/`
+# FAQ
 
-A fully-rendered HTML version of the book will be built in `booksource/_build/html/`.
+- **Q** How to raise an issue for a specific page?
+- **A** Click on the GitHub symbol at the top of the page and `Open issue` in the
+pop-up menu.
 
-### Hosting the book
+- **Q** How to raise a general issue?
+- **A** Go to the `Issues` tab at the top of this repository and create a `New
+issue`. You may want to do a search before to see if a similar issue has
+already been open.
 
-Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
+- **Q** How to suggest an edit for a specific page?
+- **A** Click on the GitHub symbol at the top of the page and `Suggest edit` in
+the pop-up menu.
 
-For GitHub and GitLab deployment specifically, the [cookiecutter-jupyter-book](https://github.com/executablebooks/cookiecutter-jupyter-book) includes templates for, and information about, optional continuous integration (CI) workflow files to help easily and automatically deploy books online with GitHub or GitLab. For example, if you chose `github` for the `include_ci` cookiecutter option, your book template was created with a GitHub actions workflow file that, once pushed to GitHub, automatically renders and pushes your book to the `gh-pages` branch of your repo and hosts it on GitHub Pages when a push or pull request is made to the main branch.
+## Hosting the book
 
-## Contributors
+Please see the [Jupyter Book
+documentation](https://jupyterbook.org/publish/web.html) to discover options
+for deploying a book online using services such as GitHub, GitLab, or Netlify.
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/perellonieto/booksource/graphs/contributors).
+# Contributors
+
+We welcome and recognize all contributions. You can see a list of current
+contributors in the [contributors
+tab](https://github.com/TAILOR-UoB/new_ways_of_publishing/graphs/contributors).
