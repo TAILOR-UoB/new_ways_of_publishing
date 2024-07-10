@@ -7,8 +7,11 @@ rendered with a **formatting tool** to generate a publishable output that can be
 delivered in various forms. 
 This is visualised by the following figure.[^pub:excl]
 
-[^pub:excl]: In this roadmap we exclude (1) the process of
-generating the external resources and (6) the delivery system.
+[^pub:excl]: In this roadmap we do not cover **(1)** the process of
+generating the external resources and **(6)** the delivery system.
+However, note that the delivery system may have some impact on the formatted artefact, 
+even within the same format. For example, hyperlinks should be handled differently 
+for a printed PDF and an online PDF. 
 
 ```{mermaid}
 ---
