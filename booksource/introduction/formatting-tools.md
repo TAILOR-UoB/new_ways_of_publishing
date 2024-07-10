@@ -29,7 +29,7 @@ flowchart LR
 (sec:pandoc)=
 ## Pandoc
 
-[Pandoc](https://pandoc.org/)[^pandoc] is a tool to convert files between multiple
+[Pandoc](https://pandoc.org/) is a tool to convert files between multiple
 markup formats. Pandoc is used within more generic tools like Quarto,
 D2L book, among others. It is customizable thanks to a Haskell library
 and a template system to feet your needs. It is able to generate
@@ -40,35 +40,39 @@ Ebooks, TeX, word processing (docx, rtf, odt), wiki markup, slide show
 ($\LaTeX$ Beamer, reveal.js, Microsoft PowerPoint, ...), and even PDF (via
 pdflatex, lualatex, xelatex, latexmk and others).
 
+
 ## Sphinx
 
-Sphinx[^sphinx] is an open-source documentation engine that is based on
-Docutils[^docutils]; extending it to multi-page documentation. Docutils is an
+[Sphinx](https://www.sphinx-doc.org/en/master/) is an open-source documentation engine that is based on
+[Docutils](https://docutils.sourceforge.io/); extending it to multi-page documentation. Docutils is an
 open-source text processing system that uses the plain text easy-to-read
 reStructuredText to create documentation in multiple formats, such as HTML,
-LaTeX, Linux man pages[^man], OpenDocument[^odf], or XML[^xml]. Sphinx supports
+LaTeX, [Linux man pages](https://linux.die.net/man/), [OpenDocument](https://en.wikipedia.org/wiki/OpenDocument), or [XML](https://en.wikipedia.org/wiki/XML). Sphinx supports
 reStructuredText and MyST markdown as input files and can generate multiple
-output formats including HTML, LaTeX, PDF, ePub, and Texinfo[^texinfo] (the
-official documentation format of the GNU project[^gnu]).
+output formats including HTML, LaTeX, PDF, ePub, and
+[Texinfo](https://www.gnu.org/software/texinfo/) (the
+official documentation format of the [GNU project](https://www.gnu.org/)).
 
 (sec:jupbook)=
 ## Jupyter Book
 
-Jupyter Book[^jbook] is one of the main projects of the Executable Books
-Project[^ebookp], together with the other project MyST Markdown[^myst]. The
+[Jupyter Book](https://jupyterbook.org/en/stable/intro.html) is one of the main projects of the [Executable Books
+Project](https://executablebooks.org/en/latest/), together with the other project [MyST
+Markdown](https://executablebooks.org/en/latest/tools/#tools-myst). The
 Executable Books Project is an international collaboration to build open source
-tools for publishing computational documents based on the Jupyter
-ecosystem[^jupyter]. Jupyter Book can read markdown, MyST Markdown, Jupyter
+tools for publishing computational documents based on the
+[Jupyter](https://jupyter.org/)
+ecosystem. Jupyter Book can read markdown, MyST Markdown, Jupyter
 notebooks and
-[reStructuredText](https://docutils.sourceforge.io/rst.html)[^rst]. It is based
+[reStructuredText](https://docutils.sourceforge.io/rst.html). It is based
 on the [Sphinx documentation engine](https://www.sphinx-doc.org/en/master/)
 being able to produce html websites, pdf, and computational narratives. It
 supports multiple programming languages in the Jupyter notebooks provided that
-a Jupyter kernel exist (e.g. Python, Julia, Rubi, Haskell, and many other
-languages[^kernels]).
+a [Jupyter kernel](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) exist (e.g. Python, Julia, Rubi, Haskell, and many other
+languages).
 Websites that include computational narratives can also bennefit from live
 environments thanks to the integration of Binder, Thebe and Google
-Colab[^colab]. It supports multiple types of narrative content like highlighted
+[Colab](https://colab.research.google.com/). It supports multiple types of narrative content like highlighted
 notes, code cells, quotations, epigraphs, glossaries, index of terms,
 footnotes, references, grids, cards, dropdown menus, tab content, maths,
 equations, proofs, theorems, algorithms, and more. The Jupyter Book system has
@@ -76,14 +80,6 @@ been used in multiple ocasions to publish online material, an extensive gallery
 can be found at https://executablebooks.org/en/latest/gallery/. This website
 has been created with Jupyter Book and serves as an example of some of its
 functionalities.
-
-[^jbook]: https://jupyterbook.org/en/stable/intro.html
-[^ebookp]: https://executablebooks.org/en/latest/
-[^myst]: https://executablebooks.org/en/latest/tools/#tools-myst
-[^jupyter]: https://jupyter.org/
-[^rst]: https://docutils.sourceforge.io/rst.html
-[^kernels]: https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
-[^colab]: https://colab.research.google.com/
 
 %- [Jupyter{book}](https://jupyterbook.org/en/stable/intro.html)
 %  - Sub-project from the Executable Books Project which also stewards the MyST
@@ -111,9 +107,10 @@ special focus on the R programming language and a publishing system. The
 publishing system uses R markdown files (with extension `.rmd`) or standard
 markdown and can produce various output formats including HTML, PDFs, Microsoft
 Word documents, Beamer presentations, HTML5 slides, scientific articles and
-books (with the the help of the bookdown R package[^bookdown]). It also support
-other programming languages including Python, SQL and others with a language
-engine[^engines]. R markdown is also integrated in Rstudio[^rstudio].
+books (with the the help of the [bookdown R package](https://bookdown.org/). It also support
+other programming languages including Python, SQL and others with a [language
+engine](https://bookdown.org/yihui/rmarkdown/language-engines.html). R markdown
+is also integrated in [Rstudio](https://posit.co/download/rstudio-desktop/).
 
 %- [Rmarkdown](https://rmarkdown.rstudio.com/):
 %  - Input R markdown files (.rmd)
@@ -123,9 +120,6 @@ engine[^engines]. R markdown is also integrated in Rstudio[^rstudio].
 %	- Supports multiple languages including R, Python and SQL (see
 %    [other language engines]()).
 %  - Posit Connect
-
-[^bookdown]: https://bookdown.org/
-[^engines]: https://bookdown.org/yihui/rmarkdown/language-engines.html
 
 (sec:bookdown)=
 ## Bookdown
@@ -169,20 +163,15 @@ Sphinx allowing the creation of websites and pdf documents.
 
 [Quarto](https://quarto.org) is another open-source publishing system with the
 objective of facilitating the collaboration to create scientific content.
-Quarto is sponsored by Posit[^posit], and follows the development of the R Markdown
+Quarto is sponsored by [Posit](https://posit.co), and follows the development of the R Markdown
 publishing system extending the focus from the programming language R to
 Python, R, Julia and Observable. It supports Jupyter notebooks, markdown and
 their own extension Quarto markdown. The conversion to different output formats
-is done with pandoc[^pandoc], which is able to produce presentations (Reveal.js),
+is done with [pandoc](https://pandoc.org/), which is able to produce presentations (Reveal.js),
 dashboards, websites, blogs, books, PDFs, Microsoft Word, ePub and more. Quarto
 is integrated into multiple authoring environments like Microsoft Visual
-Studio, Jupyter Lab, Rstudio[^rstudio], and Atlassian Confluence[^confluence]
+Studio, Jupyter Lab, [Rstudio](https://posit.co/download/rstudio-desktop/), and [Atlassian Confluence](https://www.atlassian.com/software/confluence)
 among others. 
-
-[^posit]: https://posit.co
-[^pandoc]: https://pandoc.org/
-[^rstudio]: https://posit.co/download/rstudio-desktop/
-[^confluence]: https://www.atlassian.com/software/confluence
 
 %- [Quarto](https://quarto.org): 
 %  - Quarto supports dynamic content with Python, R, Julia and Observable
@@ -197,12 +186,4 @@ among others.
 %    changes in the source files are detected.
 
 
-[^pandoc]: https://pandoc.org/ 
-[^sphinx]: https://www.sphinx-doc.org/en/master/
-[^docutils]: https://docutils.sourceforge.io/
-[^odf]: https://en.wikipedia.org/wiki/OpenDocument
-[^xml]: https://en.wikipedia.org/wiki/XML
-[^texinfo]: https://www.gnu.org/software/texinfo/
-[^gnu]: https://www.gnu.org/
-[^man]: https://linux.die.net/man/
 
