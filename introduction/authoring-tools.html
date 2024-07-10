@@ -424,11 +424,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authoring-with-formatting-tools">Authoring with formatting tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authoring-with-formatting">Authoring with formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markup-language-editors">Markup language editors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
 </ul>
 </li>
 </ul>
@@ -448,7 +450,7 @@ document.write(`
 text, markup language, tables, figures, code, or equations) which will be
 compiled and rendered by a <em>formatting tool</em> to generate publishable outputs.
 For example, a markup language editor to create <span class="math notranslate nohighlight">\(\LaTeX\)</span> is an authoring tool,
-while <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>, <code class="docutils literal notranslate"><span class="pre">XeLaTeX</span></code>, or <code class="docutils literal notranslate"><span class="pre">LuaTeX</span></code> are publishing systems that compile
+while <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>, <code class="docutils literal notranslate"><span class="pre">XeLaTeX</span></code>, or <code class="docutils literal notranslate"><span class="pre">LuaTeX</span></code> are formatting tools that compile
 input artefacts to pdf. These tools need to integrate metadata about the format
 in which the artefacts need to be formatted in different output types.
 For example, the font of the text and its position, the position of figures,
@@ -472,20 +474,18 @@ feature.</p>
     classDef input fill:#ffa;
     classDef output fill:#faa;
         </div><p>Authoring tools that do not incorporate part of the formatting are rare, as it
-is common to require at least a previsualisation of the formatted output.
+is common to provide at least a preview of the formatted output.
 Examples of authoring that can be separated from the formatting step are simple
-text editors like vim, NeoVim, Notepad, and general purpose Integrated
+text editors like vim, NeoVim, Notepad, and general-purpose Integrated
 Development Environments (IDEs).</p>
-<section id="authoring-with-formatting-tools">
-<h2>Authoring with formatting tools<a class="headerlink" href="#authoring-with-formatting-tools" title="Link to this heading">#</a></h2>
+<section id="authoring-with-formatting">
+<h2>Authoring with formatting<a class="headerlink" href="#authoring-with-formatting" title="Link to this heading">#</a></h2>
 <p>There are <strong>authoring tools</strong> that incorporate a <strong>formatting tool</strong>.  While in
 some situations it is a good practice to separate the two aspects, some
 computer programs integrate them in one tool that may (or may not) provide
-access to the intermediate artefacts. For example, softwares like Microsoft
-Word are authoring tools that already provide the formated output durint the
-authoring process. Another typical example in academic environments is Overleaf
-that provides an online collaborative authoring platform that integrates with
-<em>pdfLatex</em> in the back end.</p>
+access to the intermediate artefacts. For example, Overleaf
+provides an online collaborative authoring platform that integrates with
+<em>pdfLatex</em> in the back-end.</p>
 <div class="mermaid">
             flowchart LR
   
@@ -499,11 +499,31 @@ that provides an online collaborative authoring platform that integrates with
     classDef external fill:#eee;
     classDef input fill:#ffa;
     classDef output fill:#faa;
+        </div><section id="wysiwyg-what-you-see-is-what-you-get">
+<h3>WYSIWYG (What You See Is What You Get)<a class="headerlink" href="#wysiwyg-what-you-see-is-what-you-get" title="Link to this heading">#</a></h3>
+<p>WYSIWYG editors provide an interface to write rich text
+documents like Microsoft Word, Libre office, or Google Docs. Such
+files are difficult to convert automatically to other formats as they do not
+separate the source text from the presentation layer. Benefits include
+the possibility of collaborative editing, which comes at the expense of reduced
+control over formatting.</p>
+<div class="mermaid">
+            flowchart LR
+  
+    E1(&quot;External resources&quot;):::external -.-&gt; A1
+    subgraph &quot;Libre Office, Google Docs, Microsoft Word, ...&quot; 
+      direction LR
+      A1{{&quot;Authoring and Formatting tool&quot;}} --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
         </div></section>
+</section>
 <section id="markup-language-editors">
 <h2>Markup language editors<a class="headerlink" href="#markup-language-editors" title="Link to this heading">#</a></h2>
 <p>These editors separate the source text from the publishable output.
-Unlike WYSIWYG editors (What You See Is What You Get) they typically have a
+Unlike WYSIWYG editors they typically have a
 dual-pane user interface with one pane displaying the editable source and
 the other pane providing a preview.
 <a class="reference external" href="https://www.overleaf.com/">Overleaf</a> is an online collaborative
@@ -516,21 +536,21 @@ publishable material and work with markdown files.</p>
 <section id="integrated-development-environments">
 <h3>Integrated Development Environments<a class="headerlink" href="#integrated-development-environments" title="Link to this heading">#</a></h3>
 <p>The separation of the source code and the publishable outputs is something that
-all the Integrated Development Environments (IDEs) excel. These are tools for
+all Integrated Development Environments (IDEs) provide. These are tools for
 writing computer programs that commonly require a compilation phase which is
 usually integrated in the same tool. The idea of authoring tools that can
 create generic input artefacts that are later combined by a formatting tool
 is very similar to the common process followed in programming compiled
 programming languages. This has facilitate the adoption of IDEs as authoring
-tools. Microsoft Visual Studio, <a class="reference external" href="https://posit.co/products/enterprise/workbench/">Posit
+tools. Microsoft Visual Studio and <a class="reference external" href="https://posit.co/products/enterprise/workbench/">Posit
 Workbench</a>(formerly
 <a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a>) have tools to work with
-the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> environment. Both of them provide options for multiple
-collaborators editing content at the same time.</p>
+the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> environment. Both of them provide options for collaborative and
+contemporaneous editing.</p>
 </section>
 <section id="computational-narrative-editors">
 <h3>Computational narrative editors<a class="headerlink" href="#computational-narrative-editors" title="Link to this heading">#</a></h3>
-<p>Jupyter Notebooks are documents that offer computational narratives by
+<p>Jupyter Notebooks are documents that offer <strong>computational narratives</strong> by
 interlacing formatted markdown text and executable code cells, providing
 the output as additional content. The idea has been adopted by other platforms
 that have created similar notebook environments. Most of these platforms can
@@ -557,28 +577,6 @@ integrates with the JetBrains ecosystem tools such as the IDEs
 <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and
 <a class="reference external" href="https://www.jetbrains.com/idea/">IntelliJ</a>.</p>
 </section>
-<section id="wysiwyg-what-you-see-is-what-you-get">
-<h3>WYSIWYG (What You See Is What You Get)<a class="headerlink" href="#wysiwyg-what-you-see-is-what-you-get" title="Link to this heading">#</a></h3>
-<p>Text editors are one of the most important tools for authoring material
-publishable material. Some editors provide an interface to write rich text
-documents like Microsoft Word, Libre office, or Google Docs. However, those
-files are difficult to convert automatically to other formats as they do not
-separate the source text from the presentation layer. Some of their benefits
-is that multiple people can edit concurrently these types of files as the
-syntax is usually hidden to the user, making difficult the generation of
-compilation or format errors.</p>
-<div class="mermaid">
-            flowchart LR
-  
-    E1(&quot;External resources&quot;):::external -.-&gt; A1
-    subgraph &quot;Libre Office, Google Docs, Microsoft Word, ...&quot; 
-      direction LR
-      A1{{&quot;Authoring and Formatting tool&quot;}} --&gt; O1[&quot;Formatted\nOutput&quot;]:::output
-    end
-    classDef external fill:#eee;
-    classDef input fill:#ffa;
-    classDef output fill:#faa;
-        </div></section>
 </section>
 </section>
 
@@ -652,11 +650,13 @@ compilation or format errors.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authoring-with-formatting-tools">Authoring with formatting tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authoring-with-formatting">Authoring with formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markup-language-editors">Markup language editors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environments">Integrated Development Environments</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-narrative-editors">Computational narrative editors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wysiwyg-what-you-see-is-what-you-get">WYSIWYG (What You See Is What You Get)</a></li>
 </ul>
 </li>
 </ul>
