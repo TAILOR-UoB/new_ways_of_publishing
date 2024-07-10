@@ -8,7 +8,6 @@ chapters:
   - file: introduction/publishing-workflow
   - file: introduction/formatting-tools
   - file: introduction/authoring-tools
-  - file: introduction/open-courses
 - file: content-types/index
   sections:
   - file: content-types/markdown
@@ -21,4 +20,5 @@ chapters:
 - file: conclusion
 - file: references
 - file: glossary
+- file: appendix/open-courses
 - file: appendix/development

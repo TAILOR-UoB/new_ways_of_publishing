@@ -1,4 +1,4 @@
-# Open Courses
+# Appendix: Open Courses
 
 The idea of Open Courses is to take some of the principles of Open Research and
 adapt for the creation of online training material. Open Research is a set of
