@@ -9,7 +9,7 @@ also include videos in that section as videos are a common resource in
 internet.
 
 (sec:con:bas)=
-## Basic content
+## Non-interactive content
 
 To generate basic content with a publication system and accessing the resulting
 content online usually follows the steps shown in the diagram below.  **(1)**
