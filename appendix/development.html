@@ -423,13 +423,59 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="appendix-development-environment">
 <h1>Appendix: Development environment<a class="headerlink" href="#appendix-development-environment" title="Link to this heading">#</a></h1>
-<p>In order to build this website you will need to create a virtual environment
-with <code class="docutils literal notranslate"><span class="pre">Python3.9</span></code> with the dependencies indicated in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>
-file. You can do that by running the following code in a shell.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3.9<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<p>In order to build this website first you need to <code class="docutils literal notranslate"><span class="pre">clone</span></code> or <code class="docutils literal notranslate"><span class="pre">fork</span></code> the source
+repository. You can find a link to the repository by clicking on the GitHub
+logo at the top of this page and <code class="docutils literal notranslate"><span class="pre">Repository</span></code> in the pop-up menu (or click on
+the following link <a class="github reference external" href="https://github.com/TAILOR-UoB/new_ways_of_publishing">TAILOR-UoB/new_ways_of_publishing</a>).</p>
+<p>You can then <code class="docutils literal notranslate"><span class="pre">fork</span></code> or <code class="docutils literal notranslate"><span class="pre">clone</span></code> the respository and follow the instructions
+provided by GitHub.</p>
+<p>Once you have a local version of the repository you need to create a virtual
+environment with all the dependencies. The following instructions have been
+designed for an <strong>Ubuntu 20.04</strong> machine, but will probably work in most
+operating systems.</p>
+<p>Create a virtual environmnet with <code class="docutils literal notranslate"><span class="pre">Python3.9</span></code> at the root of the repository by
+opening a terminal at the root of the repository and running the following
+command</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3.9<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="sb">```</span>
+
+<span class="k">then</span><span class="w"> </span>activate<span class="w"> </span>the<span class="w"> </span>virtual<span class="w"> </span>environment
+
+<span class="sb">```</span>shell
 <span class="nb">source</span><span class="w"> </span>/venv/bin/activate
+<span class="sb">```</span>
+
+We<span class="w"> </span>have<span class="w"> </span>created<span class="w"> </span>a<span class="w"> </span><span class="sb">`</span>Makefile<span class="sb">`</span><span class="w"> </span>that<span class="w"> </span>can<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>all<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>steps,<span class="w"> </span>here<span class="w"> </span>we
+provide<span class="w"> </span>details<span class="w"> </span>about<span class="w"> </span>the<span class="w"> </span>process<span class="w"> </span>without<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span><span class="sb">`</span>Makefile<span class="sb">`</span><span class="w"> </span>and<span class="w"> </span>indicate
+wahat<span class="w"> </span>
+
+upgrade<span class="w"> </span>pip<span class="w"> </span>and<span class="w"> </span>install<span class="w"> </span>all<span class="w"> </span>the<span class="w"> </span>required<span class="w"> </span>dependencies
+
+<span class="sb">````</span><span class="o">{</span>tab<span class="o">}</span><span class="w"> </span>shell
+<span class="sb">```</span>shell
 pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
 pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="sb">```</span>
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Makefile</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>install
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>You will also need to install an additional python library that serves as an
+example to include your own Python code in the book</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>lib/book-python/
+</pre></div>
+</div>
+<p>The book can then be build by running the following command</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>booksource
 </pre></div>
 </div>
 <p>Once the virtual environment has been generated and loaded (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/venv/bin/activate</span></code>), the book can be built with the shell command</p>
