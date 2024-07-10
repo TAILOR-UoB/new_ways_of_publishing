@@ -9,7 +9,7 @@ as part of Work Package 9: Network Collaboration,
 and is made freely available to the academic community. 
 
 :::{admonition} Who should read this
-We prepared this material for an audience with experience in authoring AI-related training material using well-established tools such as $\Latex$, Overleaf, Google Docs etc. You will learn about the latest tools and frameworks such as JupyterBook (not be confused with Jupyter Notebooks) and Quarto. These tools make it easier to deliver content in a variety of ways, and also offer the opportunity to add interactive elements. We give examples of possible workflows to get you started. 
+We prepared this material for an audience with experience in authoring AI-related training material using well-established tools such as $\LaTeX$, Overleaf, Google Docs etc. You will learn about the latest tools and frameworks such as JupyterBook (not be confused with Jupyter Notebooks) and Quarto. These tools make it easier to deliver content in a variety of ways, and also offer the opportunity to add interactive elements. We give examples of possible workflows to get you started. 
 :::
 
 :::{admonition} How to read this
