@@ -1,5 +1,5 @@
 (sec:intro)=
-# Introduction
+# Charting the landscape
 
 The landscape of tools for authoring and publishing training material is vast, 
 and creating new or upgrading legacy material may appear daunting with all the available options.
