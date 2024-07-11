@@ -61,8 +61,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/formatting-tools';</script>
@@ -429,7 +427,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-markdown">R markdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookdown">Bookdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2l-book">D2L book</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
 </ul>
             </nav>
@@ -449,7 +446,7 @@ produce publishable formatted output.  While many of the authoring tools
 discussed in the previous section are well-known, there have been many recent
 developments in formatting tools that deserve to be better known in the
 academic community as they take opportunities for publishing training material
-to the next level. In Section <a class="reference internal" href="publishing-workflow.html#sec-pub"><span class="std std-ref">Publishing workflows</span></a> we have described the two type of
+to the next level. In the previous section we described the two type of
 paradigms  <em>Single-In-Single-Out (SISO)</em>, and <em>Single-In-Multi-Out (SIMO)</em>. In
 this section we describe some <em>formatting tools</em> that can be used for the SIMO
 paradigm.</p>
@@ -472,11 +469,11 @@ paradigm.</p>
 markup formats. Pandoc is used within more generic tools like Quarto,
 D2L book, among others. It is customizable thanks to a Haskell library
 and a template system to feet your needs. It is able to generate
-bibliographies, footnotes, <span class="math notranslate nohighlight">\(\LaTeX\)</span> math, tables, definitions, and most common
+bibliographies, footnotes, LaTeX math, tables, definitions, and most common
 publication assets. Some supported formats are lightweight markup (Markdown,
 reStructuredText, AsciiDoc, Textile, Emacs Org-Mode, …), HTML,
 Ebooks, TeX, word processing (docx, rtf, odt), wiki markup, slide show
-(<span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer, reveal.js, Microsoft PowerPoint, …), and even PDF (via
+(LaTeX Beamer, reveal.js, Microsoft PowerPoint, …), and even PDF (via
 pdflatex, lualatex, xelatex, latexmk and others).</p>
 </section>
 <section id="sphinx">
@@ -538,16 +535,6 @@ Markdown to work with long documents. The rest of the functionalities are
 shared with R Markdown. A list of books written with Bookdown can be found at
 <a class="reference external" href="https://bookdown.org/home/archive/">https://bookdown.org/home/archive/</a>.</p>
 </section>
-<section id="d2l-book">
-<span id="sec-d2lbook"></span><h2>D2L book<a class="headerlink" href="#d2l-book" title="Link to this heading">#</a></h2>
-<p>D2L book is a Python package and a toolkit to build online and printed books.
-The package was mainly developed for the publication of the book <a class="reference external" href="https://d2l.ai/">Dive into
-Deep Learning</a><span id="id1">[<a class="reference internal" href="../references.html#id26" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. Cambridge University Press, 2023. https://D2L.ai.">ZLLS23</a>]</span>, which had multiple
-collaborators mostly from Amazon. It is mainly focused for content that
-includes computational narratives in Python. The input files are mainly MyST
-markdown and Jupyter Notebooks. The publishing part is made with pandoc and
-Sphinx allowing the creation of websites and pdf documents.</p>
-</section>
 <section id="quarto">
 <span id="sec-qmd"></span><h2>Quarto<a class="headerlink" href="#quarto" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://quarto.org">Quarto</a> is another open-source publishing system with the
@@ -561,6 +548,14 @@ dashboards, websites, blogs, books, PDFs, Microsoft Word, ePub and more. Quarto
 is integrated into multiple authoring environments like Microsoft Visual
 Studio, Jupyter Lab, <a class="reference external" href="https://posit.co/download/rstudio-desktop/">Rstudio</a>, and <a class="reference external" href="https://www.atlassian.com/software/confluence">Atlassian Confluence</a>
 among others.</p>
+<div class="admonition-d2l-book-a-toolkit-for-hands-on-books admonition">
+<p class="admonition-title">D2L-Book: A Toolkit for Hands-on Books</p>
+<p>Building on several of these formatting tools,
+<a class="reference external" href="https://github.com/d2l-ai/d2l-book">d2l-book</a> is a Python package and a toolkit to build online and printed books,
+in support of the <a class="reference external" href="https://d2l.ai/">Dive into Deep Learning</a> book <span id="id1">[<a class="reference internal" href="../references.html#id26" title="Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola. Dive into Deep Learning. Cambridge University Press, 2023. https://D2L.ai.">ZLLS23</a>]</span>.
+The authoring formats are mainly MyST markdown and Jupyter Notebooks.
+Formatting is done with pandoc and Sphinx.</p>
+</div>
 </section>
 </section>
 
@@ -639,7 +634,6 @@ among others.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-markdown">R markdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookdown">Bookdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d2l-book">D2L book</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quarto">Quarto</a></li>
 </ul>
   </nav></div>
