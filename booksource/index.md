@@ -17,7 +17,7 @@ We prepared this material for an audience with experience in authoring AI-relate
 The structure of the document is fairly self-explanatory. 
 The {ref}`sec:intro` sets the stage, provides context and introduces terminology
 (if you're in a hurry, skip to {ref}`sec:formatting-tools` which describes the most recent developments). 
-{ref}`sec:con` describes use cases with different degrees of interactivity. 
+{ref}`sec:exa` describes use cases with different degrees of interactivity. 
 We then give concrete examples of authoring training material using Quarto in {ref}`sec:use`
 either from scratch or converting content originally authored in $\LaTeX$ Beamer. 
 

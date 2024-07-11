@@ -1,5 +1,5 @@
-(sec:con)=
-# Types of content
+(sec:exa)=
+# Examples
 
 In this Section we provide multiple examples of the type of content that can be
 generated with publishing systems like `Jupyter Book` and `Quarto`. We divided
@@ -10,7 +10,7 @@ internet.
 
 ## Computational infrastructure
 
-(sec:con:bas)=
+(sec:exa:bas)=
 ## Non-interactive content
 
 To generate basic content with a publication system and accessing the resulting
@@ -32,7 +32,7 @@ as static content (the content could be printed).
 Most of this type of content is described in section [](sec:static) and part of
 the section [](sec:com:nar).
 
-(sec:con:ser)=
+(sec:exa:ser)=
 ## Interactive with a third party
 
 Online content in STEM fields commonly involve programming, sometimes being an
@@ -66,7 +66,7 @@ is often slow and may end up in connection issues. There are services like
 guidelines on how to generate this type of content in subsection
 [](sec:mar:liv).
 
-(sec:con:cli)=
+(sec:exa:cli)=
 ## Interactive within the web browser
 
 There are some ways to create interactive content within the web browser based
@@ -74,7 +74,7 @@ on static content. The benefit of this type of content is that it can be hosted
 by multiple hosting services that offer free static hosting, not requiring
 computational nodes on the server side. Content of this type uses the
 computational resources of the client web browser in order to modify its
-content. The series of steps are the same as the basic content [](sec:con:bas)
+content. The series of steps are the same as the basic content [](sec:exa:bas)
 but any subsequent interactions are done in the client's computer.
 
 ```{figure} images/interactive_client.svg
@@ -88,5 +88,5 @@ web browser (no further communication is necessary with external servers).
 
 One of the drawbacks of this method is that it may require longer loading times
 as additional files need to be downloaded even if no interaction is intended.
-The section [](sec:con:run) provides a guideline with examples of this type of
+The section [](sec:exa:run) provides a guideline with examples of this type of
 content.

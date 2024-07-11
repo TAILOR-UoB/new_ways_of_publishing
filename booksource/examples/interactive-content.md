@@ -17,7 +17,7 @@ kernelspec:
 
 (launch:thebe)=
 
-(sec:con:run)=
+(sec:exa:run)=
 # Interactive content
 
 Programming examples shown in the previous sections are executed during the
