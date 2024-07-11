@@ -2,7 +2,7 @@
 # Charting the landscape
 
 The landscape of tools for authoring and publishing training material is vast, 
-and creating new or upgrading legacy material may appear daunting with all the available options.
+and creating new or upgrading legacy material may appear daunting in the face of all available options.
 This roadmap surveys the landscape and provides actionable guidelines 
 for publishing modern online training materials with state-of-the-art tools. 
 We focus on {ref}`sec:pub` that
@@ -18,27 +18,27 @@ illustrations, and sets of animated presentations. However, large parts of the
 currently available teaching material still focus on printable formats, 
 with the possible addition of hyperlinks for online delivery. 
 
-The lack of standards for publishing hinders the adoption of one authoring file
-format and increases the efforts to improve individual publishing workflows.
+The lack of standards for publishing hinders the adoption of authoring formats
+and increases the efforts to improve individual publishing workflows.
 Furthermore, the time spent getting familiar with one technology may not be
 productive in future with the rapidly changing publishing environment.
 Additionally, multiple publishing outputs require different input formats which
 forces the duplication of efforts to produce very similar material (e.g.
 printed pdf, website, blog post, slides, posters). 
 
-This roadmap provides an introduction to modern {sec}`sec:aut` and {sec}`sec:formatting-tools`. 
+This roadmap provides an introduction to modern {ref}`sec:aut` and {ref}`sec:formatting-tools`. 
 We explore the most broadly adopted authoring and publishing platforms, 
 as well as online collaboration tools to facilitate the creation of shared online
 material.  We pay special attention to the possible standardisation of a
 workflow to minimise the effort of authoring artefacts while maximizing the
 range of output modalities. Two such publishing systems are
-Jupyter Book and Quarto for which multiple examples are provided.
+`Jupyter Book` and `Quarto` for which multiple examples are provided.
 
 We also provide some use-case examples of a full workflow to generate online
-training material (including this same website). All the material is kept in a
-version control environment (GitHub) to maximise transparency and
+training material (and this website is in fact one of them). All material is kept in a
+version control environment (`GitHub`) to maximise transparency and
 reproducibility while allowing the automatic generation of the output artefacts
-with GitHub Actions. The input artefact is constructed in such a way that
+with `GitHub Actions`. The input artefact is constructed in such a way that
 multiple types of output formats can be generated automatically from them (e.g.
 formats like an HTML website, Reveal.js slides, pdf, and e-book).
 

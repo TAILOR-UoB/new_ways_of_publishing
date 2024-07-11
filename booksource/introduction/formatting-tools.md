@@ -6,7 +6,7 @@ produce publishable formatted output.  While many of the authoring tools
 discussed in the previous section are well-known, there have been many recent
 developments in formatting tools that deserve to be better known in the
 academic community as they take opportunities for publishing training material
-to the next level. In Section [](sec:pub) we have described the two type of
+to the next level. In the previous section we described the two type of
 paradigms  *Single-In-Single-Out (SISO)*, and *Single-In-Multi-Out (SIMO)*. In
 this section we describe some _formatting tools_ that can be used for the SIMO
 paradigm.
@@ -33,11 +33,11 @@ flowchart LR
 markup formats. Pandoc is used within more generic tools like Quarto,
 D2L book, among others. It is customizable thanks to a Haskell library
 and a template system to feet your needs. It is able to generate
-bibliographies, footnotes, $\LaTeX$ math, tables, definitions, and most common
+bibliographies, footnotes, LaTeX math, tables, definitions, and most common
 publication assets. Some supported formats are lightweight markup (Markdown,
 reStructuredText, AsciiDoc, Textile, Emacs Org-Mode, ...), HTML,
 Ebooks, TeX, word processing (docx, rtf, odt), wiki markup, slide show
-($\LaTeX$ Beamer, reveal.js, Microsoft PowerPoint, ...), and even PDF (via
+(LaTeX Beamer, reveal.js, Microsoft PowerPoint, ...), and even PDF (via
 pdflatex, lualatex, xelatex, latexmk and others).
 
 
@@ -139,25 +139,6 @@ https://bookdown.org/home/archive/.
 %  - Programming languages R, C/C++, Python, Fortran, Julia, Shell scripts and
 %    SQL, among others.
 
-(sec:d2lbook)=
-## D2L book
-
-D2L book is a Python package and a toolkit to build online and printed books.
-The package was mainly developed for the publication of the book [Dive into
-Deep Learning](https://d2l.ai/){cite}`zhang2023dive`, which had multiple
-collaborators mostly from Amazon. It is mainly focused for content that
-includes computational narratives in Python. The input files are mainly MyST
-markdown and Jupyter Notebooks. The publishing part is made with pandoc and
-Sphinx allowing the creation of websites and pdf documents.
-
-%- [Dive into Deep Learning](https://d2l.ai/) an interactive book with multiple
-%authors mainly from Amazon .
-%  - [d2l-book](https://github.com/d2l-ai/d2l-book) is the Python package used
-%    to build and publish the D2L book.
-%  - Programming language Python
-%  - Output website and pdf
-%  - Uses Markdown, Jupyter Notebooks, Sphinx, and pandoc
-
 (sec:qmd)=
 ## Quarto
 
@@ -186,4 +167,20 @@ among others.
 %    changes in the source files are detected.
 
 
+
+:::{admonition} D2L-Book: A Toolkit for Hands-on Books
+Building on several of these formatting tools, 
+[d2l-book](https://github.com/d2l-ai/d2l-book) is a Python package and a toolkit to build online and printed books, 
+in support of the [Dive into Deep Learning](https://d2l.ai/) book {cite}`zhang2023dive`. 
+The authoring formats are mainly MyST markdown and Jupyter Notebooks. 
+Formatting is done with pandoc and Sphinx.
+
+%- [Dive into Deep Learning](https://d2l.ai/) an interactive book with multiple
+%authors mainly from Amazon .
+%  - [d2l-book](https://github.com/d2l-ai/d2l-book) is the Python package used
+%    to build and publish the D2L book.
+%  - Programming language Python
+%  - Output website and pdf
+%  - Uses Markdown, Jupyter Notebooks, Sphinx, and pandoc
+:::
 
