@@ -1,5 +1,5 @@
 (sec:use)=
-# How to...
+# Some itineraries through the landscape
 
 ```{note}
 
