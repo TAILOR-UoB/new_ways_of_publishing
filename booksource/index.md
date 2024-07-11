@@ -13,11 +13,14 @@ For example, `Jupyter Notebooks`[^jupyter] can be used in teaching, for self-stu
 But there are many other recent developments that open further avenues for authoring and publishing dynamic and interactive training material. 
 Knowing about these developments and opportunities helps academic writers to publish their training material in the best possible forms. 
 
+[^jupyter]:  `JupyterBook` and `Jupyter Notebook` are related but different, see {ref}`sec:com:nar`.
+
 This **roadmap** therefore has twin objectives: 
 - to chart the ever-growing landscape of publishing workflows, formatting tools and authoring tools; 
 - to provide some itineraries through this landscape, such as converting an existing $\LaTeX$ Beamer presentation to `Quarto`. 
 
-[^jupyter]:  `JupyterBook` and `Jupyter Notebook` are related but different, see {ref}`sec:com:nar`.
+The companion website https://tailor-uob.github.io/mooc_trustworthy_ai/ shows the rendered results. 
+The content can be viewed in a variety of ways, following the [](sec:SIMO) paradigm. 
 
 :::{admonition} Who should read this
 We prepared this material for an audience with experience in authoring AI-related training material using well-established tools such as $\LaTeX$, Overleaf, Google Docs etc. You will learn about the latest tools and frameworks such as JupyterBook (not be confused with Jupyter Notebooks) and Quarto. These tools make it easier to deliver content in a variety of ways, and also offer the opportunity to add interactive elements. We give examples of possible workflows to get you started. 

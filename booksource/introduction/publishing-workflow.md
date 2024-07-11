@@ -125,6 +125,7 @@ Slides](https://workspace.google.com/intl/en_uk/products/slides/); or posters
 with [Microsoft
 Publisher](https://www.microsoft.com/en-gb/microsoft-365/publisher), Google Slides, LaTeX, etc.
 
+(sec:SIMO)=
 ## Single-In-Multiple-Out
 
 More recent publishing systems allow the generation of multiple types of
