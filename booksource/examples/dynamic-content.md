@@ -20,22 +20,61 @@ kernelspec:
 (sec:com:nar)=
 # Dynamic content
 
-Computational narratives are very useful for educational material in science,
-technology, engineering and mathematics. Jupyter Notebooks and other
-programming environments that integrate a textual narrative, computational
-cells and their results are really common. Publishing systems like Jupyter Book
-and Quarto support multiple ways to write this type of material by using
-directives (See [](sec:ro:di)) for code in markdown files, or directly using
-Jupyter Notebooks. This section serves as an example of the functionalities
-that can be integrated in a Markdown file.
+**Dynamic content** is content that includes computational code that is
+executed when the website/book is built. With extra configurations, the content
+can be re-run in real time locally or with a third party service like MyBiner,
+Google Colab, or others. This type of content is very useful for educational
+material in science, technology, engineering and mathematics. Jupyter Notebooks
+and other programming environments that integrate a textual narrative,
+computational cells and their results are really common. Publishing systems
+like Jupyter Book and Quarto support multiple ways to write this type of
+material by using directives (See [](sec:ro:di)) for code in markdown files, or
+directly using Jupyter Notebooks.  This section serves as an example of the
+functionalities that can be integrated in a Markdown file in a Jupyter Book. We
+also indicate what are the differences in the _Quarto_ publishing system when
+necessary.
 
-(sec:com:nar:con)=
 ## Configuration
 
-In `Jupyter Book` it is necessary to add a YAML configuration in the header of
-a markdown file indicating some parameters about the type of file and the
-kernel to use. The markdown file for this page which contains Python code needs
-the following header.
+Adding dynamic content that changes during the execution requires the
+specification of a **kernel** which is able to read the code indicated in the
+apropiate directives and produce an ouptut result. This configuration differs
+slighly depending on the platform and the type of file (e.g. markdown and
+Jupyter Notebook).
+
+### Jupyter Notebook files
+
+*Jupyter Notebooks* are computational notebooks that integrate textual
+narrative with *MyST Markdown* with cells of code that can be executed to show
+computational results between the text; with a file extension `.ipynb`. This
+format has been widely adopted by multiple authoring and publishing systems
+like *Quarto*, *Jupyter Lab*, *Google Colab*. In *Jupyter Book* and *Quarto*
+projects the configuration of **Jupyter Notebooks** is general accross the
+project. However, *Quarto* requires a *Raw* cell at the begining of the
+notebook with the `title`, `author`, and any additional options that you want
+to include.
+
+```yaml
+---
+title: Title of the page
+authors: "Miquel Perello Nieto"
+date: "July 11th, 2024"
+format: 
+  html: default
+  pdf: default
+  refealjs: default
+---
+```
+
+(sec:com:nar:con)=
+### Markdown files
+
+In **Jupyter Book**, **Markdown** files with dynamic content require a YAML
+configuration in the header indicating some parameters about
+the type of file and the kernel to use. There are kernels for different
+programming languages like R, Python, Julia, and more. For example, the
+markdown file for this page has been configured to run Python3 with the
+following `yaml` configuration
 
 ```yaml
 ---
@@ -54,7 +93,7 @@ kernelspec:
 ---
 ```
 
-The header can be automatically generated with the help of the jupyter-book
+The header can be generated automatically with the help of the jupyter-book
 tool by running the following command in a terminal at the root of the project
 
 ```shell
@@ -64,7 +103,8 @@ jupyter-book myst init markdownfile.md --kernel kernelname
 Additional documentation can be found at
 https://jupyterbook.org/en/stable/file-types/myst-notebooks.html.
 
-Running Python code in the `Quarto` publishing system requires the `jupyter`
+In **Quarto**, 
+Running Python code in the **Quarto** publishing system requires the `jupyter`
 Python package and the specification of the `python` command to use in the
 `YAML` header or in the `_quarto.yml` configuration file.
 
@@ -73,22 +113,21 @@ jupyter: python3
 ```
 
 (sec:mar:liv)=
-## Live code
+### Live code
 
-With the help of [Thebe](https://thebe.readthedocs.io/en/stable/) it is
-possible to add interactive code inline. By default, this Jupyter Book has been
-configured to run Thebe with MyBinder. It is also necessary to add the
-following line of code before the first title of the document
+In **Jupyter Books**, [Thebe](https://thebe.readthedocs.io/en/stable/) offers a
+solution to launch the kernel in the current page (without the need to jump to
+a third party website). By default, this *Jupyter Book* has been configured to
+run Thebe with the third party service *MyBinder*.  It is also necessary to add
+the following line of code before the first title of the markdown document
 
 ```
 (launch:thebe)=
 ```
 
-You can see the markdown source code of this page in the top right menu.
-
-In order to start the live code with `Thebe` it is necessary to click on the
+In order to start the live code with *Thebe* it is necessary to click on the
 upper right side menu the `spaceship` and the `Live code` button in the
-dropdown.
+drop down menu.
 
 ```{figure} images/thebe_live_code.png
 :name: figure-launch-live-code
@@ -109,9 +148,22 @@ could even fail to launch.
 Steps that Live Code will show as it prepares the running environment.
 ```
 
-Then, any python code that is written in a `code-cell` with `ipython3` will
-have the option to be run (and modified) in real time by the reader. The
-current page is an example in which you can modify all the cells. 
+Once the kernel is ready, any Python code that is written in a `{code-cell}`
+with `ipython3` will have the option to be modified and re-run in real time.
+The current page is an example in which you can modify all the cells. 
+
+**Quarto** does not currently support _Thebe_, but it supports launching the
+code in a third party environment like _MyBinder_ by adding the following
+`yaml` configuration in the header of the Markdown file
+
+
+```yaml
+code-links: binder
+```
+
+**Quarto** has good integration with [Shiny](https://shiny.posit.co/) which has
+additional functionalities that can bee seen in Section [](sec:exa:run).
+
 
 (sec:com:nar:sim)=
 ## Simple examples
@@ -133,8 +185,19 @@ with the rest of your content.
 print("2 + 2 = ", 2 + 2)
 ```
 
-The following example shows how to hide code and use a random number generator
-to create the content of a sting variable
+It is possible to modify the behaviour of `code-cells` by adding `tags`. For
+example the tag `hide-input` will make the code hidden until it is clicked with
+the mouse.
+
+````
+```{code-cell} ipython3
+:tags: [hide-input, thebe-init]
+
+# Python code
+```
+````
+
+The following code is an example
 
 ```{code-cell} ipython3
 :tags: [hide-input, thebe-init]
@@ -146,7 +209,9 @@ np.random.seed(42)
 hidden_text = f"The result of this draw of a six sided dice is {np.random.randint(1, 6)}"
 ```
 
-then the content of the variable can be printed in a separate cell
+The previous example generates a random number between 1 and 6 and stores the
+result in a variable. The content of the variable can be printed in a separate
+cell
 
 ```{code-cell} ipython3
 print(hidden_text)
@@ -257,7 +322,7 @@ print(source)
 ```
 
 (sec:complexcode)=
-## Reuse of code
+## Reuse of complex code
 
 In order to reuse complex code across the website, it is recommended to write a 
 package with the functions. In the case of the current roadmap, we have created

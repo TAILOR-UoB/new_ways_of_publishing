@@ -2,16 +2,24 @@
 # Examples
 
 In this Section we provide multiple examples of the type of content that can be
-generated with publishing systems like `Jupyter Book` and `Quarto`. We divided
-the different content into three types. The basic content is the most common
-textual narratives that include figures, tables, and other static elements. We
-also include videos in that section as videos are a common resource in
-internet.
+generated with publishing systems like *Jupyter Book* and *Quarto*. We divided
+the different contents into three subsections: [](sec:static) which is content
+that is rendered during the creation of the website/book and is kept static,
+[](sec:com:nar) that includes computational code cells that are rendered during
+the creation of the website/book but can be re-run in a third party server or
+in the same web-broser, and [](sec:exa:run) that includes elements to interact
+with like buttons, sliders, interactive figures and more. The content of this
+website is hosted as static content by GitHub Pages, however some of the
+examples shown in this section require a third party server that is able to run
+computational code on demand. For that reason, next Section [](sec:exa:com:inf)
+describes some of the limitations and considerations when We provide some
+considerations to keep in mind.
 
+(sec:exa:com:inf)=
 ## Computational infrastructure
 
 (sec:exa:bas)=
-## Non-interactive content
+### Non-interactive content
 
 To generate basic content with a publication system and accessing the resulting
 content online usually follows the steps shown in the diagram below.  **(1)**
@@ -33,7 +41,7 @@ Most of this type of content is described in section [](sec:static) and part of
 the section [](sec:com:nar).
 
 (sec:exa:ser)=
-## Interactive with a third party
+### Interactive with a third party
 
 Online content in STEM fields commonly involve programming, sometimes being an
 important part of the training material. Platforms like Jupyter notebooks allow
@@ -67,7 +75,7 @@ guidelines on how to generate this type of content in subsection
 [](sec:mar:liv).
 
 (sec:exa:cli)=
-## Interactive within the web browser
+### Interactive within the web browser
 
 There are some ways to create interactive content within the web browser based
 on static content. The benefit of this type of content is that it can be hosted

@@ -24,14 +24,6 @@ of CommonMark.
 
 [^issues]: https://talk.commonmark.org/t/issues-we-must-resolve-before-1-0-release-6-remaining/1287
 
-## Jupyter Notebooks
-
-`Jupyter Notebooks` are computational notebooks that integrate textual
-narrative with `MyST Markdown` with cells of code that can be executed to show
-computational results between the text. This format has been widely adopted by
-multiple authoring and publishing systems like `Quarto`, `Jupyter Lab`, `Google
-Colab`.
-
 (sec:ro:di)=
 ## Roles and Directives
 
