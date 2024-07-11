@@ -1,14 +1,5 @@
----
-title: Markdown
-date: 2024-07-04
-authors:
-  - name: Miquel Perello Nieto
-    affiliations:
-      - University of Bristol
-description: How to create content with markdown.
----
-(sec:basic)=
-# Basic content
+(sec:static)=
+# Static content
 
 Some of the most essential functionalities of any authoring tool and publishing
 system is the ability to create publishing material from text, tables and

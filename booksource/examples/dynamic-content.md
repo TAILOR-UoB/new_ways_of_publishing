@@ -7,6 +7,8 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.11.5
+launch_buttons:
+  thebe: true
 kernelspec:
   display_name: Python 3
   language: python
@@ -16,7 +18,7 @@ kernelspec:
 (launch:thebe)=
 
 (sec:com:nar)=
-# Computational narratives
+# Dynamic content
 
 Computational narratives are very useful for educational material in science,
 technology, engineering and mathematics. Jupyter Notebooks and other
@@ -52,7 +54,8 @@ kernelspec:
 ---
 ```
 
-which can be automatically generated with the jupyter-book tool
+The header can be automatically generated with the help of the jupyter-book
+tool by running the following command in a terminal at the root of the project
 
 ```shell
 jupyter-book myst init markdownfile.md --kernel kernelname
@@ -68,6 +71,47 @@ Python package and the specification of the `python` command to use in the
 ```yaml
 jupyter: python3
 ```
+
+(sec:mar:liv)=
+## Live code
+
+With the help of [Thebe](https://thebe.readthedocs.io/en/stable/) it is
+possible to add interactive code inline. By default, this Jupyter Book has been
+configured to run Thebe with MyBinder. It is also necessary to add the
+following line of code before the first title of the document
+
+```
+(launch:thebe)=
+```
+
+You can see the markdown source code of this page in the top right menu.
+
+In order to start the live code with `Thebe` it is necessary to click on the
+upper right side menu the `spaceship` and the `Live code` button in the
+dropdown.
+
+```{figure} images/thebe_live_code.png
+:name: figure-launch-live-code
+
+Menu to launch Live Code with Thebe
+```
+
+Then the code will be launched in your configured server (in this case
+MyBinder) and a new loading text will be shown at the top of the current page
+with several steps, building the code, publishing and launching.  Depending on
+the configured server this process may take more or less time to complete, and
+could even fail to launch.
+
+```{figure} images/thebe_steps.svg
+:name: figure-thebe-steps
+:width: 400px
+
+Steps that Live Code will show as it prepares the running environment.
+```
+
+Then, any python code that is written in a `code-cell` with `ipython3` will
+have the option to be run (and modified) in real time by the reader. The
+current page is an example in which you can modify all the cells. 
 
 (sec:com:nar:sim)=
 ## Simple examples
@@ -87,6 +131,34 @@ with the rest of your content.
 
 ```{code-cell}
 print("2 + 2 = ", 2 + 2)
+```
+
+The following example shows how to hide code and use a random number generator
+to create the content of a sting variable
+
+```{code-cell} ipython3
+:tags: [hide-input, thebe-init]
+
+import numpy as np
+
+np.random.seed(42)
+
+hidden_text = f"The result of a draw of a six sided dice is {np.random.randint(1, 6)}"
+```
+
+then the content of the variable can be printed in a separate cell
+
+```{code-cell} ipython3
+print(hidden_text)
+```
+
+The following code is a very simple example on how to create a lineplot which
+can be easily modified in a Live environment.
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+
+plt.plot([0, 1, 2, 6], [0, 4, 2, 5], 'o-')
 ```
 
 (sec:com:nar:tab)=
@@ -147,46 +219,6 @@ documentation](https://matplotlib.org/stable/gallery/mplot3d/trisurf3d_2.html#sp
 from bpython.examples import matplotlib_trisurf3d_2
 
 matplotlib_trisurf3d_2()
-```
-
-(sec:int:plo)=
-## Interactive plots
-
-Some libraries can produce figures that can be interacted with. For example
-Plotly provides tools like zooming, selection, hover information, filtering,
-and more. The following example shows the sepal length and width of flowers
-from the Iris dataset. Notice that it is possible to remove some classes from
-the visualisation by clicking on the species in the legend, it is possible to
-get additional information on the summary statistics or the individual samples
-by hovering with the mouse, it is possible to select a rectangular subregion to
-zoom in, download the plot as a `png`, and more. 
-
-```{code-cell} ipython3
-import plotly.express as px
-df = px.data.iris()
-fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species",
-                 marginal_y="violin", marginal_x="box", trendline="ols",
-                 template="simple_white")
-fig.show()
-```
-
-(sec:map)=
-## Maps
-
-The Python library `ipyleaflet` is able to draw maps using the JavaScript
-library Leaflet which are interactive and mobile-friendly.
-
-```{code-cell} ipython3
-from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
-m = Map(
-  basemap=basemap_to_tiles(
-    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
-  ),
-  center=(51.4545, -2.5879),
-  zoom=4
-)
-m.add_layer(Marker(location=(51.4545, -2.5879)))
-display(m)
 ```
 
 ## Code listing
@@ -251,74 +283,3 @@ print(f"The current BPython version is {bpython.__version__}")
 Another example with a complex 3D surface visualisation from the Matplotlib
 documentation was already shown in the Section [](sec:com:nar:plo).
 
-(sec:mar:liv)=
-## Live code
-
-With the help of [Thebe](https://thebe.readthedocs.io/en/stable/) it is
-possible to add interactive code inline. By default, this Jupyter Book has been
-configured to run Thebe with MyBinder whenever a section specifies in the Yaml
-header the following tags.
-
-```
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
-```
-
-And by adding before the first title of the document the following code
-
-```
-(launch:thebe)=
-```
-
-You can see the markdown source code of this page as an example.
-
-In order to start the live code with `Thebe` it is necessary to click on the
-upper right side menu the `spaceship` and the `Live code` button in the
-dropdown.
-
-```{figure} images/thebe_live_code.png
-:name: figure-launch-live-code
-
-Menu to launch Live Code with Thebe
-```
-
-Then the code will be launched in your configured server (in this case
-MyBinder) and a new loading text will be shown at the top of the current page
-with several steps, building the code, publishing and launching.  Depending on
-the configured server this process may take more or less time to complete, and
-could even fail to launch.
-
-```{figure} images/thebe_steps.svg
-:name: figure-thebe-steps
-:width: 400px
-
-Steps that Live Code will show as it prepares the running environment.
-```
-
-
-Then, any python code that is written in a `code-cell` with `ipython3` will
-have the option to be run (and modified) in real time by the reader. The
-current page is an example in which you can modify all the previous cells. The
-following cells are additional short examples.
-
-```{code-cell} ipython3
-import matplotlib.pyplot as plt
-
-plt.plot([0, 1, 2, 6], [0, 4, 2, 5], 'o-')
-```
-
-```{code-cell} ipython3
-:tags: [hide-input, thebe-init]
-
-import numpy as np
-
-np.random.seed(42)
-
-hidden_text = f"The result of a draw of a six sided dice is {np.random.randint(1, 6)}"
-```
-
-```{code-cell} ipython3
-print(hidden_text)
-```

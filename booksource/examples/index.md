@@ -27,7 +27,7 @@ Diagram of files and communication for content that is show in the web browser
 as static content (the content could be printed).
 ```
 
-Most of this type of content is described in section [](sec:basic) and part of
+Most of this type of content is described in section [](sec:static) and part of
 the section [](sec:com:nar).
 
 (sec:con:ser)=

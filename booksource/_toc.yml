@@ -8,11 +8,11 @@ chapters:
   - file: introduction/publishing-workflow
   - file: introduction/formatting-tools
   - file: introduction/authoring-tools
-- file: content-types/index
+- file: examples/index
   sections:
-  - file: content-types/markdown
-  - file: content-types/markdown-code
-  - file: content-types/shinylive
+  - file: examples/static-content
+  - file: examples/dynamic-content
+  - file: examples/interactive-content
 - file: use-cases/index
   sections:
   - file: use-cases/qmd

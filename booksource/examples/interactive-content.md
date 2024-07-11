@@ -1,15 +1,89 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+launch_buttons:
+  thebe: true
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+(launch:thebe)=
+
 (sec:con:run)=
-# Running code in the web browser
+# Interactive content
 
 Programming examples shown in the previous sections are executed during the
 compilation of the publication and their result is embedded into the resulting
-publication file. We have also seen that with "Thebe" it is possible to have
+publication file. We have also seen that with *Thebe* it is possible to have
 live code that can be modified and re-run to generate different results.
 However, it requires a third party server (e.g. Google Colab, MyBinder,
 SageMaker Studio Lab, or others). On the other hand, there are some methods to
 run code in the same web browser without the need of an external computation
 resource. In this Section we demonstrate how this can be achieved with
 Shinylive.
+
+(sec:int:plo)=
+## Plots with Plotly
+
+Some libraries can produce figures that can be interacted with. For example
+Plotly provides tools like zooming, selection, hover information, filtering,
+and more. The following example shows the sepal length and width of flowers
+from the Iris dataset. Notice that it is possible to remove some classes from
+the visualisation by clicking on the species in the legend, it is possible to
+get additional information on the summary statistics or the individual samples
+by hovering with the mouse, it is possible to select a rectangular subregion to
+zoom in, download the plot as a `png`, and more. 
+
+```{code-cell} ipython3
+import plotly.express as px
+df = px.data.iris()
+fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species",
+                 marginal_y="violin", marginal_x="box", trendline="ols",
+                 template="simple_white")
+fig.show()
+```
+
+(sec:map)=
+## Maps with IpyLeaflet
+
+The Python library [ipyleaflet](https://ipyleaflet.readthedocs.io/en/latest/)
+is able to draw maps using the JavaScript library Leaflet which are interactive
+and mobile-friendly.
+
+```{code-cell} ipython3
+from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
+m = Map(
+  basemap=basemap_to_tiles(
+    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
+  ),
+  center=(51.4545, -2.5879),
+  zoom=4
+)
+m.add_layer(Marker(location=(51.4545, -2.5879), draggable=False))
+display(m)
+```
+
+## Jupyter Widgets
+
+
+```{code-cell} ipython3
+import ipywidgets as widgets
+
+a = widgets.FloatText()
+b = widgets.FloatSlider()
+display(a,b)
+
+mylink = widgets.jslink((a, 'value'), (b, 'value'))
+```
+
 
 ## Shinylive: Shiny + WebAssembly
 
