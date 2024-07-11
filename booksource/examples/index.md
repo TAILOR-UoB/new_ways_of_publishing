@@ -8,6 +8,8 @@ textual narratives that include figures, tables, and other static elements. We
 also include videos in that section as videos are a common resource in
 internet.
 
+## Computational infrastructure
+
 (sec:con:bas)=
 ## Non-interactive content
 
