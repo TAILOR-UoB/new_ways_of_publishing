@@ -73,8 +73,10 @@ display(m)
 
 ## Jupyter Widgets
 
-**Jupyter Widgest** provide a set of interfaces to interact with Python code.
-In a _Live environment_ this interactions result in the code being executed.
+[Jupyter Widgest](https://ipywidgets.readthedocs.io/en/latest/) provide a set
+of interfaces to interact with Python code.  Some of the interfaces are
+buttons, sliders, In a _Live environment_ this interactions result in the code
+being executed.
 
 ```{code-cell} ipython3
 import ipywidgets as widgets
@@ -86,17 +88,24 @@ display(a,b)
 mylink = widgets.jslink((a, 'value'), (b, 'value'))
 ```
 
-In a live environment the output of this cell will show the selected number
-squared
+The results of the interactions with the widgets can be used in following code
+cells.
 
 ```{code-cell} ipython3
-from ipywidgets import interact
-
-def f(x):
-  return x**2
-
-interact(f, x=10)
+display(a)
 ```
+
+%In a live environment the output of this cell will show the selected number
+%squared
+%
+%```{code-cell} ipython3
+%from ipywidgets import interact
+%
+%def f(x):
+%  return x**2
+%
+%interact(f, x=10)
+%```
 
 
 ## Shinylive: Shiny + WebAssembly

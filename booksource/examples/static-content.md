@@ -102,6 +102,18 @@ diagrams](sec:wd).
 (sec:mer:fc)=
 ### Mermaid flowchart
 
+````
+```{mermaid} 
+flowchart TD
+  A[square node A] --> B(round edges node B)
+  A --> C([stadium node C])
+  B --> D[[subroutine node D]]
+  B --> E[(database node E)]
+  B --> F((circle F))
+  C --> F
+```
+````
+
 ```{mermaid} 
 flowchart TD
   A[square node A] --> B(round edges node B)
@@ -114,6 +126,23 @@ flowchart TD
 
 (sec:mer:sd)=
 ### Mermaid sequence diagram
+
+
+````
+```{mermaid}
+sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice->John: Hello John, how are you?
+	loop Healthcheck
+			John->John: Fight against hypochondria
+	end
+	Note right of John: Rational thoughts <br/>prevail...
+	John-->Alice: Great!
+	John->Bob: How about you?
+	Bob-->John: Jolly good!
+```
+````
 
 ```{mermaid}
 sequenceDiagram
@@ -131,6 +160,28 @@ sequenceDiagram
 
 (sec:mer:mm)=
 ### Mermaid mindmap
+
+````
+```{mermaid}
+mindmap
+  root((Data Science))
+    Statistics
+      Surveys
+      Experiments
+    Scientific Computing
+    Scientific Methods
+      Hypothesis Testing
+      Evaluation
+    Processes
+      Parallel Programming
+      Crawlers
+    Algorithms
+    Systems
+      High Performance Computing
+      Personal Computers
+      Distributed Computing
+```
+````
 
 ```{mermaid}
 mindmap
@@ -153,9 +204,19 @@ mindmap
 ```
 
 (sec:wd)=
-### WaveDrom timming diagrams
+### WaveDrom timing diagrams
 
-[WaveDrom](https://wavedrom.com/) can draw timming diagrams.
+[WaveDrom](https://wavedrom.com/) can draw timing diagrams.
+
+````
+```{wavedrom}
+{ signal : [
+  { name: "clk",  wave: "p......" },
+  { name: "bus",  wave: "x.34.5x",   data: "head body tail" },
+  { name: "wire", wave: "0.1..0." },
+]}
+```
+````
 
 ```{wavedrom}
 { signal : [
@@ -318,9 +379,3 @@ src="https://www.youtube.com/embed/4kwEMHZJx5A" title="YouTube video player"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
-
-## Learn more
-
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
-
