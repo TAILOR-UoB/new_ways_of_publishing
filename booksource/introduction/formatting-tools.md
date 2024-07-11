@@ -30,8 +30,8 @@ flowchart LR
 ## Pandoc
 
 [Pandoc](https://pandoc.org/) is a tool to convert files between multiple
-markup formats. Pandoc is used within more generic tools like Quarto,
-D2L book, among others. It is customizable thanks to a Haskell library
+markup formats. Pandoc is used within more generic tools such as Quarto. 
+It is customizable thanks to a Haskell library
 and a template system to feet your needs. It is able to generate
 bibliographies, footnotes, LaTeX math, tables, definitions, and most common
 publication assets. Some supported formats are lightweight markup (Markdown,
