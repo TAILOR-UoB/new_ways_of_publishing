@@ -29,7 +29,7 @@ that adapt to the device capabilities. The most comprehensive format to
 access the course is in its [website format]()
 which includes textual narrative, tables, figures, equations, interactive code and video recordings.
 The other format that includes the full narrative, but without interactive code or video, is the printable PDF. 
-Finally, the reveal.js slides focus on the key points but include the
+Finally, the `reveal.js` slides focus on the key points but include the
 tables, figures, equations and the interactive code.
 
 In order to generate multiple types of outputs with `Quarto` it is necessary to
