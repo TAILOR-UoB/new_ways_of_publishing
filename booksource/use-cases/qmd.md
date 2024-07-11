@@ -15,25 +15,21 @@ kernelspec:
 (sec:use:qua)=
 # Create a Quarto course from scratch
 
-In this use-case scenario we created a website for an online course with
-`Quarto` starting from zero. The website for the course can be found at
-https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html. The main
-idea was to create a website with all the necessary content to give a brief
+In this use-case scenario we created an 
+[online course](https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html) entirely with `Quarto`. 
+The main idea was to create a website with all the necessary content to give a brief
 introduction to a topic, with a set of slides created with the same content, a
 printable version as a pdf, video recordings for each section, all with Python
-interactive examples. The source quarto markdown file can be found at
-https://github.com/TAILOR-UoB/mooc_trustworthy_ai/edit/main/cha_odm/odm.qmd.
+interactive examples. 
 
 ## Overall structure of the course
 
-The idea is to create a self-contained course with multiple options to be
-accessed depending on the device capabilities. The most extensive format to
-access the course is in its website form (`html`)[^html] which includes textual
-narrative, tables, figures, equations, interactive code and video recordings.
-The other form that includes the full narrative is the printable document
-(`pdf`)[^pdf]. However, the interactive code can not be rendered, and the video
-recordings are removed. Finally, the Revealjs set of slides
-(`html-revealjs`)[^revealjs] focuses on the key points but include all the
+The idea is to create a self-contained course with multiple publishing options 
+that adapt to the device capabilities. The most comprehensive format to
+access the course is in its [website format]()
+which includes textual narrative, tables, figures, equations, interactive code and video recordings.
+The other format that includes the full narrative, but without interactive code or video, is the printable PDF. 
+Finally, the `reveal.js` slides focus on the key points but include the
 tables, figures, equations and the interactive code.
 
 In order to generate multiple types of outputs with `Quarto` it is necessary to
@@ -52,7 +48,7 @@ format:
     css: style.css
     toc: true
     number-chapters: true
-  revealjs:
+  reveal.js:
     logo: "../images/logos/tailor_and_uob.svg"
     output-file: slides-intro-to-opt-dec-mak.html
     slide-number: true
@@ -71,33 +67,30 @@ format:
 
 
 
-[^html]: https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html
-[^pdf]: https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.pdf
-[^revealjs]: https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/slides-intro-to-opt-dec-mak.html#/title-slide
 
 ## Course narrative and key points
 
-The course follows a textual narrative explainin all the details, however the
-slides need to contain a reduced version of the text. For this reason, the main
-text is enclosed 
+The course follows a textual narrative explaining the details, but the
+slides need to concentrate on the main points, leaving out some details. 
+This can be achieved as follows:  
 
 ```
-::: {.content-hidden when-format="revealjs"}
+::: {.content-hidden when-format="reveal.js"}
 
-Text shown in all formats excepts revealjs slides.
+Text shown in all formats excepts reveal.js slides.
 
 :::
 ```
 
 In order to keep some content in the slides we decided to create lists with the
-key points, which can be shown in all the formats. We have added a `Key Points`
+key points, which can be shown in all formats. We have added a `Key Points`
 title as a subsection in the other formats (an example can be found at
 https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html#key-points).
 
 
 ## Figures, tables and equations
 
-Figures, tables and equations can be visualised in all the formats and are
+Figures, tables and equations can be visualised in all formats and are
 automatically adjusted to fit the available space of the output format.
 
 Figures can be easily added in plain markdown
@@ -106,27 +99,29 @@ Figures can be easily added in plain markdown
 ![Rounded rectangle](./images/example.png)
 ```
 
-which would be rendered as follows
+which would be rendered as follows:
 
 ![Rounded rectangle](images/example.png)
 
-However, the Quarto markdown also allows to change the style of the image, for
-example the lignment and size
+However, Quarto markdown also allows changes to the style of the image, for
+example the alignment and size
 
 ```markdown
 ![Rounded rectangle](./images/example.png){fig-align="center" width="100px"}
 ```
 
-or with html code as follows.
+or with HTML code as follows.
 
 ```
 <img src="images/example.png" alt="Rectangle with the text: example of an
 image." style="width=100px">
 ```
 
-Using `html` syntax to render images in `Jupyter book` is not recomended, and
+:::{warning}
+Using `html` syntax to render images in `Jupyter Book` is not recomended, and
 requires the activation of the `html_image` extension (which is not active in
 this roadmap).
+:::
 
 Tables can be written in markdown
 
@@ -137,16 +132,16 @@ Tables can be written in markdown
 |2 | A2 | B2 |
 ```
 
-which would be rendered as
+which is rendered as
 
 |  | A  | B  |
 |--|----|----|
 |1 | A1 | B1 |
 |2 | A2 | B2 |
 
-Finally, equations are written in `LaTeX` and are interpreted by `MathJax`.
+Finally, equations can be written in `LaTeX` and are interpreted by `MathJax`.
 Equations can be written inline with `$E=mc^2$` shown as $E=mc^2$, or in
-separate lines with double dollar sign
+display mode:
 
 ```latex
 $$
@@ -196,17 +191,14 @@ plt.show()
 
 ## Interactive examples
 
-Part of the modernisation of publishing material is the possibility of creating
-interactive and dynamic applications online. Accessing the course with modern
-devices like computers, tables or mobile phones allows the interaction with
-examples. This can potentially benefit the reader to better understand certain
-concepts. `Shinylive` is a method that combines `Shiny` and `WebAssembly` to
+An important part of the attraction of novel publishing tools is the possibility of creating
+interactive and dynamic applications online. 
+`Shinylive` is a method that combines `Shiny` and `WebAssembly` to
 run `Python` code in your own client web browser. `Quarto` has a great
 integration with this technology, allowing to include code directly in the
 markdown that is executed in real time when the page is loaded. The following
-code is an example extracted from the use case. In this instance, the code is
-not shown to the reader because the learning is focused in the interactive
-part.
+code is an example extracted from the use case. 
+(In this instance we chose not to show the code in the course to focus the learner on the interactive example.)
 
 ```python
 ```{shinylive-python}
@@ -285,9 +277,9 @@ def server(input, output, session):
 app = App(app_ui, server, debug=True)
 ```
 
-On the other hand, this `roadmap` has been created with `Jupyter Book` which
+This `roadmap` has been created with `Jupyter Book` which
 does not support `Shinylive`. However, it is possible to create the Shinylive
-example in the online editor at https://shinylive.io/py/editor/ . And then
+example in the online editor at https://shinylive.io/py/editor/ and then
 insert an iframe with the result as follows
 
 ```html
@@ -322,8 +314,7 @@ recommended to create short videos of a very specific topic (less than 10
 minutes) to facilitate the time management of the students, and to potentially
 reuse some video recordings in similar courses. A total of four videos were
 recorded with an average length of approximately 9 minutes. The videos are
-currently hosted in `YouTube`[^recordings] and could be used without the main
-content.
+currently [hosted on YouTube](https://www.youtube.com/watch?v=IymQ6f87CtA&list=PLgdhPOmeUNm0tiFGUQtAG1yWx8bz914SI) and can be used without the other content.
 
 ```{figure} images/obs-background-removal.png
 :name: figure-obs
@@ -342,7 +333,7 @@ flatpak install flathub com.obsproject.Studio
 flatpak install flathub com.obsproject.Studio.Plugin.BackgroundRemoval
 ```
 
-The following video is an example of the results obtained using the `Revealjs`
+The following video is an example of the results obtained using the `reveal.js`
 slides generated with `Quarto` and the video recorded with `OBS` and the
 automatic removal of the background.
 
@@ -352,4 +343,3 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-[^recordings]: https://www.youtube.com/watch?v=IymQ6f87CtA&list=PLgdhPOmeUNm0tiFGUQtAG1yWx8bz914SI
