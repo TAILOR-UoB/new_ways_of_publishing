@@ -431,7 +431,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-flowchart">Mermaid flowchart</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-sequence-diagram">Mermaid sequence diagram</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-mindmap">Mermaid mindmap</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavedrom-timming-diagrams">WaveDrom timming diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavedrom-timing-diagrams">WaveDrom timing diagrams</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-references">Cross-references</a></li>
@@ -534,6 +534,17 @@ creation of new diagrams in the following link <a class="reference external" hre
 diagrams</span></a>.</p>
 <section id="mermaid-flowchart">
 <span id="sec-mer-fc"></span><h3>Mermaid flowchart<a class="headerlink" href="#mermaid-flowchart" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mermaid} 
+flowchart TD
+  A[square node A] --&gt; B(round edges node B)
+  A --&gt; C([stadium node C])
+  B --&gt; D[[subroutine node D]]
+  B --&gt; E[(database node E)]
+  B --&gt; F((circle F))
+  C --&gt; F
+```
+</pre></div>
+</div>
 <div class="mermaid">
             flowchart TD
   A[square node A] --&gt; B(round edges node B)
@@ -545,6 +556,21 @@ diagrams</span></a>.</p>
         </div></section>
 <section id="mermaid-sequence-diagram">
 <span id="sec-mer-sd"></span><h3>Mermaid sequence diagram<a class="headerlink" href="#mermaid-sequence-diagram" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mermaid}
+sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice-&gt;John: Hello John, how are you?
+	loop Healthcheck
+			John-&gt;John: Fight against hypochondria
+	end
+	Note right of John: Rational thoughts &lt;br/&gt;prevail...
+	John--&gt;Alice: Great!
+	John-&gt;Bob: How about you?
+	Bob--&gt;John: Jolly good!
+```
+</pre></div>
+</div>
 <div class="mermaid">
             sequenceDiagram
 	participant Alice
@@ -560,6 +586,27 @@ diagrams</span></a>.</p>
         </div></section>
 <section id="mermaid-mindmap">
 <span id="sec-mer-mm"></span><h3>Mermaid mindmap<a class="headerlink" href="#mermaid-mindmap" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mermaid}
+mindmap
+  root((Data Science))
+    Statistics
+      Surveys
+      Experiments
+    Scientific Computing
+    Scientific Methods
+      Hypothesis Testing
+      Evaluation
+    Processes
+      Parallel Programming
+      Crawlers
+    Algorithms
+    Systems
+      High Performance Computing
+      Personal Computers
+      Distributed Computing
+```
+</pre></div>
+</div>
 <div class="mermaid">
             mindmap
   root((Data Science))
@@ -579,9 +626,18 @@ diagrams</span></a>.</p>
       Personal Computers
       Distributed Computing
         </div></section>
-<section id="wavedrom-timming-diagrams">
-<span id="sec-wd"></span><h3>WaveDrom timming diagrams<a class="headerlink" href="#wavedrom-timming-diagrams" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://wavedrom.com/">WaveDrom</a> can draw timming diagrams.</p>
+<section id="wavedrom-timing-diagrams">
+<span id="sec-wd"></span><h3>WaveDrom timing diagrams<a class="headerlink" href="#wavedrom-timing-diagrams" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://wavedrom.com/">WaveDrom</a> can draw timing diagrams.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{wavedrom}
+{ signal : [
+  { name: &quot;clk&quot;,  wave: &quot;p......&quot; },
+  { name: &quot;bus&quot;,  wave: &quot;x.34.5x&quot;,   data: &quot;head body tail&quot; },
+  { name: &quot;wire&quot;, wave: &quot;0.1..0.&quot; },
+]}
+```
+</pre></div>
+</div>
 
 <div style="overflow-x:auto">
 <script type="WaveDrom">
@@ -821,7 +877,7 @@ allowfullscreen></iframe>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-flowchart">Mermaid flowchart</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-sequence-diagram">Mermaid sequence diagram</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-mindmap">Mermaid mindmap</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavedrom-timming-diagrams">WaveDrom timming diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavedrom-timing-diagrams">WaveDrom timing diagrams</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-references">Cross-references</a></li>
