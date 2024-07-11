@@ -73,6 +73,8 @@ display(m)
 
 ## Jupyter Widgets
 
+**Jupyter Widgest** provide a set of interfaces to interact with Python code.
+In a _Live environment_ this interactions result in the code being executed.
 
 ```{code-cell} ipython3
 import ipywidgets as widgets
@@ -82,6 +84,18 @@ b = widgets.FloatSlider()
 display(a,b)
 
 mylink = widgets.jslink((a, 'value'), (b, 'value'))
+```
+
+In a live environment the output of this cell will show the selected number
+squared
+
+```{code-cell} ipython3
+from ipywidgets import interact
+
+def f(x):
+  return x**2
+
+interact(f, x=10)
 ```
 
 

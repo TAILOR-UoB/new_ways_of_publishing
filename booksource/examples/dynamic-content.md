@@ -143,7 +143,7 @@ import numpy as np
 
 np.random.seed(42)
 
-hidden_text = f"The result of a draw of a six sided dice is {np.random.randint(1, 6)}"
+hidden_text = f"The result of this draw of a six sided dice is {np.random.randint(1, 6)}"
 ```
 
 then the content of the variable can be printed in a separate cell
