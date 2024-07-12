@@ -18,7 +18,9 @@ chapters:
   - file: use-cases/qmd
   - file: use-cases/tex-to-qmd
 - file: conclusion
-- file: references
 # - file: glossary
-- file: appendix/open-courses
-- file: appendix/development
+- Appendices
+  sections:
+  - file: appendix/open-courses
+  - file: appendix/development
+- file: references
