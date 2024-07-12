@@ -552,10 +552,35 @@ among others.</p>
 </section>
 <section id="reveal-js">
 <span id="sec-revealjs"></span><h2>Reveal.js<a class="headerlink" href="#reveal-js" title="Link to this heading">#</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>TO DO</p>
+<p><a class="reference external" href="https://revealjs.com/">Reveal.js</a> is an open source framework for HTML
+presentations. It supports features like animations, export to PDF, an
+intuitive navigation of the slides, speaker notes, Markdown support, LaTeX
+support, laser-like pointer, and drawing tools. The presentations can be edited
+with any HTML editor or with the online visual editor <a class="reference external" href="https://slides.com/"></a>.
+The folloiwng HTML code is a fully working <em>reveal.js</em> presentation</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;dist/reveal.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;dist/theme/white.css&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reveal&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;slides&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>Slide 1<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>Slide 2<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;dist/reveal.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nx">Reveal</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
 </div>
+<p><em>Reveal.js</em> is also supported by
+multiple formatting tools like <em>Quarto</em>, <em>Jupyter Notebook</em>, and <em>pandoc</em> that
+which convert markdown files to reveal.js presenations.</p>
 <div class="admonition-d2l-book-a-toolkit-for-hands-on-books admonition">
 <p class="admonition-title">D2L-Book: A Toolkit for Hands-on Books</p>
 <p>Building on several of these formatting tools,
