@@ -1,32 +1,32 @@
 (sec:exa)=
-# Examples
+# From static and dynamic to interactive content
 
-In this section we provide multiple examples of the type of content that can be
-generated with publishing systems like `Jupyter Book` and `Quarto`. We divided
-the different types into three subsections: [](sec:static) is rendered during
-the creation of the website/book and is kept static, [](sec:com:nar)
-includes computational code cells that are rendered during the creation of the
-website/book but can be modified and re-run on demand,  and [](sec:exa:run)
-includes interactive elements like buttons, sliders, interactive figures and
-more. The provided examples are not exhaustive and additional information can
-be found in the documentation of [Quarto](https://quarto.org/docs/guide/),
+In this section we provide a range of examples of the kinds of content that can be
+authored with publishing systems such as `Jupyter Book` and `Quarto`. 
+We consider three different types of content: 
+- [](sec:static) is rendered during the creation of the website/book and is kept static; 
+- [](sec:com:nar) includes computational code cells that are rendered during the creation of the
+website/book but can be modified and re-run on demand;  and 
+- [](sec:exa:run) provides interactive elements such as buttons, sliders, interactive figures and
+more. 
+Many more examples can be found in the documentation of [Quarto](https://quarto.org/docs/guide/) and
 [Jupyter Book](https://jupyterbook.org/en/stable/intro.html).
 
 (sec:exa:com:inf)=
-## Computational infrastructure considerations
+## Computational infrastructure
 
-An important consideration when designing online teaching material is where the
-material is going to be hosted. The capabilities of the hosting may affect the
-type of content that can be included.
+An important consideration when designing online teaching material is the location 
+where the material will be hosted and served. 
+The host capabilities may affect the type of content that can be included.
 For example, the content of this roadmap is being hosted as a static webpage thanks to the
 free service offered by [GitHub pages](https://pages.github.com/). However,
 most free hosting services do not provide computational capabilities for
 dynamic or interactive functionalities. For instance, the
-[](sec:com:nar) can be visualised as a static web page but has the capabilities
-of being run by a third party server for its dynamic functionalities. Services
-like *MyBinder*, *Google Colab*, offer free tier versions but they may be slow
+[](sec:com:nar) material is visualised as a static web page by Github pages 
+but the same content can be run by a third party server for its dynamic functionalities. 
+Services such as *MyBinder* and *Google Colab*, offer free tier versions but they may be slow
 or fail to run for various reasons (e.g. connection errors or high server
-workload). Some parts of the [](sec:exa:run) may also require a third party
+workload). Parts of the [](sec:exa:run) of the roadmap may also require a third party
 service. Additional information about these requirements is specified when
 showcasing each example.
 
