@@ -500,12 +500,12 @@ The course generated in this use case is available at
 <a class="reference external" href="https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html">https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html</a>.</p>
 <p>This use case explains the process followed to generate the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> course
 material. In order to replicate the steps involved you can <a class="reference download internal" download="" href="../_downloads/607ee4c14e80879975f26e734f105c67/cla-cal-slides.zip"><code class="xref download docutils literal notranslate"><span class="pre">download</span> <span class="pre">the</span> <span class="pre">presentation</span> <span class="pre">source</span> <span class="pre">files</span> <span class="pre">from</span> <span class="pre">this</span> <span class="pre">link</span></code></a>.</p>
-<p>To generate the slides first unzip the downloaded file and run <code class="docutils literal notranslate"><span class="pre">pdfLaTeX</span></code> and
+<p>To generate the slides first unzip the downloaded file and run <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> and
 <code class="docutils literal notranslate"><span class="pre">biber</span></code> as follows</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>-X<span class="w"> </span>cla_cal_slides.zip
-pdfLaTeX<span class="w"> </span>main.tex
+pdflatex<span class="w"> </span>main.tex
 biber<span class="w"> </span>main
-pdfLaTeX<span class="w"> </span>main.tex
+pdflatex<span class="w"> </span>main.tex
 </pre></div>
 </div>
 <p>The rest of this section uses the content of the zip file to extend the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>
@@ -530,11 +530,11 @@ contains several definitions and new commands that can not be converted by
 <code class="docutils literal notranslate"><span class="pre">brightFrame</span></code> which was previously defined in a separate file that contained
 lots of other definitions and commands. Remove the line 44 that loads the
 external file <code class="docutils literal notranslate"><span class="pre">frame-commands.tex</span></code>.</p>
-<div class="highlight-LaTeX notranslate"><div class="highlight"><pre><span></span>44: <span class="k">\input</span><span class="nb">{</span>LaTeX/frame-commands<span class="nb">}</span>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>44: <span class="k">\input</span><span class="nb">{</span>latex/frame-commands<span class="nb">}</span>
 </pre></div>
 </div>
 <p>And define the new command <code class="docutils literal notranslate"><span class="pre">brigthFrame</span></code> in the <code class="docutils literal notranslate"><span class="pre">main.tex</span></code> file</p>
-<div class="highlight-LaTeX notranslate"><div class="highlight"><pre><span></span><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\brightFrame</span><span class="nb">}</span>[2]<span class="nb">{</span>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\brightFrame</span><span class="nb">}</span>[2]<span class="nb">{</span>
   <span class="k">\begin</span><span class="nb">{</span>frame<span class="nb">}</span>
     <span class="k">\frametitle</span><span class="nb">{</span>#1<span class="nb">}</span>
     #2
@@ -623,13 +623,13 @@ spacing provided by LaTeX Beamer. The change of spacing in the <code class="docu
 output makes it difficult to fit the figures in an appealing manner. For that
 reason, we had to manually adjust the automated generated markdown code. The
 original LaTeX code</p>
-<div class="highlight-LaTeX notranslate"><div class="highlight"><pre><span></span><span class="k">\includegraphics</span><span class="na">[height=0.7\textheight]</span><span class="nb">{</span>figures/ROCCH.pdf<span class="nb">}</span><span class="k">\hfill</span>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\includegraphics</span><span class="na">[height=0.7\textheight]</span><span class="nb">{</span>figures/ROCCH.pdf<span class="nb">}</span><span class="k">\hfill</span>
 <span class="k">\includegraphics</span><span class="na">[height=0.7\textheight]</span><span class="nb">{</span>figures/ROCcal2.pdf<span class="nb">}</span><span class="k">\\</span>
 Source: <span class="k">\textcite</span><span class="nb">{</span>flach2016roc<span class="nb">}</span>
 </pre></div>
 </div>
 <p>which considered the height of the slides to position them correctly as follows</p>
-<p><img alt="" src="use-cases/images/LaTeX-two-columns.jpg" /></p>
+<p><img alt="" src="../_images/latex-two-columns.jpg" /></p>
 <p>The code was automatically converted to markdown keeping the original height
 proportions</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>![<span class="nt">image</span>](<span class="na">figures/ROCCH.pdf</span>){height=&quot;0.7\textheight&quot;}
@@ -668,7 +668,7 @@ Source: <span class="ni">@flach2016roc</span>
 symbol) were not ignored during the conversion to markdown. The fourth
 line of the following example should be removed from the generated markdown
 file.</p>
-<div class="highlight-LaTeX notranslate"><div class="highlight"><pre><span></span>confidence <span class="s">$</span><span class="nb">c</span><span class="s">$</span>, is equal to <span class="s">$</span><span class="nb">c</span><span class="s">$</span>:  
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>confidence <span class="s">$</span><span class="nb">c</span><span class="s">$</span>, is equal to <span class="s">$</span><span class="nb">c</span><span class="s">$</span>:  
 <span class="k">\begin</span><span class="nb">{</span>align*<span class="nb">}</span> 
 P(Y=i <span class="k">\:</span> | <span class="k">\:</span> <span class="k">\ph_i</span>(<span class="k">\vx</span>)=c)=c<span class="k">\qquad\text</span><span class="nb">{</span>where <span class="nb">}</span><span class="k">\</span> i=<span class="k">\argmax_j</span> <span class="k">\ph_j</span>(<span class="k">\vx</span>).
 <span class="c">%P\Big(Y=\argmax\big(\vph(X)\big) \: \Big| \: \max\big(\vph(X)\big)=c\Big)=c.</span>
@@ -909,7 +909,7 @@ directly to HTML using the MyST client Python package.
 However, we didn’t find a method to obtain the intermediate MyST markdown
 files that are automatically generated, which may have made the process
 described above with pandoc much easier. A guide on how to do this conversion
-can be found at <a class="reference external" href="https://mystmd.org/guide/writing-in-LaTeX">https://mystmd.org/guide/writing-in-LaTeX</a>. This section also
+can be found at <a class="reference external" href="https://mystmd.org/guide/writing-in-latex">https://mystmd.org/guide/writing-in-latex</a>. This section also
 provides a quick summary of the guide that results in a good HTML version.</p>
 <p>This method requires the installation of the <a class="reference external" href="https://mystmd.org/guide/installing">MyST client</a>,
 which also requires an updated version of <code class="docutils literal notranslate"><span class="pre">node</span></code>. The installation of the required version
@@ -935,7 +935,7 @@ npm<span class="w"> </span>-v
 <p>One consideration from this example is that the LaTeX environment <code class="docutils literal notranslate"><span class="pre">refsection</span></code>
 is not currently supported, and all the environments need to be removed. This
 can be done by removing the beginning and end of each environment.</p>
-<div class="highlight-LaTeX notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>refsection<span class="nb">}</span>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>refsection<span class="nb">}</span>
 ...
 <span class="k">\end</span><span class="nb">{</span>refsection<span class="nb">}</span>
 </pre></div>
