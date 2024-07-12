@@ -49,20 +49,38 @@ the directive
 Examples of directives can be found in {ref}`sec:notes`.
 
 (sec:notes)=
-## Notes
+## Callout Blocks
 
-Notes are a type of directive supported by Jupyter Book. They allow you to
-create information boxes with a colored title, and main content.
+Callout Blocks are special boxes with a colored title and a main textual
+content. These can be created with different directives with `{note}` being a
+common example.
 
 ````
 ```{note}
-Here is a note
+
+Here is a note.
 ```
 ````
 
 ```{note}
 
-Here is a note
+Here is a note.
+```
+
+The content of a callout block can be hidden by adding the optional tag `:class: dropdown`
+
+````
+```{note}
+:class: dropdown
+
+Hidden text.
+```
+````
+
+```{note}
+:class: dropdown
+
+Hidden text.
 ```
 
 Other types of notes can be created with the directives `attention`, `caution`,
@@ -72,17 +90,25 @@ examples.
 
 ```{tip}
 
-Tip note
+Tip note.
 ```
 
 ```{attention}
 
-Attention note
+Attention note.
 ```
 
 ```{error}
 
-Error note
+Error note.
+```
+
+It is possible to personalise your own notes with `{admonition}`
+
+```{admonition} This is a warning block
+:class: warning
+
+with personalised title and body text.
 ```
 
 ## Diagrams
@@ -229,45 +255,116 @@ mindmap
 ## Cross-references
 
 Published documents often have internal references to other content in the
-document. In `Jupyter Book` when inserting an image with the following
-directive
+document. By default, all the titles have their own anchor points (move the
+mouse cursor on top of a title to see a `#` symbol indicating a clickable
+anchor point). It is possible to reference sections within the same page by
+creating a link  writing the full title in lower case and dashes instead of
+spaces like `[](cross-references)` which creates a link like
+[](cross-references). With this method it is not possible to reference other
+pages; e.g. the link [](#conclusions) should not work but [](static-content)
+does work. A more flexible method is to manually indicate anchor points in
+titles, figures, tables and other content. By adding a label before a title as
+follows
+
+```markdown
+(my-label)=
+# Section title
+```
+
+the section can be references with `[](my-label)` or the more flexible role
+``{ref}`my-label` ``. For example the code ``[](sec:conclusion)`` and
+``{ref}`sec:conclusion` `` will generate a link to the [](sec:conclusion).
+
+| Code                                | Result                          |
+|:------------------------------------|:--------------------------------|
+| ``[](sec:conclusion)``                    | [](sec:conclusion)                    |
+| ``[Textual description](sec:conclusion)`` | [Textual description](sec:conclusion) |
+| ``{ref}`sec:conclusion` ``                | {ref}`sec:conclusion` |
+
+
+Labels can also be added to figures, tables and equations within their own
+directive tags. For example, in the `{figure}` directives the tag `name`
+specifies the label.
 
 ````
 ```{figure} images/example.svg
-:name: figure-example-1
+:name: fig:ex:1
 
 Caption of the example figure ex1
 ```
 ````
 
-which is rendered as 
+The previous code generates the next figure that can be referenced in multiple
+ways.
 
 ```{figure} images/example.svg
-:name: figure-example-1
+:name: fig:ex:1
 
-Caption of the example figure ex1
+Caption of the example figure number 1
 ```
 
-is possible to reference the image with the role `{numref}`Figure %s <figure-example-1>``
-which will show a reference like {numref}`Figure %s <figure-example-1>`. The
-same can be done for tables like {numref}`table-example-1`, equations like
-Equation {eq}`equation-example-1` and Sections {ref}`Introduction <sec:intro>`.
+| Code                                | Result                          |
+|:------------------------------------|:--------------------------------|
+| ``[](fig:ex:1)``                    | [](fig:ex:1)                    |
+| ``[Textual description](fig:ex:1)`` | [Textual description](fig:ex:1) |
+| ``{ref}`fig:ex:1` ``                | {ref}`fig:ex:1` |
+| ``{numref}`fig:ex:1` ``             | {numref}`fig:ex:1` |
+| ``{numref}`Figure %s and more text <fig:ex:1>` ``             | {numref}`Figure %s and more text <fig:ex:1>` |
+
+
+Tables use the tag `name`
+
+````
+```{table} Caption of the table ex1
+:name: tab:ex:1
+
+| header 1 | header 2 |
+| -------- | -------- |
+|    a     |    b     |
+```
+````
 
 ```{table} Caption of the table ex1
-:name: table-example-1
+:name: tab:ex:1
 
 | header 1 | header 2 |
 | -------- | -------- |
 |    a     |    b     |
 ```
 
+| Code                                | Result                          |
+|:------------------------------------|:--------------------------------|
+| ``[](tab:ex:1)``                    | [](tab:ex:1)                    |
+| ``[Textual description](tab:ex:1)`` | [Textual description](tab:ex:1) |
+| ``{ref}`tab:ex:1` ``                | {ref}`tab:ex:1` |
+| ``{numref}`tab:ex:1` ``             | {numref}`tab:ex:1` |
+| ``{numref}`Figure %s and more text <tab:ex:1>` ``             | {numref}`Figure %s and more text <tab:ex:1>` |
+
+Finally, equations use the tag `label`
+
+````
 ```{math}
-:label: equation-example-1
+:label: eq:ex:1
+
+E = mc^2
+```
+````
+
+```{math}
+:label: eq:ex:1
 
 E = mc^2
 ```
 
-`Quarto` has its own way to make cross references which can be consulted in
+And can only be referenced by their number
+
+| Code                                | Result                          |
+|:------------------------------------|:--------------------------------|
+| ``[](eq:ex:1)``                    | [](eq:ex:1)                    |
+| ``{eq}`eq:ex:1` ``                | {ref}`eq:ex:1` |
+
+
+`Quarto` has its own way of making cross references which can be consulted in
 their documentation ([Quarto cross
 references](https://quarto.org/docs/authoring/cross-references.html)).
 

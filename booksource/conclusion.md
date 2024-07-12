@@ -1,3 +1,4 @@
+(sec:conclusion)=
 # Conclusion
 
 Publishing teaching material nowadays goes beyond printable documents. The
