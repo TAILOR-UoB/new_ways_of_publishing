@@ -1,10 +1,20 @@
 (sec:use)=
 # Some itineraries through the landscape
 
-```{note}
+Now that we have charted the landscape of new ways of authoring and publishing online material, 
+and given a number of examples of "places to visit", 
+we are ready to describe some "itineraries" through the landscape:  
+practical use cases that people who want to create or update training material might encounter. 
 
-Add an introduction to this section
-```
+On the one hand, somebody may want to use `Quarto` to develop new training material, which is covered in [](sec:use:qua). 
+But perhaps a more common use case is that somebody already has material in a legacy format which they want to transform into a more interactive and multi-purpose form. 
+We give a concrete example of how to do this in [](sec:use:lat). 
+
+:::{note}
+There are of many other possible use cases! 
+Please get in touch if you have ideas to add other use cases to this roadmap.
+::: 
+
 
 %## Terminology
 %
