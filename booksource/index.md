@@ -19,13 +19,13 @@ Knowing about these developments and opportunities helps academic writers to pub
 
 This **roadmap** therefore has twin objectives: 
 - to chart the ever-growing landscape of publishing workflows, formatting tools and authoring tools; 
-- to provide some itineraries through this landscape, such as converting an existing $\LaTeX$ Beamer presentation to `Quarto`. 
+- to provide some itineraries through this landscape, such as converting an existing LaTeX Beamer presentation to `Quarto`. 
 
 The companion website https://tailor-uob.github.io/mooc_trustworthy_ai/ shows the rendered results. 
 The content can be viewed in a variety of ways, following the [](sec:SIMO) paradigm. 
 
 :::{admonition} Who should read this
-We prepared this material for an audience with experience in authoring AI-related training material using well-established tools such as $\LaTeX$, Overleaf, Google Docs etc. You will learn about the latest tools and frameworks such as JupyterBook (not be confused with Jupyter Notebooks) and Quarto. These tools make it easier to deliver content in a variety of ways, and also offer the opportunity to add interactive elements. We give examples of possible workflows to get you started. 
+We prepared this material for an audience with experience in authoring AI-related training material using well-established tools such as LaTeX, Overleaf, Google Docs etc. You will learn about the latest tools and frameworks such as JupyterBook (not be confused with Jupyter Notebooks) and Quarto. These tools make it easier to deliver content in a variety of ways, and also offer the opportunity to add interactive elements. We give examples of possible workflows to get you started. 
 :::
 
 :::{admonition} How to read this
@@ -35,7 +35,7 @@ In {ref}`sec:intro` we provide context and introduce terminology
 (if you're in a hurry, skip to {ref}`sec:formatting-tools` which describes the most recent developments). 
 The {ref}`sec:exa` section gives many examples of static, dynamic and interactive content. 
 We then give {ref}`sec:use`: concrete use cases of authoring training material using `Quarto`,
-either from scratch or converting content originally authored in $\LaTeX$ Beamer. 
+either from scratch or converting content originally authored in LaTeX Beamer. 
 
 The full table of contents is given in the panel on the left, each element of which is a separate webpage. 
 You can step through these pages in order by following the `Next` link at the bottom of each page. 

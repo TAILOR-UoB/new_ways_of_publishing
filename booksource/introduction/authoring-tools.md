@@ -4,7 +4,7 @@
 **Authoring tools** facilitate the creation of input artefacts (e.g. plain
 text, markup language, tables, figures, code, or equations) which will be
 compiled and rendered by a _formatting tool_ to generate publishable outputs.
-For example, a markup language editor to create $\LaTeX$ is an authoring tool,
+For example, a markup language editor to create LaTeX is an authoring tool,
 while `pdflatex`, `XeLaTeX`, or `LuaTeX` are formatting tools that compile
 input artefacts to pdf. These tools need to integrate metadata about the format
 in which the artefacts need to be formatted in different output types.
@@ -91,8 +91,8 @@ Unlike WYSIWYG editors they typically have a
 dual-pane user interface with one pane displaying the editable source and 
 the other pane providing a preview. 
 [Overleaf](https://www.overleaf.com/) is an online collaborative
-authoring tool that allows the edition of $\LaTeX$ files, managing the errors
-and generating PDF files with a $\LaTeX$ compiler. However the free tier has
+authoring tool that allows the edition of LaTeX files, managing the errors
+and generating PDF files with a LaTeX compiler. However the free tier has
 some collaboration limitations. [HackMD](https://hackmd.io/),
 [Notion](https://www.notion.so/) and [Typst](https://typst.app/) are other
 online collaborative text editing tools that can be used for authoring
