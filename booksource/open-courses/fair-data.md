@@ -77,7 +77,7 @@ licenses and maximise the use of your material it is advisable to use well
 known licenses. 
 
 Some of the most common licenses are the Creative Commons. Similar principles
-shown previously in the open source licenses section apply here. For example
+shown previously in the open-source licenses section apply here. For example
 the **Open Data Commons by Attribution License (ODC-BY v4.0**) allows to copy,
 distribute and use a database, produce new works derived from it, modify,
 transform and build upon it subject to attribution to the original work. A

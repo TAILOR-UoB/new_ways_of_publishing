@@ -303,7 +303,7 @@ finalised, which has been the approach taken for this course. The video were
 recorded in a home environment with non-professional devices such as a common
 laptop and its internal microphone. In order to record both the slides and the
 speaker we used [OBS (Open Bradcaster Software)
-Studio](https://obsproject.com/) which is a free and open source software for
+Studio](https://obsproject.com/) which is a free and open-source software for
 video recording (and live streaming) available for Windows, Mac and Linux.
 
 The background of the speaker was removed using an OBS Studio plugin that does

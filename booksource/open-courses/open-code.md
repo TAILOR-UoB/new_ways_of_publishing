@@ -7,7 +7,7 @@ https://opensource.org/licenses
 
 Source of the following content https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons#:~:text=The%20Creative%20Commons%20set%20of,open%20access%20papers%20and%20books.
 and https://help.figshare.com/article/what-is-the-most-appropriate-licence-for-my-research
-the legal side of open source https://opensource.guide/legal/
+the legal side of open-source https://opensource.guide/legal/
 
 Acronyms
 

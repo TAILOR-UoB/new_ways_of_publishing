@@ -59,7 +59,7 @@ official documentation format of the [GNU project](https://www.gnu.org/)).
 [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) is one of the main projects of the [Executable Books
 Project](https://executablebooks.org/en/latest/), together with the other project [MyST
 Markdown](https://executablebooks.org/en/latest/tools/#tools-myst). The
-Executable Books Project is an international collaboration to build open source
+Executable Books Project is an international collaboration to build open-source
 tools for publishing computational documents based on the
 [Jupyter](https://jupyter.org/)
 ecosystem. `Jupyter Book` can read markdown, MyST Markdown, Jupyter
@@ -170,7 +170,7 @@ among others.
 (sec:revealjs)=
 ## Reveal.js
 
-[Reveal.js](https://revealjs.com/) is an open source framework for HTML
+[Reveal.js](https://revealjs.com/) is an open-source framework for HTML
 presentations. It supports features like animations, export to PDF, an
 intuitive navigation of the slides, speaker notes, Markdown support, LaTeX
 support, laser-like pointer, and drawing tools. The presentations can be edited

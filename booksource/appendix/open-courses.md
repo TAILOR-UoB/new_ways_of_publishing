@@ -31,7 +31,7 @@ overview and should not be taken as legal advise, additional information can be
 found at https://opensource.guide/legal/. Furthermore, an interactive guide on
 how to choose a license is available at https://choosealicense.com/.
 
-One of the most common licenses for open source is `Creative Commons`. It has
+One of the most common licenses for open-source is `Creative Commons`. It has
 lots of variations depending on the flexibility that you want to provide to the
 users. The Creative Common licenses are short named with acronyms, and
 understanding them makes much easier their interpretation.  
@@ -197,7 +197,7 @@ licenses and maximise the use of your material it is advisable to use well
 known licenses. 
 
 Some of the most common licenses are the Creative Commons. Similar principles
-shown previously in the open source licenses section apply here. For example
+shown previously in the open-source licenses section apply here. For example
 the **Open Data Commons by Attribution License (ODC-BY v4.0**) allows to copy,
 distribute and use a database, produce new works derived from it, modify,
 transform and build upon it subject to attribution to the original work. A

@@ -11,10 +11,10 @@ can generate multiple publishing outputs (like slides, websites, pdfs, or
 documents).
 
 The proliferation and adoption of the World Wide Web has allowed the modernisation of teaching
-material that is cross-platform and dynamic. Clear examples of modern teaching
-material online include video recordings (e.g. Khan Academy), online exams 
-(e.g. Massive Open Online Courses or MOOCs), personal blogs with dynamic
-illustrations, and sets of animated presentations. However, large parts of the 
+material that is cross-platform and dynamic. Examples of modern teaching
+material include online videos (e.g. Khan Academy), online exams 
+(e.g. Massive Open Online Courses or MOOCs), personal blogs with commenting facilities, 
+and animated or interactive illustrations. However, large parts of the 
 currently available teaching material still focus on printable formats, 
 with the possible addition of hyperlinks for online delivery. 
 
@@ -35,12 +35,12 @@ range of output modalities. Two such publishing systems are
 `Jupyter Book` and `Quarto` for which multiple examples are provided.
 
 We also provide some use-case examples of a full workflow to generate online
-training material (and this website is in fact one of them). All material is kept in a
-version control environment (`GitHub`) to maximise transparency and
+training material (and this website is in fact one of them). All material is kept in 
+the `GitHub` version control environment to maximise transparency and
 reproducibility while allowing the automatic generation of the output artefacts
 with `GitHub Actions`. The input artefact is constructed in such a way that
 multiple types of output formats can be generated automatically from them (e.g.
-formats like an HTML website, Reveal.js slides, pdf, and e-book).
+formats like an HTML website, `reveal.js` slides, online or print PDFs, and e-books).
 
 <!--
 
