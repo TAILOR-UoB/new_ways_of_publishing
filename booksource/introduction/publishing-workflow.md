@@ -10,8 +10,8 @@ This is visualised by the following figure.[^pub:excl]
 [^pub:excl]: In this roadmap we do not cover **(1)** the process of
 generating the external resources and **(6)** the delivery system.
 However, note that the delivery system may have some impact on the formatted artefact, 
-even within the same format. For example, hyperlinks should be handled differently 
-for a printed PDF and an online PDF. 
+even within the same format. For example, hyperlinks should ideally be handled differently 
+for printed and online PDFs. 
 
 ```{mermaid}
 ---
@@ -50,7 +50,7 @@ of slides, documents, posters and other output formats from the same material.
 In this roadmap, we are interested in workflows to generate this multitude of
 outputs minimising the _authoring_ effort. Here, we describe two types of
 paradigms which were discussed in the previous TAILOR deliverable D9.3 {cite}`sokol21`:
-*Single-In-Single-Out (SISO)*, and *Single-In-Multi-Out (SIMO)*. 
+[](sec:SISO) (SISO) and [](sec:SIMO) (SIMO). 
 
 
 %% MPN: I have removed this as it was complicated  and may not be necessary
@@ -74,6 +74,7 @@ paradigms which were discussed in the previous TAILOR deliverable D9.3 {cite}`so
 %    classDef external fill:#aaa,stroke:#333,stroke-dasharray: 5 5;
 %```
 
+(sec:SISO)=
 ## Single-In-Single-Out
 
 _Formatting tools_ commonly specialise in generating only one type of
@@ -117,13 +118,12 @@ flowchart LR
 ```
 
 Common examples of this type of paradigm are the authoring and publishing
-workflows followed by creating text documents with [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word), [Libre
-Office Writer](https://www.libreoffice.org/discover/writer/), [LaTeX](https://www.latex-project.org/); sets of slides with [Microsoft
-PowerPoint](https://www.microsoft.com/en-gb/microsoft-365/powerpoint), [LibreOffice Impress](https://www.libreoffice.org/discover/impress/), [LaTeX Beamer](https://ctan.org/pkg/beamer),
-[Reveal.js](https://revealjs.com/), or [Google
-Slides](https://workspace.google.com/intl/en_uk/products/slides/); or posters
-with [Microsoft
-Publisher](https://www.microsoft.com/en-gb/microsoft-365/publisher), Google Slides, LaTeX, etc.
+workflows for creating
+- text documents with [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word), [Libre
+Office Writer](https://www.libreoffice.org/discover/writer/), [LaTeX](https://www.latex-project.org/); 
+- slide decks with [Microsoft PowerPoint](https://www.microsoft.com/en-gb/microsoft-365/powerpoint), [LibreOffice Impress](https://www.libreoffice.org/discover/impress/), [LaTeX Beamer](https://ctan.org/pkg/beamer),
+[Reveal.js](https://revealjs.com/), or [Google Slides](https://workspace.google.com/intl/en_uk/products/slides/); and 
+- posters with [Microsoft Publisher](https://www.microsoft.com/en-gb/microsoft-365/publisher), Google Slides, LaTeX, etc.
 
 (sec:SIMO)=
 ## Single-In-Multiple-Out
