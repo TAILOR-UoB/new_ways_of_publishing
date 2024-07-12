@@ -31,7 +31,7 @@ like `Jupyter Book` and `Quarto` support multiple ways to write this type of
 material by using directives (See [](sec:ro:di)) for code in markdown files, or
 directly using Jupyter Notebooks.  This section serves as an example of the
 functionalities that can be integrated in a Markdown file in a Jupyter Book. We
-also indicate what are the differences in the _Quarto_ publishing system when
+also indicate what are the differences in the `Quarto` publishing system when
 necessary.
 
 ## Configuration
@@ -44,7 +44,7 @@ Jupyter Notebook).
 
 ### Jupyter Notebook files
 
-*Jupyter Notebooks* are web-based documents that combine a textual narrative
+`Jupyter Notebooks` are web-based documents that combine a textual narrative
 (written in a markup language) with computational elements (supporting a
 multitude of programming languages). The code of the notebooks can be executed
 with the help of a
@@ -55,17 +55,15 @@ provide the results to the authoring application. The default kernel is the
 [IPython](https://ipython.org/). Common functionalities added via the code
 cells are the generation of figures, tables, plots, and interactive elements
 and the analysis of data. Jupyter Notebooks have a file extension `.ipynb` and
-can be edited with authoring tools like `Jupyter Notebook`, *Jupyter Lab*,
+can be edited with authoring tools like `Jupyter Notebook`, `Jupyter Lab`,
 *Google Colab*, and most *integrated development environments* (IDEs) like
-*PyCharm*, *Microsoft Visual Studio*, *Posit*, and *RStudio* (See more in the
-section
-[](sec:aut:com:nar)). 
+*PyCharm*, *Microsoft Visual Studio*, *Posit*, and *RStudio* (See also [](sec:aut:com:nar)). 
 
-In `Jupyter Book` and `Quarto` projects the configuration of **Jupyter
-Notebooks** is general across the project. However, `Quarto` requires a *Raw*
+In `Jupyter Book` and `Quarto` projects the configuration of `Jupyter
+Notebooks` is general across the project. However, `Quarto` requires a *Raw*
 cell at the beginning of the notebook with the `title`, `author`, and any
 additional options that you want to include in order to be rendered. The
-following is a configuration example for `Quarto`
+following is a configuration example for `Quarto`:
 
 ```yaml
 ---
@@ -82,7 +80,7 @@ format:
 (sec:com:nar:con)=
 ### Markdown files
 
-In *`Jupyter Book`*, **Markdown** files with dynamic content require a YAML
+In `Jupyter Book`, **Markdown** files with dynamic content require a YAML
 configuration in the header indicating some parameters about
 the type of file and the kernel to use. There are kernels for different
 programming languages like R, Python, Julia, and more. For example, the
@@ -106,7 +104,7 @@ kernelspec:
 ---
 ```
 
-The header can be generated automatically with the help of the jupyter-book
+The header can be generated automatically with the help of the `jupyter-book`
 tool by running the following command in a terminal at the root of the project
 
 ```shell
@@ -116,8 +114,7 @@ jupyter-book myst init markdownfile.md --kernel kernelname
 Additional documentation can be found at
 https://jupyterbook.org/en/stable/file-types/myst-notebooks.html.
 
-In *`Quarto`*, 
-Running Python code in the *`Quarto`* publishing system requires the `jupyter`
+Running Python code in the `Quarto` publishing system requires the `jupyter`
 Python package and the specification of the `python` command to use in the
 `YAML` header or in the `_quarto.yml` configuration file.
 
@@ -128,19 +125,20 @@ jupyter: python3
 (sec:mar:liv)=
 ### Live code
 
-In **Jupyter Books**, [Thebe](https://thebe.readthedocs.io/en/stable/) offers a
+In `Jupyter Book`, [Thebe](https://thebe.readthedocs.io/en/stable/) offers a
 solution to launch the kernel in the current page (without the need to jump to
-a third party website). By default, this `Jupyter Book` has been configured to
-run Thebe with the third party service *MyBinder*.  It is also necessary to add
-the following line of code before the first title of the markdown document
+a third party website). 
+The web page you are currently reading has been configured to
+run Thebe with the third party service *MyBinder*.  This was achieved by adding
+the following line of code before the first title of the markdown document: 
 
 ```
 (launch:thebe)=
 ```
 
-In order to start the live code with *Thebe* it is necessary to click on the
-upper right side menu the `spaceship` and the `Live code` button in the
-drop down menu.
+The top of the page now displays the *spaceship* icon. 
+You can launch *Thebe* by clicking on it and select `Live code` in the
+drop down menu: 
 
 ```{figure} images/thebe_live_code.png
 :name: figure-launch-live-code
@@ -148,11 +146,11 @@ drop down menu.
 Menu to launch Live Code with Thebe
 ```
 
-Then the code will be launched in your configured server (in this case
-MyBinder) and a new loading text will be shown at the top of the current page
+This will launch the code in your configured server (in this case
+*MyBinder*) and a new loading text will be shown at the top of the current page
 with several steps, building the code, publishing and launching.  Depending on
-the configured server this process may take more or less time to complete, and
-could even fail to launch.
+the configured server this process may take some time to complete, and
+occasionally could fail to launch.
 
 ```{figure} images/thebe_steps.svg
 :name: figure-thebe-steps
@@ -162,10 +160,10 @@ Steps that Live Code will show as it prepares the running environment.
 ```
 
 Once the kernel is ready, any Python code that is written in a `{code-cell}`
-with `ipython3` will have the option to be modified and re-run in real time.
+with `ipython3` can be modified and re-run in real time.
 The current page is an example in which you can modify all the cells. 
 
-*`Quarto`* does not currently support _Thebe_, but it supports launching the
+`Quarto` does not currently support _Thebe_, but it supports launching the
 code in a third party environment like _MyBinder_ by adding the following
 `yaml` configuration in the header of the Markdown file
 
@@ -174,7 +172,7 @@ code in a third party environment like _MyBinder_ by adding the following
 code-links: binder
 ```
 
-*`Quarto`* has good integration with [Shiny](https://shiny.posit.co/) which has
+`Quarto` has good integration with [Shiny](https://shiny.posit.co/) which has
 additional functionalities that can bee seen in Section [](sec:exa:run).
 
 
@@ -210,7 +208,7 @@ the mouse.
 ```
 ````
 
-The following code is an example
+The following code is an example:
 
 ```{code-cell} ipython3
 :tags: [hide-input, thebe-init]
@@ -230,7 +228,7 @@ cell
 print(hidden_text)
 ```
 
-The following code is a very simple example on how to create a lineplot which
+The following code illustrates how to create a lineplot which
 can be easily modified in a Live environment.
 
 ```{code-cell} ipython3
@@ -243,11 +241,11 @@ plt.plot([0, 1, 2, 6], [0, 4, 2, 5], 'o-')
 ## Exploration of tables
 
 In data analysis it is common to inspect large amounts of data which in certain
-cases is stored in a tabular form. Pandas is a Python library that is able to
+cases is stored in a tabular form. `Pandas` is a Python library that is able to
 produce `Data Frames` (similar to the `Data Frames` from the `R` programming
 language), and can produce summaries and visualisations in various output
 formats. The following example shows the recorded temperatures (Celsius) in
-Bristol as shown in the Wikipedia article[^bristol].
+Bristol as shown in its Wikipedia article[^bristol].
 
 [^bristol]: https://en.wikipedia.org/wiki/Bristol
 
@@ -279,7 +277,7 @@ df.describe()
 
 Figures generated with plotting libraries can also be rendered and shown as
 static images (e.g. matplotlib, pyplot, bokeh). The following is an example
-with the previous temperatures rendered with Matplotlib.
+with the previous temperatures rendered with `Matplotlib``.
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
