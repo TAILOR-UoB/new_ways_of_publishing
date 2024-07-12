@@ -55,17 +55,17 @@ provide the results to the authoring application. The default kernel is the
 [IPython](https://ipython.org/). Common functionalities added via the code
 cells are the generation of figures, tables, plots, and interactive elements
 and the analysis of data. Jupyter Notebooks have a file extension `.ipynb` and
-can be edited with authoring tools like *Jupyter Notebook*, *Jpyter Lab*,
+can be edited with authoring tools like `Jupyter Notebook`, *Jupyter Lab*,
 *Google Colab*, and most *integrated development environments* (IDEs) like
 *PyCharm*, *Microsoft Visual Studio*, *Posit*, and *RStudio* (See more in the
 section
 [](sec:aut:com:nar)). 
 
-In *Jupyter Book* and *Quarto* projects the configuration of **Jupyter
-Notebooks** is general across the project. However, *Quarto* requires a *Raw*
+In `Jupyter Book` and `Quarto` projects the configuration of **Jupyter
+Notebooks** is general across the project. However, `Quarto` requires a *Raw*
 cell at the beginning of the notebook with the `title`, `author`, and any
 additional options that you want to include in order to be rendered. The
-following is a configuration example for *Quarto*
+following is a configuration example for `Quarto`
 
 ```yaml
 ---
@@ -82,7 +82,7 @@ format:
 (sec:com:nar:con)=
 ### Markdown files
 
-In **Jupyter Book**, **Markdown** files with dynamic content require a YAML
+In *`Jupyter Book`*, **Markdown** files with dynamic content require a YAML
 configuration in the header indicating some parameters about
 the type of file and the kernel to use. There are kernels for different
 programming languages like R, Python, Julia, and more. For example, the
@@ -116,8 +116,8 @@ jupyter-book myst init markdownfile.md --kernel kernelname
 Additional documentation can be found at
 https://jupyterbook.org/en/stable/file-types/myst-notebooks.html.
 
-In **Quarto**, 
-Running Python code in the **Quarto** publishing system requires the `jupyter`
+In *`Quarto`*, 
+Running Python code in the *`Quarto`* publishing system requires the `jupyter`
 Python package and the specification of the `python` command to use in the
 `YAML` header or in the `_quarto.yml` configuration file.
 
@@ -130,7 +130,7 @@ jupyter: python3
 
 In **Jupyter Books**, [Thebe](https://thebe.readthedocs.io/en/stable/) offers a
 solution to launch the kernel in the current page (without the need to jump to
-a third party website). By default, this *Jupyter Book* has been configured to
+a third party website). By default, this `Jupyter Book` has been configured to
 run Thebe with the third party service *MyBinder*.  It is also necessary to add
 the following line of code before the first title of the markdown document
 
@@ -165,7 +165,7 @@ Once the kernel is ready, any Python code that is written in a `{code-cell}`
 with `ipython3` will have the option to be modified and re-run in real time.
 The current page is an example in which you can modify all the cells. 
 
-**Quarto** does not currently support _Thebe_, but it supports launching the
+*`Quarto`* does not currently support _Thebe_, but it supports launching the
 code in a third party environment like _MyBinder_ by adding the following
 `yaml` configuration in the header of the Markdown file
 
@@ -174,7 +174,7 @@ code in a third party environment like _MyBinder_ by adding the following
 code-links: binder
 ```
 
-**Quarto** has good integration with [Shiny](https://shiny.posit.co/) which has
+*`Quarto`* has good integration with [Shiny](https://shiny.posit.co/) which has
 additional functionalities that can bee seen in Section [](sec:exa:run).
 
 

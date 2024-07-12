@@ -2,7 +2,7 @@
 # Examples
 
 In this section we provide multiple examples of the type of content that can be
-generated with publishing systems like *Jupyter Book* and *Quarto*. We divided
+generated with publishing systems like `Jupyter Book` and `Quarto`. We divided
 the different types into three subsections: [](sec:static) is rendered during
 the creation of the website/book and is kept static, [](sec:com:nar)
 includes computational code cells that are rendered during the creation of the

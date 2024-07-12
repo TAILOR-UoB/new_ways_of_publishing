@@ -175,7 +175,7 @@ presentations. It supports features like animations, export to PDF, an
 intuitive navigation of the slides, speaker notes, Markdown support, LaTeX
 support, laser-like pointer, and drawing tools. The presentations can be edited
 with any HTML editor or with the online visual editor [](https://slides.com/).
-The folloiwng HTML code is a fully working *reveal.js* presentation
+The folloiwng HTML code is a fully working `reveal.js` presentation
 
 ```html
 <html>
@@ -198,9 +198,9 @@ The folloiwng HTML code is a fully working *reveal.js* presentation
 </html>
 ```
 
-*Reveal.js* is also supported by
-multiple formatting tools like *Quarto*, *Jupyter Notebook*, and *pandoc* that
-which convert markdown files to reveal.js presenations.
+`reveal.js` is also supported by
+multiple formatting tools like `Quarto`, `Jupyter Notebook`, and `pandoc` that
+which convert markdown files to `reveal.js` presentations.
 
 
 :::{admonition} D2L-Book: A Toolkit for Hands-on Books
