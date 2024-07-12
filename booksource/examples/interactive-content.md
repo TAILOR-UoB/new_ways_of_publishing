@@ -27,7 +27,7 @@ live code that can be modified and re-run to generate different results.
 However, it requires a third party server (e.g. Google Colab, MyBinder,
 SageMaker Studio Lab, or others). On the other hand, there are some methods to
 run code in the same web browser without the need of an external computation
-resource. In this Section we demonstrate how this can be achieved with
+resource. In this section we demonstrate how this can be achieved with
 Shinylive.
 
 (sec:int:plo)=

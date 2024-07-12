@@ -44,7 +44,7 @@ showcasing each example.
 %
 %The content of this website is hosted as static content in GitHub Pages,
 %however some of the examples shown in this section require a third party server
-%that is able to run computational code on demand. For that reason, next Section
+%that is able to run computational code on demand. For that reason, the next section
 %[](sec:exa:com:inf) describes some of the limitations and considerations when
 %We provide some considerations to keep in mind.
 %

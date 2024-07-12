@@ -359,5 +359,5 @@ print(f"The current BPython version is {bpython.__version__}")
 ```
 
 Another example with a complex 3D surface visualisation from the Matplotlib
-documentation was already shown in the Section [](sec:com:nar:plo).
+documentation was already shown in Section [](sec:com:nar:plo).
 
