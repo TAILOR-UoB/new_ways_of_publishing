@@ -24,14 +24,14 @@ This use case explains the process followed to generate the `Quarto` course
 material. In order to replicate the steps involved you can {download}`download
 the presentation source files from this link <./data/cla-cal-slides.zip>`. 
 
-To generate the slides first unzip the downloaded file and run `pdfLaTeX` and
+To generate the slides first unzip the downloaded file and run `pdflatex` and
 `biber` as follows
 
 ```shell
 unzip -X cla_cal_slides.zip
-pdfLaTeX main.tex
+pdflatex main.tex
 biber main
-pdfLaTeX main.tex
+pdflatex main.tex
 ```
 
 The rest of this section uses the content of the zip file to extend the `Quarto`
@@ -60,13 +60,13 @@ The first thing that needed to be changed was to define the command
 lots of other definitions and commands. Remove the line 44 that loads the
 external file `frame-commands.tex`.
 
-```LaTeX
-44: \input{LaTeX/frame-commands}
+```latex
+44: \input{latex/frame-commands}
 ```
 
 And define the new command `brigthFrame` in the `main.tex` file
 
-```LaTeX
+```latex
 \newcommand{\brightFrame}[2]{
   \begin{frame}
     \frametitle{#1}
@@ -178,7 +178,7 @@ output makes it difficult to fit the figures in an appealing manner. For that
 reason, we had to manually adjust the automated generated markdown code. The
 original LaTeX code 
 
-```LaTeX
+```latex
 \includegraphics[height=0.7\textheight]{figures/ROCCH.pdf}\hfill
 \includegraphics[height=0.7\textheight]{figures/ROCcal2.pdf}\\
 Source: \textcite{flach2016roc}
@@ -186,7 +186,7 @@ Source: \textcite{flach2016roc}
 
 which considered the height of the slides to position them correctly as follows
 
-![](images/LaTeX-two-columns.jpg)
+![](images/latex-two-columns.jpg)
 
 The code was automatically converted to markdown keeping the original height
 proportions
@@ -233,7 +233,7 @@ symbol) were not ignored during the conversion to markdown. The fourth
 line of the following example should be removed from the generated markdown
 file.
 
-```LaTeX
+```latex
 confidence $c$, is equal to $c$:  
 \begin{align*} 
 P(Y=i \: | \: \ph_i(\vx)=c)=c\qquad\text{where }\ i=\argmax_j \ph_j(\vx).
@@ -493,7 +493,7 @@ directly to HTML using the MyST client Python package.
 However, we didn't find a method to obtain the intermediate MyST markdown
 files that are automatically generated, which may have made the process
 described above with pandoc much easier. A guide on how to do this conversion
-can be found at https://mystmd.org/guide/writing-in-LaTeX. This section also
+can be found at https://mystmd.org/guide/writing-in-latex. This section also
 provides a quick summary of the guide that results in a good HTML version. 
 
 This method requires the installation of the [MyST client](https://mystmd.org/guide/installing), 
@@ -527,7 +527,7 @@ One consideration from this example is that the LaTeX environment `refsection`
 is not currently supported, and all the environments need to be removed. This
 can be done by removing the beginning and end of each environment.
 
-```LaTeX
+```latex
 \begin{refsection}
 ...
 \end{refsection}
