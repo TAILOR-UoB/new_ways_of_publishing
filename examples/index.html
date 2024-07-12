@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Examples &#8212; New ways of Publishing</title>
+    <title>From static and dynamic to interactive content &#8212; New ways of Publishing</title>
   
   
   
@@ -194,7 +194,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../introduction/authoring-tools.html">Authoring tools</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">From static and dynamic to interactive content</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="static-content.html">Static content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamic-content.html">Dynamic content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interactive-content.html">Interactive content</a></li>
@@ -411,7 +411,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Examples</h1>
+    <h1>From static and dynamic to interactive content</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -421,7 +421,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-infrastructure-considerations">Computational infrastructure considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-infrastructure">Computational infrastructure</a></li>
 </ul>
             </nav>
         </div>
@@ -433,32 +433,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="examples">
-<span id="sec-exa"></span><h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
-<p>In this section we provide multiple examples of the type of content that can be
-generated with publishing systems like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>. We divided
-the different types into three subsections: <a class="reference internal" href="static-content.html#sec-static"><span class="std std-ref">Static content</span></a> is rendered during
-the creation of the website/book and is kept static, <a class="reference internal" href="dynamic-content.html#sec-com-nar"><span class="std std-ref">Dynamic content</span></a>
-includes computational code cells that are rendered during the creation of the
-website/book but can be modified and re-run on demand,  and <a class="reference internal" href="interactive-content.html#sec-exa-run"><span class="std std-ref">Interactive content</span></a>
-includes interactive elements like buttons, sliders, interactive figures and
-more. The provided examples are not exhaustive and additional information can
-be found in the documentation of <a class="reference external" href="https://quarto.org/docs/guide/">Quarto</a>,
-<a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book</a>.</p>
-<section id="computational-infrastructure-considerations">
-<span id="sec-exa-com-inf"></span><h2>Computational infrastructure considerations<a class="headerlink" href="#computational-infrastructure-considerations" title="Link to this heading">#</a></h2>
-<p>An important consideration when designing online teaching material is where the
-material is going to be hosted. The capabilities of the hosting may affect the
-type of content that can be included.
+  <section class="tex2jax_ignore mathjax_ignore" id="from-static-and-dynamic-to-interactive-content">
+<span id="sec-exa"></span><h1>From static and dynamic to interactive content<a class="headerlink" href="#from-static-and-dynamic-to-interactive-content" title="Link to this heading">#</a></h1>
+<p>In this section we provide a range of examples of the kinds of content that can be
+authored with publishing systems such as <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>.
+We consider three different types of content:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="static-content.html#sec-static"><span class="std std-ref">Static content</span></a> is rendered during the creation of the website/book and is kept static;</p></li>
+<li><p><a class="reference internal" href="dynamic-content.html#sec-com-nar"><span class="std std-ref">Dynamic content</span></a> includes computational code cells that are rendered during the creation of the
+website/book but can be modified and re-run on demand;  and</p></li>
+<li><p><a class="reference internal" href="interactive-content.html#sec-exa-run"><span class="std std-ref">Interactive content</span></a> provides interactive elements such as buttons, sliders, interactive figures and
+more.
+Many more examples can be found in the documentation of <a class="reference external" href="https://quarto.org/docs/guide/">Quarto</a> and
+<a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book</a>.</p></li>
+</ul>
+<section id="computational-infrastructure">
+<span id="sec-exa-com-inf"></span><h2>Computational infrastructure<a class="headerlink" href="#computational-infrastructure" title="Link to this heading">#</a></h2>
+<p>An important consideration when designing online teaching material is the location
+where the material will be hosted and served.
+The host capabilities may affect the type of content that can be included.
 For example, the content of this roadmap is being hosted as a static webpage thanks to the
 free service offered by <a class="reference external" href="https://pages.github.com/">GitHub pages</a>. However,
 most free hosting services do not provide computational capabilities for
 dynamic or interactive functionalities. For instance, the
-<a class="reference internal" href="dynamic-content.html#sec-com-nar"><span class="std std-ref">Dynamic content</span></a> can be visualised as a static web page but has the capabilities
-of being run by a third party server for its dynamic functionalities. Services
-like <em>MyBinder</em>, <em>Google Colab</em>, offer free tier versions but they may be slow
+<a class="reference internal" href="dynamic-content.html#sec-com-nar"><span class="std std-ref">Dynamic content</span></a> material is visualised as a static web page by Github pages
+but the same content can be run by a third party server for its dynamic functionalities.
+Services such as <em>MyBinder</em> and <em>Google Colab</em>, offer free tier versions but they may be slow
 or fail to run for various reasons (e.g. connection errors or high server
-workload). Some parts of the <a class="reference internal" href="interactive-content.html#sec-exa-run"><span class="std std-ref">Interactive content</span></a> may also require a third party
+workload). Parts of the <a class="reference internal" href="interactive-content.html#sec-exa-run"><span class="std std-ref">Interactive content</span></a> of the roadmap may also require a third party
 service. Additional information about these requirements is specified when
 showcasing each example.</p>
 </section>
@@ -536,7 +538,7 @@ showcasing each example.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-infrastructure-considerations">Computational infrastructure considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-infrastructure">Computational infrastructure</a></li>
 </ul>
   </nav></div>
 
