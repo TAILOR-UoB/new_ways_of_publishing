@@ -2,7 +2,7 @@
 
 Available tools in the last decade
 
-- [Posit Workbench](https://posit.co/products/enterprise/workbench/)(formerly
+- [Posit Workbench](https://posit.co/products/enterprise/workbench/) (formerly
   RStudio):
   Integrated management of data science for teams, allowing multiple
   collaborators editing the same source code for `Quarto` applications among

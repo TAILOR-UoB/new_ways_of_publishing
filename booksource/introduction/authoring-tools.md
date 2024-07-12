@@ -109,7 +109,7 @@ create generic input artefacts that are later combined by a formatting tool
 is very similar to the common process followed in programming compiled
 programming languages. This has facilitate the adoption of IDEs as authoring
 tools. Microsoft Visual Studio and [Posit
-Workbench](https://posit.co/products/enterprise/workbench/)(formerly
+Workbench](https://posit.co/products/enterprise/workbench/) (formerly
 [RStudio](https://posit.co/download/rstudio-desktop/)) have tools to work with
 the `Quarto` environment. Both of them provide options for collaborative and 
 contemporaneous editing.
@@ -118,15 +118,15 @@ contemporaneous editing.
 (sec:aut:com:nar)=
 ### Computational notebook editors
 
-Jupyter Notebooks are documents that offer *computational narratives* by
+`Jupyter Notebooks` are documents that offer *computational narratives* by
 interlacing formatted markdown text and executable code cells, providing
 the output as additional content. The idea has been adopted by other platforms
 that have created similar notebook environments. Most of these platforms can
 convert the resulting computational narratives into various formats like html,
 pdf, or text documents. Jupyter Notebook and
 [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) offer the official
-environment for the original Jupyter Notebooks. All of the following projects
-offer cloud-based platforms to edit Jupyter notebooks or similar. [Google
+environment for the original `Jupyter Notebooks`. All of the following projects
+offer cloud-based platforms to edit `Jupyter Notebooks` or similar. [Google
 Colab](https://colab.research.google.com/) is hosted by
 Google and free for low-intensive programs, [Kaggle
 Notebooks](https://www.kaggle.com/notebooks) is 
@@ -136,7 +136,7 @@ Learning, offering a free solution to participate into Kaggle competitions.
 and focused on Data Science and Machine Learning with
 CPUs and GPUs available. It supports various programming languages Python, R,
 F\# and Julia, among others. Other platforms that are similar to support
-functionalities similar to Jupyter Notebook are [CoCalc](https://cocalc.com/),
+functionalities similar to `Jupyter Notebook` are [CoCalc](https://cocalc.com/),
 [JetBrains Datalore](https://datalore.jetbrains.com/),
 [Deepnote](https://deepnote.com/), [Hex](https://hex.tech/),
 [Pluto.jl](https://plutojl.org/), [Nextjournal](https://nextjournal.com/), and
