@@ -439,7 +439,7 @@ int main() {
 ````
 
 (sec:citations)=
-## Citations
+## Citations and bibliography
 
 It is possible to add citations and a bibliography using a `bibtex` file. For
 example, the references in this webpage are all stored in the
