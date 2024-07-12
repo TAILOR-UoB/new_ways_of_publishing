@@ -5,7 +5,7 @@ website. It has been prepared as a deliverable of the
 [TAILOR Network of Trustworthy AI through Integrating Learning, Optimisation and Reasoning](https://tailor-network.eu) 
 as part of Work Package 9: Network Collaboration. 
 
-This source code serves as an example on how to use Jupyter Book to create
+This source code serves as an example on how to use `Jupyter Book` to create
 online training material.
 
 # Development

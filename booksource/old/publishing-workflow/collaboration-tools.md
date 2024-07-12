@@ -5,7 +5,7 @@ Available tools in the last decade
 - [Posit Workbench](https://posit.co/products/enterprise/workbench/)(formerly
   RStudio):
   Integrated management of data science for teams, allowing multiple
-  collaborators editing the same source code for Quarto applications among
+  collaborators editing the same source code for `Quarto` applications among
   others. 
 - [Starboard](https://starboard.gg/): Notebooks that run in the client web
 browser.
@@ -93,7 +93,7 @@ Comparing data dashboarding tools and frameworks [^1]
     to organise ideas between them in a virtual plane that resembles a physical
     surface.
   - Pandoc to convert between different file formats (e.g. Word Document to
-    Markdown). This is one of the integral parts of Quarto publishing system.
+    Markdown). This is one of the integral parts of `Quarto` publishing system.
 - [Pluto.jl](https://plutojl.org/):
   - For programming language Julia
   - Creates notebooks that can be exported to html or pdf

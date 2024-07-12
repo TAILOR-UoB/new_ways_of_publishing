@@ -47,7 +47,7 @@ That's all that is needed to get started!
 
 ## Quickly add YAML metadata for MyST Notebooks
 
-If you have a markdown file and you'd like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:
+If you have a markdown file and you'd like to quickly add YAML metadata to it, so that `Jupyter Book` will treat it as a MyST Markdown Notebook, run the following command:
 
 ```
 jupyter-book myst init path/to/markdownfile.md

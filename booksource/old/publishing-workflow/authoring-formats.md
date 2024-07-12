@@ -8,5 +8,5 @@
 - Markdown (2004) a markup language to create formatted text using plain text that is
   both human and machine readable.
 - R Markdown
-- Quarto Markdown
+- `Quarto` Markdown
 - MyST Markdown is a community-driven

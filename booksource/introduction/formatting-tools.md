@@ -62,7 +62,7 @@ Markdown](https://executablebooks.org/en/latest/tools/#tools-myst). The
 Executable Books Project is an international collaboration to build open source
 tools for publishing computational documents based on the
 [Jupyter](https://jupyter.org/)
-ecosystem. Jupyter Book can read markdown, MyST Markdown, Jupyter
+ecosystem. `Jupyter Book` can read markdown, MyST Markdown, Jupyter
 notebooks and
 [reStructuredText](https://docutils.sourceforge.io/rst.html). It is based
 on the [Sphinx documentation engine](https://www.sphinx-doc.org/en/master/)
@@ -75,10 +75,10 @@ environments thanks to the integration of Binder, Thebe and Google
 [Colab](https://colab.research.google.com/). It supports multiple types of narrative content like highlighted
 notes, code cells, quotations, epigraphs, glossaries, index of terms,
 footnotes, references, grids, cards, dropdown menus, tab content, maths,
-equations, proofs, theorems, algorithms, and more. The Jupyter Book system has
+equations, proofs, theorems, algorithms, and more. The `Jupyter Book` system has
 been used in multiple ocasions to publish online material, an extensive gallery
 can be found at https://executablebooks.org/en/latest/gallery/. This website
-has been created with Jupyter Book and serves as an example of some of its
+has been created with `Jupyter Book` and serves as an example of some of its
 functionalities.
 
 %- [Jupyter{book}](https://jupyterbook.org/en/stable/intro.html)
@@ -147,7 +147,7 @@ objective of facilitating the collaboration to create scientific content.
 Quarto is sponsored by [Posit](https://posit.co), and follows the development of the R Markdown
 publishing system extending the focus from the programming language R to
 Python, R, Julia and Observable. It supports Jupyter notebooks, markdown and
-their own extension Quarto markdown. The conversion to different output formats
+their own extension `Quarto` markdown. The conversion to different output formats
 is done with [pandoc](https://pandoc.org/), which is able to produce presentations (Reveal.js),
 dashboards, websites, blogs, books, PDFs, Microsoft Word, ePub and more. Quarto
 is integrated into multiple authoring environments like Microsoft Visual
@@ -155,10 +155,10 @@ Studio, Jupyter Lab, [Rstudio](https://posit.co/download/rstudio-desktop/), and 
 among others. 
 
 %- [Quarto](https://quarto.org): 
-%  - Quarto supports dynamic content with Python, R, Julia and Observable
+%  - `Quarto` supports dynamic content with Python, R, Julia and Observable
 %  - programming languages.
-%  - Quarto uses pandoc to convert the input artefacts to its output.
-%  - Quarto supports plain text markdown, Jupyter notebooks and an augmented
+%  - `Quarto` uses pandoc to convert the input artefacts to its output.
+%  - `Quarto` supports plain text markdown, Jupyter notebooks and an augmented
 %  - markdown, 
 %  - Integration with Posit Connect (former RMarkdown), Atlassian Confluence, Visual
 %    Studio, 

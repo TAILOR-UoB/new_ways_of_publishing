@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 (sec:use:qua)=
-# Create a Quarto course from scratch
+# Create a `Quarto` course from scratch
 
 In this use-case scenario we created an 
 [online course](https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html) entirely with `Quarto`. 
@@ -103,7 +103,7 @@ which would be rendered as follows:
 
 ![Rounded rectangle](images/example.png)
 
-However, Quarto markdown also allows changes to the style of the image, for
+However, `Quarto` markdown also allows changes to the style of the image, for
 example the alignment and size
 
 ```markdown

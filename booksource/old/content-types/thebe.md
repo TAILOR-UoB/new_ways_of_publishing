@@ -17,7 +17,7 @@ kernelspec:
 # Thebe
 
 With the help of [Thebe](https://thebe.readthedocs.io/en/stable/) it is
-possible to add interactive code inline. By default, this Jupyter Book has been
+possible to add interactive code inline. By default, this `Jupyter Book` has been
 configured to run Thebe with MyBinder whenever a section specifies in the Yaml
 header the following tags.
 

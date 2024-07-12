@@ -27,7 +27,7 @@ Google Colab, or others. This type of content is very useful for educational
 material in science, technology, engineering and mathematics. Jupyter Notebooks
 and other programming environments that integrate a textual narrative,
 computational cells and their results are really common. Publishing systems
-like Jupyter Book and Quarto support multiple ways to write this type of
+like `Jupyter Book` and `Quarto` support multiple ways to write this type of
 material by using directives (See [](sec:ro:di)) for code in markdown files, or
 directly using Jupyter Notebooks.  This section serves as an example of the
 functionalities that can be integrated in a Markdown file in a Jupyter Book. We
