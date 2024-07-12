@@ -56,7 +56,7 @@ fig.show()
 ## Maps with IpyLeaflet
 
 The Python library [ipyleaflet](https://ipyleaflet.readthedocs.io/en/latest/)
-is able to draw maps using the JavaScript library Leaflet which are interactive
+can display maps using the JavaScript library Leaflet which are interactive
 and mobile-friendly.
 
 ```{code-cell} ipython3
@@ -74,7 +74,7 @@ display(m)
 
 ## Jupyter Widgets
 
-[Jupyter Widgest](https://ipywidgets.readthedocs.io/en/latest/) provide a set
+[Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/) provide a set
 of interfaces to interact with Python code.  Some of the interfaces are
 buttons, sliders, In a _Live environment_ this interactions result in the code
 being executed.
@@ -89,7 +89,7 @@ display(a,b)
 mylink = widgets.jslink((a, 'value'), (b, 'value'))
 ```
 
-The results of the interactions with the widgets can be used in following code
+The results of the interactions with the widgets can be used in the following code
 cells.
 
 ```{code-cell} ipython3
@@ -215,5 +215,4 @@ app = App(app_ui, None)
 ```
 ````
 
-More complex examples are shown in use case scenarios [](sec:use:qua) and
-[](sec:use:lat).
+More complex examples are demonstrated in the following sections. 
