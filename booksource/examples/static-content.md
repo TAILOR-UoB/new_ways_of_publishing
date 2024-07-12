@@ -441,15 +441,26 @@ int main() {
 (sec:citations)=
 ## Citations
 
-It is possible to cite references from a bibliography that is stored in a
-`bibtex` file. For example, the following syntax: `` {cite}`ruby` `` will
-generate the following citation: {cite}`ruby`.
+It is possible to add citations and a bibliography using a `bibtex` file. For
+example, the references in this webpage are all stored in the
+[](../references.bib) file. The bibliography can be inserted in any particular
+section with the directive `{bibliography}`. The current [](sec:references)
+section contains the following markdown content:
 
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
+````
+(sec:references)=
+# References
+
+```{bibliography}
+```
+````
+
+Once a bibliography has been added in the document, it is possible to cite any
+of the references with the `{cite}` role. The following role `` {cite}`sokol21`
+`` will generate the citation {cite}`sokol21`, which provides information about
+the reference when hovering the mouse over it. The list of references in the
+bibliography will only contain those reference that are cited at least once in
+the whole website.
 
 ## Videos
 

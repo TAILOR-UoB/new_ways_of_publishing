@@ -1,3 +1,4 @@
+(sec:references)=
 # References
 
 ```{bibliography}
