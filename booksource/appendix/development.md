@@ -1,4 +1,4 @@
-# Appendix: Development environment
+# Appendix B: Development environment
 
 In order to build this website first you need to `clone` or `fork` the source
 repository. You can find a link to the repository by clicking on the GitHub
