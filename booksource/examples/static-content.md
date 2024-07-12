@@ -1,7 +1,7 @@
 (sec:static)=
 # Static content
 
-Prior to the world-wide web, **static content** was the only type of content that could be 
+Prior to the World Wide Web, **static content** was the only type of content that could be 
 published. It is primarily content that can be printed 
 without loss of information, the most common forms of which are text, tables and
 figures. 
