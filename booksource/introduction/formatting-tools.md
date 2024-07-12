@@ -170,9 +170,37 @@ among others.
 (sec:revealjs)=
 ## Reveal.js
 
-:::{note}
-TO DO
-:::
+[Reveal.js](https://revealjs.com/) is an open source framework for HTML
+presentations. It supports features like animations, export to PDF, an
+intuitive navigation of the slides, speaker notes, Markdown support, LaTeX
+support, laser-like pointer, and drawing tools. The presentations can be edited
+with any HTML editor or with the online visual editor [](https://slides.com/).
+The folloiwng HTML code is a fully working *reveal.js* presentation
+
+```html
+<html>
+  <head>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>Slide 1</section>
+        <section>Slide 2</section>
+      </div>
+    </div>
+    <script src="dist/reveal.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
+```
+
+*Reveal.js* is also supported by
+multiple formatting tools like *Quarto*, *Jupyter Notebook*, and *pandoc* that
+which convert markdown files to reveal.js presenations.
 
 
 :::{admonition} D2L-Book: A Toolkit for Hands-on Books
