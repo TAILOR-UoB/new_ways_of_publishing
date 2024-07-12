@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Conclusion &#8212; New ways of Publishing</title>
+    <title>Concluding remarks &#8212; New ways of Publishing</title>
   
   
   
@@ -61,6 +61,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'conclusion';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
@@ -203,7 +205,7 @@
 <li class="toctree-l2"><a class="reference internal" href="use-cases/tex-to-qmd.html">Convert a LaTeX Beamer presentation to Quarto</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Conclusion</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Concluding remarks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendix/open-courses.html">Appendix: Open Courses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendix/development.html">Appendix: Development environment</a></li>
@@ -407,7 +409,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Conclusion</h1>
+    <h1>Concluding remarks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -421,31 +423,54 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="conclusion">
-<span id="sec-conclusion"></span><h1>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h1>
-<p>Publishing teaching material nowadays goes beyond printable documents. The
-growth of the World Wide Web is enabling the modernisation of teaching material
+  <section class="tex2jax_ignore mathjax_ignore" id="concluding-remarks">
+<span id="sec-conclusion"></span><h1>Concluding remarks<a class="headerlink" href="#concluding-remarks" title="Link to this heading">#</a></h1>
+<p>Technology has moved far beyond the printing press, yet academic publishing
+is to a large extent still informed by the legacy format of printable documents.
+The growth of the World Wide Web is enabling the modernisation of teaching material
 which can be accessed from a large variety of devices. It also provides a
 platform for dynamic and interactive material that is automatically adjusted to
-the publishing medium. However, the rapid growth of web technologies creates a
-dynamic environment for software and publishing tools that are still being
+the publishing medium.
+This roadmap has been written to help AI researchers embrace these new ways of publishing
+and the new modes of learning that they facilitate.</p>
+<p>It should also be said that the rapid growth of web technologies creates a
+transitional environment for software and publishing tools that are still being
 developed and do not address all the requirements of such systems. Publishing
 systems like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> are among the most curated ones but are
-under heavy development. In this deliverable, we provided a roadmap to
-publishing online material with guidelines on state-of-the-art tools, examples
-and use cases. We focused on the publishing paradigm SIMO
-(Single-Input-Multiple-Output) which can be easily tackled with <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> (with
-some current limitations). Another paradigm that has not been explored is the
-MIMO (Multiple-Input-Multiple-Ouput) in which a composition tool is able to
-collate different types of input artefacts (potentially from different sources)
-and group them automatically to generate different types of publishable
-outputs. Another limitation of available solutions is the lack of good
-real-time collaboration functionalities in the state-of-the-art tools. This
-complicates the creation of material with multiple authors involved. Platforms
-like Overleaf, Google Docs, and Typst are examples of good collaboration tools
-but lack the flexibility of the proposed SIMO paradigm. New platforms with
-similar functionalities for <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> and <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> need to be created.</p>
-</section>
+under heavy development.
+In a year from now they will have many new features that will push the boundaries even further.
+The challenge is for all of us to keep abreast of these developments and to make sure that
+we use the best tools for our purposes,
+while keeping in mind that this should not just be driven by the technological push
+but strike a balance with well-understood educational needs.</p>
+<p>One area where current technology does not quite meet users’ needs is in collaborative authoring.
+Markdown-based formatting tools such as <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> offer maximum freedom how the authoring artefacts are produced,
+which some will see as an advantage but also means that a collaborative environment for authoring
+markdown files (e.g., <a class="reference external" href="https://hackmd.io/">HackMD</a>) is separate from <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> formatting.
+This situation is similar to LaTeX authoring prior to 2011 when Overleaf and ShareLaTeX were developed.
+Interestingly, the collaborative features in Overleaf such as commenting and tracked changes followed the model set by WYSIWYG editors such as Microsoft Word and Google Docs.
+A good collaborative environment combined with the flexibility of the Single-In-Multiple-Out paradigm would pave the way to the <strong>Multiple-In-Multiple-Out (MIMO)</strong> publishing paradigm that was already envisaged in the
+TAILOR deliverable D9.3 <span id="id1">[<a class="reference internal" href="references.html#id5" title="Kacper Sokol and Peter Flach. Training platform – beta report. Technical Report, Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization (TAILOR), 2021. URL: https://tailor-network.eu/wp-content/uploads/2021/11/Extended-Deliverable-9.3-Report-v1.1.pdf.">SF21</a>]</span>.
+Such a system would pull together different authoring artefacts, possibly from different locations, and composes them in all the required output formats.</p>
+<div class="mermaid">
+            %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
+
+flowchart LR
+    I1(&quot;&lt;center&gt;Text&lt;/center&gt;&quot;):::input --- C{{&quot;Composition&quot;}}:::foo
+    classDef input fill:#ffa;
+    style C fill:#f9f
+    I2(&quot;Figures&quot;):::input --- C:::foo
+    I3(Code):::input --- C:::foo
+    I4(...):::input --- C:::foo
+    C --&gt; O1[&quot;Published \n Paper \n (PDF)&quot;]
+    C --&gt; O2[&quot;Presentation \n Slides \n (PPTX/PDF)&quot;]
+    C --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
+    C --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
+    style O1 fill:#fca
+    style O2 fill:#bff
+    style O3 fill:#f99
+    style O4 fill:#bfb
+        </div></section>
 
     <script type="text/x-thebe-config">
     {
