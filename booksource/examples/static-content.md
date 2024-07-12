@@ -1,11 +1,14 @@
 (sec:static)=
 # Static content
 
-Broadly speaking, **static content** was the only type of content that could be 
-published prior to the world-wide web. It is primarily content that can be printed 
+Prior to the world-wide web, **static content** was the only type of content that could be 
+published. It is primarily content that can be printed 
 without loss of information, the most common forms of which are text, tables and
-figures. In this section we provide several examples on how to produce static
-content in `Jupyter Book` and `Quarto`.
+figures. 
+More broadly, static content is authored once after which it is formatted and rendered the same every time. 
+We therefore also include basic video and audio in this category. 
+In this section we provide several examples on how to produce static
+content in `Jupyter Book` and `Quarto`. 
 
 Both formatting systems are capable of reading `Markdown` and `Jupyter Notebooks` and
 convert them to a variety of output formats. They support particular versions
