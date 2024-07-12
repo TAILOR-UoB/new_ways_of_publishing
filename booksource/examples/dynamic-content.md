@@ -44,15 +44,28 @@ Jupyter Notebook).
 
 ### Jupyter Notebook files
 
-*Jupyter Notebooks* are computational notebooks that integrate textual
-narrative with *MyST Markdown* with cells of code that can be executed to show
-computational results between the text; with a file extension `.ipynb`. This
-format has been widely adopted by multiple authoring and publishing systems
-like *Quarto*, *Jupyter Lab*, *Google Colab*. In *Jupyter Book* and *Quarto*
-projects the configuration of **Jupyter Notebooks** is general accross the
-project. However, *Quarto* requires a *Raw* cell at the begining of the
-notebook with the `title`, `author`, and any additional options that you want
-to include.
+*Jupyter Notebooks* are web-based documents that combine a textual narrative
+(written in a markup language) with computational elements (supporting a
+multitude of programming languages). The code of the notebooks can be executed
+with the help of a
+[kernel](https://docs.jupyter.org/en/latest/projects/kernels.html); a
+*programming language specific* process that can interpret the code, run it and
+provide the results to the authoring application. The default kernel is the
+[ipykernel](https://github.com/ipython/ipykernel) built on top of
+[IPython](https://ipython.org/). Common functionalities added via the code
+cells are the generation of figures, tables, plots, and interactive elements
+and the analysis of data. Jupyter Notebooks have a file extension `.ipynb` and
+can be edited with authoring tools like *Jupyter Notebook*, *Jpyter Lab*,
+*Google Colab*, and most *integrated development environments* (IDEs) like
+*PyCharm*, *Microsoft Visual Studio*, *Posit*, and *RStudio* (See more in the
+section
+[](sec:aut:com:nar)). 
+
+In *Jupyter Book* and *Quarto* projects the configuration of **Jupyter
+Notebooks** is general across the project. However, *Quarto* requires a *Raw*
+cell at the beginning of the notebook with the `title`, `author`, and any
+additional options that you want to include in order to be rendered. The
+following is a configuration example for *Quarto*
 
 ```yaml
 ---

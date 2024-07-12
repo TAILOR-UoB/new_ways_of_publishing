@@ -114,6 +114,8 @@ Workbench](https://posit.co/products/enterprise/workbench/)(formerly
 the `Quarto` environment. Both of them provide options for collaborative and 
 contemporaneous editing.
 
+
+(sec:aut:com:nar)=
 ### Computational narrative editors
 
 Jupyter Notebooks are documents that offer **computational narratives** by
