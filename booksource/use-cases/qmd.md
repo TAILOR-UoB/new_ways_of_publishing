@@ -13,14 +13,15 @@ kernelspec:
 ---
 
 (sec:use:qua)=
-# Create a `Quarto` course from scratch
+# Create a Quarto course from scratch
 
-In this use-case scenario we created an 
+In this section we describe how we created an 
 [online course](https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html) entirely with `Quarto`. 
 The main idea was to create a website with all the necessary content to give a brief
 introduction to a topic, with a set of slides created with the same content, a
 printable version as a pdf, video recordings for each section, all with Python
 interactive examples. 
+
 
 ## Overall structure of the course
 
