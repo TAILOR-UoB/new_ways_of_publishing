@@ -19,7 +19,7 @@ chapters:
   - file: use-cases/tex-to-qmd
 - file: conclusion
 # - file: glossary
-- part: "Appendices"
+- caption: "Appendices"
   sections:
   - file: appendix/open-courses
   - file: appendix/development
