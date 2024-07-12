@@ -16,6 +16,7 @@ cleanbuild: clean build
 
 buildbook:
 	jupyter-book build booksource/ --builder pdfhtml
+	cp booksource/_build/pdf/book.pdf booksource/assets/documents/nwop_book.pdf
 
 serve:
 	python -m http.server 9000 -d booksource/_build/html/

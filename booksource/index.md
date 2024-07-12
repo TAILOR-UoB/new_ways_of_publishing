@@ -1,5 +1,7 @@
 # New Ways of Publishing: A Roadmap to Authoring Online Training Material
 
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](assets/documents/nwop_book.pdf)
+
 This website provides a set of guidelines to publish online training material
 using state-of-the-art web authoring tools, and also serves as an example authored 
 using the `JupyterBook` framework for producing documents from computational content.
