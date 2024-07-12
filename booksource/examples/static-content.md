@@ -123,7 +123,7 @@ creation of a multitude of diagrams including [flowcharts](sec:mer:fc),
 live editor that allows the exploration of various examples, modification and
 creation of new diagrams in the following link https://mermaid.live/edit.
 [WaveDrom](https://wavedrom.com/) is another rendering engine to draw [timing
-diagrams](sec:wd).
+diagrams](sec:wd). Some examples can be found below.
 
 (sec:mer:fc)=
 ### Mermaid flowchart
@@ -153,35 +153,41 @@ flowchart TD
 (sec:mer:sd)=
 ### Mermaid sequence diagram
 
+Example of a sequence diagram with Mermaid showing the interactions between a
+web developer, the hosting and a client web browser.
 
 ````
 ```{mermaid}
 sequenceDiagram
-	participant Alice
-	participant Bob
-	Alice->John: Hello John, how are you?
-	loop Healthcheck
-			John->John: Fight against hypochondria
+	participant Web developer
+	participant Hosting server
+  participant Client web browser
+	Web developer->>Hosting server: Upload webpage source files
+  Client web browser->>Hosting server: Request specific web page
+  Hosting server->>Client web browser: Provide requested web page
+	loop Read
+			Client web browser->Client web browser: User navigates the page
 	end
-	Note right of John: Rational thoughts <br/>prevail...
-	John-->Alice: Great!
-	John->Bob: How about you?
-	Bob-->John: Jolly good!
+  Note right of Client web browser: User clicks a link
+  Client web browser->>Hosting server: Request another page
+  Hosting server->>Client web browser: Provide requested web page
 ```
 ````
 
 ```{mermaid}
 sequenceDiagram
-	participant Alice
-	participant Bob
-	Alice->John: Hello John, how are you?
-	loop Healthcheck
-			John->John: Fight against hypochondria
+	participant Web developer
+	participant Hosting server
+  participant Client web browser
+	Web developer->>Hosting server: Upload webpage source files
+  Client web browser->>Hosting server: Request specific web page
+  Hosting server->>Client web browser: Provide requested web page
+	loop Read
+			Client web browser->Client web browser: User navigates the page
 	end
-	Note right of John: Rational thoughts <br/>prevail...
-	John-->Alice: Great!
-	John->Bob: How about you?
-	Bob-->John: Jolly good!
+  Note right of Client web browser: User clicks a link
+  Client web browser->>Hosting server: Request another page
+  Hosting server->>Client web browser: Provide requested web page
 ```
 
 (sec:mer:mm)=
