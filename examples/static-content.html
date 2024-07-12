@@ -436,7 +436,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-references">Cross-references</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-segments">Code segments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-tabs">Inline-tabs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations-and-bibliography">Citations and bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
 </ul>
             </nav>
@@ -895,16 +895,25 @@ can create tabs to select which content to display. The following is an example 
 </div>
 </div>
 </section>
-<section id="citations">
-<span id="sec-citations"></span><h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
-<p>It is possible to cite references from a bibliography that is stored in a
-<code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example, the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`ruby`</span></code> will
-generate the following citation: <span id="id3">[<a class="reference internal" href="../references.html#id2" title="David Flanagan and Yukihiro Matsumoto. The Ruby Programming Language. O'Reilly Media, 2008.">FM08</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
+<section id="citations-and-bibliography">
+<span id="sec-citations"></span><h2>Citations and bibliography<a class="headerlink" href="#citations-and-bibliography" title="Link to this heading">#</a></h2>
+<p>It is possible to add citations and a bibliography using a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For
+example, the references in this webpage are all stored in the
+<a class="reference download internal" download="" href="../_downloads/33e59b5ca9ec342068223d604c3f8d55/references.bib"><code class="xref download myst docutils literal notranslate"><span class="pre">../references.bib</span></code></a> file. The bibliography can be inserted in any particular
+section with the directive <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code>. The current <a class="reference internal" href="../references.html#sec-references"><span class="std std-ref">References</span></a>
+section contains the following markdown content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(sec:references)=
+# References
+
+```{bibliography}
+```
+</pre></div>
+</div>
+<p>Once a bibliography has been added in the document, it is possible to cite any
+of the references with the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> role. The following role <code class="docutils literal notranslate"><span class="pre">{cite}`sokol21`</span></code> will generate the citation <span id="id3">[<a class="reference internal" href="../references.html#id5" title="Kacper Sokol and Peter Flach. Training platform – beta report. Technical Report, Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization (TAILOR), 2021. URL: https://tailor-network.eu/wp-content/uploads/2021/11/Extended-Deliverable-9.3-Report-v1.1.pdf.">SF21</a>]</span>, which provides information about
+the reference when hovering the mouse over it. The list of references in the
+bibliography will only contain those reference that are cited at least once in
+the whole website.</p>
 </section>
 <section id="videos">
 <h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
@@ -1026,7 +1035,7 @@ allowfullscreen></iframe>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-references">Cross-references</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-segments">Code segments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-tabs">Inline-tabs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations-and-bibliography">Citations and bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
 </ul>
   </nav></div>
