@@ -425,7 +425,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown">Markdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roles-and-directives">Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#callout-blocks">Callout Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams">Diagrams</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-flowchart">Mermaid flowchart</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-sequence-diagram">Mermaid sequence diagram</a></li>
@@ -486,20 +486,34 @@ the directive
 ```
 </pre></div>
 </div>
-<p>Examples of directives can be found in <a class="reference internal" href="#sec-notes"><span class="std std-ref">Notes</span></a>.</p>
+<p>Examples of directives can be found in <a class="reference internal" href="#sec-notes"><span class="std std-ref">Callout Blocks</span></a>.</p>
 </section>
-<section id="notes">
-<span id="sec-notes"></span><h2>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h2>
-<p>Notes are a type of directive supported by Jupyter Book. They allow you to
-create information boxes with a colored title, and main content.</p>
+<section id="callout-blocks">
+<span id="sec-notes"></span><h2>Callout Blocks<a class="headerlink" href="#callout-blocks" title="Link to this heading">#</a></h2>
+<p>Callout Blocks are special boxes with a colored title and a main textual
+content. These can be created with different directives with <code class="docutils literal notranslate"><span class="pre">{note}</span></code> being a
+common example.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
-Here is a note
+
+Here is a note.
 ```
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Here is a note</p>
+<p>Here is a note.</p>
+</div>
+<p>The content of a callout block can be hidden by adding the optional tag <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">dropdown</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
+:class: dropdown
+
+Hidden text.
+```
+</pre></div>
+</div>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>Hidden text.</p>
 </div>
 <p>Other types of notes can be created with the directives <code class="docutils literal notranslate"><span class="pre">attention</span></code>, <code class="docutils literal notranslate"><span class="pre">caution</span></code>,
 <code class="docutils literal notranslate"><span class="pre">danger</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">important</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, <code class="docutils literal notranslate"><span class="pre">tip</span></code>, <code class="docutils literal notranslate"><span class="pre">seealso</span></code>, and more that can
@@ -507,15 +521,20 @@ be found at <a class="reference external" href="https://mystmd.org/guide/directi
 examples.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Tip note</p>
+<p>Tip note.</p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Attention note</p>
+<p>Attention note.</p>
 </div>
 <div class="admonition error">
 <p class="admonition-title">Error</p>
-<p>Error note</p>
+<p>Error note.</p>
+</div>
+<p>It is possible to personalise your own notes with <code class="docutils literal notranslate"><span class="pre">{admonition}</span></code></p>
+<div class="warning admonition">
+<p class="admonition-title">This is a warning block</p>
+<p>with personalised title and body text.</p>
 </div>
 </section>
 <section id="diagrams">
@@ -652,27 +671,96 @@ mindmap
 <section id="cross-references">
 <h2>Cross-references<a class="headerlink" href="#cross-references" title="Link to this heading">#</a></h2>
 <p>Published documents often have internal references to other content in the
-document. In <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> when inserting an image with the following
-directive</p>
+document. By default, all the titles have their own anchor points (move the
+mouse cursor on top of a title to see a <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol indicating a clickable
+anchor point). It is possible to reference sections within the same page by
+creating a link  writing the full title in lower case and dashes instead of
+spaces like <code class="docutils literal notranslate"><span class="pre">[](cross-references)</span></code> which creates a link like
+<a class="reference internal" href="#cross-references"><code class="xref myst docutils literal notranslate"><span class="pre">cross-references</span></code></a>. With this method it is not possible to reference other
+pages; e.g. the link <a class="reference internal" href="#conclusions"><code class="xref myst docutils literal notranslate"><span class="pre">conclusions</span></code></a> should not work but <a class="reference internal" href="#"><span class="doc std std-doc">Static content</span></a>
+does work. A more flexible method is to manually indicate anchor points in
+titles, figures, tables and other content. By adding a label before a title as
+follows</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>(my-label)=
+<span class="gh"># Section title</span>
+</pre></div>
+</div>
+<p>the section can be references with <code class="docutils literal notranslate"><span class="pre">[](my-label)</span></code> or the more flexible role
+<code class="docutils literal notranslate"><span class="pre">{ref}`my-label`</span> </code>. For example the code <code class="docutils literal notranslate"><span class="pre">[](sec:conclusion)</span></code> and
+<code class="docutils literal notranslate"><span class="pre">{ref}`sec:conclusion`</span> </code> will generate a link to the <a class="reference internal" href="../conclusion.html#sec-conclusion"><span class="std std-ref">Conclusion</span></a>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Code</p></th>
+<th class="head text-left"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[](sec:conclusion)</span></code></p></td>
+<td class="text-left"><p><a class="reference internal" href="../conclusion.html#sec-conclusion"><span class="std std-ref">Conclusion</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[Textual</span> <span class="pre">description](sec:conclusion)</span></code></p></td>
+<td class="text-left"><p><a class="reference internal" href="../conclusion.html#sec-conclusion"><span class="std std-ref">Textual description</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{ref}`sec:conclusion`</span> </code></p></td>
+<td class="text-left"><p><a class="reference internal" href="../conclusion.html#sec-conclusion"><span class="std std-ref">Conclusion</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Labels can also be added to figures, tables and equations within their own
+directive tags. For example, in the <code class="docutils literal notranslate"><span class="pre">{figure}</span></code> directives the tag <code class="docutils literal notranslate"><span class="pre">name</span></code>
+specifies the label.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} images/example.svg
-:name: figure-example-1
+:name: fig:ex:1
 
 Caption of the example figure ex1
 ```
 </pre></div>
 </div>
-<p>which is rendered as</p>
-<figure class="align-default" id="figure-example-1">
+<p>The previous code generates the next figure that can be referenced in multiple
+ways.</p>
+<figure class="align-default" id="fig-ex-1">
 <img alt="../_images/example.svg" src="../_images/example.svg" /><figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Caption of the example figure ex1</span><a class="headerlink" href="#figure-example-1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Caption of the example figure number 1</span><a class="headerlink" href="#fig-ex-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>is possible to reference the image with the role <code class="docutils literal notranslate"><span class="pre">{numref}</span></code>Figure %s <figure-example-1>``
-which will show a reference like <a class="reference internal" href="#figure-example-1"><span class="std std-numref">Figure 1</span></a>. The
-same can be done for tables like <a class="reference internal" href="#table-example-1"><span class="std std-numref">Table 1</span></a>, equations like
-Equation <a class="reference internal" href="#equation-equation-example-1">(1)</a> and Sections <a class="reference internal" href="../introduction/index.html#sec-intro"><span class="std std-ref">Introduction</span></a>.</p>
-<div class="pst-scrollable-table-container"><table class="table" id="table-example-1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Caption of the table ex1</span><a class="headerlink" href="#table-example-1" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Code</p></th>
+<th class="head text-left"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[](fig:ex:1)</span></code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#fig-ex-1"><span class="std std-ref">Caption of the example figure number 1</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[Textual</span> <span class="pre">description](fig:ex:1)</span></code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#fig-ex-1"><span class="std std-ref">Textual description</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{ref}`fig:ex:1`</span> </code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#fig-ex-1"><span class="std std-ref">Caption of the example figure number 1</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{numref}`fig:ex:1`</span> </code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#fig-ex-1"><span class="std std-numref">Fig. 1</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{numref}`Figure</span> <span class="pre">%s</span> <span class="pre">and</span> <span class="pre">more</span> <span class="pre">text</span> <span class="pre">&lt;fig:ex:1&gt;`</span> </code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#fig-ex-1"><span class="std std-numref">Figure 1 and more text</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Tables use the tag <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{table} Caption of the table ex1
+:name: tab:ex:1
+
+| header 1 | header 2 |
+| -------- | -------- |
+|    a     |    b     |
+```
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-ex-1">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Caption of the table ex1</span><a class="headerlink" href="#tab-ex-1" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>header 1</p></th>
 <th class="head"><p>header 2</p></th>
@@ -685,9 +773,59 @@ Equation <a class="reference internal" href="#equation-equation-example-1">(1)</
 </tbody>
 </table>
 </div>
-<div class="math notranslate nohighlight" id="equation-equation-example-1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-equation-example-1" title="Link to this equation">#</a></span>\[E = mc^2\]</div>
-<p><code class="docutils literal notranslate"><span class="pre">Quarto</span></code> has its own way to make cross references which can be consulted in
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Code</p></th>
+<th class="head text-left"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[](tab:ex:1)</span></code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#tab-ex-1"><span class="std std-ref">Caption of the table ex1</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[Textual</span> <span class="pre">description](tab:ex:1)</span></code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#tab-ex-1"><span class="std std-ref">Textual description</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{ref}`tab:ex:1`</span> </code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#tab-ex-1"><span class="std std-ref">Caption of the table ex1</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{numref}`tab:ex:1`</span> </code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#tab-ex-1"><span class="std std-numref">Table 1</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{numref}`Figure</span> <span class="pre">%s</span> <span class="pre">and</span> <span class="pre">more</span> <span class="pre">text</span> <span class="pre">&lt;tab:ex:1&gt;`</span> </code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#tab-ex-1"><span class="std std-numref">Figure 1 and more text</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Finally, equations use the tag <code class="docutils literal notranslate"><span class="pre">label</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{math}
+:label: eq:ex:1
+
+E = mc^2
+```
+</pre></div>
+</div>
+<div class="math notranslate nohighlight" id="equation-eq-ex-1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-ex-1" title="Link to this equation">#</a></span>\[E = mc^2\]</div>
+<p>And can only be referenced by their number</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Code</p></th>
+<th class="head text-left"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[](eq:ex:1)</span></code></p></td>
+<td class="text-left"><p><a class="reference internal" href="#equation-eq-ex-1">(1)</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{eq}`eq:ex:1`</span> </code></p></td>
+<td class="text-left"><p><span class="xref std std-ref">eq:ex:1</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Quarto</span></code> has its own way of making cross references which can be consulted in
 their documentation (<a class="reference external" href="https://quarto.org/docs/authoring/cross-references.html">Quarto cross
 references</a>).</p>
 </section>
@@ -871,7 +1009,7 @@ allowfullscreen></iframe>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown">Markdown</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roles-and-directives">Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#callout-blocks">Callout Blocks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams">Diagrams</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-flowchart">Mermaid flowchart</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid-sequence-diagram">Mermaid sequence diagram</a></li>
