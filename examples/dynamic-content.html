@@ -503,7 +503,7 @@ like <code class="docutils literal notranslate"><span class="pre">Jupyter</span>
 material by using directives (See <a class="reference internal" href="static-content.html#sec-ro-di"><span class="std std-ref">Roles and Directives</span></a>) for code in markdown files, or
 directly using Jupyter Notebooks.  This section serves as an example of the
 functionalities that can be integrated in a Markdown file in a Jupyter Book. We
-also indicate what are the differences in the <em>Quarto</em> publishing system when
+also indicate what are the differences in the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> publishing system when
 necessary.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">#</a></h2>
@@ -514,7 +514,7 @@ slighly depending on the platform and the type of file (e.g. markdown and
 Jupyter Notebook).</p>
 <section id="jupyter-notebook-files">
 <h3>Jupyter Notebook files<a class="headerlink" href="#jupyter-notebook-files" title="Link to this heading">#</a></h3>
-<p><em>Jupyter Notebooks</em> are web-based documents that combine a textual narrative
+<p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebooks</span></code> are web-based documents that combine a textual narrative
 (written in a markup language) with computational elements (supporting a
 multitude of programming languages). The code of the notebooks can be executed
 with the help of a
@@ -525,16 +525,13 @@ provide the results to the authoring application. The default kernel is the
 <a class="reference external" href="https://ipython.org/">IPython</a>. Common functionalities added via the code
 cells are the generation of figures, tables, plots, and interactive elements
 and the analysis of data. Jupyter Notebooks have a file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and
-can be edited with authoring tools like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>, <em>Jupyter Lab</em>,
+can be edited with authoring tools like <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>, <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code>,
 <em>Google Colab</em>, and most <em>integrated development environments</em> (IDEs) like
-<em>PyCharm</em>, <em>Microsoft Visual Studio</em>, <em>Posit</em>, and <em>RStudio</em> (See more in the
-section
-<a class="reference internal" href="../introduction/authoring-tools.html#sec-aut-com-nar"><span class="std std-ref">Computational notebook editors</span></a>).</p>
-<p>In <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> projects the configuration of <strong>Jupyter
-Notebooks</strong> is general across the project. However, <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> requires a <em>Raw</em>
+<em>PyCharm</em>, <em>Microsoft Visual Studio</em>, <em>Posit</em>, and <em>RStudio</em> (See also <a class="reference internal" href="../introduction/authoring-tools.html#sec-aut-com-nar"><span class="std std-ref">Computational notebook editors</span></a>).</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> projects the configuration of <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebooks</span></code> is general across the project. However, <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> requires a <em>Raw</em>
 cell at the beginning of the notebook with the <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">author</span></code>, and any
 additional options that you want to include in order to be rendered. The
-following is a configuration example for <code class="docutils literal notranslate"><span class="pre">Quarto</span></code></p>
+following is a configuration example for <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Title of the page</span>
 <span class="nt">authors</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Miquel</span><span class="nv"> </span><span class="s">Perello</span><span class="nv"> </span><span class="s">Nieto&quot;</span>
@@ -549,7 +546,7 @@ following is a configuration example for <code class="docutils literal notransla
 </section>
 <section id="markdown-files">
 <span id="sec-com-nar-con"></span><h3>Markdown files<a class="headerlink" href="#markdown-files" title="Link to this heading">#</a></h3>
-<p>In <em><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code></em>, <strong>Markdown</strong> files with dynamic content require a YAML
+<p>In <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code>, <strong>Markdown</strong> files with dynamic content require a YAML
 configuration in the header indicating some parameters about
 the type of file and the kernel to use. There are kernels for different
 programming languages like R, Python, Julia, and more. For example, the
@@ -571,15 +568,14 @@ following <code class="docutils literal notranslate"><span class="pre">yaml</spa
 <span class="nn">---</span>
 </pre></div>
 </div>
-<p>The header can be generated automatically with the help of the jupyter-book
+<p>The header can be generated automatically with the help of the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>
 tool by running the following command in a terminal at the root of the project</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>myst<span class="w"> </span>init<span class="w"> </span>markdownfile.md<span class="w"> </span>--kernel<span class="w"> </span>kernelname
 </pre></div>
 </div>
 <p>Additional documentation can be found at
 <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/myst-notebooks.html">https://jupyterbook.org/en/stable/file-types/myst-notebooks.html</a>.</p>
-<p>In <em><code class="docutils literal notranslate"><span class="pre">Quarto</span></code></em>,
-Running Python code in the <em><code class="docutils literal notranslate"><span class="pre">Quarto</span></code></em> publishing system requires the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>
+<p>Running Python code in the <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> publishing system requires the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>
 Python package and the specification of the <code class="docutils literal notranslate"><span class="pre">python</span></code> command to use in the
 <code class="docutils literal notranslate"><span class="pre">YAML</span></code> header or in the <code class="docutils literal notranslate"><span class="pre">_quarto.yml</span></code> configuration file.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">jupyter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span>
@@ -588,28 +584,29 @@ Python package and the specification of the <code class="docutils literal notran
 </section>
 <section id="live-code">
 <span id="sec-mar-liv"></span><h3>Live code<a class="headerlink" href="#live-code" title="Link to this heading">#</a></h3>
-<p>In <strong>Jupyter Books</strong>, <a class="reference external" href="https://thebe.readthedocs.io/en/stable/">Thebe</a> offers a
+<p>In <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code>, <a class="reference external" href="https://thebe.readthedocs.io/en/stable/">Thebe</a> offers a
 solution to launch the kernel in the current page (without the need to jump to
-a third party website). By default, this <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> has been configured to
-run Thebe with the third party service <em>MyBinder</em>.  It is also necessary to add
-the following line of code before the first title of the markdown document</p>
+a third party website).
+The web page you are currently reading has been configured to
+run Thebe with the third party service <em>MyBinder</em>.  This was achieved by adding
+the following line of code before the first title of the markdown document:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">launch</span><span class="p">:</span><span class="n">thebe</span><span class="p">)</span><span class="o">=</span>
 </pre></div>
 </div>
-<p>In order to start the live code with <em>Thebe</em> it is necessary to click on the
-upper right side menu the <code class="docutils literal notranslate"><span class="pre">spaceship</span></code> and the <code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">code</span></code> button in the
-drop down menu.</p>
+<p>The top of the page now displays the <em>spaceship</em> icon.
+You can launch <em>Thebe</em> by clicking on it and select <code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">code</span></code> in the
+drop down menu:</p>
 <figure class="align-default" id="figure-launch-live-code">
 <img alt="../_images/thebe_live_code.png" src="../_images/thebe_live_code.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Menu to launch Live Code with Thebe</span><a class="headerlink" href="#figure-launch-live-code" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Then the code will be launched in your configured server (in this case
-MyBinder) and a new loading text will be shown at the top of the current page
+<p>This will launch the code in your configured server (in this case
+<em>MyBinder</em>) and a new loading text will be shown at the top of the current page
 with several steps, building the code, publishing and launching.  Depending on
-the configured server this process may take more or less time to complete, and
-could even fail to launch.</p>
+the configured server this process may take some time to complete, and
+occasionally could fail to launch.</p>
 <figure class="align-default" id="figure-thebe-steps">
 <a class="reference internal image-reference" href="../_images/thebe_steps.svg"><img alt="../_images/thebe_steps.svg" src="../_images/thebe_steps.svg" width="400px" /></a>
 <figcaption>
@@ -617,15 +614,15 @@ could even fail to launch.</p>
 </figcaption>
 </figure>
 <p>Once the kernel is ready, any Python code that is written in a <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code>
-with <code class="docutils literal notranslate"><span class="pre">ipython3</span></code> will have the option to be modified and re-run in real time.
+with <code class="docutils literal notranslate"><span class="pre">ipython3</span></code> can be modified and re-run in real time.
 The current page is an example in which you can modify all the cells.</p>
-<p><em><code class="docutils literal notranslate"><span class="pre">Quarto</span></code></em> does not currently support <em>Thebe</em>, but it supports launching the
+<p><code class="docutils literal notranslate"><span class="pre">Quarto</span></code> does not currently support <em>Thebe</em>, but it supports launching the
 code in a third party environment like <em>MyBinder</em> by adding the following
 <code class="docutils literal notranslate"><span class="pre">yaml</span></code> configuration in the header of the Markdown file</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">code-links</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binder</span>
 </pre></div>
 </div>
-<p><em><code class="docutils literal notranslate"><span class="pre">Quarto</span></code></em> has good integration with <a class="reference external" href="https://shiny.posit.co/">Shiny</a> which has
+<p><code class="docutils literal notranslate"><span class="pre">Quarto</span></code> has good integration with <a class="reference external" href="https://shiny.posit.co/">Shiny</a> which has
 additional functionalities that can bee seen in Section <a class="reference internal" href="interactive-content.html#sec-exa-run"><span class="std std-ref">Interactive content</span></a>.</p>
 </section>
 </section>
@@ -663,7 +660,7 @@ the mouse.</p>
 ```
 </pre></div>
 </div>
-<p>The following code is an example</p>
+<p>The following code is an example:</p>
 <div class="cell tag_hide-input tag_thebe-init docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -696,7 +693,7 @@ cell</p>
 </div>
 </div>
 </div>
-<p>The following code is a very simple example on how to create a lineplot which
+<p>The following code illustrates how to create a lineplot which
 can be easily modified in a Live environment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,7 +704,7 @@ can be easily modified in a Live environment.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f12cc397fa0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fc7809d5fa0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/b5bf50767cb266a38760a72b9494e808d521bdaf24015461df81a08a214eccc5.png" src="../_images/b5bf50767cb266a38760a72b9494e808d521bdaf24015461df81a08a214eccc5.png" />
@@ -717,11 +714,11 @@ can be easily modified in a Live environment.</p>
 <section id="exploration-of-tables">
 <span id="sec-com-nar-tab"></span><h2>Exploration of tables<a class="headerlink" href="#exploration-of-tables" title="Link to this heading">#</a></h2>
 <p>In data analysis it is common to inspect large amounts of data which in certain
-cases is stored in a tabular form. Pandas is a Python library that is able to
+cases is stored in a tabular form. <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> is a Python library that is able to
 produce <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Frames</span></code> (similar to the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Frames</span></code> from the <code class="docutils literal notranslate"><span class="pre">R</span></code> programming
 language), and can produce summaries and visualisations in various output
 formats. The following example shows the recorded temperatures (Celsius) in
-Bristol as shown in the Wikipedia article<a class="footnote-reference brackets" href="#bristol" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+Bristol as shown in its Wikipedia article<a class="footnote-reference brackets" href="#bristol" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -740,167 +737,167 @@ Bristol as shown in the Wikipedia article<a class="footnote-reference brackets" 
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_e7bce_row0_col0 {
+#T_49d05_row0_col0 {
   background-color: #3b4cc0;
   color: #f1f1f1;
 }
-#T_e7bce_row0_col1 {
+#T_49d05_row0_col1 {
   background-color: #efcebd;
   color: #000000;
 }
-#T_e7bce_row1_col0 {
+#T_49d05_row1_col0 {
   background-color: #5875e1;
   color: #f1f1f1;
 }
-#T_e7bce_row1_col1 {
+#T_49d05_row1_col1 {
   background-color: #f7b79b;
   color: #000000;
 }
-#T_e7bce_row2_col0 {
+#T_49d05_row2_col0 {
   background-color: #6180e9;
   color: #f1f1f1;
 }
-#T_e7bce_row2_col1 {
+#T_49d05_row2_col1 {
   background-color: #f59f80;
   color: #000000;
 }
-#T_e7bce_row3_col0 {
+#T_49d05_row3_col0 {
   background-color: #7a9df8;
   color: #f1f1f1;
 }
-#T_e7bce_row3_col1 {
+#T_49d05_row3_col1 {
   background-color: #ea7b60;
   color: #f1f1f1;
 }
-#T_e7bce_row4_col0 {
+#T_49d05_row4_col0 {
   background-color: #8db0fe;
   color: #000000;
 }
-#T_e7bce_row4_col1 {
+#T_49d05_row4_col1 {
   background-color: #e36b54;
   color: #f1f1f1;
 }
-#T_e7bce_row5_col0, #T_e7bce_row8_col0 {
+#T_49d05_row5_col0, #T_49d05_row8_col0 {
   background-color: #a1c0ff;
   color: #000000;
 }
-#T_e7bce_row5_col1 {
+#T_49d05_row5_col1 {
   background-color: #c32e31;
   color: #f1f1f1;
 }
-#T_e7bce_row6_col0 {
+#T_49d05_row6_col0 {
   background-color: #bcd2f7;
   color: #000000;
 }
-#T_e7bce_row6_col1 {
+#T_49d05_row6_col1 {
   background-color: #b40426;
   color: #f1f1f1;
 }
-#T_e7bce_row7_col0 {
+#T_49d05_row7_col0 {
   background-color: #b7cff9;
   color: #000000;
 }
-#T_e7bce_row7_col1 {
+#T_49d05_row7_col1 {
   background-color: #bd1f2d;
   color: #f1f1f1;
 }
-#T_e7bce_row8_col1 {
+#T_49d05_row8_col1 {
   background-color: #de614d;
   color: #f1f1f1;
 }
-#T_e7bce_row9_col0 {
+#T_49d05_row9_col0 {
   background-color: #85a8fc;
   color: #f1f1f1;
 }
-#T_e7bce_row9_col1 {
+#T_49d05_row9_col1 {
   background-color: #e57058;
   color: #f1f1f1;
 }
-#T_e7bce_row10_col0 {
+#T_49d05_row10_col0 {
   background-color: #6e90f2;
   color: #f1f1f1;
 }
-#T_e7bce_row10_col1 {
+#T_49d05_row10_col1 {
   background-color: #f7bca1;
   color: #000000;
 }
-#T_e7bce_row11_col0 {
+#T_49d05_row11_col0 {
   background-color: #4a63d3;
   color: #f1f1f1;
 }
-#T_e7bce_row11_col1 {
+#T_49d05_row11_col1 {
   background-color: #f4c6af;
   color: #000000;
 }
 </style>
-<table id="T_e7bce">
+<table id="T_49d05">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_e7bce_level0_col0" class="col_heading level0 col0" >Record low</th>
-      <th id="T_e7bce_level0_col1" class="col_heading level0 col1" >Record high</th>
+      <th id="T_49d05_level0_col0" class="col_heading level0 col0" >Record low</th>
+      <th id="T_49d05_level0_col1" class="col_heading level0 col1" >Record high</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_e7bce_level0_row0" class="row_heading level0 row0" >Jan</th>
-      <td id="T_e7bce_row0_col0" class="data row0 col0" >-14.400000</td>
-      <td id="T_e7bce_row0_col1" class="data row0 col1" >14.200000</td>
+      <th id="T_49d05_level0_row0" class="row_heading level0 row0" >Jan</th>
+      <td id="T_49d05_row0_col0" class="data row0 col0" >-14.400000</td>
+      <td id="T_49d05_row0_col1" class="data row0 col1" >14.200000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row1" class="row_heading level0 row1" >Feb</th>
-      <td id="T_e7bce_row1_col0" class="data row1 col0" >-9.700000</td>
-      <td id="T_e7bce_row1_col1" class="data row1 col1" >18.300000</td>
+      <th id="T_49d05_level0_row1" class="row_heading level0 row1" >Feb</th>
+      <td id="T_49d05_row1_col0" class="data row1 col0" >-9.700000</td>
+      <td id="T_49d05_row1_col1" class="data row1 col1" >18.300000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row2" class="row_heading level0 row2" >Mar</th>
-      <td id="T_e7bce_row2_col0" class="data row2 col0" >-8.300000</td>
-      <td id="T_e7bce_row2_col1" class="data row2 col1" >21.700000</td>
+      <th id="T_49d05_level0_row2" class="row_heading level0 row2" >Mar</th>
+      <td id="T_49d05_row2_col0" class="data row2 col0" >-8.300000</td>
+      <td id="T_49d05_row2_col1" class="data row2 col1" >21.700000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row3" class="row_heading level0 row3" >Apr</th>
-      <td id="T_e7bce_row3_col0" class="data row3 col0" >-4.700000</td>
-      <td id="T_e7bce_row3_col1" class="data row3 col1" >25.700000</td>
+      <th id="T_49d05_level0_row3" class="row_heading level0 row3" >Apr</th>
+      <td id="T_49d05_row3_col0" class="data row3 col0" >-4.700000</td>
+      <td id="T_49d05_row3_col1" class="data row3 col1" >25.700000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row4" class="row_heading level0 row4" >May</th>
-      <td id="T_e7bce_row4_col0" class="data row4 col0" >-2.000000</td>
-      <td id="T_e7bce_row4_col1" class="data row4 col1" >27.400000</td>
+      <th id="T_49d05_level0_row4" class="row_heading level0 row4" >May</th>
+      <td id="T_49d05_row4_col0" class="data row4 col0" >-2.000000</td>
+      <td id="T_49d05_row4_col1" class="data row4 col1" >27.400000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row5" class="row_heading level0 row5" >Jun</th>
-      <td id="T_e7bce_row5_col0" class="data row5 col0" >0.600000</td>
-      <td id="T_e7bce_row5_col1" class="data row5 col1" >32.500000</td>
+      <th id="T_49d05_level0_row5" class="row_heading level0 row5" >Jun</th>
+      <td id="T_49d05_row5_col0" class="data row5 col0" >0.600000</td>
+      <td id="T_49d05_row5_col1" class="data row5 col1" >32.500000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row6" class="row_heading level0 row6" >Jul</th>
-      <td id="T_e7bce_row6_col0" class="data row6 col0" >4.700000</td>
-      <td id="T_e7bce_row6_col1" class="data row6 col1" >34.500000</td>
+      <th id="T_49d05_level0_row6" class="row_heading level0 row6" >Jul</th>
+      <td id="T_49d05_row6_col0" class="data row6 col0" >4.700000</td>
+      <td id="T_49d05_row6_col1" class="data row6 col1" >34.500000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row7" class="row_heading level0 row7" >Aug</th>
-      <td id="T_e7bce_row7_col0" class="data row7 col0" >3.900000</td>
-      <td id="T_e7bce_row7_col1" class="data row7 col1" >33.300000</td>
+      <th id="T_49d05_level0_row7" class="row_heading level0 row7" >Aug</th>
+      <td id="T_49d05_row7_col0" class="data row7 col0" >3.900000</td>
+      <td id="T_49d05_row7_col1" class="data row7 col1" >33.300000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row8" class="row_heading level0 row8" >Sep</th>
-      <td id="T_e7bce_row8_col0" class="data row8 col0" >0.600000</td>
-      <td id="T_e7bce_row8_col1" class="data row8 col1" >28.300000</td>
+      <th id="T_49d05_level0_row8" class="row_heading level0 row8" >Sep</th>
+      <td id="T_49d05_row8_col0" class="data row8 col0" >0.600000</td>
+      <td id="T_49d05_row8_col1" class="data row8 col1" >28.300000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row9" class="row_heading level0 row9" >Oct</th>
-      <td id="T_e7bce_row9_col0" class="data row9 col0" >-3.200000</td>
-      <td id="T_e7bce_row9_col1" class="data row9 col1" >26.800000</td>
+      <th id="T_49d05_level0_row9" class="row_heading level0 row9" >Oct</th>
+      <td id="T_49d05_row9_col0" class="data row9 col0" >-3.200000</td>
+      <td id="T_49d05_row9_col1" class="data row9 col1" >26.800000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row10" class="row_heading level0 row10" >Nov</th>
-      <td id="T_e7bce_row10_col0" class="data row10 col0" >-6.500000</td>
-      <td id="T_e7bce_row10_col1" class="data row10 col1" >17.500000</td>
+      <th id="T_49d05_level0_row10" class="row_heading level0 row10" >Nov</th>
+      <td id="T_49d05_row10_col0" class="data row10 col0" >-6.500000</td>
+      <td id="T_49d05_row10_col1" class="data row10 col1" >17.500000</td>
     </tr>
     <tr>
-      <th id="T_e7bce_level0_row11" class="row_heading level0 row11" >Dec</th>
-      <td id="T_e7bce_row11_col0" class="data row11 col0" >-11.900000</td>
-      <td id="T_e7bce_row11_col1" class="data row11 col1" >15.800000</td>
+      <th id="T_49d05_level0_row11" class="row_heading level0 row11" >Dec</th>
+      <td id="T_49d05_row11_col0" class="data row11 col0" >-11.900000</td>
+      <td id="T_49d05_row11_col1" class="data row11 col1" >15.800000</td>
     </tr>
   </tbody>
 </table>
@@ -988,7 +985,7 @@ example shows some statistics of the previous table.</p>
 <span id="sec-com-nar-plo"></span><h2>Static plots<a class="headerlink" href="#static-plots" title="Link to this heading">#</a></h2>
 <p>Figures generated with plotting libraries can also be rendered and shown as
 static images (e.g. matplotlib, pyplot, bokeh). The following is an example
-with the previous temperatures rendered with Matplotlib.</p>
+with the previous temperatures rendered with `Matplotlib``.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
