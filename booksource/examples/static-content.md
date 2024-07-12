@@ -1,14 +1,15 @@
 (sec:static)=
 # Static content
 
-Some of the most essential functionalities of any authoring tool and publishing
-system is the ability to create publishing material from text, tables and
-figures. In this Section we provide several examples on how to produce this
-content in `Jupyter Book` and `Quarto` publishing systems.
+Broadly speaking, **static content** was the only type of content that could be 
+published prior to the world-wide web. It is primarily content that can be printed 
+without loss of information, the most common forms of which are text, tables and
+figures. In this section we provide several examples on how to produce static
+content in `Jupyter Book` and `Quarto`.
 
-Both systems are capable of reading `Markdown` and `Jupyter Notebooks` and
+Both formatting systems are capable of reading `Markdown` and `Jupyter Notebooks` and
 convert them to a variety of output formats. They support particular versions
-of `Markdown` as there is no current specification that has been fixed.
+of `Markdown` as there is no Markdown standard yet.
 `Quarto` has its own `Quarto markdown` with extension `.qmd`, while `Jupyter
 Book` uses `MyST Markdown`.
 
@@ -384,7 +385,7 @@ different programming language specifications.
 For example the following code is for Python
 
 ```python
-print("Hellow world!")
+print("Hello world!")
 ```
 
 while the following code is written in `ANSI C`
@@ -400,9 +401,9 @@ int main() {
 
 ## Inline-tabs
 
-Some interactive books that contain code may be directed to audience with
+Some interactive books that contain code may be aimed at diverse audiences with
 different background programming knowledge. For those cases, `MyST Markdown`
-can create tabs to select which content to see. The following is an example of
+can create tabs to select which content to display. The following is an example of
 `Python` and `C++` code:
 
 ````{tab} Python
@@ -419,8 +420,7 @@ int main(const int argc, const char **argv) {
 ```
 ````
 
-A second example shows how chaning the tab in one of the tabs affects other
-code segments.
+Tab choices persist across code segments: 
 
 ````{tab} Python
 ```python
@@ -441,7 +441,7 @@ int main() {
 (sec:citations)=
 ## Citations
 
-It is possible to make citations to a bibliography that is stored in a
+It is possible to cite references from a bibliography that is stored in a
 `bibtex` file. For example, the following syntax: `` {cite}`ruby` `` will
 generate the following citation: {cite}`ruby`.
 
