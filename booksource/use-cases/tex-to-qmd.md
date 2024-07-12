@@ -370,7 +370,7 @@ align: center
 alt: Thumbnails of multiple reveal.js slides
 ---
 
-Some of the slides created by `Quarto` in the Reveal.js engine.
+Some of the slides created by Quarto in the Reveal.js engine.
 ```
 
 ## Questions and answers
