@@ -446,8 +446,8 @@ produce publishable formatted output.  While many of the authoring tools
 discussed in the previous section are well-known, there have been many recent
 developments in formatting tools that deserve to be better known in the
 academic community as they take opportunities for publishing training material
-to the next level. In the previous section we described the two type of
-paradigms  <em>Single-In-Single-Out (SISO)</em>, and <em>Single-In-Multi-Out (SIMO)</em>. In
+to the next level. In the previous section we described the two
+paradigms  <a class="reference internal" href="publishing-workflow.html#sec-siso"><span class="std std-ref">Single-In-Single-Out</span></a> (SISO) and <a class="reference internal" href="publishing-workflow.html#sec-simo"><span class="std std-ref">Single-In-Multiple-Out</span></a> (SIMO). In
 this section we describe some <em>formatting tools</em> that can be used for the SIMO
 paradigm.</p>
 <div class="mermaid">
@@ -496,24 +496,25 @@ Markdown</a>. The
 Executable Books Project is an international collaboration to build open-source
 tools for publishing computational documents based on the
 <a class="reference external" href="https://jupyter.org/">Jupyter</a>
-ecosystem. <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> can read markdown, MyST Markdown, Jupyter
-notebooks and
+ecosystem. <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> can read markdown, MyST Markdown, <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebooks</span></code> and
 <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>. It is based
 on the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx documentation engine</a>
 being able to produce html websites, pdf, and computational narratives. It
 supports multiple programming languages in the Jupyter notebooks provided that
 a <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Jupyter kernel</a> exist (e.g. Python, Julia, Rubi, Haskell, and many other
-languages).
-Websites that include computational narratives can also bennefit from live
+languages).</p>
+<p>Websites that include computational narratives can also benefit from live
 environments thanks to the integration of Binder, Thebe and Google
 <a class="reference external" href="https://colab.research.google.com/">Colab</a>. It supports multiple types of narrative content like highlighted
 notes, code cells, quotations, epigraphs, glossaries, index of terms,
 footnotes, references, grids, cards, dropdown menus, tab content, maths,
 equations, proofs, theorems, algorithms, and more. The <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> system has
 been used in multiple ocasions to publish online material, an extensive gallery
-can be found at <a class="reference external" href="https://executablebooks.org/en/latest/gallery/">https://executablebooks.org/en/latest/gallery/</a>. This website
+can be found at <a class="reference external" href="https://executablebooks.org/en/latest/gallery/">https://executablebooks.org/en/latest/gallery/</a>. This roadmap
 has been created with <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and serves as an example of some of its
-functionalities.</p>
+functionalities.
+Another great example of a collaboratively authored <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> is the
+<a class="reference external" href="https://tailor-network.eu/handbook/">TAILOR Handbook of Trustworthy AI</a>.</p>
 </section>
 <section id="r-markdown">
 <span id="sec-rmd"></span><h2>R markdown<a class="headerlink" href="#r-markdown" title="Link to this heading">#</a></h2>
@@ -551,12 +552,13 @@ among others.</p>
 </section>
 <section id="reveal-js">
 <span id="sec-revealjs"></span><h2>Reveal.js<a class="headerlink" href="#reveal-js" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://revealjs.com/">Reveal.js</a> is an open-source framework for HTML
+<p><a class="reference external" href="https://revealjs.com/">Reveal.js</a> is an open-source framework for in-browser
 presentations. It supports features like animations, export to PDF, an
 intuitive navigation of the slides, speaker notes, Markdown support, LaTeX
-support, laser-like pointer, and drawing tools. The presentations can be edited
-with any HTML editor or with the online visual editor <a class="reference external" href="https://slides.com/"></a>.
-The folloiwng HTML code is a fully working <code class="docutils literal notranslate"><span class="pre">reveal.js</span></code> presentation</p>
+support, laser-like pointer, and drawing tools. <code class="docutils literal notranslate"><span class="pre">reveal.js</span></code> presentations can be
+authored in markdown, HTML or a mix using any text editor and served locally using the
+<a class="reference external" href="https://jekyllrb.com">Jekyll</a> static website generator.
+The following HTML code is a fully working <code class="docutils literal notranslate"><span class="pre">reveal.js</span></code> presentation</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;dist/reveal.css&quot;</span> <span class="p">/&gt;</span>
@@ -577,9 +579,7 @@ The folloiwng HTML code is a fully working <code class="docutils literal notrans
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">reveal.js</span></code> is also supported by
-multiple formatting tools like <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>, <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>, and <code class="docutils literal notranslate"><span class="pre">pandoc</span></code> that
-which convert markdown files to <code class="docutils literal notranslate"><span class="pre">reveal.js</span></code> presentations.</p>
+<p><code class="docutils literal notranslate"><span class="pre">reveal.js</span></code> is directly supported by formatting tools inclusing <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>, <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>, and <code class="docutils literal notranslate"><span class="pre">pandoc</span></code>.</p>
 <div class="admonition-d2l-book-a-toolkit-for-hands-on-books admonition">
 <p class="admonition-title">D2L-Book: A Toolkit for Hands-on Books</p>
 <p>Building on several of these formatting tools,
