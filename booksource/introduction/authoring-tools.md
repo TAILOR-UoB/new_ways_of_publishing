@@ -116,9 +116,9 @@ contemporaneous editing.
 
 
 (sec:aut:com:nar)=
-### Computational narrative editors
+### Computational notebook editors
 
-Jupyter Notebooks are documents that offer **computational narratives** by
+Jupyter Notebooks are documents that offer *computational narratives* by
 interlacing formatted markdown text and executable code cells, providing
 the output as additional content. The idea has been adopted by other platforms
 that have created similar notebook environments. Most of these platforms can
