@@ -6,8 +6,8 @@ produce publishable formatted output.  While many of the authoring tools
 discussed in the previous section are well-known, there have been many recent
 developments in formatting tools that deserve to be better known in the
 academic community as they take opportunities for publishing training material
-to the next level. In the previous section we described the two type of
-paradigms  *Single-In-Single-Out (SISO)*, and *Single-In-Multi-Out (SIMO)*. In
+to the next level. In the previous section we described the two
+paradigms  [](sec:SISO) (SISO) and [](sec:SIMO) (SIMO). In
 this section we describe some _formatting tools_ that can be used for the SIMO
 paradigm.
 
@@ -62,24 +62,26 @@ Markdown](https://executablebooks.org/en/latest/tools/#tools-myst). The
 Executable Books Project is an international collaboration to build open-source
 tools for publishing computational documents based on the
 [Jupyter](https://jupyter.org/)
-ecosystem. `Jupyter Book` can read markdown, MyST Markdown, Jupyter
-notebooks and
+ecosystem. `Jupyter Book` can read markdown, MyST Markdown, `Jupyter notebooks` and
 [reStructuredText](https://docutils.sourceforge.io/rst.html). It is based
 on the [Sphinx documentation engine](https://www.sphinx-doc.org/en/master/)
 being able to produce html websites, pdf, and computational narratives. It
 supports multiple programming languages in the Jupyter notebooks provided that
 a [Jupyter kernel](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) exist (e.g. Python, Julia, Rubi, Haskell, and many other
 languages).
-Websites that include computational narratives can also bennefit from live
+
+Websites that include computational narratives can also benefit from live
 environments thanks to the integration of Binder, Thebe and Google
 [Colab](https://colab.research.google.com/). It supports multiple types of narrative content like highlighted
 notes, code cells, quotations, epigraphs, glossaries, index of terms,
 footnotes, references, grids, cards, dropdown menus, tab content, maths,
 equations, proofs, theorems, algorithms, and more. The `Jupyter Book` system has
 been used in multiple ocasions to publish online material, an extensive gallery
-can be found at https://executablebooks.org/en/latest/gallery/. This website
+can be found at https://executablebooks.org/en/latest/gallery/. This roadmap
 has been created with `Jupyter Book` and serves as an example of some of its
 functionalities.
+Another great example of a collaboratively authored `Jupyter Book` is the 
+[TAILOR Handbook of Trustworthy AI](https://tailor-network.eu/handbook/). 
 
 %- [Jupyter{book}](https://jupyterbook.org/en/stable/intro.html)
 %  - Sub-project from the Executable Books Project which also stewards the MyST
@@ -170,12 +172,13 @@ among others.
 (sec:revealjs)=
 ## Reveal.js
 
-[Reveal.js](https://revealjs.com/) is an open-source framework for HTML
+[Reveal.js](https://revealjs.com/) is an open-source framework for in-browser
 presentations. It supports features like animations, export to PDF, an
 intuitive navigation of the slides, speaker notes, Markdown support, LaTeX
-support, laser-like pointer, and drawing tools. The presentations can be edited
-with any HTML editor or with the online visual editor [](https://slides.com/).
-The folloiwng HTML code is a fully working `reveal.js` presentation
+support, laser-like pointer, and drawing tools. `reveal.js` presentations can be 
+authored in markdown, HTML or a mix using any text editor and served locally using the 
+[Jekyll](https://jekyllrb.com) static website generator. 
+The following HTML code is a fully working `reveal.js` presentation
 
 ```html
 <html>
@@ -198,9 +201,7 @@ The folloiwng HTML code is a fully working `reveal.js` presentation
 </html>
 ```
 
-`reveal.js` is also supported by
-multiple formatting tools like `Quarto`, `Jupyter Notebook`, and `pandoc` that
-which convert markdown files to `reveal.js` presentations.
+`reveal.js` is directly supported by formatting tools inclusing `Quarto`, `Jupyter Notebook`, and `pandoc`.
 
 
 :::{admonition} D2L-Book: A Toolkit for Hands-on Books
