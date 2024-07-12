@@ -451,13 +451,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="static-content">
 <span id="sec-static"></span><h1>Static content<a class="headerlink" href="#static-content" title="Link to this heading">#</a></h1>
-<p>Some of the most essential functionalities of any authoring tool and publishing
-system is the ability to create publishing material from text, tables and
-figures. In this Section we provide several examples on how to produce this
-content in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> publishing systems.</p>
-<p>Both systems are capable of reading <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> and <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebooks</span></code> and
+<p>Broadly speaking, <strong>static content</strong> was the only type of content that could be
+published prior to the world-wide web. It is primarily content that can be printed
+without loss of information, the most common forms of which are text, tables and
+figures. In this section we provide several examples on how to produce static
+content in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> and <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>.</p>
+<p>Both formatting systems are capable of reading <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> and <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebooks</span></code> and
 convert them to a variety of output formats. They support particular versions
-of <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> as there is no current specification that has been fixed.
+of <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> as there is no Markdown standard yet.
 <code class="docutils literal notranslate"><span class="pre">Quarto</span></code> has its own <code class="docutils literal notranslate"><span class="pre">Quarto</span> <span class="pre">markdown</span></code> with extension <code class="docutils literal notranslate"><span class="pre">.qmd</span></code>, while <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> uses <code class="docutils literal notranslate"><span class="pre">MyST</span> <span class="pre">Markdown</span></code>.</p>
 <section id="markdown">
 <h2>Markdown<a class="headerlink" href="#markdown" title="Link to this heading">#</a></h2>
@@ -842,7 +843,7 @@ and mathematics) is the publication of short extracts of pseudocode or source
 code. <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> languages usually support the highlight of code based on the
 different programming language specifications.</p>
 <p>For example the following code is for Python</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hellow world!&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>while the following code is written in <code class="docutils literal notranslate"><span class="pre">ANSI</span> <span class="pre">C</span></code></p>
@@ -857,9 +858,9 @@ different programming language specifications.</p>
 </section>
 <section id="inline-tabs">
 <h2>Inline-tabs<a class="headerlink" href="#inline-tabs" title="Link to this heading">#</a></h2>
-<p>Some interactive books that contain code may be directed to audience with
+<p>Some interactive books that contain code may be aimed at diverse audiences with
 different background programming knowledge. For those cases, <code class="docutils literal notranslate"><span class="pre">MyST</span> <span class="pre">Markdown</span></code>
-can create tabs to select which content to see. The following is an example of
+can create tabs to select which content to display. The following is an example of
 <code class="docutils literal notranslate"><span class="pre">Python</span></code> and <code class="docutils literal notranslate"><span class="pre">C++</span></code> code:</p>
 <div class="tab-set docutils">
 <input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Python</label><div class="tab-content docutils">
@@ -876,8 +877,7 @@ can create tabs to select which content to see. The following is an example of
 </div>
 </div>
 </div>
-<p>A second example shows how chaning the tab in one of the tabs affects other
-code segments.</p>
+<p>Tab choices persist across code segments:</p>
 <div class="tab-set docutils">
 <input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">Python</label><div class="tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
@@ -897,7 +897,7 @@ code segments.</p>
 </section>
 <section id="citations">
 <span id="sec-citations"></span><h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
-<p>It is possible to make citations to a bibliography that is stored in a
+<p>It is possible to cite references from a bibliography that is stored in a
 <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example, the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`ruby`</span></code> will
 generate the following citation: <span id="id3">[<a class="reference internal" href="../references.html#id2" title="David Flanagan and Yukihiro Matsumoto. The Ruby Programming Language. O'Reilly Media, 2008.">FM08</a>]</span>.</p>
 <p>Moreover, you can insert a bibliography into your page with this syntax:
