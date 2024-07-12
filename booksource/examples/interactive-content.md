@@ -25,10 +25,11 @@ compilation of the publication and their result is embedded into the resulting
 publication file. We have also seen that with *Thebe* it is possible to have
 live code that can be modified and re-run to generate different results.
 However, it requires a third party server (e.g. Google Colab, MyBinder,
-SageMaker Studio Lab, or others). On the other hand, there are some methods to
-run code in the same web browser without the need of an external computation
-resource. In this section we demonstrate how this can be achieved with
-Shinylive.
+SageMaker Studio Lab, or others). On the other hand, there are methods to
+run code in the same web browser used for viewing the formatted content, 
+without the need of an external computation resource. 
+In this section we demonstrate how this can be achieved with
+Shinylive and other libraries. 
 
 (sec:int:plo)=
 ## Plots with Plotly
