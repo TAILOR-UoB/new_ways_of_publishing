@@ -549,7 +549,7 @@ creation of a multitude of diagrams including <a class="reference internal" href
 live editor that allows the exploration of various examples, modification and
 creation of new diagrams in the following link <a class="reference external" href="https://mermaid.live/edit">https://mermaid.live/edit</a>.
 <a class="reference external" href="https://wavedrom.com/">WaveDrom</a> is another rendering engine to draw <a class="reference internal" href="#sec-wd"><span class="std std-ref">timing
-diagrams</span></a>.</p>
+diagrams</span></a>. Some examples can be found below.</p>
 <section id="mermaid-flowchart">
 <span id="sec-mer-fc"></span><h3>Mermaid flowchart<a class="headerlink" href="#mermaid-flowchart" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mermaid} 
@@ -574,33 +574,39 @@ flowchart TD
         </div></section>
 <section id="mermaid-sequence-diagram">
 <span id="sec-mer-sd"></span><h3>Mermaid sequence diagram<a class="headerlink" href="#mermaid-sequence-diagram" title="Link to this heading">#</a></h3>
+<p>Example of a sequence diagram with Mermaid showing the interactions between a
+web developer, the hosting and a client web browser.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mermaid}
 sequenceDiagram
-	participant Alice
-	participant Bob
-	Alice-&gt;John: Hello John, how are you?
-	loop Healthcheck
-			John-&gt;John: Fight against hypochondria
+	participant Web developer
+	participant Hosting server
+  participant Client web browser
+	Web developer-&gt;&gt;Hosting server: Upload webpage source files
+  Client web browser-&gt;&gt;Hosting server: Request specific web page
+  Hosting server-&gt;&gt;Client web browser: Provide requested web page
+	loop Read
+			Client web browser-&gt;Client web browser: User navigates the page
 	end
-	Note right of John: Rational thoughts &lt;br/&gt;prevail...
-	John--&gt;Alice: Great!
-	John-&gt;Bob: How about you?
-	Bob--&gt;John: Jolly good!
+  Note right of Client web browser: User clicks a link
+  Client web browser-&gt;&gt;Hosting server: Request another page
+  Hosting server-&gt;&gt;Client web browser: Provide requested web page
 ```
 </pre></div>
 </div>
 <div class="mermaid">
             sequenceDiagram
-	participant Alice
-	participant Bob
-	Alice-&gt;John: Hello John, how are you?
-	loop Healthcheck
-			John-&gt;John: Fight against hypochondria
+	participant Web developer
+	participant Hosting server
+  participant Client web browser
+	Web developer-&gt;&gt;Hosting server: Upload webpage source files
+  Client web browser-&gt;&gt;Hosting server: Request specific web page
+  Hosting server-&gt;&gt;Client web browser: Provide requested web page
+	loop Read
+			Client web browser-&gt;Client web browser: User navigates the page
 	end
-	Note right of John: Rational thoughts &lt;br/&gt;prevail...
-	John--&gt;Alice: Great!
-	John-&gt;Bob: How about you?
-	Bob--&gt;John: Jolly good!
+  Note right of Client web browser: User clicks a link
+  Client web browser-&gt;&gt;Hosting server: Request another page
+  Hosting server-&gt;&gt;Client web browser: Provide requested web page
         </div></section>
 <section id="mermaid-mindmap">
 <span id="sec-mer-mm"></span><h3>Mermaid mindmap<a class="headerlink" href="#mermaid-mindmap" title="Link to this heading">#</a></h3>
