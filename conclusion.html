@@ -61,8 +61,6 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'conclusion';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
@@ -426,41 +424,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="conclusion">
 <h1>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h1>
-<p>Another paradigm that has not been explored in this roadmap is the
-<strong>Multiple-In-Multiple-Out (MIMO)</strong> that considers the storage of different
-artefacts in different platforms and allows the composition of the necessary
-artefacts to publish different output types.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To be added</p>
-<ul class="simple">
-<li><p>Adding input artefacts automatically incorporates in the correct place</p></li>
-<li><p>Files can be distributed in different platforms</p></li>
-</ul>
-</div>
-<div class="mermaid">
-            %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
-
-flowchart LR
-    I1(&quot;&lt;center&gt;Text&lt;/center&gt;&quot;):::input --- C{{&quot;Composition&quot;}}:::foo
-    classDef input fill:#ffa;
-    style C fill:#f9f
-    I2(&quot;Figures&quot;):::input --- C:::foo
-    I3(Code):::input --- C:::foo
-    I4(...):::input --- C:::foo
-    C --&gt; O1[&quot;Published \n Paper \n (PDF)&quot;]
-    C --&gt; O2[&quot;Presentation \n Slides \n (PPTX/PDF)&quot;]
-    C --&gt; O3[&quot;Poster \n (PPTX/PDF)&quot;]
-    C --&gt; O4[&quot;Computational \n Notebook \n (Colab)&quot;]
-    style O1 fill:#fca
-    style O2 fill:#bff
-    style O3 fill:#f99
-    style O4 fill:#bfb
-        </div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The following text is shared with the current deliverable report. We need to
-change or adapt both of them.</p>
-</div>
 <p>Publishing teaching material nowadays goes beyond printable documents. The
 growth of the World Wide Web is enabling the modernisation of teaching material
 which can be accessed from a large variety of devices. It also provides a
