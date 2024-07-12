@@ -1,63 +1,52 @@
 (sec:conclusion)=
-# Conclusion
+# Concluding remarks
 
-Publishing teaching material nowadays goes beyond printable documents. The
-growth of the World Wide Web is enabling the modernisation of teaching material
+Technology has moved far beyond the printing press, yet academic publishing 
+is to a large extent still informed by the legacy format of printable documents. 
+The growth of the World Wide Web is enabling the modernisation of teaching material
 which can be accessed from a large variety of devices. It also provides a
 platform for dynamic and interactive material that is automatically adjusted to
-the publishing medium. However, the rapid growth of web technologies creates a
-dynamic environment for software and publishing tools that are still being
+the publishing medium. 
+This roadmap has been written to help AI researchers embrace these new ways of publishing 
+and the new modes of learning that they facilitate. 
+
+It should also be said that the rapid growth of web technologies creates a
+transitional environment for software and publishing tools that are still being
 developed and do not address all the requirements of such systems. Publishing
 systems like `Jupyter Book` and `Quarto` are among the most curated ones but are
-under heavy development. In this deliverable, we provided a roadmap to
-publishing online material with guidelines on state-of-the-art tools, examples
-and use cases. We focused on the publishing paradigm SIMO
-(Single-Input-Multiple-Output) which can be easily tackled with `Quarto` (with
-some current limitations). Another paradigm that has not been explored is the
-MIMO (Multiple-Input-Multiple-Ouput) in which a composition tool is able to
-collate different types of input artefacts (potentially from different sources)
-and group them automatically to generate different types of publishable
-outputs. Another limitation of available solutions is the lack of good
-real-time collaboration functionalities in the state-of-the-art tools. This
-complicates the creation of material with multiple authors involved. Platforms
-like Overleaf, Google Docs, and Typst are examples of good collaboration tools
-but lack the flexibility of the proposed SIMO paradigm. New platforms with
-similar functionalities for `Quarto` and `Jupyter Book` need to be created.
+under heavy development. 
+In a year from now they will have many new features that will push the boundaries even further. 
+The challenge is for all of us to keep abreast of these developments and to make sure that 
+we use the best tools for our purposes, 
+while keeping in mind that this should not just be driven by the technological push 
+but strike a balance with well-understood educational needs. 
 
+One area where current technology does not quite meet users' needs is in collaborative authoring. 
+Markdown-based formatting tools such as `Quarto` offer maximum freedom how the authoring artefacts are produced, 
+which some will see as an advantage but also means that a collaborative environment for authoring 
+markdown files (e.g., [HackMD](https://hackmd.io/)) is separate from `Quarto` formatting. 
+This situation is similar to LaTeX authoring prior to 2011 when Overleaf and ShareLaTeX were developed. 
+Interestingly, the collaborative features in Overleaf such as commenting and tracked changes followed the model set by WYSIWYG editors such as Microsoft Word and Google Docs. 
+A good collaborative environment combined with the flexibility of the Single-In-Multiple-Out paradigm would pave the way to the **Multiple-In-Multiple-Out (MIMO)** publishing paradigm that was already envisaged in the 
+TAILOR deliverable D9.3 {cite}`sokol21`. 
+Such a system would pull together different authoring artefacts, possibly from different locations, and composes them in all the required output formats. 
 
-%Another paradigm that has not been explored in this roadmap is the
-%**Multiple-In-Multiple-Out (MIMO)** that considers the storage of different
-%artefacts in different platforms and allows the composition of the necessary
-%artefacts to publish different output types.
-%
-%```{note} To be added
-%
-%- Adding input artefacts automatically incorporates in the correct place
-%- Files can be distributed in different platforms
-%```
-%
-%```{mermaid}
-%%%{ init : { "flowchart" : { "curve" : "stepBefore" }}}%%
-%
-%flowchart LR
-%    I1("<center>Text</center>"):::input --- C{{"Composition"}}:::foo
-%    classDef input fill:#ffa;
-%    style C fill:#f9f
-%    I2("Figures"):::input --- C:::foo
-%    I3(Code):::input --- C:::foo
-%    I4(...):::input --- C:::foo
-%    C --> O1["Published \n Paper \n (PDF)"]
-%    C --> O2["Presentation \n Slides \n (PPTX/PDF)"]
-%    C --> O3["Poster \n (PPTX/PDF)"]
-%    C --> O4["Computational \n Notebook \n (Colab)"]
-%    style O1 fill:#fca
-%    style O2 fill:#bff
-%    style O3 fill:#f99
-%    style O4 fill:#bfb
-%```
-%
-%```{note}
-%The following text is shared with the current deliverable report. We need to
-%change or adapt both of them.
-%```
-%
+```{mermaid}
+%%{ init : { "flowchart" : { "curve" : "stepBefore" }}}%%
+
+flowchart LR
+    I1("<center>Text</center>"):::input --- C{{"Composition"}}:::foo
+    classDef input fill:#ffa;
+    style C fill:#f9f
+    I2("Figures"):::input --- C:::foo
+    I3(Code):::input --- C:::foo
+    I4(...):::input --- C:::foo
+    C --> O1["Published \n Paper \n (PDF)"]
+    C --> O2["Presentation \n Slides \n (PPTX/PDF)"]
+    C --> O3["Poster \n (PPTX/PDF)"]
+    C --> O4["Computational \n Notebook \n (Colab)"]
+    style O1 fill:#fca
+    style O2 fill:#bff
+    style O3 fill:#f99
+    style O4 fill:#bfb
+```
