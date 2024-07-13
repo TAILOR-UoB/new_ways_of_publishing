@@ -20,7 +20,7 @@ chapters:
 - file: conclusion
 # - file: glossary
 - caption: Appendices
-  chapter:
+  chapters:
   - file: appendix/open-courses
   - file: appendix/development
 - file: references
