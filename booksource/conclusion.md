@@ -27,7 +27,7 @@ which some will see as an advantage but also means that a collaborative environm
 markdown files (e.g., [HackMD](https://hackmd.io/)) is separate from `Quarto` formatting. 
 This situation is similar to LaTeX authoring prior to 2011 when Overleaf and ShareLaTeX were developed. 
 Interestingly, the collaborative features in Overleaf such as commenting and tracked changes followed the model set by WYSIWYG editors such as Microsoft Word and Google Docs. 
-A good collaborative environment combined with the flexibility of the Single-In-Multiple-Out paradigm would pave the way to the **Multiple-In-Multiple-Out (MIMO)** publishing paradigm that was already envisaged in the 
+A good collaborative environment combined with the flexibility of the Single-In-Multi-Out paradigm would pave the way to the **Multi-In-Multi-Out (MIMO)** publishing paradigm that was already envisaged in the 
 TAILOR deliverable D9.3 {cite}`sokol21`. 
 Such a system would pull together different authoring artefacts, possibly from different locations, and composes them in all the required output formats. 
 
