@@ -20,22 +20,23 @@ kernelspec:
 (sec:exa:run)=
 # Interactive content
 
-Programming examples shown in the previous sections are executed during the
-compilation of the publication and their result is embedded into the resulting
-publication file. We have also seen that with *Thebe* it is possible to have
+The programming examples discussed in the preceding sections are executed during the
+compilation of the authored material and their results are embedded into the resulting
+formatted file. We have also seen that with *Thebe* it is possible to have
 live code that can be modified and re-run to generate different results.
 However, it requires a third party server (e.g. Google Colab, MyBinder,
 SageMaker Studio Lab, or others). On the other hand, there are methods to
 run code in the same web browser used for viewing the formatted content, 
 without the need of an external computation resource. 
 In this section we demonstrate how this can be achieved with
-Shinylive and other libraries. 
+**Shinylive** and other libraries. 
 
 (sec:int:plo)=
 ## Plots with Plotly
 
-Some libraries can produce figures that can be interacted with. For example
-Plotly provides tools like zooming, selection, hover information, filtering,
+Some libraries can produce figures that the reader can interact with. For example,
+[Plotly](https://github.com/plotly/plotly.py) 
+provides facilities such as zooming, selection, hover information, filtering,
 and more. The following example shows the sepal length and width of flowers
 from the Iris dataset. Notice that it is possible to remove some classes from
 the visualisation by clicking on the species in the legend, it is possible to
@@ -176,9 +177,8 @@ data-external="1" width="100%" height="400px">
 </iframe>
 
 There are multiple prebuild common Python packages like Matplotlib, Numpy,
-Seaborn, Scipy, and scikit-learn (See list of packages for Pyodide 0.25.1 at
-https://shiny.posit.co/py/docs/shinylive.html#installed-packages). This makes
-it flexible to create plots with interactive parts like the following histogram
+Seaborn, Scipy, and scikit-learn[^shiny].
+This gives the flexibility to create plots with interactive parts like the following histogram
 of random points.
 
 <iframe src="https://shinylive.io/py/editor/#code=NobwRAdghgtgpmAXGKAHVA6VBPMAaMAYwHsIAXOcpMASxlWICcyACGKM1AG2LK5oBGWbN14soAZxbcyAHQh0GzFhACu9bOKkRU8gGaNiMFhIAWNCJsVNWAQXR4WjSgBM4jR6prz5aVAH0vFgBeFi8sKABzOH89Li8XAAp5FlSwmgwLVFUyfwl+N0ZkyFl8FlKAOXUBdxZiPRYBCwlSxwAGRwBGNo6WACY2gEo8FLTw4hzs3NEyYpnS4flBnwh5NwaJdwA3d0SsnMcJzgOTOAkJGlJBxFHUgAEjqduWO+cIQqweWaguMmDS2wscwSMjESKMWALZ7raRfRLXZ5pFSYCHvIwYTZwJKdACcADYABxtImdZYQJFIgAeIRY3TaLAA1LSAKwsABUyIwqJc6O5EESABYAMwAdjJiLSehokUcUGpoRkGNUAhmEnhEtScowwNmlMc+zIGH5wxYbggFzI2GCABVGKo4GSKWlnGRVIxyVLIitfOgafZUIk-IEaI5Nowdh5TXABKpIja7Q75GAAL4AXSAA" data-external="1"
@@ -191,6 +191,9 @@ Or a simple line plot which can be easily modified.
 width="100%" height="400px">
 </iframe>
 
+[^shiny]: See list of packages for Pyodide 0.25.1 at https://shiny.posit.co/py/docs/shinylive.html#installed-packages. 
+
+
 ### Shinylive in Quarto
 
 Shiny and `Quarto` are both developed by Posit (formerly RStudio). Quarto
@@ -198,8 +201,8 @@ integrates very well with Shinylive being able to embed any Shinylive
 application in a Markdown file by writing the source code directly in a
 directive of the type `{shinylive-python}`. There are some options that can be
 adjusted in the header, and the code goes directly below. The following example
-in `Quarto` would render as the first example of the previous subsection
-[](sec:shi:jup).
+in `Quarto` would render as the first example in
+[](sec:shi:jup) above. 
 
 ````
 ```{shinylive-python}
