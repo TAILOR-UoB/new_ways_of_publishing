@@ -11,8 +11,8 @@ But perhaps a more common use case is that somebody already has material in a le
 We give a concrete example of how to do this in [](sec:use:lat). 
 
 :::{note}
-There are of many other possible use cases! 
-Please get in touch if you have ideas to add other use cases to this roadmap.
+There are of course many other possible itineraries through the landscape! 
+Please get in touch if you have ideas for additional use cases for this roadmap.
 ::: 
 
 
