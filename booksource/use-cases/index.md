@@ -10,6 +10,9 @@ On the one hand, somebody may want to use `Quarto` to develop new training mater
 But perhaps a more common use case is that somebody already has material in a legacy format which they want to transform into a more interactive and multi-purpose form. 
 We give a concrete example of how to do this in [](sec:use:lat). 
 
+We remind the reader that the fully rendered courses can be viewed on 
+[the companion website](https://tailor-uob.github.io/mooc_trustworthy_ai/) .
+
 :::{note}
 There are of course many other possible itineraries through the landscape! 
 Please get in touch if you have ideas for additional use cases for this roadmap.
