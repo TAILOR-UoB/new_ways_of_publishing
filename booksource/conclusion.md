@@ -1,5 +1,5 @@
 (sec:conclusion)=
-# Outlook: towards collaborative authoring
+# Outlook: towards collaborative MIMO authoring
 
 Technology has moved far beyond the printing press, yet academic publishing 
 is to a large extent still informed by the legacy format of printable documents. 
