@@ -36,6 +36,11 @@ for deploying a book online using services such as GitHub, GitLab, or Netlify.
 
 # Contributors
 
+The authors and main contributors of the repository are
+
+- Miquel Perello Nieto
+- Peter Flach
+
 We welcome and recognize all contributions. You can see a list of current
 contributors in the [contributors
 tab](https://github.com/TAILOR-UoB/new_ways_of_publishing/graphs/contributors).
