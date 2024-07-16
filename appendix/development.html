@@ -437,65 +437,116 @@ operating systems.</p>
 opening a terminal at the root of the repository and running the following
 command</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3.9<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-<span class="sb">```</span>
-
-<span class="k">then</span><span class="w"> </span>activate<span class="w"> </span>the<span class="w"> </span>virtual<span class="w"> </span>environment
-
-<span class="sb">```</span>shell
-<span class="nb">source</span><span class="w"> </span>/venv/bin/activate
-<span class="sb">```</span>
-
-We<span class="w"> </span>have<span class="w"> </span>created<span class="w"> </span>a<span class="w"> </span><span class="sb">`</span>Makefile<span class="sb">`</span><span class="w"> </span>that<span class="w"> </span>can<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>all<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>steps,<span class="w"> </span>here<span class="w"> </span>we
-provide<span class="w"> </span>details<span class="w"> </span>about<span class="w"> </span>the<span class="w"> </span>process<span class="w"> </span>without<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span><span class="sb">`</span>Makefile<span class="sb">`</span><span class="w"> </span>and<span class="w"> </span>indicate
-wahat<span class="w"> </span>
-
-upgrade<span class="w"> </span>pip<span class="w"> </span>and<span class="w"> </span>install<span class="w"> </span>all<span class="w"> </span>the<span class="w"> </span>required<span class="w"> </span>dependencies
-
-<span class="sb">````</span><span class="o">{</span>tab<span class="o">}</span><span class="w"> </span>shell
-<span class="sb">```</span>shell
-pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-<span class="sb">```</span>
 </pre></div>
 </div>
+<p>then activate the virtual environment</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/venv/bin/activate
+</pre></div>
+</div>
+<p>We have created a <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> that can help in all the following steps. We
+provide below instructions with and without the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> in different tabs.</p>
+<p>First, upgrade pip and install all the required dependencies. One of the
+dependencies is a local Python library <code class="docutils literal notranslate"><span class="pre">lib/book-python</span></code> that facilitates parts
+of the roadmap.</p>
 <div class="tab-set docutils">
-<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Makefile</label><div class="tab-content docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Shell</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>lib/book-python/
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--2">Makefile</label><div class="tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>install
 </pre></div>
 </div>
 </div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</pre></div>
-</div>
-<p>You will also need to install an additional python library that serves as an
-example to include your own Python code in the book</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>lib/book-python/
-</pre></div>
-</div>
-<p>The book can then be build by running the following command</p>
+<p>Then, the book can be built with</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">Shell</label><div class="tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>booksource
 </pre></div>
 </div>
-<p>Once the virtual environment has been generated and loaded (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/venv/bin/activate</span></code>), the book can be built with the shell command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>build
+</div>
+<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--2">Makefile</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>build
 </pre></div>
 </div>
-<p>The previous build will compile only the source files that have changed. Some
-of the table of contents on other pages may still be out of date. To fully
-build the book from anew run the shell command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>cleanbuild
+</div>
+</div>
+<p>The previous build will compile only the source files that have changed.
+However, the table of contents in pages that have not changed won’t be updated.
+To fully build the book from anew it is necessary to clean the previous files.</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"><label class="tab-label" for="tab-set--2-input--1">Shell</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>clean<span class="w"> </span>booksource
+jupyter-book<span class="w"> </span>build<span class="w"> </span>booksource
 </pre></div>
 </div>
-<p>In case of wanting to run Jupyter Notebooks, you will need to create a kernel
-of the current virtual environment and load it from the Notebook.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipykernel
+</div>
+<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"><label class="tab-label" for="tab-set--2-input--2">Makefile</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>clean-build
+</pre></div>
+</div>
+</div>
+</div>
+<p>The local version of the website is stored in <code class="docutils literal notranslate"><span class="pre">booksource/_build/html/</span></code>. The
+html files can be explored with a web browser. However, some of the
+functionalities will not work without a proper web server. For example, Python
+has its own light version of a web service that can be started locally with the
+following command</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--1">Shell</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">9000</span><span class="w"> </span>-d<span class="w"> </span>booksource/_build/html/
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--2">Makefile</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>serve
+</pre></div>
+</div>
+</div>
+</div>
+<p>If successful you should be able to access the website locally at
+<a class="reference external" href="http://localhost:9000">http://localhost:9000</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">PDF</span></code> version of the website needs to be rendered a part from the website,
+and it will overwrite the <code class="docutils literal notranslate"><span class="pre">HTML</span></code> website with a one page version of it. The
+resulting <code class="docutils literal notranslate"><span class="pre">PDF</span></code> is then moved into the <code class="docutils literal notranslate"><span class="pre">booksource/assets/documents/</span></code> folder.</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--4-input--1" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--1">Shell</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>booksource/<span class="w"> </span>--builder<span class="w"> </span>pdfhtml
+cp<span class="w"> </span>booksource/_build/pdf/book.pdf<span class="w"> </span>booksource/assets/documents/nwop_book.pdf
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--4-input--2" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--2">Makefile</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>build-pdf
+</pre></div>
+</div>
+</div>
+</div>
+<p>In order to get the website back you will need to run again the <code class="docutils literal notranslate"><span class="pre">build</span></code>
+process.</p>
+<p>In this roadmap we did not use any Jupyter Notebook. However, in case of
+wanting to edit one you will need to create a kernel of the current virtual
+environment and load it from the Notebook.</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--5-input--1" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--1">Shell</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipykernel
 python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="w"> </span>data-science
 </pre></div>
 </div>
-<p>Then, you can open the notebooks with the following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</div>
+<input class="tab-input" id="tab-set--5-input--2" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--2">Makefile</label><div class="tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>create-kernel
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, you can open <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> and edit any notebooks inside the folder
+<code class="docutils literal notranslate"><span class="pre">booksource</span></code> with the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>./booksource/
 </pre></div>
 </div>
 </section>
