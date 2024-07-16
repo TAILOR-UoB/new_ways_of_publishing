@@ -153,7 +153,7 @@ python -m ipykernel install --user --name data-science
 
 ````{tab} Makefile
 ```shell
-create-kernel
+make create-kernel
 ```
 ````
 
