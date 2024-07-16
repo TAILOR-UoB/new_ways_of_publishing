@@ -126,11 +126,11 @@ Office Writer](https://www.libreoffice.org/discover/writer/), [LaTeX](https://ww
 - posters with [Microsoft Publisher](https://www.microsoft.com/en-gb/microsoft-365/publisher), Google Slides, LaTeX, etc.
 
 (sec:SIMO)=
-## Single-In-Multiple-Out
+## Single-In-Multi-Out
 
 More recent publishing systems allow the generation of multiple types of
 publication formats from a joint set of input artefacts. We refer to this
-paradigm as Single-In-Multiple-Out (SIMO). This paradigm offers various
+paradigm as Single-In-Multi-Out (SIMO). This paradigm offers various
 benefits, among them: 
 - keeping  the artefacts in a single, well-defined location which facilitates consistency, management and findability; 
 - keeping a unique source of history changes and versions which is useful for auditing and
