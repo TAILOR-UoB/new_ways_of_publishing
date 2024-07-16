@@ -17,7 +17,7 @@ Create a virtual environmnet with `Python3.9` at the root of the repository by
 opening a terminal at the root of the repository and running the following
 command
 
-````shell
+```shell
 python3.9 -m venv venv
 ```
 
@@ -27,70 +27,139 @@ then activate the virtual environment
 source /venv/bin/activate
 ```
 
-We have created a `Makefile` that can help in all the following steps, here we
-provide details about the process without using the `Makefile` and indicate
-wahat 
+We have created a `Makefile` that can help in all the following steps. We
+provide below instructions with and without the `Makefile` in different tabs.
 
-upgrade pip and install all the required dependencies
+First, upgrade pip and install all the required dependencies. One of the
+dependencies is a local Python library `lib/book-python` that facilitates parts
+of the roadmap.
 
-````{tab} shell
+````{tab} Shell
 ```shell
 pip install --upgrade pip
 pip install -r requirements.txt
+pip install -e lib/book-python/
 ```
 ````
+
 ````{tab} Makefile
 ```shell
 make install
 ```
 ````
 
+%% Another method to do the tabs
+%`````{tab-set}
+%````{tab-item} Shell
+%
+%```{code-block} shell
+%pip install --upgrade pip
+%pip install -r requirements.txt
+%pip install -e lib/book-python/
+%```
+%````
+%
+%````{tab-item} Makefile
+%
+%```{code-block} shell
+%make install
+%```
+%````
+%`````
 
-```shell
-pip install --upgrade pip
-pip install -r requirements.txt
-```
 
-You will also need to install an additional python library that serves as an
-example to include your own Python code in the book
+Then, the book can be built with
 
-```shell
-pip install -e lib/book-python/
-```
-
-The book can then be build by running the following command
-
+````{tab} Shell
 ```shell
 jupyter-book build booksource
 ```
+````
 
-
-
-Once the virtual environment has been generated and loaded (`source
-/venv/bin/activate`), the book can be built with the shell command
-
-```bash
+````{tab} Makefile
+```shell
 make build
 ```
+````
 
-The previous build will compile only the source files that have changed. Some
-of the table of contents on other pages may still be out of date. To fully
-build the book from anew run the shell command
+The previous build will compile only the source files that have changed.
+However, the table of contents in pages that have not changed won't be updated.
+To fully build the book from anew it is necessary to clean the previous files.
 
-```bash
-make cleanbuild
+````{tab} Shell
+```shell
+jupyter-book clean booksource
+jupyter-book build booksource
 ```
+````
 
-In case of wanting to run Jupyter Notebooks, you will need to create a kernel
-of the current virtual environment and load it from the Notebook.
+````{tab} Makefile
+```shell
+make clean-build
+```
+````
 
-```bash
+The local version of the website is stored in `booksource/_build/html/`. The
+html files can be explored with a web browser. However, some of the
+functionalities will not work without a proper web server. For example, Python
+has its own light version of a web service that can be started locally with the
+following command
+
+````{tab} Shell
+```shell
+python -m http.server 9000 -d booksource/_build/html/
+```
+````
+
+````{tab} Makefile
+```shell
+make serve
+```
+````
+
+If successful you should be able to access the website locally at
+http://localhost:9000.
+
+The `PDF` version of the website needs to be rendered a part from the website,
+and it will overwrite the `HTML` website with a one page version of it. The
+resulting `PDF` is then moved into the `booksource/assets/documents/` folder.
+
+````{tab} Shell
+```shell
+jupyter-book build booksource/ --builder pdfhtml
+cp booksource/_build/pdf/book.pdf booksource/assets/documents/nwop_book.pdf
+```
+````
+
+````{tab} Makefile
+```shell
+make build-pdf
+```
+````
+
+In order to get the website back you will need to run again the `build`
+process.
+
+In this roadmap we did not use any Jupyter Notebook. However, in case of
+wanting to edit one you will need to create a kernel of the current virtual
+environment and load it from the Notebook.
+
+````{tab} Shell
+```shell
 pip install ipykernel
 python -m ipykernel install --user --name data-science
 ```
+````
 
-Then, you can open the notebooks with the following command
+````{tab} Makefile
+```shell
+create-kernel
+```
+````
+
+Then, you can open `Jupyter Notebook` and edit any notebooks inside the folder
+`booksource` with the following command
 
 ```bash
-jupyter notebook
+jupyter notebook ./booksource/
 ```

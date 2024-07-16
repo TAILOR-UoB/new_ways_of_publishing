@@ -3,8 +3,12 @@ install:
 	pip install -r requirements.txt
 	pip install -e lib/book-python/
 
-install_r:
+install-r:
 	./install_irkernel.r
+
+create-kernel:
+	pip install ipykernel
+	python -m ipykernel install --user --name data-science
 
 build:
 	jupyter-book build booksource
@@ -12,9 +16,9 @@ build:
 clean:
 	jupyter-book clean booksource
 
-cleanbuild: clean build
+clean-build: clean build
 
-buildbook:
+build-pdf:
 	jupyter-book build booksource/ --builder pdfhtml
 	cp booksource/_build/pdf/book.pdf booksource/assets/documents/nwop_book.pdf
 
