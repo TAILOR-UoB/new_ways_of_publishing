@@ -13,3 +13,6 @@ ipyleaflet
 jupyterlab
 pyppeteer
 pycalib==0.0.9.dev7
+sphinxcontrib-mermaid
+sphinxcontrib-wavedrom
+sphinxcontrib-blockdiag

@@ -64,7 +64,3 @@ sphinx:
     - sphinxcontrib.mermaid # Draw diagrams with Mermaid
     - sphinxcontrib.blockdiag
     - sphinxcontrib.wavedrom
-      #- hoverxref.extension
-      #- sphinx_tippy
-      #- sphinxcontrib.tikz
-      #- sphinxcontrib.plantuml
