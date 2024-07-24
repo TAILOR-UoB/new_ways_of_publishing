@@ -11,7 +11,7 @@ But perhaps a more common use case is that somebody already has material in a le
 We give a concrete example of how to do this in [](sec:use:lat). 
 
 We remind the reader that the fully rendered courses can be viewed on 
-[the companion website](https://tailor-uob.github.io/mooc_trustworthy_ai/).
+[the companion website](https://tailor-uob.github.io/training-material/).
 
 :::{note}
 There are of course many other possible itineraries through the landscape! 

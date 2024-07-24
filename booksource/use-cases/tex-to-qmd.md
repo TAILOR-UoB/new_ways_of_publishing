@@ -18,7 +18,7 @@ kernelspec:
 In this use case we start from an already existing set of
 slides made with LaTeX package [Beamer](https://ctan.org/pkg/beamer?lang=en).
 The course generated in this use case is available at
-https://tailor-uob.github.io/mooc_trustworthy_ai/cha_wahcc/wahcc.html.
+https://tailor-uob.github.io/training-material/cha_wahcc/wahcc.html.
 
 This use case explains the process followed to generate the `Quarto` course
 material. In order to replicate the steps involved you can {download}`download

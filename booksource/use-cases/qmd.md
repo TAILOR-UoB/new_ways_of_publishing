@@ -16,7 +16,7 @@ kernelspec:
 # Create a Quarto course from scratch
 
 In this section we describe how we created an 
-[online course](https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html) entirely with `Quarto`. 
+[online course](https://tailor-uob.github.io/training-material/cha_odm/odm.html) entirely with `Quarto`. 
 The main idea was to create a website with all the necessary content to give a brief
 introduction to a topic, with a set of slides created with the same content, a
 printable version as a pdf, video recordings for each section, all with Python
@@ -34,8 +34,8 @@ Finally, the `reveal.js` slides focus on the key points but include the
 tables, figures, equations and the interactive code.
 
 In order to generate multiple types of outputs with `Quarto` it is necessary to
-configure the different formats in the [_quarto.yml](https://github.com/TAILOR-UoB/mooc_trustworthy_ai/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/_quarto.yml) file (See [lines 52-84](https://github.com/TAILOR-UoB/mooc_trustworthy_ai/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/_quarto.yml#L52-L84)) and
-in the quarto markdown file of the specific section (See [lines 20-38](https://github.com/TAILOR-UoB/mooc_trustworthy_ai/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/cha_odm/odm.qmd#L20-L38) of [odm.qmd](https://github.com/TAILOR-UoB/mooc_trustworthy_ai/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/cha_odm/odm.qmd)).
+configure the different formats in the [_quarto.yml](https://github.com/TAILOR-UoB/training-material/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/_quarto.yml) file (See [lines 52-84](https://github.com/TAILOR-UoB/training-material/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/_quarto.yml#L52-L84)) and
+in the quarto markdown file of the specific section (See [lines 20-38](https://github.com/TAILOR-UoB/training-material/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/cha_odm/odm.qmd#L20-L38) of [odm.qmd](https://github.com/TAILOR-UoB/training-material/blob/63044497ef9f8d2f23afa4acd939d27b4839ed2a/cha_odm/odm.qmd)).
 
 The following is a small extract of the configuration in YAML format.
 
@@ -86,7 +86,7 @@ Text shown in all formats excepts reveal.js slides.
 In order to keep some content in the slides we decided to create lists with the
 key points, which can be shown in all formats. We have added a `Key Points`
 title as a subsection in the other formats (an example can be found at
-https://tailor-uob.github.io/mooc_trustworthy_ai/cha_odm/odm.html#key-points).
+https://tailor-uob.github.io/training-material/cha_odm/odm.html#key-points).
 
 
 ## Figures, tables and equations
