@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Create a Quarto course from scratch &#8212; New ways of Publishing</title>
   
@@ -28,39 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=a8e58a58"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'use-cases/qmd';</script>
@@ -488,7 +490,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="create-a-quarto-course-from-scratch">
-<span id="sec-use-qua"></span><h1>Create a Quarto course from scratch<a class="headerlink" href="#create-a-quarto-course-from-scratch" title="Link to this heading">#</a></h1>
+<span id="sec-use-qua"></span><h1>Create a Quarto course from scratch<a class="headerlink" href="#create-a-quarto-course-from-scratch" title="Permalink to this heading">#</a></h1>
 <p>In this section we describe how we created an
 <a class="reference external" href="https://tailor-uob.github.io/training-material/cha_odm/odm.html">online course</a> entirely with <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>.
 The main idea was to create a website with all the necessary content to give a brief
@@ -496,7 +498,7 @@ introduction to a topic, with a set of slides created with the same content, a
 printable version as a pdf, video recordings for each section, all with Python
 interactive examples.</p>
 <section id="overall-structure-of-the-course">
-<h2>Overall structure of the course<a class="headerlink" href="#overall-structure-of-the-course" title="Link to this heading">#</a></h2>
+<h2>Overall structure of the course<a class="headerlink" href="#overall-structure-of-the-course" title="Permalink to this heading">#</a></h2>
 <p>The idea is to create a self-contained course with multiple publishing options
 that adapt to the device capabilities. The most comprehensive format to
 access the course is in its <a class="reference internal" href="#"><span class="xref myst">website format</span></a>
@@ -535,7 +537,7 @@ in the quarto markdown file of the specific section (See <a class="reference ext
 </div>
 </section>
 <section id="course-narrative-and-key-points">
-<h2>Course narrative and key points<a class="headerlink" href="#course-narrative-and-key-points" title="Link to this heading">#</a></h2>
+<h2>Course narrative and key points<a class="headerlink" href="#course-narrative-and-key-points" title="Permalink to this heading">#</a></h2>
 <p>The course follows a textual narrative explaining the details, but the
 slides need to concentrate on the main points, leaving out some details.
 This can be achieved as follows:</p>
@@ -552,7 +554,7 @@ title as a subsection in the other formats (an example can be found at
 <a class="reference external" href="https://tailor-uob.github.io/training-material/cha_odm/odm.html#key-points">https://tailor-uob.github.io/training-material/cha_odm/odm.html#key-points</a>).</p>
 </section>
 <section id="figures-tables-and-equations">
-<h2>Figures, tables and equations<a class="headerlink" href="#figures-tables-and-equations" title="Link to this heading">#</a></h2>
+<h2>Figures, tables and equations<a class="headerlink" href="#figures-tables-and-equations" title="Permalink to this heading">#</a></h2>
 <p>Figures, tables and equations can be visualised in all formats and are
 automatically adjusted to fit the available space of the output format.</p>
 <p>Figures can be easily added in plain markdown</p>
@@ -585,7 +587,7 @@ this roadmap).</p>
 </pre></div>
 </div>
 <p>which is rendered as</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<div class="pst-scrollable-table-container"><table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>A</p></th>
@@ -623,7 +625,7 @@ display mode:</p>
 \]</div>
 </section>
 <section id="programming-examples">
-<h2>Programming examples<a class="headerlink" href="#programming-examples" title="Link to this heading">#</a></h2>
+<h2>Programming examples<a class="headerlink" href="#programming-examples" title="Permalink to this heading">#</a></h2>
 <p>This course is designed for a technical audience that may benefit from
 programming examples that serve both to teach a concept and learn how to code
 the example. In this use-case we generate figures based on the explained
@@ -653,12 +655,12 @@ from the use-case which shows the source code and the generated figure below.</p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a135778a2f468bd2a7d4388981586fc4c8bc7c429237bfe915f40e3a37fe124b.png" src="../_images/a135778a2f468bd2a7d4388981586fc4c8bc7c429237bfe915f40e3a37fe124b.png" />
+<img alt="../_images/24f92b9197a613e738582c9ff5d6751f3f284639d9f58116b6c72a0440e2ef84.png" src="../_images/24f92b9197a613e738582c9ff5d6751f3f284639d9f58116b6c72a0440e2ef84.png" />
 </div>
 </div>
 </section>
 <section id="interactive-examples">
-<h2>Interactive examples<a class="headerlink" href="#interactive-examples" title="Link to this heading">#</a></h2>
+<h2>Interactive examples<a class="headerlink" href="#interactive-examples" title="Permalink to this heading">#</a></h2>
 <p>An important part of the attraction of novel publishing tools is the possibility of creating
 interactive and dynamic applications online.
 <code class="docutils literal notranslate"><span class="pre">Shinylive</span></code> is a method that combines <code class="docutils literal notranslate"><span class="pre">Shiny</span></code> and <code class="docutils literal notranslate"><span class="pre">WebAssembly</span></code> to
@@ -667,78 +669,78 @@ integration with this technology, allowing to include code directly in the
 markdown that is executed in real time when the page is loaded. The following
 code is an example extracted from the use case.
 (In this instance we chose not to show the code in the course to focus the learner on the interactive example.)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">```</span><span class="p">{</span><span class="n">shinylive</span><span class="o">-</span><span class="n">python</span><span class="p">}</span>
-<span class="c1">#| standalone: true</span>
-<span class="c1">#| components: viewer</span>
-<span class="c1">#| viewerHeight: 480</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 480
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">shiny</span> <span class="kn">import</span> <span class="n">App</span><span class="p">,</span> <span class="n">render</span><span class="p">,</span> <span class="n">ui</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+import matplotlib.pyplot as plt
+from shiny import App, render, ui
+import pandas as pd
 
-<span class="n">app_ui</span> <span class="o">=</span> <span class="n">ui</span><span class="o">.</span><span class="n">page_fluid</span><span class="p">(</span>
-    <span class="n">ui</span><span class="o">.</span><span class="n">layout_sidebar</span><span class="p">(</span>
-        <span class="n">ui</span><span class="o">.</span><span class="n">sidebar</span><span class="p">(</span>
-    <span class="n">ui</span><span class="o">.</span><span class="n">input_slider</span><span class="p">(</span><span class="s2">&quot;TP&quot;</span><span class="p">,</span> <span class="s2">&quot;Cost True C1&quot;</span><span class="p">,</span>  <span class="n">value</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span> <span class="nb">min</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-    <span class="n">ui</span><span class="o">.</span><span class="n">input_slider</span><span class="p">(</span><span class="s2">&quot;TN&quot;</span><span class="p">,</span> <span class="s2">&quot;Cost True C2&quot;</span><span class="p">,</span>  <span class="n">value</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-    <span class="n">ui</span><span class="o">.</span><span class="n">input_slider</span><span class="p">(</span><span class="s2">&quot;FN&quot;</span><span class="p">,</span> <span class="s2">&quot;Cost False C2&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>   <span class="nb">max</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
-    <span class="n">ui</span><span class="o">.</span><span class="n">input_slider</span><span class="p">(</span><span class="s2">&quot;FP&quot;</span><span class="p">,</span> <span class="s2">&quot;Cost False C1&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>   <span class="nb">max</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
-    <span class="p">),</span>
-    <span class="n">ui</span><span class="o">.</span><span class="n">output_plot</span><span class="p">(</span><span class="s2">&quot;plot&quot;</span><span class="p">)</span>
-    <span class="p">),</span>
-<span class="p">)</span>
+app_ui = ui.page_fluid(
+    ui.layout_sidebar(
+        ui.sidebar(
+    ui.input_slider(&quot;TP&quot;, &quot;Cost True C1&quot;,  value=-5, min=-10, max=0),
+    ui.input_slider(&quot;TN&quot;, &quot;Cost True C2&quot;,  value=-1, min=-10, max=0),
+    ui.input_slider(&quot;FN&quot;, &quot;Cost False C2&quot;, value=10, min=1,   max=10),
+    ui.input_slider(&quot;FP&quot;, &quot;Cost False C1&quot;, value=1,  min=1,   max=10),
+    ),
+    ui.output_plot(&quot;plot&quot;)
+    ),
+)
 
-<span class="k">def</span> <span class="nf">server</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
-    <span class="nd">@output</span>
-    <span class="nd">@render</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">=</span><span class="s2">&quot;A histogram&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">plot</span><span class="p">():</span>
-        <span class="n">TP</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">TP</span><span class="p">()</span> <span class="c1"># C_1|1</span>
-        <span class="n">FN</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">FN</span><span class="p">()</span> <span class="c1"># C_1|2</span>
-        <span class="n">FP</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">FP</span><span class="p">()</span> <span class="c1"># C_2|1</span>
-        <span class="n">TN</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">TN</span><span class="p">()</span> <span class="c1"># C_2|2</span>
-        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-        <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">()</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">FP</span><span class="p">,</span> <span class="n">TP</span><span class="p">],</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Predict $C_1$&quot;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">TN</span><span class="p">,</span> <span class="n">FN</span><span class="p">],</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Predict $C_2$&quot;</span><span class="p">)</span>
+def server(input, output, session):
+    @output
+    @render.plot(alt=&quot;A histogram&quot;)
+    def plot():
+        TP = input.TP() # C_1|1
+        FN = input.FN() # C_1|2
+        FP = input.FP() # C_2|1
+        TN = input.TN() # C_2|2
+        fig = plt.figure()
+        ax = fig.add_subplot()
+        ax.grid(True)
+        ax.plot([0, 1], [FP, TP], &#39;--&#39;, label=&quot;Predict $C_1$&quot;)
+        ax.plot([0, 1], [TN, FN], &#39;--&#39;, label=&quot;Predict $C_2$&quot;)
 
-        <span class="n">threshold</span> <span class="o">=</span> <span class="p">(</span><span class="n">FP</span> <span class="o">-</span> <span class="n">TN</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">FP</span> <span class="o">-</span> <span class="n">TN</span> <span class="o">+</span> <span class="n">FN</span> <span class="o">-</span> <span class="n">TP</span><span class="p">)</span>
-        <span class="n">cost_t</span> <span class="o">=</span> <span class="n">threshold</span><span class="o">*</span><span class="n">TP</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">threshold</span><span class="p">)</span><span class="o">*</span><span class="n">FP</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">threshold</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">cost_t</span><span class="p">,</span> <span class="n">TP</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Optimal $C_1$&quot;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">threshold</span><span class="p">],</span> <span class="p">[</span><span class="n">TN</span><span class="p">,</span> <span class="n">cost_t</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Optimal $C_2$&quot;</span><span class="p">)</span>
+        threshold = (FP - TN)/(FP - TN + FN - TP)
+        cost_t = threshold*TP + (1-threshold)*FP
+        ax.plot([threshold, 1], [cost_t, TP], lw=5, color=&#39;tab:blue&#39;, label=&quot;Optimal $C_1$&quot;)
+        ax.plot([0, threshold], [TN, cost_t], lw=5, color=&#39;tab:orange&#39;, label=&quot;Optimal $C_2$&quot;)
 
-        <span class="n">C</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TP</span><span class="p">,</span> <span class="n">FP</span><span class="p">],</span> <span class="p">[</span><span class="n">FN</span><span class="p">,</span> <span class="n">TN</span><span class="p">]]</span>
-        <span class="n">bbox</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round&quot;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$C_{2|2}$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
-                    <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset fontsize&#39;</span><span class="p">,</span>
-                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">),</span>
-                    <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$C_{1|1}$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-                    <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset fontsize&#39;</span><span class="p">,</span>
-                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">),</span>
-                    <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$C_{1|2}$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-                    <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset fontsize&#39;</span><span class="p">,</span>
-                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">),</span>
-                    <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$C_{2|1}$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-                    <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset fontsize&#39;</span><span class="p">,</span>
-                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">),</span>
-                    <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
+        C = [[TP, FP], [FN, TN]]
+        bbox = dict(boxstyle=&quot;round&quot;, fc=&quot;white&quot;)
+        ax.annotate(r&#39;$C_{2|2}$&#39;, (0, C[1][1]), xytext=(2, -1),
+                    textcoords=&#39;offset fontsize&#39;,
+                    arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, facecolor=&#39;black&#39;),
+                    bbox=bbox)
+        ax.annotate(r&#39;$C_{1|1}$&#39;, (1, C[0][0]), xytext=(2, 0),
+                    textcoords=&#39;offset fontsize&#39;,
+                    arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, facecolor=&#39;black&#39;),
+                    bbox=bbox)
+        ax.annotate(r&#39;$C_{1|2}$&#39;, (0, C[0][1]), xytext=(0, 2),
+                    textcoords=&#39;offset fontsize&#39;,
+                    arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, facecolor=&#39;black&#39;),
+                    bbox=bbox)
+        ax.annotate(r&#39;$C_{2|1}$&#39;, (1, C[1][0]), xytext=(2, 0),
+                    textcoords=&#39;offset fontsize&#39;,
+                    arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, facecolor=&#39;black&#39;),
+                    bbox=bbox)
 
-        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;$t*=</span><span class="si">{</span><span class="n">threshold</span><span class="si">:</span><span class="s1">0.2</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">cost_t</span><span class="p">),</span> 
-                    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">--</span><span class="mi">3</span><span class="p">),</span>
-                    <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset fontsize&#39;</span><span class="p">,</span>
-                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">),</span>
-                    <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
+        ax.annotate(f&#39;$t*={threshold:0.2}$&#39;, (threshold, cost_t), 
+                    xytext=(0, --3),
+                    textcoords=&#39;offset fontsize&#39;,
+                    arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, facecolor=&#39;black&#39;),
+                    bbox=bbox)
 
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$P(C_1|x)$&#39;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Expected cost&#39;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        ax.set_xlabel(&#39;$P(C_1|x)$&#39;)
+        ax.set_ylabel(&#39;Expected cost&#39;)
+        ax.legend()
 
-        <span class="k">return</span> <span class="n">fig</span>
+        return fig
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">app_ui</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+app = App(app_ui, server, debug=True)
 </pre></div>
 </div>
 <p>This <code class="docutils literal notranslate"><span class="pre">roadmap</span></code> has been created with <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code> which
@@ -756,7 +758,7 @@ data-external="1" width="100%" height="400px">
 </iframe>
 </section>
 <section id="video-recordings">
-<h2>Video recordings<a class="headerlink" href="#video-recordings" title="Link to this heading">#</a></h2>
+<h2>Video recordings<a class="headerlink" href="#video-recordings" title="Permalink to this heading">#</a></h2>
 <p>The video recordings required the accompanying set of slides generated from the
 same course. Given that the slides contain a reduced version of the website, it
 is possible to create the slides and the videos before the narrative is
@@ -779,7 +781,7 @@ currently <a class="reference external" href="https://www.youtube.com/watch?v=Iy
 <img alt="../_images/obs-background-removal.png" src="../_images/obs-background-removal.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">OBS Studio configured to record the set of slides and video capture with a
-plugin that automatically removes the background.</span><a class="headerlink" href="#figure-obs" title="Link to this image">#</a></p>
+plugin that automatically removes the background.</span><a class="headerlink" href="#figure-obs" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In order to install the background removal plugin in Ubuntu 20.04 it is
