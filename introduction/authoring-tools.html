@@ -63,8 +63,14 @@
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/authoring-tools';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
@@ -459,8 +465,8 @@ guidelines on the type of files that need to be considered during the authoring
 process, which tools can directly help on the generation of those artefacts. We
 consider the collaboration of teams in the authoring process as a desirable
 feature.</p>
-<div class="mermaid">
-            flowchart LR
+<pre  class="mermaid">
+        flowchart LR
   
     E1(&quot;External resources&quot;):::external -.-&gt; A1
     subgraph &quot;Vim, NeoVim, Notepad&quot; 
@@ -472,7 +478,7 @@ feature.</p>
     classDef external fill:#eee;
     classDef input fill:#ffa;
     classDef output fill:#faa;
-        </div><p>Authoring tools that do not incorporate part of the formatting are rare, as it
+    </pre><p>Authoring tools that do not incorporate part of the formatting are rare, as it
 is common to provide at least a preview of the formatted output.
 Examples of authoring that can be separated from the formatting step are simple
 text editors like vim, NeoVim, Notepad, and general-purpose Integrated
@@ -485,8 +491,8 @@ computer programs integrate them in one tool that may (or may not) provide
 access to the intermediate artefacts. For example, Overleaf
 provides an online collaborative authoring platform that integrates with
 <em>pdfLatex</em> in the back-end.</p>
-<div class="mermaid">
-            flowchart LR
+<pre  class="mermaid">
+        flowchart LR
   
     E1(&quot;External resources&quot;):::external -.-&gt; A1
     subgraph &quot;IDE + Quarto, HackMD, Notion, Typst, Overleaf...&quot; 
@@ -498,7 +504,7 @@ provides an online collaborative authoring platform that integrates with
     classDef external fill:#eee;
     classDef input fill:#ffa;
     classDef output fill:#faa;
-        </div><section id="wysiwyg-what-you-see-is-what-you-get">
+    </pre><section id="wysiwyg-what-you-see-is-what-you-get">
 <h3>WYSIWYG (What You See Is What You Get)<a class="headerlink" href="#wysiwyg-what-you-see-is-what-you-get" title="Permalink to this heading">#</a></h3>
 <p>WYSIWYG editors provide an interface to write rich text
 documents like Microsoft Word, Libre office, or Google Docs. Such
@@ -506,8 +512,8 @@ files are difficult to convert automatically to other formats as they do not
 separate the source text from the presentation layer. Benefits include
 the possibility of collaborative editing, which comes at the expense of reduced
 control over formatting.</p>
-<div class="mermaid">
-            flowchart LR
+<pre  class="mermaid">
+        flowchart LR
   
     E1(&quot;External resources&quot;):::external -.-&gt; A1
     subgraph &quot;Libre Office, Google Docs, Microsoft Word, ...&quot; 
@@ -517,7 +523,7 @@ control over formatting.</p>
     classDef external fill:#eee;
     classDef input fill:#ffa;
     classDef output fill:#faa;
-        </div></section>
+    </pre></section>
 </section>
 <section id="markup-language-editors">
 <h2>Markup language editors<a class="headerlink" href="#markup-language-editors" title="Permalink to this heading">#</a></h2>

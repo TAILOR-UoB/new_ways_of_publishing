@@ -63,8 +63,14 @@
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/publishing-workflow';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
@@ -443,8 +449,8 @@ collated together with the help of an <strong>authoring tool</strong> and subseq
 rendered with a <strong>formatting tool</strong> to generate a publishable output that can be
 delivered in various forms.
 This is visualised by the following figure.<a class="footnote-reference brackets" href="#pub-excl" id="id1">1</a></p>
-<div class="mermaid">
-            flowchart LR
+<pre  class="mermaid">
+        flowchart LR
   
     E1(&quot;(1)\nExternal resources&quot;):::external -.-&gt; A1
     A1{{&quot;(2)\nAuthoring tool&quot;}} --&gt; I1(&quot;(3)\nText + Figures +\nCode + Tables + ...&quot;):::input
@@ -455,7 +461,7 @@ This is visualised by the following figure.<a class="footnote-reference brackets
     classDef input fill:#ffa;
     classDef output fill:#faa;
     classDef delivery stroke:#666,stroke-width:2px,stroke-dasharray: 5 5;
-        </div><p>An example of a publishing workflow is the following. A research group may
+    </pre><p>An example of a publishing workflow is the following. A research group may
 carry out an investigation which ends up with <strong>(1)</strong> data, figures, analyses,
 and results, those resources are put together with an <strong>(2)</strong> authoring tool
 like Overleaf which produces an <strong>(3)</strong> organised hierarchy of files and text
@@ -491,8 +497,8 @@ often repeated if a poster, computational notebooks, or a website need to be
 created. We refer to this paradigm of publishing system as Single-In-Single-Out
 as each system works independently, while the authors need to keep up to date
 copies of similar content in each of them.</p>
-<div class="mermaid">
-            %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
+<pre  class="mermaid">
+        %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
 
 flowchart LR
   
@@ -514,7 +520,7 @@ flowchart LR
     style O4 fill:#bfb
     classDef input fill:#ffa;
     classDef empty fill:#aaa,stroke:#333,stroke-dasharray: 5 5;
-        </div><p>Common examples of this type of paradigm are the authoring and publishing
+    </pre><p>Common examples of this type of paradigm are the authoring and publishing
 workflows for creating</p>
 <ul class="simple">
 <li><p>text documents with <a class="reference external" href="https://www.microsoft.com/en-gb/microsoft-365/word">Microsoft Word</a>, <a class="reference external" href="https://www.libreoffice.org/discover/writer/">Libre
@@ -536,8 +542,8 @@ benefits, among them:</p>
 transparency; and</p></li>
 <li><p>not duplicating artefacts that are not changed between different publishing systems.</p></li>
 </ul>
-<div class="mermaid">
-            %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
+<pre  class="mermaid">
+        %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
 
 flowchart LR
     I1(&quot;Text + Figures + \n Code + ...&quot;):::input --- dummy2{{&quot;Formatting tool&quot;}}
@@ -550,7 +556,7 @@ flowchart LR
     style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
-        </div><p>Nowadays, the SIMO type of formatting tool is becoming more common, and we
+    </pre><p>Nowadays, the SIMO type of formatting tool is becoming more common, and we
 focus on the state-of-the-art formatting tools that fall into this category in this roadmap.
 The roadmap document itself is an example of one particular tool (<code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Book</span></code>), while the
 rest of the document and use cases also include examples built with <code class="docutils literal notranslate"><span class="pre">Quarto</span></code>. A description of these

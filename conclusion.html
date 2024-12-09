@@ -63,8 +63,14 @@
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'conclusion';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
@@ -454,8 +460,8 @@ Interestingly, the collaborative features in Overleaf such as commenting and tra
 A good collaborative environment combined with the flexibility of the Single-In-Multi-Out paradigm would pave the way to the <strong>Multi-In-Multi-Out (MIMO)</strong> publishing paradigm that was already envisaged in the
 TAILOR deliverable D9.3 <span id="id1">[<a class="reference internal" href="references.html#id5" title="Kacper Sokol and Peter Flach. Training platform – beta report. Technical Report, Foundations of Trustworthy AI – Integrating Reasoning, Learning and Optimization (TAILOR), 2021. URL: https://tailor-network.eu/wp-content/uploads/2021/11/Extended-Deliverable-9.3-Report-v1.1.pdf.">SF21</a>]</span>.
 Such a system would pull together different authoring artefacts, possibly from different locations, and composes them in all the required output formats.</p>
-<div class="mermaid">
-            %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
+<pre  class="mermaid">
+        %%{ init : { &quot;flowchart&quot; : { &quot;curve&quot; : &quot;stepBefore&quot; }}}%%
 
 flowchart LR
     I1(&quot;&lt;center&gt;Text&lt;/center&gt;&quot;):::input --- C{{&quot;Composition&quot;}}:::foo
@@ -472,7 +478,7 @@ flowchart LR
     style O2 fill:#bff
     style O3 fill:#f99
     style O4 fill:#bfb
-        </div></section>
+    </pre></section>
 
     <script type="text/x-thebe-config">
     {

@@ -65,8 +65,14 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/static-content';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
@@ -569,15 +575,15 @@ flowchart TD
 ```
 </pre></div>
 </div>
-<div class="mermaid">
-            flowchart TD
+<pre  class="mermaid">
+        flowchart TD
   A[square node A] --&gt; B(round edges node B)
   A --&gt; C([stadium node C])
   B --&gt; D[[subroutine node D]]
   B --&gt; E[(database node E)]
   B --&gt; F((circle F))
   C --&gt; F
-        </div></section>
+    </pre></section>
 <section id="mermaid-sequence-diagram">
 <span id="sec-mer-sd"></span><h3>Mermaid sequence diagram<a class="headerlink" href="#mermaid-sequence-diagram" title="Permalink to this heading">#</a></h3>
 <p>Example of a sequence diagram with Mermaid showing the interactions between a
@@ -599,8 +605,8 @@ sequenceDiagram
 ```
 </pre></div>
 </div>
-<div class="mermaid">
-            sequenceDiagram
+<pre  class="mermaid">
+        sequenceDiagram
 	participant Web developer
 	participant Hosting server
   participant Client web browser
@@ -613,7 +619,7 @@ sequenceDiagram
   Note right of Client web browser: User clicks a link
   Client web browser-&gt;&gt;Hosting server: Request another page
   Hosting server-&gt;&gt;Client web browser: Provide requested web page
-        </div></section>
+    </pre></section>
 <section id="mermaid-mindmap">
 <span id="sec-mer-mm"></span><h3>Mermaid mindmap<a class="headerlink" href="#mermaid-mindmap" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mermaid}
@@ -637,8 +643,8 @@ mindmap
 ```
 </pre></div>
 </div>
-<div class="mermaid">
-            mindmap
+<pre  class="mermaid">
+        mindmap
   root((Data Science))
     Statistics
       Surveys
@@ -655,7 +661,7 @@ mindmap
       High Performance Computing
       Personal Computers
       Distributed Computing
-        </div></section>
+    </pre></section>
 <section id="wavedrom-timing-diagrams">
 <span id="sec-wd"></span><h3>WaveDrom timing diagrams<a class="headerlink" href="#wavedrom-timing-diagrams" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://wavedrom.com/">WaveDrom</a> can draw timing diagrams.</p>
